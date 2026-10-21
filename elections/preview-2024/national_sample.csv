@@ -23,3 +23,5 @@ SAMPLE-PA-7,house,PA,7,Sample Republican K,R,190000,99,SAMPLE-AP,1,R
 SAMPLE-PA-7,house,PA,7,Sample Democrat K,D,180000,99,,0,R
 SAMPLE-IA-1,house,IA,1,Sample Republican L,R,170000,95,SAMPLE-AP,1,R
 SAMPLE-IA-1,house,IA,1,Sample Democrat L,D,165000,95,,0,R
+TEST-PA-SEN,senate,PA,,Dave McCormick,R,,,SAMPLE-AP,1,D
+TEST-PA-SEN,senate,PA,,Bob Casey,D,,,,0,D

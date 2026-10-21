@@ -1,10 +1,6 @@
 {
  "election": "PREVIEW - NOT 2026 RESULTS: real 2024 Missouri results + SAMPLE (fake) national data",
  "election_date": "2024-11-05",
- "highlight": [
-  "MO House 96",
-  "MO House 105"
- ],
  "baselines": {
   "senate": {
    "R": 31,
@@ -60,6 +56,99 @@
    "url": "file:elections/preview-2024/national_sample.csv"
   },
   {
+   "id": "pa_feed",
+   "name": "PA DOS API (2024 archive, format test)",
+   "adapter": "pa_api",
+   "enabled": true,
+   "url": "https://www.electionreturns.pa.gov/api/ElectionReturn/GET?methodName=GetElectionResults&ElectionID=105&ElectionType=G&IsActive=0",
+   "contests": [
+    {
+     "race_id": "TEST-PA-SEN",
+     "category": "senate",
+     "state": "PA",
+     "match": "^United States Senator$"
+    }
+   ]
+  },
+  {
+   "id": "mn_feed",
+   "name": "MN SOS files (2024 archive, format test)",
+   "adapter": "mn_txt",
+   "enabled": true,
+   "urls": [
+    "https://electionresultsfiles.sos.mn.gov/20241105/ussenate.txt"
+   ],
+   "contests": [
+    {
+     "race_id": "TEST-MN-SEN",
+     "category": "senate",
+     "state": "MN",
+     "match": "^U\\.S\\. Senator"
+    }
+   ]
+  },
+  {
+   "id": "nc_feed",
+   "name": "NC SBE JSON (2024 archive, format test)",
+   "adapter": "nc_enr",
+   "enabled": true,
+   "url": "https://er.ncsbe.gov/enr/20241105/data/results_0.txt",
+   "contests": [
+    {
+     "race_id": "TEST-NC-GOV",
+     "category": "governor",
+     "state": "NC",
+     "match": "^NC GOVERNOR"
+    }
+   ]
+  },
+  {
+   "id": "ga_feed",
+   "name": "GA SOS export (2024 archive, format test)",
+   "adapter": "ga_ev",
+   "enabled": true,
+   "url": "https://results.sos.ga.gov/cdn/results/Georgia/export-2024NovGen.json",
+   "contests": [
+    {
+     "race_id": "TEST-GA-HOUSE-2",
+     "category": "house",
+     "state": "GA",
+     "match": "^US House of Representatives - District 2$",
+     "district": "2"
+    }
+   ]
+  },
+  {
+   "id": "fl_feed",
+   "name": "FL DOS extract (2024 archive, format test)",
+   "adapter": "fl_dos",
+   "enabled": true,
+   "url": "https://results.elections.myflorida.com/ResultsExtract.Asp?ElectionDate=11/5/2024&OfficialResults=N&PartyRaces=N&DataMode=&FormsButton2=Download",
+   "contests": [
+    {
+     "race_id": "TEST-FL-SEN",
+     "category": "senate",
+     "state": "FL",
+     "match": "^United States Senator$"
+    }
+   ]
+  },
+  {
+   "id": "wa_feed",
+   "name": "WA SOS CSV (2024 archive, format test)",
+   "adapter": "wa_sos",
+   "enabled": true,
+   "url": "https://results.vote.wa.gov/results/20241105/export/20241105_AllState.csv",
+   "contests": [
+    {
+     "race_id": "TEST-WA-SEN",
+     "category": "senate",
+     "state": "WA",
+     "match": "^U.S. Senator$"
+    }
+   ]
+  },
+  {
    "id": "broken",
    "name": "Deliberately broken source (failure test)",
    "adapter": "stlco_csv",
@@ -67,5 +156,11 @@
    "url": "https://extcontent.stlouisco.com/BOE/eResults/doesnotexist/CSV.csv"
   }
  ],
- "preview_banner": "PREVIEW / SAMPLE DATA - these are NOT 2026 results. Missouri figures are certified 2024 results; any national race labelled SAMPLE is fake demo data. Live results start election night, Nov 3, 2026."
+ "preview_banner": "PREVIEW / SAMPLE DATA - these are NOT 2026 results. Missouri figures are certified 2024 results; any national race labelled SAMPLE is fake demo data. Live results start election night, Nov 3, 2026.",
+ "key_races": [
+  "MO House 96",
+  "MO House 105",
+  "Amendment 3",
+  "TEST-PA-SEN"
+ ]
 }
