@@ -39,6 +39,7 @@ def parse_pdf(src):
     if not path or not os.path.exists(path):
         data = fetch(src["url"], binary=True, timeout=60)
         path = path or tempfile.mktemp(suffix=".pdf")
+        os.makedirs(os.path.dirname(path), exist_ok=True)
         open(path, "wb").write(data)
     txt = subprocess.run(["pdftotext", "-layout", path, "-"], capture_output=True, text=True, check=True).stdout
     return parse_text(txt, official="Official" in txt[:500])

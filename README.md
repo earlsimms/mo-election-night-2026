@@ -37,3 +37,14 @@ Everything election-specific lives in `elections/<YYYY-MM-DD>/`; code in `fetche
 4. Regenerate the national race list CSV (one row per race; format in the template header) and load it into a new Google Sheet.
 5. Write the config path into `elections/ACTIVE`, and update the date in the election-window `cron` line of the workflow.
 6. Optional: add a preview config (see `elections/preview-2024/`) with `preview_banner` and commit its output as `site/data/results.json`.
+
+## Key races
+Mark races as "key" (gold badge, sorted first, "Key races only" filter, "★ Key races" tab):
+- Missouri/any race: add its title (e.g. `MO House 96`, `Amendment 6`, `MO US House 2`) or a national race_id to `key_races` in the election config.
+- National races: set `key_race` = `TRUE` (or FALSE) in the calls sheet.
+
+## State results feeds (vote counts only)
+Adapters in `fetcher/adapters/state_feeds.py`: `nc_enr`, `ga_ev`, `mn_txt`, `pa_api`, `fl_dos`, `wa_sos` (formats checked against 2024 archives)
+and `clarity` (best effort, untested). Each source lists `contests` with `race_id`, `category`, `state`, optional `district`, and a `match`
+regex for the feed's contest name. Feed votes replace sheet votes for the same race_id; calls ALWAYS come from the sheet
+(`winner=1` + `called_by`). `registry/state_feeds_all50.json` lists the known feed for every state, so use it to add states in future elections.

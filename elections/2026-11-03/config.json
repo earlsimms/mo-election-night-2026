@@ -4,10 +4,6 @@
  "live_start_utc": "2026-11-04T00:00:00Z",
  "live_end_utc": "2026-11-07T00:00:00Z",
  "measures_file": "elections/2026-11-03/measures.json",
- "highlight": [
-  "MO House 96",
-  "MO House 105"
- ],
  "baselines": {
   "senate": {
    "R": 31,
@@ -63,6 +59,214 @@
    "enabled": true,
    "url": "PASTE_PUBLISHED_CSV_URL_HERE",
    "note": "Sheet is PRIVATE. To activate: in the sheet, File > Share > Publish to web > Sheet1 > CSV, paste the pub?output=csv URL here. (Or set link-sharing 'Anyone with link: Viewer' and paste the /edit URL - auto-converted to export?format=csv.) Until then this source shows as DOWN and national races are empty."
+  },
+  {
+   "id": "nc_feed",
+   "name": "NC State Board of Elections (live JSON)",
+   "adapter": "nc_enr",
+   "enabled": true,
+   "url": "https://er.ncsbe.gov/enr/20261103/data/results_0.txt",
+   "contests": [
+    {
+     "race_id": "2026-SEN-NC",
+     "category": "senate",
+     "state": "NC",
+     "match": "^US SENATE"
+    }
+   ],
+   "note": "Format verified on 2024 archive; 2026 URL follows the same date pattern (assumed)."
+  },
+  {
+   "id": "ga_feed",
+   "name": "Georgia SOS (Enhanced Voting export JSON)",
+   "adapter": "ga_ev",
+   "enabled": true,
+   "url": "https://results.sos.ga.gov/cdn/results/Georgia/export-2026NovGen.json",
+   "contests": [
+    {
+     "race_id": "2026-SEN-GA",
+     "category": "senate",
+     "state": "GA",
+     "match": "^US Senate"
+    },
+    {
+     "race_id": "2026-GOV-GA",
+     "category": "governor",
+     "state": "GA",
+     "match": "^Governor$"
+    }
+   ],
+   "note": "Format verified (2024NovGen). 2026 slug '2026NovGen' is a GUESS - confirm on results.sos.ga.gov on Nov 3. File ~30 MB."
+  },
+  {
+   "id": "mn_feed",
+   "name": "Minnesota SOS media results files",
+   "adapter": "mn_txt",
+   "enabled": true,
+   "urls": [
+    "https://electionresultsfiles.sos.mn.gov/20261103/ussenate.txt",
+    "https://electionresultsfiles.sos.mn.gov/20261103/stateoffice.txt"
+   ],
+   "contests": [
+    {
+     "race_id": "2026-SEN-MN",
+     "category": "senate",
+     "state": "MN",
+     "match": "^U\\.S\\. Senator"
+    },
+    {
+     "race_id": "2026-GOV-MN",
+     "category": "governor",
+     "state": "MN",
+     "match": "^Governor"
+    }
+   ],
+   "note": "ussenate.txt format verified (2024). Governor file name 'stateoffice.txt' is ASSUMED - check the MediaResult index on Nov 3."
+  },
+  {
+   "id": "pa_feed",
+   "name": "Pennsylvania DOS election returns API",
+   "adapter": "pa_api",
+   "enabled": true,
+   "url": "https://www.electionreturns.pa.gov/api/ElectionReturn/GET?methodName=GetElectionResults&ElectionID=117&ElectionType=G&IsActive=1",
+   "contests": [
+    {
+     "race_id": "2026-GOV-PA",
+     "category": "governor",
+     "state": "PA",
+     "match": "^Governor"
+    }
+   ],
+   "note": "Verified on 2024 (ElectionID=105). ElectionID 117/G active for 2026 per GetAllElections. Undocumented API; publishes no % reporting."
+  },
+  {
+   "id": "fl_feed",
+   "name": "Florida Division of Elections extract (TSV)",
+   "adapter": "fl_dos",
+   "enabled": true,
+   "url": "https://results.elections.myflorida.com/ResultsExtract.Asp?ElectionDate=11/3/2026&OfficialResults=N&PartyRaces=N&DataMode=&FormsButton2=Download",
+   "contests": [
+    {
+     "race_id": "2026-SEN-FL",
+     "category": "senate",
+     "state": "FL",
+     "match": "^United States Senator$"
+    },
+    {
+     "race_id": "2026-GOV-FL",
+     "category": "governor",
+     "state": "FL",
+     "match": "^Governor"
+    }
+   ],
+   "note": "Format verified on 11/5/2024. County rows are summed."
+  },
+  {
+   "id": "wa_feed",
+   "name": "Washington SOS statewide CSV",
+   "adapter": "wa_sos",
+   "enabled": true,
+   "url": "https://results.vote.wa.gov/results/20261103/export/20261103_AllState.csv",
+   "contests": [
+    {
+     "race_id": "2026-HOU-WA-03",
+     "category": "house",
+     "state": "WA",
+     "match": "^Congressional District 3\\b",
+     "district": "03"
+    },
+    {
+     "race_id": "2026-HOU-WA-08",
+     "category": "house",
+     "state": "WA",
+     "match": "^Congressional District 8\\b",
+     "district": "08"
+    }
+   ],
+   "note": "Format verified on 2024 (statewide races). WA has no Senate/Gov race in 2026; US House contest names are ASSUMED ('Congressional District N - U.S. Representative'), confirm on Nov 3."
+  },
+  {
+   "id": "oh_feed",
+   "name": "Ohio SOS - best effort",
+   "adapter": "clarity",
+   "enabled": false,
+   "url": "https://liveresults.ohiosos.gov/",
+   "contests": [
+    {
+     "race_id": "2026-GOV-OH",
+     "category": "governor",
+     "state": "OH",
+     "match": "^Governor"
+    },
+    {
+     "race_id": "2026-SEN-OH",
+     "category": "senate",
+     "state": "OH",
+     "match": "(US|U\\.S\\.|United States) Senat"
+    }
+   ],
+   "note": "UNTESTED. Research suggests this site is NOT Clarity; only enable if it exposes a Clarity-style /current_ver.txt + summary.json, else needs a new adapter."
+  },
+  {
+   "id": "nv_feed",
+   "name": "Nevada SOS - best effort",
+   "adapter": "clarity",
+   "enabled": false,
+   "url": "https://silverstateelection.nv.gov/",
+   "contests": [
+    {
+     "race_id": "2026-GOV-NV",
+     "category": "governor",
+     "state": "NV",
+     "match": "^Governor"
+    }
+   ],
+   "note": "UNTESTED. Research suggests this site is NOT Clarity; only enable if it exposes a Clarity-style /current_ver.txt + summary.json, else needs a new adapter."
+  },
+  {
+   "id": "ia_feed",
+   "name": "Iowa SOS (Clarity) - best effort",
+   "adapter": "clarity",
+   "enabled": false,
+   "url": "https://electionresults.iowa.gov/IA/ELECTION_ID/",
+   "contests": [
+    {
+     "race_id": "2026-GOV-IA",
+     "category": "governor",
+     "state": "IA",
+     "match": "^Governor"
+    },
+    {
+     "race_id": "2026-SEN-IA",
+     "category": "senate",
+     "state": "IA",
+     "match": "(US|U\\.S\\.|United States) Senat"
+    }
+   ],
+   "note": "UNTESTED. Replace ELECTION_ID with the Clarity election id on Nov 3, then set enabled=true."
+  },
+  {
+   "id": "ks_feed",
+   "name": "Kansas SOS (Clarity) - best effort",
+   "adapter": "clarity",
+   "enabled": false,
+   "url": "https://results.enr.clarityelections.com/KS/ELECTION_ID/",
+   "contests": [
+    {
+     "race_id": "2026-GOV-KS",
+     "category": "governor",
+     "state": "KS",
+     "match": "^Governor"
+    }
+   ],
+   "note": "UNTESTED. Replace ELECTION_ID with the Clarity election id on Nov 3, then set enabled=true."
   }
- ]
+ ],
+ "key_races": [
+  "MO House 96",
+  "MO House 105",
+  "Amendment 6",
+  "State Auditor"
+ ],
+ "_key_races_help": "Race titles (e.g. 'MO House 96', 'Amendment 6', 'MO US House 2') or national race_ids (e.g. '2026-SEN-NC'). National races can also be flagged with key_race=TRUE in the calls sheet."
 }
