@@ -97,7 +97,8 @@ def run(cfg_path, out_path):
     for r in races:
         p = polls.get("races", {}).get(r.get("race_id"))
         if p: r["poll"] = p
-    doc = {"polls_meta": {k: v for k, v in polls.items() if k != "races"},
+    doc = {"social": cfg.get("social", {}),
+           "polls_meta": {k: v for k, v in polls.items() if k != "races"},
            "election": cfg["election"], "election_date": cfg.get("election_date"), "preview_banner": cfg.get("preview_banner", ""), "generated_at": now(), "sources": sources, "tallies": tally(races, cfg.get("baselines", {})), "races": races,
            "measures": json.load(open(os.path.join(ROOT, cfg["measures_file"]))).get("measures", []) if cfg.get("measures_file") else []}
     os.makedirs(os.path.dirname(out_path), exist_ok=True)

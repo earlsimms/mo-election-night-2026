@@ -288,5 +288,18 @@
   "ttl_hours": 6,
   "delay_s": 2,
   "_help": "Pre-election polls for national Senate/Governor races. Chain: RCP -> Silver Bulletin -> Politico -> 270toWin (first that is reachable and has a parser)."
+ },
+ "social": {
+  "x_lists": [
+   {
+    "name": "MO Politics",
+    "id": "1034110069762342914"
+   },
+   {
+    "name": "Campaigns & Elections",
+    "id": "1058572960607490053"
+   }
+  ],
+  "_help": "Public X lists shown in the 'Live chatter' panel via X's official embed (widgets.js). No API tokens."
  }
 }
