@@ -1,0 +1,87 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Election Night Live Results</title>
+<style>
+:root{--r:#c8102e;--d:#0b5ed7;--o:#777;--bg:#f5f6f8;--card:#fff}
+*{box-sizing:border-box}body{margin:0;font:14px/1.4 system-ui,Segoe UI,Arial;background:var(--bg);color:#111}
+header{background:#111827;color:#fff;padding:10px 16px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+header h1{font-size:18px;margin:0}#gen{font-size:12px;opacity:.85}
+.tallies{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px;padding:10px 16px}
+.tally{background:var(--card);border-radius:8px;padding:10px;box-shadow:0 1px 2px #0002}
+.tally h3{margin:0 0 6px;font-size:14px}.bar{display:flex;height:22px;border-radius:4px;overflow:hidden;background:#e5e7eb;position:relative}
+.bar div{height:100%}.bar .mid{position:absolute;left:50%;top:-3px;bottom:-3px;border-left:2px dashed #111}
+.R{background:var(--r)}.D{background:var(--d)}.Rl{background:#f2a7b3}.Dl{background:#9ec5fe}
+.nums{display:flex;justify-content:space-between;font-size:12px;margin-top:4px}
+nav{display:flex;flex-wrap:wrap;gap:6px;padding:0 16px}nav button{border:1px solid #ccc;background:#fff;border-radius:16px;padding:5px 12px;cursor:pointer}
+nav button.on{background:#111827;color:#fff}
+.controls{display:flex;flex-wrap:wrap;gap:8px;padding:8px 16px}.controls input,.controls select{padding:6px;border:1px solid #bbb;border-radius:6px}
+.controls input{flex:1;min-width:200px}
+#grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:10px;padding:6px 16px 16px}
+.race{background:var(--card);border-radius:8px;padding:10px;box-shadow:0 1px 2px #0002;border-left:5px solid #ccc}
+.race.hl{outline:3px solid #f59e0b}.race.stale{opacity:.7}
+.race h4{margin:0;font-size:15px;display:flex;justify-content:space-between;gap:6px}
+.badge{font-size:11px;padding:2px 7px;border-radius:10px;white-space:nowrap;font-weight:600}
+.called{background:#065f46;color:#fff}.certified{background:#1f2937;color:#fff}.leading{background:#fde68a}.too_early{background:#e5e7eb}
+.meta{font-size:12px;color:#555;margin:2px 0 6px}
+.c{display:grid;grid-template-columns:1fr auto auto;gap:6px;align-items:center;font-size:13px;padding:2px 0}
+.c .w{font-weight:700}.pb{grid-column:1/-1;height:5px;background:#eee;border-radius:3px}.pb div{height:100%;border-radius:3px}
+.ptag{display:inline-block;width:18px;text-align:center;color:#fff;border-radius:3px;font-size:11px;margin-right:4px}
+.otitle{font-size:12px;color:#333;background:#f9fafb;padding:6px;border-radius:4px;margin-bottom:6px}
+#sources{padding:8px 16px 30px;font-size:12px}#sources table{border-collapse:collapse;width:100%;background:#fff}
+#sources td,#sources th{border:1px solid #ddd;padding:4px 6px;text-align:left}.ok{color:#065f46;font-weight:700}.fail{color:#b91c1c;font-weight:700}
+#banner{display:none;background:#b91c1c;color:#fff;padding:6px 16px}
+.legend{font-size:12px;padding:0 16px;color:#444}
+</style></head><body>
+<header><h1 id="title">Election Night Live Results</h1><div id="gen">Loading…</div></header>
+<div id="preview" style="display:none;background:#7c2d12;color:#fff;padding:8px 16px;font-weight:600"></div><div id="banner"></div>
+<section class="tallies" id="tallies"></section>
+<div class="legend"><span class="badge called">CALLED</span> source declared a winner &nbsp; <span class="badge certified">CERTIFIED</span> official final &nbsp; <span class="badge leading">LEADING</span> unofficial, partial count (not a projection) &nbsp; <span class="badge too_early">TOO EARLY</span> no votes yet</div>
+<nav id="tabs"></nav>
+<div class="controls"><input id="q" placeholder="Search race, candidate, district, county… (e.g. House 96, Amendment 6, Wagner)">
+<select id="st"><option value="">All statuses</option><option value="called">Called</option><option value="certified">Certified</option><option value="leading">Leading</option><option value="too_early">Too early</option></select>
+<label><input type="checkbox" id="hlonly"> Highlighted only</label></div>
+<main id="grid"></main>
+<section id="sources"></section>
+<script>
+const TABS=[["key","★ Key races"],["national","National"],["mo_statewide","MO Statewide"],["mo_measure","MO Ballot Measures"],["mo_ushouse","MO US House"],["mo_senate","MO Senate"],["mo_house","MO House"],["county","St. Charles / St. Louis Co."],["mo_judicial","Judicial"],["all","All"]];
+let D=null,M={},tab="key";const $=s=>document.querySelector(s);
+const tz={timeZone:"America/Chicago",hour:"numeric",minute:"2-digit",second:"2-digit",month:"short",day:"numeric",timeZoneName:"short"};
+const fmt=t=>t?new Date(t).toLocaleString("en-US",tz):"never";
+const ago=t=>{if(!t)return"";const s=(Date.now()-new Date(t))/1000;return s<90?`${s|0}s ago`:`${(s/60)|0} min ago`};
+const pc=p=>p==="R"?"var(--r)":p==="D"?"var(--d)":"var(--o)";
+function tabsHTML(){$("#tabs").innerHTML=TABS.map(([k,l])=>`<button class="${k==tab?"on":""}" data-k="${k}">${l}</button>`).join("");
+ document.querySelectorAll("#tabs button").forEach(b=>b.onclick=()=>{tab=b.dataset.k;tabsHTML();render()});}
+function tallyCard(name,t){if(!t)return"";const T=t.total,w=x=>100*x/T+"%";
+ return `<div class="tally"><h3>${name} — ${t.control} for control</h3><div class="bar"><div class="D" style="width:${w(t.called.D)}"></div><div class="Dl" style="width:${w(t.leading.D)}"></div>
+ <div style="flex:1"></div><div class="Rl" style="width:${w(t.leading.R)}"></div><div class="R" style="width:${w(t.called.R)}"></div><div class="mid"></div></div>
+ <div class="nums"><span><b style="color:var(--d)">D ${t.called.D}</b> won/not up${t.leading.D?` · +${t.leading.D} leading`:""}</span><span>${T-t.called.D-t.called.R-t.called.O} undecided</span><span>${t.leading.R?`+${t.leading.R} leading · `:""}<b style="color:var(--r)">R ${t.called.R}</b></span></div>
+ <div class="nums"><span>Not on ballot: D ${t.holdover.D} / R ${t.holdover.R}</span>${t.note?`<span title="${t.note}">ⓘ</span>`:""}</div></div>`}
+function raceHTML(r){const src=D.sources.find(s=>s.id===r.source_id)||{};const ot=/2026/.test(D.election)&&!/TEST/.test(D.election)?M[r.title]:null;
+ const lab={called:`CALLED${r.called_by?" ("+r.called_by+")":""}`,certified:"CERTIFIED",leading:"LEADING",too_early:"TOO EARLY"}[r.status];
+ const lead=r.candidates[0];const col=r.is_measure?(lead&&lead.name==="Yes"?"#16a34a":"#dc2626"):pc(lead&&lead.party);
+ return `<div class="race ${r.highlight?"hl":""} ${r.stale?"stale":""}" style="border-left-color:${r.status==="too_early"?"#ccc":col}">
+ <h4><span>${r.highlight?"★ ":""}${r.sample?"<b style='color:#7c2d12'>[SAMPLE]</b> ":""}${r.title}</span><span class="badge ${r.status}">${lab}</span></h4>
+ <div class="meta">${r.reporting_text||""}${r.reporting_pct!=null?` (${r.reporting_pct}%)`:""}${r.margin_pct!=null&&r.total_votes?` · margin ${r.margin_pct} pts`:""} · ${src.name||r.source_id}${r.stale?" · <b style='color:#b91c1c'>STALE (source down)</b>":""}</div>
+ ${ot?`<div class="otitle">${ot.official_ballot_title}</div>`:""}
+ ${r.candidates.slice(0,6).map(c=>`<div class="c"><span class="${c.winner?"w":""}">${c.party?`<span class="ptag" style="background:${pc(c.party)}">${c.party}</span>`:""}${c.name}${c.winner?" ✔":""}</span><span>${c.votes.toLocaleString()}</span><span><b>${c.pct}%</b></span>
+ <div class="pb"><div style="width:${c.pct}%;background:${r.is_measure?(c.name==="Yes"?"#16a34a":"#dc2626"):pc(c.party)}"></div></div></div>`).join("")}</div>`}
+function render(){if(!D)return;const q=$("#q").value.toLowerCase().trim(),st=$("#st").value,hl=$("#hlonly").checked;
+ let rs=D.races.filter(r=>tab==="all"||(tab==="key"?(r.highlight||["mo_measure","mo_statewide","mo_ushouse"].includes(r.category)||(r.level==="national"&&r.status!=="too_early")):tab==="national"?r.level==="national":r.category===tab&&r.level!=="national"));
+ if(q)rs=rs.filter(r=>(r.title+" "+r.raw_title+" "+(r.county||"")+" "+r.candidates.map(c=>c.name).join(" ")).toLowerCase().includes(q));
+ if(st)rs=rs.filter(r=>r.status===st);if(hl)rs=rs.filter(r=>r.highlight);
+ const ord={mo_statewide:0,mo_measure:1,mo_ushouse:2};
+ rs.sort((a,b)=>(b.highlight-a.highlight)||((ord[a.category]??9)-(ord[b.category]??9))||a.title.localeCompare(b.title,undefined,{numeric:true}));
+ $("#grid").innerHTML=rs.length?rs.slice(0,600).map(raceHTML).join(""):"<p>No races match.</p>";}
+async function load(){try{const r=await fetch("data/results.json?t="+Date.now(),{cache:"no-store"});D=await r.json();
+ try{const m=await (await fetch("data/mo_2026_measures.json",{cache:"no-store"})).json();M={};m.measures.forEach(x=>M[x.title]=x)}catch(e){}
+ $("#title").textContent="Election Night Live Results — "+D.election;
+ $("#gen").textContent=`Data built ${fmt(D.generated_at)} (${ago(D.generated_at)}) · page refreshes every 60s`;
+ const pv=/PREVIEW|TEST|SAMPLE/i.test(D.election)||D.races.some(r=>r.sample);$("#preview").style.display=pv?"block":"none";
+ $("#preview").textContent=pv?"PREVIEW / SAMPLE DATA - these are NOT 2026 results. Missouri figures are certified 2024 results; any national race labelled SAMPLE is fake demo data. Live results start election night, Nov 3, 2026.":"";
+ const t=D.tallies;$("#tallies").innerHTML=tallyCard("U.S. Senate",t.senate)+tallyCard("U.S. House",t.house)+tallyCard("Governors",t.governor);
+ const bad=D.sources.filter(s=>!s.ok);$("#banner").style.display=bad.length?"block":"none";
+ $("#banner").textContent=bad.length?"⚠ Source problem: "+bad.map(s=>s.name).join(", ")+" — showing last good data where available.":"";
+ $("#sources").innerHTML=`<h3>Sources</h3><table><tr><th>Source</th><th>Status</th><th>Last good update</th><th>Last checked</th><th>Races</th><th>Notes / error</th></tr>${D.sources.map(s=>`<tr><td><a href="${s.url}" target="_blank" rel="noopener">${s.name}</a></td><td class="${s.ok?"ok":"fail"}">${s.ok?"OK":"DOWN"}</td><td>${fmt(s.updated_at)}</td><td>${fmt(s.checked_at)}</td><td>${s.race_count}</td><td>${s.error||s.note||""}</td></tr>`).join("")}</table>`;
+ if(!pv&&Date.now()-new Date(D.generated_at)>15*60e3){$("#banner").style.display="block";$("#banner").textContent+=" ⚠ Data file is over 15 minutes old — the update job may be stalled.";}
+ render();}catch(e){$("#gen").textContent="Could not load data/results.json ("+e+") — retrying";}}
+tabsHTML();["#q","#st","#hlonly"].forEach(s=>$(s).oninput=render);load();setInterval(load,60000);
+</script></body></html>
