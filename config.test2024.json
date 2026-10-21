@@ -1,0 +1,47 @@
+{
+ "election": "PREVIEW - NOT 2026 RESULTS: real 2024 Missouri results + SAMPLE (fake) national data",
+ "highlight": [
+  "MO House 96",
+  "MO House 105"
+ ],
+ "sources": [
+  {
+   "id": "mo_sos",
+   "name": "Missouri SOS official returns 2024 (archived PDF)",
+   "adapter": "mo_sos_pdf",
+   "enabled": true,
+   "url": "https://www.sos.mo.gov/CMSImages/ElectionResultsStatistics/2024GeneralElection.pdf",
+   "cache_file": "data/archive/mo2024.pdf"
+  },
+  {
+   "id": "stlco",
+   "name": "St. Louis County BOE CSV (Aug 2026 primary, format test)",
+   "adapter": "stlco_csv",
+   "enabled": true,
+   "url": "https://extcontent.stlouisco.com/BOE/eResults/el260804/CSV.csv",
+   "county": "St. Louis County"
+  },
+  {
+   "id": "stcharles",
+   "name": "St. Charles County LVT (Aug 2026 primary, format test)",
+   "adapter": "lvt_html",
+   "enabled": true,
+   "url": "https://www.livevoterturnout.com/ENR/stcharlesmoenr/32/en/Index_32.html",
+   "county": "St. Charles County"
+  },
+  {
+   "id": "national",
+   "name": "National SAMPLE data (fake, labeled)",
+   "adapter": "national_csv",
+   "enabled": true,
+   "url": "file:sample/national_sample.csv"
+  },
+  {
+   "id": "broken",
+   "name": "Deliberately broken source (failure test)",
+   "adapter": "stlco_csv",
+   "enabled": true,
+   "url": "https://extcontent.stlouisco.com/BOE/eResults/doesnotexist/CSV.csv"
+  }
+ ]
+}
