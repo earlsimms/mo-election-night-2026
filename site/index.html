@@ -55,7 +55,7 @@ function tallyCard(name,t){if(!t)return"";const T=t.total,w=x=>100*x/T+"%";
  <div style="flex:1"></div><div class="Rl" style="width:${w(t.leading.R)}"></div><div class="R" style="width:${w(t.called.R)}"></div><div class="mid"></div></div>
  <div class="nums"><span><b style="color:var(--d)">D ${t.called.D}</b> won/not up${t.leading.D?` · +${t.leading.D} leading`:""}</span><span>${T-t.called.D-t.called.R-t.called.O} undecided</span><span>${t.leading.R?`+${t.leading.R} leading · `:""}<b style="color:var(--r)">R ${t.called.R}</b></span></div>
  <div class="nums"><span>Not on ballot: D ${t.holdover.D} / R ${t.holdover.R}</span>${t.note?`<span title="${t.note}">ⓘ</span>`:""}</div></div>`}
-function raceHTML(r){const src=D.sources.find(s=>s.id===r.source_id)||{};const ot=/2026/.test(D.election)&&!/TEST/.test(D.election)?M[r.title]:null;
+function raceHTML(r){const src=D.sources.find(s=>s.id===r.source_id)||{};const ot=M[r.title];
  const lab={called:`CALLED${r.called_by?" ("+r.called_by+")":""}`,certified:"CERTIFIED",leading:"LEADING",too_early:"TOO EARLY"}[r.status];
  const lead=r.candidates[0];const col=r.is_measure?(lead&&lead.name==="Yes"?"#16a34a":"#dc2626"):pc(lead&&lead.party);
  return `<div class="race ${r.highlight?"hl":""} ${r.stale?"stale":""}" style="border-left-color:${r.status==="too_early"?"#ccc":col}">
@@ -72,11 +72,11 @@ function render(){if(!D)return;const q=$("#q").value.toLowerCase().trim(),st=$("
  rs.sort((a,b)=>(b.highlight-a.highlight)||((ord[a.category]??9)-(ord[b.category]??9))||a.title.localeCompare(b.title,undefined,{numeric:true}));
  $("#grid").innerHTML=rs.length?rs.slice(0,600).map(raceHTML).join(""):"<p>No races match.</p>";}
 async function load(){try{const r=await fetch("data/results.json?t="+Date.now(),{cache:"no-store"});D=await r.json();
- try{const m=await (await fetch("data/mo_2026_measures.json",{cache:"no-store"})).json();M={};m.measures.forEach(x=>M[x.title]=x)}catch(e){}
+ M={};(D.measures||[]).forEach(x=>M[x.title]=x);
  $("#title").textContent="Election Night Live Results — "+D.election;
  $("#gen").textContent=`Data built ${fmt(D.generated_at)} (${ago(D.generated_at)}) · page refreshes every 60s`;
- const pv=/PREVIEW|TEST|SAMPLE/i.test(D.election)||D.races.some(r=>r.sample);$("#preview").style.display=pv?"block":"none";
- $("#preview").textContent=pv?"PREVIEW / SAMPLE DATA - these are NOT 2026 results. Missouri figures are certified 2024 results; any national race labelled SAMPLE is fake demo data. Live results start election night, Nov 3, 2026.":"";
+ const pv=!!D.preview_banner||/PREVIEW|TEST|SAMPLE/i.test(D.election)||D.races.some(r=>r.sample);$("#preview").style.display=pv?"block":"none";
+ $("#preview").textContent=pv?(D.preview_banner||"PREVIEW / SAMPLE DATA - not official live results. Races labelled SAMPLE are fake demo data."):"";
  const t=D.tallies;$("#tallies").innerHTML=tallyCard("U.S. Senate",t.senate)+tallyCard("U.S. House",t.house)+tallyCard("Governors",t.governor);
  const bad=D.sources.filter(s=>!s.ok);$("#banner").style.display=bad.length?"block":"none";
  $("#banner").textContent=bad.length?"⚠ Source problem: "+bad.map(s=>s.name).join(", ")+" — showing last good data where available.":"";

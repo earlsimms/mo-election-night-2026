@@ -5,16 +5,11 @@ import json, os, sys, time, argparse, traceback, datetime
 from .adapters import ADAPTERS
 from .common import ROOT
 
-# Seats NOT on the 2026 ballot (edit if wrong). Senate: 65 holdovers; Governors: 14 holdovers.
-BASELINE = {"senate": {"R": 31, "D": 34, "total": 100, "control": 51, "note": "D includes 2 independents caucusing with D. VP (R) breaks 50-50 ties."},
-            "governor": {"R": 8, "D": 6, "total": 50, "control": 26},
-            "house": {"R": 0, "D": 0, "total": 435, "control": 218}}
-
 def now(): return datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds")
 
-def tally(races):
+def tally(races, baselines):
     out = {}
-    for ch, b in BASELINE.items():
+    for ch, b in baselines.items():
         t = {"called": {"R": b["R"], "D": b["D"], "O": 0}, "leading": {"R": 0, "D": 0, "O": 0}, "too_early": 0,
              "holdover": {"R": b["R"], "D": b["D"]}, **{k: v for k, v in b.items() if k not in ("R", "D")}}
         for r in races:
@@ -53,14 +48,15 @@ def run(cfg_path, out_path):
             meta.update(ok=False, updated_at=p.get("updated_at"), race_count=len(rs), error=f"{type(e).__name__}: {e}"[:300])
             print("SOURCE FAILED", s["id"], meta["error"], file=sys.stderr)
         sources.append(meta); races.extend(rs)
-    doc = {"election": cfg["election"], "generated_at": now(), "sources": sources, "tallies": tally(races), "races": races}
+    doc = {"election": cfg["election"], "election_date": cfg.get("election_date"), "preview_banner": cfg.get("preview_banner", ""), "generated_at": now(), "sources": sources, "tallies": tally(races, cfg.get("baselines", {})), "races": races,
+           "measures": json.load(open(os.path.join(ROOT, cfg["measures_file"]))).get("measures", []) if cfg.get("measures_file") else []}
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     tmp = out_path + ".tmp"; json.dump(doc, open(tmp, "w"), separators=(",", ":")); os.replace(tmp, out_path)
     print(f"wrote {out_path}: {len(races)} races; " + ", ".join(f'{s["id"]}={"ok" if s["ok"] else "FAIL"}' for s in sources))
     return doc
 
 if __name__ == "__main__":
-    a = argparse.ArgumentParser(); a.add_argument("--config", default="config.json")
+    a = argparse.ArgumentParser(); a.add_argument("--config", default=open(os.path.join(ROOT, "elections/ACTIVE")).read().strip())
     a.add_argument("--out", default=os.path.join(ROOT, "site/data/results.json")); a.add_argument("--loop", type=int, default=0)
     o = a.parse_args()
     while True:
