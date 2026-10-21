@@ -29,6 +29,7 @@ nav button.on{background:#111827;color:#fff}
 #sources{padding:8px 16px 30px;font-size:12px}#sources table{border-collapse:collapse;width:100%;background:#fff}
 #sources td,#sources th{border:1px solid #ddd;padding:4px 6px;text-align:left}.ok{color:#065f46;font-weight:700}.fail{color:#b91c1c;font-weight:700}
 #banner{display:none;background:#b91c1c;color:#fff;padding:6px 16px}
+.poll{font-size:12px;background:#eef2ff;border:1px dashed #6366f1;border-radius:4px;padding:5px;margin-top:6px}.poll b{color:#3730a3}.cmp{font-size:12px;background:#f0fdf4;border:1px solid #86efac;border-radius:4px;padding:5px;margin-top:4px}
 .legend{font-size:12px;padding:0 16px;color:#444}
 </style></head><body>
 <header><h1 id="title">Election Night Live Results</h1><div id="gen">Loading…</div></header>
@@ -38,6 +39,8 @@ nav button.on{background:#111827;color:#fff}
 <nav id="tabs"></nav>
 <div class="controls"><input id="q" placeholder="Search race, candidate, district, county… (e.g. House 96, Amendment 6, Wagner)">
 <select id="st"><option value="">All statuses</option><option value="called">Called</option><option value="certified">Certified</option><option value="leading">Leading</option><option value="too_early">Too early</option></select>
+<select id="sort"><option value="">Sort: default</option><option value="gap">Sort: biggest gap vs polls</option></select>
+<label><input type="checkbox" id="pollonly"> Has polling</label>
 <label><input type="checkbox" id="hlonly"> Key races only</label></div>
 <main id="grid"></main>
 <section id="sources"></section>
@@ -55,6 +58,19 @@ function tallyCard(name,t){if(!t)return"";const T=t.total,w=x=>100*x/T+"%";
  <div style="flex:1"></div><div class="Rl" style="width:${w(t.leading.R)}"></div><div class="R" style="width:${w(t.called.R)}"></div><div class="mid"></div></div>
  <div class="nums"><span><b style="color:var(--d)">D ${t.called.D}</b> won/not up${t.leading.D?` · +${t.leading.D} leading`:""}</span><span>${T-t.called.D-t.called.R-t.called.O} undecided</span><span>${t.leading.R?`+${t.leading.R} leading · `:""}<b style="color:var(--r)">R ${t.called.R}</b></span></div>
  <div class="nums"><span>Not on ballot: D ${t.holdover.D} / R ${t.holdover.R}</span>${t.note?`<span title="${t.note}">ⓘ</span>`:""}</div></div>`}
+
+const fm=m=>m==null?"n/a":Math.abs(m)<0.05?"EVEN":(m>0?"R+":"D+")+Math.abs(m).toFixed(1);
+function resMargin(r){const c=r.candidates;if(!r.total_votes)return null;const R=c.find(x=>x.party==="R"),D=c.find(x=>x.party==="D")||c.find(x=>x.party!=="R");return R&&D?+(R.pct-D.pct).toFixed(1):null}
+function pollRef(p){return p&&(p.avg&&p.avg.margin!=null?{m:p.avg.margin,k:"avg"}:p.latest&&p.latest.margin!=null?{m:p.latest.margin,k:"latest"}:null)}
+function gap(r){const pr=pollRef(r.poll),rm=resMargin(r);return pr&&rm!=null?rm-pr.m:null}
+function pollHTML(r){const p=r.poll;if(!p)return"";const nm=(v)=>p.candidates.map((c,i)=>v[i]!=null?`${c.name} (${c.party}) ${v[i]}%`:"").filter(Boolean).join(" / ");
+ let s=`<div class="poll"><b>PRE-ELECTION POLLING</b> (not results) · source: <a href="${p.source_url}" target="_blank" rel="noopener">${p.source}</a><br>`;
+ if(p.avg)s+=`Average: ${nm(p.avg.values)} → <b>${fm(p.avg.margin)}</b> <span style="color:#666">(${p.avg.label})</span><br>`;
+ if(p.latest)s+=`Latest: ${p.latest.pollster}, ${p.latest.date}, ${p.latest.sample}: ${nm(p.latest.values)} → <b>${fm(p.latest.margin)}</b>`;
+ s+=`</div>`;const pr=pollRef(p),rm=resMargin(r);
+ if(pr&&rm!=null){const g=rm-pr.m,who=Math.abs(g)<0.05?"exactly matching polls":`${g>0?"R":"D"} beating polls by ${Math.abs(g).toFixed(1)}`;
+  s+=`<div class="cmp"><b>${["called","certified"].includes(r.status)?"Final comparison":"Running comparison (partial count, not a call)"}:</b> result ${fm(rm)} vs poll ${pr.k==="avg"?"avg":"latest"} ${fm(pr.m)} → ${who}</div>`}
+ return s}
 function raceHTML(r){const src=D.sources.find(s=>s.id===r.source_id)||{};const ot=M[r.title];
  const lab={called:`CALLED${r.called_by?" ("+r.called_by+")":""}`,certified:"CERTIFIED",leading:"LEADING",too_early:"TOO EARLY"}[r.status];
  const lead=r.candidates[0];const col=r.is_measure?(lead&&lead.name==="Yes"?"#16a34a":"#dc2626"):pc(lead&&lead.party);
@@ -63,13 +79,14 @@ function raceHTML(r){const src=D.sources.find(s=>s.id===r.source_id)||{};const o
  <div class="meta">${r.reporting_text||""}${r.reporting_pct!=null?` (${r.reporting_pct}%)`:""}${r.margin_pct!=null&&r.total_votes?` · margin ${r.margin_pct} pts`:""} · ${src.name||r.source_id}${r.votes_source?` · votes: ${(D.sources.find(s=>s.id===r.votes_source)||{}).name||r.votes_source}`:""}${r.stale?" · <b style='color:#b91c1c'>STALE (source down)</b>":""}</div>
  ${ot?`<div class="otitle">${ot.official_ballot_title}</div>`:""}
  ${r.candidates.slice(0,6).map(c=>`<div class="c"><span class="${c.winner?"w":""}">${c.party?`<span class="ptag" style="background:${pc(c.party)}">${c.party}</span>`:""}${c.name}${c.winner?" ✔":""}</span><span>${c.votes.toLocaleString()}</span><span><b>${c.pct}%</b></span>
- <div class="pb"><div style="width:${c.pct}%;background:${r.is_measure?(c.name==="Yes"?"#16a34a":"#dc2626"):pc(c.party)}"></div></div></div>`).join("")}</div>`}
+ <div class="pb"><div style="width:${c.pct}%;background:${r.is_measure?(c.name==="Yes"?"#16a34a":"#dc2626"):pc(c.party)}"></div></div></div>`).join("")}${pollHTML(r)}</div>`}
 function render(){if(!D)return;const q=$("#q").value.toLowerCase().trim(),st=$("#st").value,hl=$("#hlonly").checked;
  let rs=D.races.filter(r=>tab==="all"||(tab==="key"?r.key:tab==="overview"?(r.key||["mo_measure","mo_statewide","mo_ushouse"].includes(r.category)||(r.level==="national"&&r.status!=="too_early")):tab==="national"?r.level==="national":r.category===tab&&r.level!=="national"));
  if(q)rs=rs.filter(r=>(r.title+" "+r.raw_title+" "+(r.county||"")+" "+r.candidates.map(c=>c.name).join(" ")).toLowerCase().includes(q));
- if(st)rs=rs.filter(r=>r.status===st);if(hl)rs=rs.filter(r=>r.key);
+ if(st)rs=rs.filter(r=>r.status===st);if($("#pollonly").checked)rs=rs.filter(r=>r.poll);if(hl)rs=rs.filter(r=>r.key);
  const ord={mo_statewide:0,mo_measure:1,mo_ushouse:2};
  rs.sort((a,b)=>((b.key?1:0)-(a.key?1:0))||((ord[a.category]??9)-(ord[b.category]??9))||a.title.localeCompare(b.title,undefined,{numeric:true}));
+ if($("#sort").value==="gap")rs.sort((a,b)=>Math.abs(gap(b)??-1)-Math.abs(gap(a)??-1));
  $("#grid").innerHTML=rs.length?rs.slice(0,600).map(raceHTML).join(""):"<p>No races match.</p>";}
 async function load(){try{const r=await fetch("data/results.json?t="+Date.now(),{cache:"no-store"});D=await r.json();
  M={};(D.measures||[]).forEach(x=>M[x.title]=x);
@@ -80,8 +97,8 @@ async function load(){try{const r=await fetch("data/results.json?t="+Date.now(),
  const t=D.tallies;$("#tallies").innerHTML=tallyCard("U.S. Senate",t.senate)+tallyCard("U.S. House",t.house)+tallyCard("Governors",t.governor);
  const bad=D.sources.filter(s=>!s.ok);$("#banner").style.display=bad.length?"block":"none";
  $("#banner").textContent=bad.length?"⚠ Source problem: "+bad.map(s=>s.name).join(", ")+" — showing last good data where available.":"";
- $("#sources").innerHTML=`<h3>Sources</h3><table><tr><th>Source</th><th>Status</th><th>Last good update</th><th>Last checked</th><th>Races</th><th>Notes / error</th></tr>${D.sources.map(s=>`<tr><td><a href="${s.url}" target="_blank" rel="noopener">${s.name}</a></td><td class="${s.ok?"ok":"fail"}">${s.ok?"OK":"DOWN"}</td><td>${fmt(s.updated_at)}</td><td>${fmt(s.checked_at)}</td><td>${s.race_count}</td><td>${s.error||s.note||""}</td></tr>`).join("")}</table>`;
+ $("#sources").innerHTML=`<h3>Sources</h3><table><tr><th>Source</th><th>Status</th><th>Last good update</th><th>Last checked</th><th>Races</th><th>Notes / error</th></tr>${D.sources.map(s=>`<tr><td><a href="${s.url}" target="_blank" rel="noopener">${s.name}</a></td><td class="${s.ok?"ok":"fail"}">${s.waiting?"WAITING":s.ok?"OK":"DOWN"}</td><td>${fmt(s.updated_at)}</td><td>${fmt(s.checked_at)}</td><td>${s.race_count}</td><td>${s.error||s.note||""}</td></tr>`).join("")}</table>`;
  if(!pv&&Date.now()-new Date(D.generated_at)>15*60e3){$("#banner").style.display="block";$("#banner").textContent+=" ⚠ Data file is over 15 minutes old — the update job may be stalled.";}
  render();}catch(e){$("#gen").textContent="Could not load data/results.json ("+e+") — retrying";}}
-tabsHTML();["#q","#st","#hlonly"].forEach(s=>$(s).oninput=render);load();setInterval(load,60000);
+tabsHTML();["#q","#st","#hlonly","#sort","#pollonly"].forEach(s=>$(s).oninput=render);load();setInterval(load,60000);
 </script></body></html>

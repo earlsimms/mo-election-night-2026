@@ -1,5 +1,5 @@
 # Builds site/data/results.json and deploys site/ to the gh-pages branch (GitHub Pages source: gh-pages / root).
-# Outside the active election's live_start_utc..live_end_utc window (elections/ACTIVE -> config) it deploys the committed data unchanged.
+# Outside the active election's live window it refreshes the race list + pre-election polls (results sources wait).
 # Inside the window it polls sources every ~2 min (looping inside the job; GitHub cron floor is 5 min and runs can be late).
 name: update-results
 on:
@@ -29,7 +29,9 @@ jobs:
           CFG=$(cat elections/ACTIVE)
           read START END < <(python3 -c "import json,datetime as d;c=json.load(open('$CFG'));f=lambda k:int(d.datetime.fromisoformat(c.get(k,'1970-01-01T00:00:00Z').replace('Z','+00:00')).timestamp());print(f('live_start_utc'),f('live_end_utc'))")
           NOW=$(date -u +%s)
-          if [ "$NOW" -lt "$START" ] || [ "$NOW" -ge "$END" ]; then deploy; exit 0; fi
+          if [ "$NOW" -lt "$START" ] || [ "$NOW" -ge "$END" ]; then
+            # pre/post-election: refresh race list + polls (polls cached 6h), results sources wait for live_start_utc
+            python3 -m fetcher.fetch --config "$CFG" || true; deploy; exit 0; fi
           for i in $(seq 1 26); do
             python3 -m fetcher.fetch --config "$CFG" || true
             deploy || true
