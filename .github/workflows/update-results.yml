@@ -1,12 +1,12 @@
 # Builds site/data/results.json and deploys site/ to the gh-pages branch (GitHub Pages source: gh-pages / root).
-# Before 2026-11-04 00:00 UTC (6 PM CT Nov 3) it deploys the committed PREVIEW data unchanged.
-# From then until 2026-11-06 it polls sources every ~2 min (looping inside the job; GitHub cron floor is 5 min and runs can be late).
+# Outside the active election's live_start_utc..live_end_utc window (elections/ACTIVE -> config) it deploys the committed data unchanged.
+# Inside the window it polls sources every ~2 min (looping inside the job; GitHub cron floor is 5 min and runs can be late).
 name: update-results
 on:
   push: {branches: [main]}
   workflow_dispatch:
   schedule:
-    - cron: "*/5 * 4-6 11 *"     # election night window (UTC dates Nov 4-6 = Nov 3 6PM CT onward)
+    - cron: "*/5 * 4-6 11 *"     # 2026 window (UTC Nov 4-6). FOR A NEW ELECTION edit these dates too (cron cannot read config)
     - cron: "17 */6 * * *"       # light heartbeat otherwise
 concurrency: {group: results, cancel-in-progress: false}
 permissions: {contents: write}
@@ -26,10 +26,12 @@ jobs:
             git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" gh-pages
             cd "$GITHUB_WORKSPACE"
           }
-          NOW=$(date -u +%s); START=$(date -u -d 2026-11-04T00:00:00Z +%s); END=$(date -u -d 2026-11-07T00:00:00Z +%s)
+          CFG=$(cat elections/ACTIVE)
+          read START END < <(python3 -c "import json,datetime as d;c=json.load(open('$CFG'));f=lambda k:int(d.datetime.fromisoformat(c.get(k,'1970-01-01T00:00:00Z').replace('Z','+00:00')).timestamp());print(f('live_start_utc'),f('live_end_utc'))")
+          NOW=$(date -u +%s)
           if [ "$NOW" -lt "$START" ] || [ "$NOW" -ge "$END" ]; then deploy; exit 0; fi
           for i in $(seq 1 26); do
-            python3 -m fetcher.fetch --config config.json || true
+            python3 -m fetcher.fetch --config "$CFG" || true
             deploy || true
             sleep 110
           done
