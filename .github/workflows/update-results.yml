@@ -1,0 +1,35 @@
+# Builds site/data/results.json and deploys site/ to the gh-pages branch (GitHub Pages source: gh-pages / root).
+# Before 2026-11-04 00:00 UTC (6 PM CT Nov 3) it deploys the committed PREVIEW data unchanged.
+# From then until 2026-11-06 it polls sources every ~2 min (looping inside the job; GitHub cron floor is 5 min and runs can be late).
+name: update-results
+on:
+  push: {branches: [main]}
+  workflow_dispatch:
+  schedule:
+    - cron: "*/5 * 4-6 11 *"     # election night window (UTC dates Nov 4-6 = Nov 3 6PM CT onward)
+    - cron: "17 */6 * * *"       # light heartbeat otherwise
+concurrency: {group: results, cancel-in-progress: false}
+permissions: {contents: write}
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get install -y poppler-utils && pip install beautifulsoup4
+      - name: Build and deploy
+        run: |
+          git config user.name results-bot; git config user.email results-bot@users.noreply.github.com
+          deploy() {
+            rm -rf /tmp/out && cp -r site /tmp/out && touch /tmp/out/.nojekyll
+            cd /tmp/out && git init -q -b gh-pages && git add -A && git -c user.name=results-bot -c user.email=results-bot@users.noreply.github.com commit -qm "deploy $(date -u +%FT%TZ)"
+            git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" gh-pages
+            cd "$GITHUB_WORKSPACE"
+          }
+          NOW=$(date -u +%s); START=$(date -u -d 2026-11-04T00:00:00Z +%s); END=$(date -u -d 2026-11-07T00:00:00Z +%s)
+          if [ "$NOW" -lt "$START" ] || [ "$NOW" -ge "$END" ]; then deploy; exit 0; fi
+          for i in $(seq 1 26); do
+            python3 -m fetcher.fetch --config config.json || true
+            deploy || true
+            sleep 110
+          done
