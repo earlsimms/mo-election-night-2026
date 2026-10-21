@@ -33,7 +33,8 @@
    "adapter": "mo_sos_enr",
    "enabled": true,
    "url": "https://enr.sos.mo.gov/ElectionResults.aspx",
-   "note": "Cloudflare-protected; HTML scrape. Structure unverified from cloud IPs."
+   "note": "Cloudflare-protected; HTML scrape. Structure unverified from cloud IPs.",
+   "live_only": true
   },
   {
    "id": "stlco",
@@ -41,7 +42,8 @@
    "adapter": "stlco_csv",
    "enabled": true,
    "url": "https://extcontent.stlouisco.com/BOE/eResults/el261103/CSV.csv",
-   "county": "St. Louis County"
+   "county": "St. Louis County",
+   "live_only": true
   },
   {
    "id": "stcharles",
@@ -50,7 +52,8 @@
    "enabled": true,
    "url": "https://www.livevoterturnout.com/ENR/stcharlesmoenr/33/en/Index_33.html",
    "county": "St. Charles County",
-   "note": "The /32/ index was the Aug 4 2026 primary; confirm the November number from sccmo.org/437/Election-Results."
+   "note": "The /32/ index was the Aug 4 2026 primary; confirm the November number from sccmo.org/437/Election-Results.",
+   "live_only": true
   },
   {
    "id": "national",
@@ -58,7 +61,8 @@
    "adapter": "national_csv",
    "enabled": true,
    "url": "PASTE_PUBLISHED_CSV_URL_HERE",
-   "note": "Sheet is PRIVATE. To activate: in the sheet, File > Share > Publish to web > Sheet1 > CSV, paste the pub?output=csv URL here. (Or set link-sharing 'Anyone with link: Viewer' and paste the /edit URL - auto-converted to export?format=csv.) Until then this source shows as DOWN and national races are empty."
+   "note": "Sheet is PRIVATE. To activate: in the sheet, File > Share > Publish to web > Sheet1 > CSV, paste the pub?output=csv URL here. (Or set link-sharing 'Anyone with link: Viewer' and paste the /edit URL - auto-converted to export?format=csv.) Until then this source shows as DOWN and national races are empty.",
+   "fallback_url": "file:elections/2026-11-03/national_calls_template.csv"
   },
   {
    "id": "nc_feed",
@@ -74,7 +78,8 @@
      "match": "^US SENATE"
     }
    ],
-   "note": "Format verified on 2024 archive; 2026 URL follows the same date pattern (assumed)."
+   "note": "Format verified on 2024 archive; 2026 URL follows the same date pattern (assumed).",
+   "live_only": true
   },
   {
    "id": "ga_feed",
@@ -96,7 +101,8 @@
      "match": "^Governor$"
     }
    ],
-   "note": "Format verified (2024NovGen). 2026 slug '2026NovGen' is a GUESS - confirm on results.sos.ga.gov on Nov 3. File ~30 MB."
+   "note": "Format verified (2024NovGen). 2026 slug '2026NovGen' is a GUESS - confirm on results.sos.ga.gov on Nov 3. File ~30 MB.",
+   "live_only": true
   },
   {
    "id": "mn_feed",
@@ -121,7 +127,8 @@
      "match": "^Governor"
     }
    ],
-   "note": "ussenate.txt format verified (2024). Governor file name 'stateoffice.txt' is ASSUMED - check the MediaResult index on Nov 3."
+   "note": "ussenate.txt format verified (2024). Governor file name 'stateoffice.txt' is ASSUMED - check the MediaResult index on Nov 3.",
+   "live_only": true
   },
   {
    "id": "pa_feed",
@@ -137,7 +144,8 @@
      "match": "^Governor"
     }
    ],
-   "note": "Verified on 2024 (ElectionID=105). ElectionID 117/G active for 2026 per GetAllElections. Undocumented API; publishes no % reporting."
+   "note": "Verified on 2024 (ElectionID=105). ElectionID 117/G active for 2026 per GetAllElections. Undocumented API; publishes no % reporting.",
+   "live_only": true
   },
   {
    "id": "fl_feed",
@@ -159,7 +167,8 @@
      "match": "^Governor"
     }
    ],
-   "note": "Format verified on 11/5/2024. County rows are summed."
+   "note": "Format verified on 11/5/2024. County rows are summed.",
+   "live_only": true
   },
   {
    "id": "wa_feed",
@@ -183,7 +192,8 @@
      "district": "08"
     }
    ],
-   "note": "Format verified on 2024 (statewide races). WA has no Senate/Gov race in 2026; US House contest names are ASSUMED ('Congressional District N - U.S. Representative'), confirm on Nov 3."
+   "note": "Format verified on 2024 (statewide races). WA has no Senate/Gov race in 2026; US House contest names are ASSUMED ('Congressional District N - U.S. Representative'), confirm on Nov 3.",
+   "live_only": true
   },
   {
    "id": "oh_feed",
@@ -205,7 +215,8 @@
      "match": "(US|U\\.S\\.|United States) Senat"
     }
    ],
-   "note": "UNTESTED. Research suggests this site is NOT Clarity; only enable if it exposes a Clarity-style /current_ver.txt + summary.json, else needs a new adapter."
+   "note": "UNTESTED. Research suggests this site is NOT Clarity; only enable if it exposes a Clarity-style /current_ver.txt + summary.json, else needs a new adapter.",
+   "live_only": true
   },
   {
    "id": "nv_feed",
@@ -221,7 +232,8 @@
      "match": "^Governor"
     }
    ],
-   "note": "UNTESTED. Research suggests this site is NOT Clarity; only enable if it exposes a Clarity-style /current_ver.txt + summary.json, else needs a new adapter."
+   "note": "UNTESTED. Research suggests this site is NOT Clarity; only enable if it exposes a Clarity-style /current_ver.txt + summary.json, else needs a new adapter.",
+   "live_only": true
   },
   {
    "id": "ia_feed",
@@ -243,7 +255,8 @@
      "match": "(US|U\\.S\\.|United States) Senat"
     }
    ],
-   "note": "UNTESTED. Replace ELECTION_ID with the Clarity election id on Nov 3, then set enabled=true."
+   "note": "UNTESTED. Replace ELECTION_ID with the Clarity election id on Nov 3, then set enabled=true.",
+   "live_only": true
   },
   {
    "id": "ks_feed",
@@ -259,7 +272,8 @@
      "match": "^Governor"
     }
    ],
-   "note": "UNTESTED. Replace ELECTION_ID with the Clarity election id on Nov 3, then set enabled=true."
+   "note": "UNTESTED. Replace ELECTION_ID with the Clarity election id on Nov 3, then set enabled=true.",
+   "live_only": true
   }
  ],
  "key_races": [
@@ -268,5 +282,11 @@
   "Amendment 6",
   "State Auditor"
  ],
- "_key_races_help": "Race titles (e.g. 'MO House 96', 'Amendment 6', 'MO US House 2') or national race_ids (e.g. '2026-SEN-NC'). National races can also be flagged with key_race=TRUE in the calls sheet."
+ "_key_races_help": "Race titles (e.g. 'MO House 96', 'Amendment 6', 'MO US House 2') or national race_ids (e.g. '2026-SEN-NC'). National races can also be flagged with key_race=TRUE in the calls sheet.",
+ "polls": {
+  "enabled": true,
+  "ttl_hours": 6,
+  "delay_s": 2,
+  "_help": "Pre-election polls for national Senate/Governor races. Chain: RCP -> Silver Bulletin -> Politico -> 270toWin (first that is reachable and has a parser)."
+ }
 }

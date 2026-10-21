@@ -48,3 +48,13 @@ Adapters in `fetcher/adapters/state_feeds.py`: `nc_enr`, `ga_ev`, `mn_txt`, `pa_
 and `clarity` (best effort, untested). Each source lists `contests` with `race_id`, `category`, `state`, optional `district`, and a `match`
 regex for the feed's contest name. Feed votes replace sheet votes for the same race_id; calls ALWAYS come from the sheet
 (`winner=1` + `called_by`). `registry/state_feeds_all50.json` lists the known feed for every state, so use it to add states in future elections.
+
+## Pre-election polls (shown separately from results)
+`fetcher/polls.py` tries sources in Earl's order: RCP → Silver Bulletin → Politico → 270toWin. On 2026-10-21 RCP and Politico returned 403 (bot wall)
+and Silver Bulletin's averages are paywalled, so 270toWin (robots.txt allows; Content-Signal `use=reference`) supplies the numbers. Each card names the poll source.
+Polls are cached 6 h (`polls.ttl_hours`) and fetched 2 s apart. The card shows the 270toWin average plus the latest poll (pollster, date, sample, margin).
+Once votes come in it adds "result R+x vs poll D+y → R beating polls by z", labelled a *running comparison* until the race is called.
+Use "Sort: biggest gap vs polls" and "Has polling" in the toolbar. Disable with `"polls": {"enabled": false}`.
+
+## Sources outside the live window
+Results sources marked `live_only` show WAITING until `live_start_utc`. The national source falls back to the race-list CSV until the sheet URL is set.

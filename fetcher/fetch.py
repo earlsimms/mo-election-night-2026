@@ -55,9 +55,20 @@ def run(cfg_path, out_path):
     sources, races = [], []
     for s in cfg["sources"]:
         if not s.get("enabled", True): continue
+        start = s.get("active_from_utc") or (cfg.get("live_start_utc") if s.get("live_only") else None)
+        if start and datetime.datetime.now(datetime.timezone.utc) < datetime.datetime.fromisoformat(start.replace("Z", "+00:00")):
+            sources.append({"id": s["id"], "name": s["name"], "url": s.get("url") or (s.get("urls") or [""])[0], "ok": True, "waiting": True,
+                            "checked_at": now(), "updated_at": None, "race_count": 0, "error": None,
+                            "note": f"Not polled until {start} (results not published yet)"})
+            continue
         meta = {"id": s["id"], "name": s["name"], "url": s.get("url") or (s.get("urls") or [""])[0], "note": s.get("note", ""), "checked_at": now()}
         try:
-            rs = ADAPTERS[s["adapter"]](s)
+            try:
+                rs = ADAPTERS[s["adapter"]](s)
+            except Exception as e1:
+                if not s.get("fallback_url"): raise
+                rs = ADAPTERS[s["adapter"]](dict(s, url=s["fallback_url"]))
+                meta["note"] = f"Primary failed ({type(e1).__name__}: {str(e1)[:120]}); using fallback {s['fallback_url']}"
             for r in rs:
                 r["source_id"] = s["id"]; r.setdefault("level", "missouri" if r["category"] != "county" else "county")
                 r["highlight"] = r["title"] in cfg.get("highlight", [])
@@ -76,7 +87,18 @@ def run(cfg_path, out_path):
         r["key"] = bool(r.get("key") or r["title"] in keys or r.get("race_id") in keys)
         r["highlight"] = r["key"]
         if str(r.get("race_id", "")).upper().startswith(("SAMPLE", "TEST")): r["sample"] = True
-    doc = {"election": cfg["election"], "election_date": cfg.get("election_date"), "preview_banner": cfg.get("preview_banner", ""), "generated_at": now(), "sources": sources, "tallies": tally(races, cfg.get("baselines", {})), "races": races,
+    polls = {}
+    if cfg.get("polls", {}).get("enabled"):
+        try:
+            from .polls import refresh
+            polls = refresh(cfg, races, os.path.join(os.path.dirname(out_path), "polls.json"))
+        except Exception as e:
+            print("POLLS FAILED", e, file=sys.stderr)
+    for r in races:
+        p = polls.get("races", {}).get(r.get("race_id"))
+        if p: r["poll"] = p
+    doc = {"polls_meta": {k: v for k, v in polls.items() if k != "races"},
+           "election": cfg["election"], "election_date": cfg.get("election_date"), "preview_banner": cfg.get("preview_banner", ""), "generated_at": now(), "sources": sources, "tallies": tally(races, cfg.get("baselines", {})), "races": races,
            "measures": json.load(open(os.path.join(ROOT, cfg["measures_file"]))).get("measures", []) if cfg.get("measures_file") else []}
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     tmp = out_path + ".tmp"; json.dump(doc, open(tmp, "w"), separators=(",", ":")); os.replace(tmp, out_path)
