@@ -23,6 +23,28 @@ def tally(races, baselines):
         out[ch] = t
     return out
 
+def _last(n): return (n or "").replace(",", " ").split()[-1].lower() if (n or "").split() else ""
+
+def merge_feeds(races):
+    """State feeds supply live vote counts; the calls sheet supplies calls/key flags. Never mark called from a feed."""
+    from .common import finalize
+    nat = {r.get("race_id"): r for r in races if r.get("level") == "national" and r.get("race_id")}
+    out = [r for r in races if r.get("level") != "state_feed"]
+    for f in (r for r in races if r.get("level") == "state_feed"):
+        n = nat.get(f["race_id"])
+        if n is None:
+            f["level"] = "national"; f["title"] += " (state feed only)"; out.append(f); continue
+        won = {_last(c["name"]) for c in n["candidates"] if c.get("winner")}
+        wonp = {c["party"] for c in n["candidates"] if c.get("winner")}
+        cands = [dict(c) for c in f["candidates"]]
+        for c in cands:
+            c["winner"] = bool(won) and (_last(c["name"]) in won or (not any(_last(x["name"]) in won for x in cands) and c["party"] in wonp))
+        n.update(candidates=cands, reporting_pct=f["reporting_pct"], reporting_text=f["reporting_text"],
+                 votes_source=f["source_id"], feed_contest=f.get("feed_contest"))
+        finalize(n)
+        if n.get("called_by") and any(c["winner"] for c in cands): n["status"] = "called"
+    return out
+
 def run(cfg_path, out_path):
     cfg = json.load(open(os.path.join(ROOT, cfg_path)))
     prev = {}
@@ -33,7 +55,7 @@ def run(cfg_path, out_path):
     sources, races = [], []
     for s in cfg["sources"]:
         if not s.get("enabled", True): continue
-        meta = {"id": s["id"], "name": s["name"], "url": s["url"], "note": s.get("note", ""), "checked_at": now()}
+        meta = {"id": s["id"], "name": s["name"], "url": s.get("url") or (s.get("urls") or [""])[0], "note": s.get("note", ""), "checked_at": now()}
         try:
             rs = ADAPTERS[s["adapter"]](s)
             for r in rs:
@@ -48,6 +70,12 @@ def run(cfg_path, out_path):
             meta.update(ok=False, updated_at=p.get("updated_at"), race_count=len(rs), error=f"{type(e).__name__}: {e}"[:300])
             print("SOURCE FAILED", s["id"], meta["error"], file=sys.stderr)
         sources.append(meta); races.extend(rs)
+    races = merge_feeds(races)
+    keys = set(cfg.get("key_races", []) + cfg.get("highlight", []))
+    for r in races:
+        r["key"] = bool(r.get("key") or r["title"] in keys or r.get("race_id") in keys)
+        r["highlight"] = r["key"]
+        if str(r.get("race_id", "")).upper().startswith(("SAMPLE", "TEST")): r["sample"] = True
     doc = {"election": cfg["election"], "election_date": cfg.get("election_date"), "preview_banner": cfg.get("preview_banner", ""), "generated_at": now(), "sources": sources, "tallies": tally(races, cfg.get("baselines", {})), "races": races,
            "measures": json.load(open(os.path.join(ROOT, cfg["measures_file"]))).get("measures", []) if cfg.get("measures_file") else []}
     os.makedirs(os.path.dirname(out_path), exist_ok=True)

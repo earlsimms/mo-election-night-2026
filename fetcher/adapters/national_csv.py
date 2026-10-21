@@ -4,7 +4,7 @@ Sheets export (https://docs.google.com/spreadsheets/d/<FILE_ID>/export?format=cs
 link-viewable; a plain /edit URL is auto-converted to the export URL.
 
 Columns (header row, exact names): race_id,category,state,district,candidate,party,votes,reporting_pct,called_by,winner,
-incumbent_party,status,updated_at,notes   (status/updated_at/notes optional for backward compatibility)
+incumbent_party,status,updated_at,key_race,notes   (status/updated_at/key_race/notes optional for backward compatibility)
 One row per candidate. A race row with blank candidate is a placeholder (race shows TOO EARLY).
 Honesty rule: 'called' ONLY if winner=1 AND called_by non-empty; a status of 'called' without both is downgraded."""
 import csv, io, re
@@ -34,9 +34,10 @@ def parse(src):
         cat, st, d = r["category"].strip().lower(), r["state"].strip().upper(), (r.get("district") or "").strip()
         race = races.setdefault(k, {"raw_title": k, "category": cat, "state": st, "district": d or None, "candidates": [],
                                     "called_by": "", "reporting_pct": None, "incumbent_party": (r.get("incumbent_party") or "").strip(),
-                                    "is_measure": False, "level": "national", "updated_at": None, "notes": ""})
+                                    "is_measure": False, "level": "national", "updated_at": None, "notes": "", "race_id": k, "key": False})
         race["title"] = {"senate": f"{st} Senate", "governor": f"{st} Governor"}.get(cat, f"{st}-{d} House")
         if k.upper().startswith("SAMPLE"): race["title"] = "SAMPLE (fake) - " + race["title"]; race["sample"] = True
+        if (r.get("key_race") or "").strip().upper() in ("TRUE", "1", "YES", "Y"): race["key"] = True
         if r.get("notes"): race["notes"] = r["notes"].strip()
         if (r.get("notes") or "").lower().startswith("special"): race["title"] += " (special)"
         if (r.get("reporting_pct") or "").strip(): race["reporting_pct"] = max(race["reporting_pct"] or 0, pnum(r["reporting_pct"]))
