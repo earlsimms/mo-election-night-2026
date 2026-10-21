@@ -1,7 +1,7 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Election Night Live Results</title>
 <style>
-:root{--r:#c8102e;--d:#0b5ed7;--o:#777;--bg:#f5f6f8;--card:#fff}
+:root{--r:#c8102e;--d:#0b5ed7;--o:#6b7280;--bg:#f5f6f8;--card:#fff}
 *{box-sizing:border-box}body{margin:0;font:14px/1.4 system-ui,Segoe UI,Arial;background:var(--bg);color:#111}
 header{background:#111827;color:#fff;padding:10px 16px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
 header h1{font-size:18px;margin:0}#gen{font-size:12px;opacity:.85}
@@ -17,7 +17,8 @@ nav button.on{background:#111827;color:#fff}
 .controls input{flex:1;min-width:200px}
 #grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:10px;padding:6px 16px 16px}
 .race{background:var(--card);border-radius:8px;padding:10px;box-shadow:0 1px 2px #0002;border-left:5px solid #ccc}
-.race.hl{outline:3px solid #f59e0b;background:#fffbeb}.keyb{background:#f59e0b;color:#111}.race.stale{opacity:.7}
+.race{color:#111}.race .meta{color:#1f2937}.race.hl{outline:3px solid #f59e0b;outline-offset:1px}.poll a,.cmp a{color:#1e3a8a}
+.lg{display:inline-block;width:14px;height:12px;border:1px solid #999;vertical-align:middle;margin:0 1px}.keyb{background:#f59e0b;color:#111}.race.stale{opacity:.7}
 .race h4{margin:0;font-size:15px;display:flex;justify-content:space-between;gap:6px}
 .badge{font-size:11px;padding:2px 7px;border-radius:10px;white-space:nowrap;font-weight:600}
 .called{background:#065f46;color:#fff}.certified{background:#1f2937;color:#fff}.leading{background:#fde68a}.too_early{background:#e5e7eb}
@@ -36,6 +37,7 @@ nav button.on{background:#111827;color:#fff}
 <div id="preview" style="display:none;background:#7c2d12;color:#fff;padding:8px 16px;font-weight:600"></div><div id="banner"></div>
 <section class="tallies" id="tallies"></section>
 <div class="legend"><span class="badge called">CALLED</span> source declared a winner &nbsp; <span class="badge certified">CERTIFIED</span> official final &nbsp; <span class="badge leading">LEADING</span> unofficial, partial count (not a projection) &nbsp; <span class="badge too_early">TOO EARLY</span> no votes yet</div>
+<div class="legend" style="margin-top:4px">Card color = current leader &amp; margin: R <span class="lg" style="background:#fde8e8"></span><span class="lg" style="background:#fbc9c9"></span><span class="lg" style="background:#f5a3a3"></span><span class="lg" style="background:#ec7c7c"></span> · D <span class="lg" style="background:#e6effc"></span><span class="lg" style="background:#c7dbf9"></span><span class="lg" style="background:#a3c3f3"></span><span class="lg" style="background:#7ea9eb"></span> · Independent/other <span class="lg" style="background:#f1eafb"></span><span class="lg" style="background:#ddd0f5"></span><span class="lg" style="background:#c7b3ee"></span><span class="lg" style="background:#b296e6"></span> (light→dark = 0–3, 3–10, 10–20, 20+ pts) · <span class="lg" style="background:#eceff3"></span> too early / tied / ballot measures · <span class="badge keyb">★ KEY RACE</span> gold badge + outline</div>
 <nav id="tabs"></nav>
 <div class="controls"><input id="q" placeholder="Search race, candidate, district, county… (e.g. House 96, Amendment 6, Wagner)">
 <select id="st"><option value="">All statuses</option><option value="called">Called</option><option value="certified">Certified</option><option value="leading">Leading</option><option value="too_early">Too early</option></select>
@@ -71,10 +73,14 @@ function pollHTML(r){const p=r.poll;if(!p)return"";const nm=(v)=>p.candidates.ma
  if(pr&&rm!=null){const g=rm-pr.m,who=Math.abs(g)<0.05?"exactly matching polls":`${g>0?"R":"D"} beating polls by ${Math.abs(g).toFixed(1)}`;
   s+=`<div class="cmp"><b>${["called","certified"].includes(r.status)?"Final comparison":"Running comparison (partial count, not a call)"}:</b> result ${fm(rm)} vs poll ${pr.k==="avg"?"avg":"latest"} ${fm(pr.m)} → ${who}</div>`}
  return s}
+const SH={R:["#fde8e8","#fbc9c9","#f5a3a3","#ec7c7c"],D:["#e6effc","#c7dbf9","#a3c3f3","#7ea9eb"],O:["#f1eafb","#ddd0f5","#c7b3ee","#b296e6"]},NEU="#eceff3";
+function cardBg(r){const c=r.candidates;if(r.is_measure||r.status==="too_early"||!r.total_votes||c.length<1)return NEU;
+ const m=c.length>1?c[0].pct-c[1].pct:100;if(m<0.05)return NEU;const k=c[0].party==="R"?"R":c[0].party==="D"?"D":"O";
+ return SH[k][m<3?0:m<10?1:m<20?2:3]}
 function raceHTML(r){const src=D.sources.find(s=>s.id===r.source_id)||{};const ot=M[r.title];
  const lab={called:`CALLED${r.called_by?" ("+r.called_by+")":""}`,certified:"CERTIFIED",leading:"LEADING",too_early:"TOO EARLY"}[r.status];
  const lead=r.candidates[0];const col=r.is_measure?(lead&&lead.name==="Yes"?"#16a34a":"#dc2626"):pc(lead&&lead.party);
- return `<div class="race ${r.key?"hl":""} ${r.stale?"stale":""}" style="border-left-color:${r.status==="too_early"?"#ccc":col}">
+ return `<div class="race ${r.key?"hl":""} ${r.stale?"stale":""}" style="background:${cardBg(r)};border-left-color:${r.status==="too_early"?"#ccc":col}">
  <h4><span>${r.key?"<span class='badge keyb'>★ KEY RACE</span> ":""}${r.sample?"<b style='color:#7c2d12'>[SAMPLE]</b> ":""}${r.title}</span><span class="badge ${r.status}">${lab}</span></h4>
  <div class="meta">${r.reporting_text||""}${r.reporting_pct!=null?` (${r.reporting_pct}%)`:""}${r.margin_pct!=null&&r.total_votes?` · margin ${r.margin_pct} pts`:""} · ${src.name||r.source_id}${r.votes_source?` · votes: ${(D.sources.find(s=>s.id===r.votes_source)||{}).name||r.votes_source}`:""}${r.stale?" · <b style='color:#b91c1c'>STALE (source down)</b>":""}</div>
  ${ot?`<div class="otitle">${ot.official_ballot_title}</div>`:""}
