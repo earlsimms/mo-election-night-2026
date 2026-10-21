@@ -1,0 +1,68 @@
+{
+ "election": "2026-11-03 General Election",
+ "election_date": "2026-11-03",
+ "live_start_utc": "2026-11-04T00:00:00Z",
+ "live_end_utc": "2026-11-07T00:00:00Z",
+ "measures_file": "elections/2026-11-03/measures.json",
+ "highlight": [
+  "MO House 96",
+  "MO House 105"
+ ],
+ "baselines": {
+  "senate": {
+   "R": 31,
+   "D": 34,
+   "total": 100,
+   "control": 51,
+   "note": "Seats not on the 2026 ballot. D includes 2 independents caucusing with D. VP (R) breaks 50-50 ties."
+  },
+  "governor": {
+   "R": 8,
+   "D": 6,
+   "total": 50,
+   "control": 26,
+   "note": "Governors not on the 2026 ballot."
+  },
+  "house": {
+   "R": 0,
+   "D": 0,
+   "total": 435,
+   "control": 218
+  }
+ },
+ "sources": [
+  {
+   "id": "mo_sos",
+   "name": "Missouri SOS Election Night Results",
+   "adapter": "mo_sos_enr",
+   "enabled": true,
+   "url": "https://enr.sos.mo.gov/ElectionResults.aspx",
+   "note": "Cloudflare-protected; HTML scrape. Structure unverified from cloud IPs."
+  },
+  {
+   "id": "stlco",
+   "name": "St. Louis County Board of Elections (CSV)",
+   "adapter": "stlco_csv",
+   "enabled": true,
+   "url": "https://extcontent.stlouisco.com/BOE/eResults/el261103/CSV.csv",
+   "county": "St. Louis County"
+  },
+  {
+   "id": "stcharles",
+   "name": "St. Charles County Election Authority (LiveVoterTurnout)",
+   "adapter": "lvt_html",
+   "enabled": true,
+   "url": "https://www.livevoterturnout.com/ENR/stcharlesmoenr/33/en/Index_33.html",
+   "county": "St. Charles County",
+   "note": "The /32/ index was the Aug 4 2026 primary; confirm the November number from sccmo.org/437/Election-Results."
+  },
+  {
+   "id": "national",
+   "name": "National calls sheet (Google Sheet: Election Night 2026 - National Calls)",
+   "adapter": "national_csv",
+   "enabled": true,
+   "url": "PASTE_PUBLISHED_CSV_URL_HERE",
+   "note": "Sheet is PRIVATE. To activate: in the sheet, File > Share > Publish to web > Sheet1 > CSV, paste the pub?output=csv URL here. (Or set link-sharing 'Anyone with link: Viewer' and paste the /edit URL - auto-converted to export?format=csv.) Until then this source shows as DOWN and national races are empty."
+  }
+ ]
+}

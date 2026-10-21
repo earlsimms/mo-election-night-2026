@@ -1,0 +1,71 @@
+{
+ "election": "PREVIEW - NOT 2026 RESULTS: real 2024 Missouri results + SAMPLE (fake) national data",
+ "election_date": "2024-11-05",
+ "highlight": [
+  "MO House 96",
+  "MO House 105"
+ ],
+ "baselines": {
+  "senate": {
+   "R": 31,
+   "D": 34,
+   "total": 100,
+   "control": 51,
+   "note": "Seats not on the 2026 ballot. D includes 2 independents caucusing with D. VP (R) breaks 50-50 ties."
+  },
+  "governor": {
+   "R": 8,
+   "D": 6,
+   "total": 50,
+   "control": 26,
+   "note": "Governors not on the 2026 ballot."
+  },
+  "house": {
+   "R": 0,
+   "D": 0,
+   "total": 435,
+   "control": 218
+  }
+ },
+ "sources": [
+  {
+   "id": "mo_sos",
+   "name": "Missouri SOS official returns 2024 (archived PDF)",
+   "adapter": "mo_sos_pdf",
+   "enabled": true,
+   "url": "https://www.sos.mo.gov/CMSImages/ElectionResultsStatistics/2024GeneralElection.pdf",
+   "cache_file": "data/archive/mo2024.pdf"
+  },
+  {
+   "id": "stlco",
+   "name": "St. Louis County BOE CSV (Aug 2026 primary, format test)",
+   "adapter": "stlco_csv",
+   "enabled": true,
+   "url": "https://extcontent.stlouisco.com/BOE/eResults/el260804/CSV.csv",
+   "county": "St. Louis County"
+  },
+  {
+   "id": "stcharles",
+   "name": "St. Charles County LVT (Aug 2026 primary, format test)",
+   "adapter": "lvt_html",
+   "enabled": true,
+   "url": "https://www.livevoterturnout.com/ENR/stcharlesmoenr/32/en/Index_32.html",
+   "county": "St. Charles County"
+  },
+  {
+   "id": "national",
+   "name": "National SAMPLE data (fake, labeled)",
+   "adapter": "national_csv",
+   "enabled": true,
+   "url": "file:elections/preview-2024/national_sample.csv"
+  },
+  {
+   "id": "broken",
+   "name": "Deliberately broken source (failure test)",
+   "adapter": "stlco_csv",
+   "enabled": true,
+   "url": "https://extcontent.stlouisco.com/BOE/eResults/doesnotexist/CSV.csv"
+  }
+ ],
+ "preview_banner": "PREVIEW / SAMPLE DATA - these are NOT 2026 results. Missouri figures are certified 2024 results; any national race labelled SAMPLE is fake demo data. Live results start election night, Nov 3, 2026."
+}
