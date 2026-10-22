@@ -3040,6 +3040,194 @@
     }
    ],
    "candidates_source": "https://ballotpedia.org/Missouri_2026_ballot_measures"
+  },
+  {
+   "title": "State Auditor",
+   "category": "mo_statewide",
+   "district": null,
+   "candidates": [
+    {
+     "name": "Scott Fitzpatrick",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Quentin Wilson",
+     "party": "D"
+    },
+    {
+     "name": "Dustin Coffell",
+     "party": "L"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_state_executive_official_elections,_2026"
+  },
+  {
+   "title": "MO US House 1",
+   "category": "mo_ushouse",
+   "district": 1,
+   "candidates": [
+    {
+     "name": "Wesley Bell",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Paul Berry",
+     "party": "R"
+    },
+    {
+     "name": "Tom Schmitz",
+     "party": "L"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Missouri,_2026"
+  },
+  {
+   "title": "MO US House 2",
+   "category": "mo_ushouse",
+   "district": 2,
+   "candidates": [
+    {
+     "name": "Ann Wagner",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Frederick Wellman",
+     "party": "D"
+    },
+    {
+     "name": "Brandon Daugherty",
+     "party": "L"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Missouri,_2026"
+  },
+  {
+   "title": "MO US House 3",
+   "category": "mo_ushouse",
+   "district": 3,
+   "candidates": [
+    {
+     "name": "Bob Onder",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Bethany Mann",
+     "party": "D"
+    },
+    {
+     "name": "Jim Higgins",
+     "party": "L"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Missouri,_2026"
+  },
+  {
+   "title": "MO US House 4",
+   "category": "mo_ushouse",
+   "district": 4,
+   "candidates": [
+    {
+     "name": "Mark Alford",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Jordan Herrera",
+     "party": "D"
+    },
+    {
+     "name": "Thomas Holbrook",
+     "party": "L"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Missouri,_2026"
+  },
+  {
+   "title": "MO US House 5",
+   "category": "mo_ushouse",
+   "district": 5,
+   "candidates": [
+    {
+     "name": "Emanuel Cleaver",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Rick Brattin",
+     "party": "R"
+    },
+    {
+     "name": "Randy Langkraehr",
+     "party": "L"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Missouri,_2026"
+  },
+  {
+   "title": "MO US House 6",
+   "category": "mo_ushouse",
+   "district": 6,
+   "candidates": [
+    {
+     "name": "Josh Smead",
+     "party": "D"
+    },
+    {
+     "name": "Chris Stigall",
+     "party": "R"
+    },
+    {
+     "name": "Andy Maidment",
+     "party": "L"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Missouri,_2026"
+  },
+  {
+   "title": "MO US House 7",
+   "category": "mo_ushouse",
+   "district": 7,
+   "candidates": [
+    {
+     "name": "Eric Burlison",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Missi Hesketh",
+     "party": "D"
+    },
+    {
+     "name": "Kevin Craig",
+     "party": "L"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Missouri,_2026"
+  },
+  {
+   "title": "MO US House 8",
+   "category": "mo_ushouse",
+   "district": 8,
+   "candidates": [
+    {
+     "name": "Jason Smith",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Christopher Reichard",
+     "party": "D"
+    },
+    {
+     "name": "Rebecca Sharpe Lombard",
+     "party": "L"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Missouri,_2026"
   }
  ]
 }

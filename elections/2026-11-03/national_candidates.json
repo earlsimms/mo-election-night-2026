@@ -1,0 +1,8431 @@
+{
+ "_help": "Certified general-election candidates per national race_id, from Ballotpedia (fetched 2026-10-21; write-ins omitted). fetch.py merges these onto national races; sheet/feed rows override by normalized last name.",
+ "fetched": "2026-10-21",
+ "races": {
+  "2026-SEN-AK": {
+   "candidates": [
+    {
+     "name": "Dan S. Sullivan",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Gerald Heikes",
+     "party": "R"
+    },
+    {
+     "name": "Mary Peltola",
+     "party": "D"
+    },
+    {
+     "name": "Daniel J. Sullivan Jr.",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_Senate_elections,_2026"
+  },
+  "2026-SEN-AL": {
+   "candidates": [
+    {
+     "name": "Barry Moore",
+     "party": "R"
+    },
+    {
+     "name": "Everett Wess",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_Senate_elections,_2026"
+  },
+  "2026-SEN-AR": {
+   "candidates": [
+    {
+     "name": "Tom Cotton",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Hallie Shoffner",
+     "party": "D"
+    },
+    {
+     "name": "Jeff Wadlin",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_Senate_elections,_2026"
+  },
+  "2026-SEN-CO": {
+   "candidates": [
+    {
+     "name": "John Hickenlooper",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Mark Baisley",
+     "party": "R"
+    },
+    {
+     "name": "Chris Baum",
+     "party": "AV"
+    },
+    {
+     "name": "Bob Chew",
+     "party": "CF"
+    },
+    {
+     "name": "Blake Huber",
+     "party": "L"
+    },
+    {
+     "name": "Adam Withrow",
+     "party": "U"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_Senate_elections,_2026"
+  },
+  "2026-SEN-DE": {
+   "candidates": [
+    {
+     "name": "Chris Coons",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Michael Katz",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_Senate_elections,_2026"
+  },
+  "2026-SEN-FL": {
+   "candidates": [
+    {
+     "name": "Ashley B. Moody",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Angela Nixon",
+     "party": "D"
+    },
+    {
+     "name": "Neil Gillespie",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_Senate_special_election_in_Florida,_2026"
+  },
+  "2026-SEN-GA": {
+   "candidates": [
+    {
+     "name": "Jon Ossoff",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Mike Collins",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_Senate_elections,_2026"
+  },
+  "2026-SEN-IA": {
+   "candidates": [
+    {
+     "name": "Ashley Hinson",
+     "party": "R"
+    },
+    {
+     "name": "Josh Turek",
+     "party": "D"
+    },
+    {
+     "name": "Thomas Laehn",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_Senate_elections,_2026"
+  },
+  "2026-SEN-ID": {
+   "candidates": [
+    {
+     "name": "Jim Risch",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Todd Achilles",
+     "party": "I"
+    },
+    {
+     "name": "Natalie Fleming",
+     "party": "I"
+    },
+    {
+     "name": "Matt Loesby",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_Senate_elections,_2026"
+  },
+  "2026-SEN-IL": {
+   "candidates": [
+    {
+     "name": "Don Tracy",
+     "party": "R"
+    },
+    {
+     "name": "Whitfield Harrington Jr.",
+     "party": "AC"
+    },
+    {
+     "name": "Juliana Stratton",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_Senate_elections,_2026"
+  },
+  "2026-SEN-KS": {
+   "candidates": [
+    {
+     "name": "Roger Marshall",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Adam Hamilton",
+     "party": "D"
+    },
+    {
+     "name": "David Graham",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_Senate_elections,_2026"
+  },
+  "2026-SEN-KY": {
+   "candidates": [
+    {
+     "name": "Andy Barr",
+     "party": "R"
+    },
+    {
+     "name": "Charles Booker",
+     "party": "D"
+    },
+    {
+     "name": "Christopher Campbell",
+     "party": "K"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_Senate_elections,_2026"
+  },
+  "2026-SEN-LA": {
+   "candidates": [
+    {
+     "name": "Julia Letlow",
+     "party": "R"
+    },
+    {
+     "name": "Jamie Davis",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_Senate_elections,_2026"
+  },
+  "2026-SEN-MA": {
+   "candidates": [
+    {
+     "name": "Edward J. Markey",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "John Deaton",
+     "party": "R"
+    },
+    {
+     "name": "Joseph Tache",
+     "party": "PFS"
+    },
+    {
+     "name": "Shiva Ayyadurai",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_Senate_elections,_2026"
+  },
+  "2026-SEN-ME": {
+   "candidates": [
+    {
+     "name": "Susan Collins",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Troy Dale Jackson",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_Senate_elections,_2026"
+  },
+  "2026-SEN-MI": {
+   "candidates": [
+    {
+     "name": "Mike Rogers",
+     "party": "R"
+    },
+    {
+     "name": "Abdul El-Sayed",
+     "party": "D"
+    },
+    {
+     "name": "Douglas P. Marsh",
+     "party": "G"
+    },
+    {
+     "name": "Lydia Christensen",
+     "party": "L"
+    },
+    {
+     "name": "Walter Kristy",
+     "party": "NLI"
+    },
+    {
+     "name": "Timothy Long",
+     "party": "UST"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_Senate_elections,_2026"
+  },
+  "2026-SEN-MN": {
+   "candidates": [
+    {
+     "name": "Michele Tafoya",
+     "party": "R"
+    },
+    {
+     "name": "Peggy Flanagan",
+     "party": "D"
+    },
+    {
+     "name": "Rebecca Whiting",
+     "party": "L"
+    },
+    {
+     "name": "Marisa Simonetti",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_Senate_elections,_2026"
+  },
+  "2026-SEN-MS": {
+   "candidates": [
+    {
+     "name": "Cindy Hyde-Smith",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Scott Colom",
+     "party": "D"
+    },
+    {
+     "name": "Ty Pinkins",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_Senate_elections,_2026"
+  },
+  "2026-SEN-MT": {
+   "candidates": [
+    {
+     "name": "Kurt Alme",
+     "party": "R"
+    },
+    {
+     "name": "Alani Bankhead",
+     "party": "D"
+    },
+    {
+     "name": "Seth Bodnar",
+     "party": "I"
+    },
+    {
+     "name": "Kyle Austin",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_Senate_elections,_2026"
+  },
+  "2026-SEN-NC": {
+   "candidates": [
+    {
+     "name": "Michael Whatley",
+     "party": "R"
+    },
+    {
+     "name": "Roy Cooper",
+     "party": "D"
+    },
+    {
+     "name": "Michael Dublin",
+     "party": "G"
+    },
+    {
+     "name": "Shannon Bray",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_Senate_elections,_2026"
+  },
+  "2026-SEN-NE": {
+   "candidates": [
+    {
+     "name": "Pete Ricketts",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Chuck Conboy",
+     "party": "AFN"
+    },
+    {
+     "name": "Mike Marvin",
+     "party": "LMN"
+    },
+    {
+     "name": "Robin Richards",
+     "party": "NWP"
+    },
+    {
+     "name": "Dan Osborn",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_Senate_elections,_2026"
+  },
+  "2026-SEN-NH": {
+   "candidates": [
+    {
+     "name": "John Sununu",
+     "party": "R"
+    },
+    {
+     "name": "Edmond Laplante",
+     "party": "C"
+    },
+    {
+     "name": "Chris Pappas",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_Senate_elections,_2026"
+  },
+  "2026-SEN-NJ": {
+   "candidates": [
+    {
+     "name": "Cory Booker",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Justin Murphy",
+     "party": "R"
+    },
+    {
+     "name": "Veronica Fernandez",
+     "party": "ETC"
+    },
+    {
+     "name": "Joanne Kuniansky",
+     "party": "SW"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_Senate_elections,_2026"
+  },
+  "2026-SEN-NM": {
+   "candidates": [
+    {
+     "name": "Ben Ray Luján",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Larry E. Marker",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_Senate_elections,_2026"
+  },
+  "2026-SEN-OH": {
+   "candidates": [
+    {
+     "name": "Jon Husted",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Sherrod Brown",
+     "party": "D"
+    },
+    {
+     "name": "Bill Redpath",
+     "party": "L"
+    },
+    {
+     "name": "Gregory Levy",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_Senate_special_election_in_Ohio,_2026"
+  },
+  "2026-SEN-OK": {
+   "candidates": [
+    {
+     "name": "Kevin Hern",
+     "party": "R"
+    },
+    {
+     "name": "N'Kiyla Thomas",
+     "party": "D"
+    },
+    {
+     "name": "Ron Meinhardt",
+     "party": "I"
+    },
+    {
+     "name": "Curtis Stinnett",
+     "party": "I"
+    },
+    {
+     "name": "Sevier White",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_Senate_elections,_2026"
+  },
+  "2026-SEN-OR": {
+   "candidates": [
+    {
+     "name": "Jeff Merkley",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "David Brock Smith",
+     "party": "R"
+    },
+    {
+     "name": "Gary Dye",
+     "party": "L"
+    },
+    {
+     "name": "Chris Henry",
+     "party": "P"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_Senate_elections,_2026"
+  },
+  "2026-SEN-RI": {
+   "candidates": [
+    {
+     "name": "Jack Reed",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Raymond McKay",
+     "party": "R"
+    },
+    {
+     "name": "Michael Bahry",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_Senate_elections,_2026"
+  },
+  "2026-SEN-SC": {
+   "candidates": [
+    {
+     "name": "Darline Graham",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Mark Hackett",
+     "party": "C"
+    },
+    {
+     "name": "Annie Andrews",
+     "party": "D"
+    },
+    {
+     "name": "Kasie Whitener",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_Senate_elections,_2026"
+  },
+  "2026-SEN-SD": {
+   "candidates": [
+    {
+     "name": "Mike Rounds",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Brian Bengs",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_Senate_elections,_2026"
+  },
+  "2026-SEN-TN": {
+   "candidates": [
+    {
+     "name": "Bill Hagerty",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Marquita Bradshaw",
+     "party": "D"
+    },
+    {
+     "name": "Tharon Chandler",
+     "party": "I"
+    },
+    {
+     "name": "Andrew Gerena",
+     "party": "I"
+    },
+    {
+     "name": "Jeremy Hearn",
+     "party": "I"
+    },
+    {
+     "name": "Robert Jones",
+     "party": "I"
+    },
+    {
+     "name": "James Macon III",
+     "party": "I"
+    },
+    {
+     "name": "Yoshi Matthews",
+     "party": "I"
+    },
+    {
+     "name": "David Sutman Jr.",
+     "party": "I"
+    },
+    {
+     "name": "Catherine Whitson",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_Senate_elections,_2026"
+  },
+  "2026-SEN-TX": {
+   "candidates": [
+    {
+     "name": "Ken Paxton",
+     "party": "R"
+    },
+    {
+     "name": "James Talarico",
+     "party": "D"
+    },
+    {
+     "name": "Ted Brown",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_Senate_elections,_2026"
+  },
+  "2026-SEN-VA": {
+   "candidates": [
+    {
+     "name": "Mark Warner",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Bert Mizusawa",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_Senate_elections,_2026"
+  },
+  "2026-SEN-WV": {
+   "candidates": [
+    {
+     "name": "Shelley Moore Capito",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "S. Marshall Wilson",
+     "party": "C"
+    },
+    {
+     "name": "Rachel Fetty Anderson",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_Senate_elections,_2026"
+  },
+  "2026-SEN-WY": {
+   "candidates": [
+    {
+     "name": "Harriet Hageman",
+     "party": "R"
+    },
+    {
+     "name": "James Byrd",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_Senate_elections,_2026"
+  },
+  "2026-GOV-AK": {
+   "candidates": [
+    {
+     "name": "David Bronson",
+     "party": "R"
+    },
+    {
+     "name": "Treg Taylor",
+     "party": "R"
+    },
+    {
+     "name": "Bernadette Wilson",
+     "party": "R"
+    },
+    {
+     "name": "Jonathan Kreiss-Tomkins",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/Gubernatorial_elections,_2026"
+  },
+  "2026-GOV-AL": {
+   "candidates": [
+    {
+     "name": "Tommy Tuberville",
+     "party": "R"
+    },
+    {
+     "name": "Doug Jones",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/Gubernatorial_elections,_2026"
+  },
+  "2026-GOV-AR": {
+   "candidates": [
+    {
+     "name": "Sarah Huckabee Sanders",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Fredrick Love",
+     "party": "D"
+    },
+    {
+     "name": "Colt Shelby",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/Gubernatorial_elections,_2026"
+  },
+  "2026-GOV-AZ": {
+   "candidates": [
+    {
+     "name": "Katie Hobbs",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Andy Biggs",
+     "party": "R"
+    },
+    {
+     "name": "Risa Lombardo",
+     "party": "G"
+    },
+    {
+     "name": "Teri Hourihan",
+     "party": "NL"
+    }
+   ],
+   "source": "https://ballotpedia.org/Gubernatorial_elections,_2026"
+  },
+  "2026-GOV-CA": {
+   "candidates": [
+    {
+     "name": "Steve Hilton",
+     "party": "R"
+    },
+    {
+     "name": "Xavier Becerra",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/Gubernatorial_elections,_2026"
+  },
+  "2026-GOV-CO": {
+   "candidates": [
+    {
+     "name": "Victor Marx",
+     "party": "R"
+    },
+    {
+     "name": "Erik Underwood",
+     "party": "AV"
+    },
+    {
+     "name": "Stephen Hamilton",
+     "party": "C"
+    },
+    {
+     "name": "Phil Weiser",
+     "party": "D"
+    },
+    {
+     "name": "Eric Mulder",
+     "party": "L"
+    },
+    {
+     "name": "Greg Lopez",
+     "party": "I"
+    },
+    {
+     "name": "Jeff Peckman",
+     "party": "U"
+    }
+   ],
+   "source": "https://ballotpedia.org/Gubernatorial_elections,_2026"
+  },
+  "2026-GOV-CT": {
+   "candidates": [
+    {
+     "name": "Ned Lamont",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Ryan Fazio",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/Gubernatorial_elections,_2026"
+  },
+  "2026-GOV-FL": {
+   "candidates": [
+    {
+     "name": "Byron Donalds",
+     "party": "R"
+    },
+    {
+     "name": "David Jolly",
+     "party": "D"
+    },
+    {
+     "name": "Scott Jewett",
+     "party": "L"
+    },
+    {
+     "name": "Dean Abrams",
+     "party": "I"
+    },
+    {
+     "name": "Charles Burkett",
+     "party": "I"
+    },
+    {
+     "name": "Jeffrey Datto",
+     "party": "I"
+    },
+    {
+     "name": "Moliere Dimanche",
+     "party": "I"
+    },
+    {
+     "name": "Frank Russo",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/Gubernatorial_elections,_2026"
+  },
+  "2026-GOV-GA": {
+   "candidates": [
+    {
+     "name": "Rick Jackson",
+     "party": "R"
+    },
+    {
+     "name": "Keisha Bottoms",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/Gubernatorial_elections,_2026"
+  },
+  "2026-GOV-HI": {
+   "candidates": [
+    {
+     "name": "Joshua Green",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Gary Cordery",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/Gubernatorial_elections,_2026"
+  },
+  "2026-GOV-IA": {
+   "candidates": [
+    {
+     "name": "Zach Lahn",
+     "party": "R"
+    },
+    {
+     "name": "Rob Sand",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/Gubernatorial_elections,_2026"
+  },
+  "2026-GOV-ID": {
+   "candidates": [
+    {
+     "name": "Brad Little",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Pro-Life",
+     "party": "C"
+    },
+    {
+     "name": "Terri Pickens",
+     "party": "D"
+    },
+    {
+     "name": "Paul Sand",
+     "party": "L"
+    },
+    {
+     "name": "John R. Stegner",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/Gubernatorial_elections,_2026"
+  },
+  "2026-GOV-IL": {
+   "candidates": [
+    {
+     "name": "JB Pritzker",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Darren Bailey",
+     "party": "R"
+    },
+    {
+     "name": "Collin Corbett",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/Gubernatorial_elections,_2026"
+  },
+  "2026-GOV-KS": {
+   "candidates": [
+    {
+     "name": "Ty Masterson",
+     "party": "R"
+    },
+    {
+     "name": "Cindy Holscher",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/Gubernatorial_elections,_2026"
+  },
+  "2026-GOV-MA": {
+   "candidates": [
+    {
+     "name": "Maura Healey",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Michael Minogue",
+     "party": "R"
+    },
+    {
+     "name": "Andrea James",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/Gubernatorial_elections,_2026"
+  },
+  "2026-GOV-MD": {
+   "candidates": [
+    {
+     "name": "Wes Moore",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Dan Cox",
+     "party": "R"
+    },
+    {
+     "name": "Andy Ellis",
+     "party": "G"
+    },
+    {
+     "name": "Cathy White",
+     "party": "WC"
+    }
+   ],
+   "source": "https://ballotpedia.org/Gubernatorial_elections,_2026"
+  },
+  "2026-GOV-ME": {
+   "candidates": [
+    {
+     "name": "Bobby Charles",
+     "party": "R"
+    },
+    {
+     "name": "Hannah Pingree",
+     "party": "D"
+    },
+    {
+     "name": "Richard Bennett",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/Gubernatorial_elections,_2026"
+  },
+  "2026-GOV-MI": {
+   "candidates": [
+    {
+     "name": "John James",
+     "party": "R"
+    },
+    {
+     "name": "Jocelyn Benson",
+     "party": "D"
+    },
+    {
+     "name": "Douglas Campbell",
+     "party": "G"
+    },
+    {
+     "name": "Anthony Hudson",
+     "party": "L"
+    },
+    {
+     "name": "Donna Brandenburg",
+     "party": "UST"
+    }
+   ],
+   "source": "https://ballotpedia.org/Gubernatorial_elections,_2026"
+  },
+  "2026-GOV-MN": {
+   "candidates": [
+    {
+     "name": "Lisa Demuth",
+     "party": "R"
+    },
+    {
+     "name": "Amy Klobuchar",
+     "party": "D"
+    },
+    {
+     "name": "Steven Young",
+     "party": "G"
+    }
+   ],
+   "source": "https://ballotpedia.org/Gubernatorial_elections,_2026"
+  },
+  "2026-GOV-NE": {
+   "candidates": [
+    {
+     "name": "Jim Pillen",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Brett Lindstrom",
+     "party": "AFN"
+    },
+    {
+     "name": "Lynne Walz",
+     "party": "D"
+    },
+    {
+     "name": "Rick Beard",
+     "party": "LMN"
+    }
+   ],
+   "source": "https://ballotpedia.org/Gubernatorial_elections,_2026"
+  },
+  "2026-GOV-NH": {
+   "candidates": [
+    {
+     "name": "Kelly Ayotte",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Cinde Warmington",
+     "party": "D"
+    },
+    {
+     "name": "Stephen Villee",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/Gubernatorial_elections,_2026"
+  },
+  "2026-GOV-NM": {
+   "candidates": [
+    {
+     "name": "Gregg Hull",
+     "party": "R"
+    },
+    {
+     "name": "Debra Haaland",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/Gubernatorial_elections,_2026"
+  },
+  "2026-GOV-NV": {
+   "candidates": [
+    {
+     "name": "Joe Lombardo",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Aaron Ford",
+     "party": "D"
+    },
+    {
+     "name": "Danielle Ford",
+     "party": "NP"
+    }
+   ],
+   "source": "https://ballotpedia.org/Gubernatorial_elections,_2026"
+  },
+  "2026-GOV-NY": {
+   "candidates": [
+    {
+     "name": "Kathy Hochul",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Bruce Blakeman",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/Gubernatorial_elections,_2026"
+  },
+  "2026-GOV-OH": {
+   "candidates": [
+    {
+     "name": "Vivek Ramaswamy",
+     "party": "R"
+    },
+    {
+     "name": "Amy Acton",
+     "party": "D"
+    },
+    {
+     "name": "Don Kissick",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/Gubernatorial_elections,_2026"
+  },
+  "2026-GOV-OK": {
+   "candidates": [
+    {
+     "name": "Mike Mazzei",
+     "party": "R"
+    },
+    {
+     "name": "Cyndi Munson",
+     "party": "D"
+    },
+    {
+     "name": "Robert Brooks",
+     "party": "I"
+    },
+    {
+     "name": "Orlando Lynn Bush",
+     "party": "I"
+    },
+    {
+     "name": "Jerry Griffin",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/Gubernatorial_elections,_2026"
+  },
+  "2026-GOV-OR": {
+   "candidates": [
+    {
+     "name": "Tina Kotek",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Brett Smith",
+     "party": "PGO"
+    },
+    {
+     "name": "Christine Drazan",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/Gubernatorial_elections,_2026"
+  },
+  "2026-GOV-PA": {
+   "candidates": [
+    {
+     "name": "Josh Shapiro",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Stacy Garrity",
+     "party": "R"
+    },
+    {
+     "name": "Ken Krawchuk",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/Gubernatorial_elections,_2026"
+  },
+  "2026-GOV-RI": {
+   "candidates": [
+    {
+     "name": "Aaron Guckian",
+     "party": "R"
+    },
+    {
+     "name": "Helena Foulkes",
+     "party": "D"
+    },
+    {
+     "name": "Ken Block",
+     "party": "I"
+    },
+    {
+     "name": "Jasjit Gotra",
+     "party": "I"
+    },
+    {
+     "name": "Christopher Reynolds",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/Gubernatorial_elections,_2026"
+  },
+  "2026-GOV-SC": {
+   "candidates": [
+    {
+     "name": "Alan Wilson",
+     "party": "R"
+    },
+    {
+     "name": "Jermaine Johnson",
+     "party": "D"
+    },
+    {
+     "name": "Walid Hakim",
+     "party": "G"
+    },
+    {
+     "name": "Michael Addison",
+     "party": "UC"
+    }
+   ],
+   "source": "https://ballotpedia.org/Gubernatorial_elections,_2026"
+  },
+  "2026-GOV-SD": {
+   "candidates": [
+    {
+     "name": "Larry Rhoden",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Dan Ahlers",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/Gubernatorial_elections,_2026"
+  },
+  "2026-GOV-TN": {
+   "candidates": [
+    {
+     "name": "Marsha Blackburn",
+     "party": "R"
+    },
+    {
+     "name": "Jerri Green",
+     "party": "D"
+    },
+    {
+     "name": "Misam Abidi",
+     "party": "I"
+    },
+    {
+     "name": "Dean Brewer",
+     "party": "I"
+    },
+    {
+     "name": "Ray Brown",
+     "party": "I"
+    },
+    {
+     "name": "David Hatley",
+     "party": "I"
+    },
+    {
+     "name": "Wendell Jackson",
+     "party": "I"
+    },
+    {
+     "name": "Charles Morgan",
+     "party": "I"
+    },
+    {
+     "name": "Eddie Lee Murphy",
+     "party": "I"
+    },
+    {
+     "name": "Lauren Pinkston",
+     "party": "I"
+    },
+    {
+     "name": "Victor Scoggin",
+     "party": "I"
+    },
+    {
+     "name": "Dave Seeman",
+     "party": "I"
+    },
+    {
+     "name": "Karl Smithson",
+     "party": "I"
+    },
+    {
+     "name": "L. Webb Taylor",
+     "party": "I"
+    },
+    {
+     "name": "Robert Vick",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/Gubernatorial_elections,_2026"
+  },
+  "2026-GOV-TX": {
+   "candidates": [
+    {
+     "name": "Greg Abbott",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Gina Hinojosa",
+     "party": "D"
+    },
+    {
+     "name": "Pat Dixon",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/Gubernatorial_elections,_2026"
+  },
+  "2026-GOV-VT": {
+   "candidates": [
+    {
+     "name": "Phil Scott",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Amanda Janoo",
+     "party": "D"
+    },
+    {
+     "name": "Dean Roy",
+     "party": "FAU"
+    },
+    {
+     "name": "June Goodband",
+     "party": "GMP"
+    },
+    {
+     "name": "Brian Judd",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/Gubernatorial_elections,_2026"
+  },
+  "2026-GOV-WI": {
+   "candidates": [
+    {
+     "name": "Tom Tiffany",
+     "party": "R"
+    },
+    {
+     "name": "David Crowley",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/Gubernatorial_elections,_2026"
+  },
+  "2026-GOV-WY": {
+   "candidates": [
+    {
+     "name": "Eric Barlow",
+     "party": "R"
+    },
+    {
+     "name": "Rebecca Bextel",
+     "party": "C"
+    },
+    {
+     "name": "Ken Casner",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/Gubernatorial_elections,_2026"
+  },
+  "2026-HOU-AK-AL": {
+   "candidates": [
+    {
+     "name": "Nicholas Begich",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Eric Hafner",
+     "party": "D"
+    },
+    {
+     "name": "Jim McDermott",
+     "party": "L"
+    },
+    {
+     "name": "Bill Hill",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Alaska,_2026"
+  },
+  "2026-HOU-AL-01": {
+   "candidates": [
+    {
+     "name": "Clyde Jones",
+     "party": "D"
+    },
+    {
+     "name": "Jerry Carl",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Alabama,_2026"
+  },
+  "2026-HOU-AL-02": {
+   "candidates": [
+    {
+     "name": "Shomari Figures",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Rhett Marques",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Alabama,_2026"
+  },
+  "2026-HOU-AL-03": {
+   "candidates": [
+    {
+     "name": "Mike Rogers",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Lee McInnis",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Alabama,_2026"
+  },
+  "2026-HOU-AL-04": {
+   "candidates": [
+    {
+     "name": "Robert Aderholt",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Amanda Pusczek",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Alabama,_2026"
+  },
+  "2026-HOU-AL-05": {
+   "candidates": [
+    {
+     "name": "Dale Strong",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Andrew Sneed",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Alabama,_2026"
+  },
+  "2026-HOU-AL-06": {
+   "candidates": [
+    {
+     "name": "Gary Palmer",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Maurice Mercer",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Alabama,_2026"
+  },
+  "2026-HOU-AL-07": {
+   "candidates": [
+    {
+     "name": "Terri Sewell",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Ammie Akin",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Alabama,_2026"
+  },
+  "2026-HOU-AR-01": {
+   "candidates": [
+    {
+     "name": "Rick Crawford",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Terri Yarbrough Green",
+     "party": "D"
+    },
+    {
+     "name": "Steve Parsons",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Arkansas,_2026"
+  },
+  "2026-HOU-AR-02": {
+   "candidates": [
+    {
+     "name": "French Hill",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Chris Jones",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Arkansas,_2026"
+  },
+  "2026-HOU-AR-03": {
+   "candidates": [
+    {
+     "name": "Steve Womack",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Robb Ryerse",
+     "party": "D"
+    },
+    {
+     "name": "Bobby Wilson",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Arkansas,_2026"
+  },
+  "2026-HOU-AR-04": {
+   "candidates": [
+    {
+     "name": "Bruce Westerman",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "James Russell",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Arkansas,_2026"
+  },
+  "2026-HOU-AZ-01": {
+   "candidates": [
+    {
+     "name": "Amish Shah",
+     "party": "D"
+    },
+    {
+     "name": "Jay Feely",
+     "party": "R"
+    },
+    {
+     "name": "Monica Alponte",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Arizona,_2026"
+  },
+  "2026-HOU-AZ-02": {
+   "candidates": [
+    {
+     "name": "Eli Crane",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Jonathan Nez",
+     "party": "D"
+    },
+    {
+     "name": "Curtis Goodwin",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Arizona,_2026"
+  },
+  "2026-HOU-AZ-03": {
+   "candidates": [
+    {
+     "name": "Yassamin Ansari",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "David Redkey",
+     "party": "G"
+    },
+    {
+     "name": "Alan Aversa",
+     "party": "NL"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Arizona,_2026"
+  },
+  "2026-HOU-AZ-04": {
+   "candidates": [
+    {
+     "name": "Greg Stanton",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Zuhdi Jasser",
+     "party": "R"
+    },
+    {
+     "name": "Tisha Benoit",
+     "party": "NL"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Arizona,_2026"
+  },
+  "2026-HOU-AZ-05": {
+   "candidates": [
+    {
+     "name": "Elizabeth Lee",
+     "party": "D"
+    },
+    {
+     "name": "Mark Lamb",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Arizona,_2026"
+  },
+  "2026-HOU-AZ-06": {
+   "candidates": [
+    {
+     "name": "Juan Ciscomani",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "JoAnna Mendoza",
+     "party": "D"
+    },
+    {
+     "name": "Gary Swing",
+     "party": "G"
+    },
+    {
+     "name": "Jereme Peters",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Arizona,_2026"
+  },
+  "2026-HOU-AZ-07": {
+   "candidates": [
+    {
+     "name": "Adelita Grijalva",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Daniel Butierez Sr.",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Arizona,_2026"
+  },
+  "2026-HOU-AZ-08": {
+   "candidates": [
+    {
+     "name": "Abraham Hamadeh",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Bernadette Greene Placentia",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Arizona,_2026"
+  },
+  "2026-HOU-AZ-09": {
+   "candidates": [
+    {
+     "name": "Paul Gosar",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Danielle Sterbinsky",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Arizona,_2026"
+  },
+  "2026-HOU-CA-01": {
+   "candidates": [
+    {
+     "name": "James Gallagher",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Mike McGuire",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-02": {
+   "candidates": [
+    {
+     "name": "Jared Huffman",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Robin Littau",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-03": {
+   "candidates": [
+    {
+     "name": "Ami Bera",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Robb Tucker",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-04": {
+   "candidates": [
+    {
+     "name": "Mike Thompson",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Eric Jones",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-05": {
+   "candidates": [
+    {
+     "name": "Tom McClintock",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Michael Masuda",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-06": {
+   "candidates": [
+    {
+     "name": "Kevin Kiley",
+     "party": "NPP",
+     "incumbent": true
+    },
+    {
+     "name": "Richard Pan",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-07": {
+   "candidates": [
+    {
+     "name": "Doris Matsui",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Mai Vang",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-08": {
+   "candidates": [
+    {
+     "name": "John Garamendi",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Rudy Recile",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-09": {
+   "candidates": [
+    {
+     "name": "Josh Harder",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "John McBride",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-10": {
+   "candidates": [
+    {
+     "name": "Mark DeSaulnier",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Jeff Frese",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-11": {
+   "candidates": [
+    {
+     "name": "Connie Chan",
+     "party": "D"
+    },
+    {
+     "name": "Scott Wiener",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-12": {
+   "candidates": [
+    {
+     "name": "Lateefah Simon",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Jamie Joyce",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-13": {
+   "candidates": [
+    {
+     "name": "Adam Gray",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Kevin Lincoln II",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-14": {
+   "candidates": [
+    {
+     "name": "Aisha Wahab",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Melissa Hernandez",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-15": {
+   "candidates": [
+    {
+     "name": "Kevin Mullin",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Charles Hoelter",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-16": {
+   "candidates": [
+    {
+     "name": "Sam Liccardo",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Peter Soule",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-17": {
+   "candidates": [
+    {
+     "name": "Ro Khanna",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Ritesh Tandon",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-18": {
+   "candidates": [
+    {
+     "name": "Zoe Lofgren",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Shane Lewis",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-19": {
+   "candidates": [
+    {
+     "name": "Jimmy Panetta",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Peter Verbica",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-20": {
+   "candidates": [
+    {
+     "name": "Vince Fong",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Sandra Van Scotter",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-21": {
+   "candidates": [
+    {
+     "name": "Jim Costa",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Kyle Kirkland",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-22": {
+   "candidates": [
+    {
+     "name": "David G. Valadao",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Randy Villegas",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-23": {
+   "candidates": [
+    {
+     "name": "Jay Obernolte",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Tessa Lynn Hodge",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-24": {
+   "candidates": [
+    {
+     "name": "Salud Carbajal",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Bob Smith",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-25": {
+   "candidates": [
+    {
+     "name": "Raul Ruiz",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Joe Males",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-26": {
+   "candidates": [
+    {
+     "name": "Jacqui Irwin",
+     "party": "D"
+    },
+    {
+     "name": "Samuel Gallucci",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-27": {
+   "candidates": [
+    {
+     "name": "George Whitesides",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Jason Gibbs",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-28": {
+   "candidates": [
+    {
+     "name": "Judy Chu",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "April Verlato",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-29": {
+   "candidates": [
+    {
+     "name": "Luz Maria Rivas",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Angélica María Dueñas",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-30": {
+   "candidates": [
+    {
+     "name": "Laura Friedman",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Scott Meyers",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-31": {
+   "candidates": [
+    {
+     "name": "Gil Cisneros",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Eric Ching",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-32": {
+   "candidates": [
+    {
+     "name": "Brad Sherman",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Larry Thompson",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-33": {
+   "candidates": [
+    {
+     "name": "Pete Aguilar",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Stephanie Vargas",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-34": {
+   "candidates": [
+    {
+     "name": "Jimmy Gomez",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Angela Gonzales-Torres",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-35": {
+   "candidates": [
+    {
+     "name": "Norma Torres",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Mike Cargile",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-36": {
+   "candidates": [
+    {
+     "name": "Ted Lieu",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Houston Brignano",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-37": {
+   "candidates": [
+    {
+     "name": "Sydney Kamlager-Dove",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Samantha Mota",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-38": {
+   "candidates": [
+    {
+     "name": "Hilda Solis",
+     "party": "D"
+    },
+    {
+     "name": "Pedro Casas",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-39": {
+   "candidates": [
+    {
+     "name": "Mark Takano",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Steve Manos",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-40": {
+   "candidates": [
+    {
+     "name": "Ken Calvert",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Young Kim",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-41": {
+   "candidates": [
+    {
+     "name": "Linda Sánchez",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Mitch Clemmons",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-42": {
+   "candidates": [
+    {
+     "name": "Robert Garcia",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Brian Burley",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-43": {
+   "candidates": [
+    {
+     "name": "Maxine Waters",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Cristian Morales",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-44": {
+   "candidates": [
+    {
+     "name": "Nanette Barragán",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Genevieve Angel",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-45": {
+   "candidates": [
+    {
+     "name": "Derek Tran",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Chuong Vo",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-46": {
+   "candidates": [
+    {
+     "name": "Lou Correa",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "David Pan",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-47": {
+   "candidates": [
+    {
+     "name": "Dave Min",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Jenny Rae Le Roux",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-48": {
+   "candidates": [
+    {
+     "name": "Marni von Wilpert",
+     "party": "D"
+    },
+    {
+     "name": "Jim Desmond",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-49": {
+   "candidates": [
+    {
+     "name": "Mike Levin",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Armen Kurdian",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-50": {
+   "candidates": [
+    {
+     "name": "Scott Peters",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Steve Cohen",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-51": {
+   "candidates": [
+    {
+     "name": "Sara Jacobs",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Ricardo Cabrera",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CA-52": {
+   "candidates": [
+    {
+     "name": "Juan Vargas",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Jeff Belle",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_California,_2026"
+  },
+  "2026-HOU-CO-01": {
+   "candidates": [
+    {
+     "name": "Melat Kiros",
+     "party": "D"
+    },
+    {
+     "name": "Christy Peterson",
+     "party": "R"
+    },
+    {
+     "name": "Chad Humphrey",
+     "party": "L"
+    },
+    {
+     "name": "Shimon Blau",
+     "party": "I"
+    },
+    {
+     "name": "Critter Milton",
+     "party": "U"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Colorado,_2026"
+  },
+  "2026-HOU-CO-02": {
+   "candidates": [
+    {
+     "name": "Joe Neguse",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Kelley Dennison",
+     "party": "R"
+    },
+    {
+     "name": "Gaylon Kent",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Colorado,_2026"
+  },
+  "2026-HOU-CO-03": {
+   "candidates": [
+    {
+     "name": "Jeff Hurd",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Dwayne Romero",
+     "party": "D"
+    },
+    {
+     "name": "Cory Robertson",
+     "party": "L"
+    },
+    {
+     "name": "Clifton Brown",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Colorado,_2026"
+  },
+  "2026-HOU-CO-04": {
+   "candidates": [
+    {
+     "name": "Lauren Boebert",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Eileen Laubacher",
+     "party": "D"
+    },
+    {
+     "name": "Douglas Mangeris",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Colorado,_2026"
+  },
+  "2026-HOU-CO-05": {
+   "candidates": [
+    {
+     "name": "Jeff Crank",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Jessica Killin",
+     "party": "D"
+    },
+    {
+     "name": "Christopher Mitchell",
+     "party": "AC"
+    },
+    {
+     "name": "Mark Elworth Jr.",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Colorado,_2026"
+  },
+  "2026-HOU-CO-06": {
+   "candidates": [
+    {
+     "name": "Jason Crow",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Jason Ray Clark",
+     "party": "R"
+    },
+    {
+     "name": "Patty McMahon",
+     "party": "L"
+    },
+    {
+     "name": "Samir Witta",
+     "party": "I"
+    },
+    {
+     "name": "Meredith Ryan",
+     "party": "U"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Colorado,_2026"
+  },
+  "2026-HOU-CO-07": {
+   "candidates": [
+    {
+     "name": "Brittany Pettersen",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Timothy Bennett",
+     "party": "R"
+    },
+    {
+     "name": "Lawrence Clark",
+     "party": "AC"
+    },
+    {
+     "name": "Dan Sallis",
+     "party": "L"
+    },
+    {
+     "name": "Joe Krzeczkowski",
+     "party": "I"
+    },
+    {
+     "name": "Susan Hall",
+     "party": "U"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Colorado,_2026"
+  },
+  "2026-HOU-CO-08": {
+   "candidates": [
+    {
+     "name": "Gabe Evans",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Manny Rutinel",
+     "party": "D"
+    },
+    {
+     "name": "David Wood",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Colorado,_2026"
+  },
+  "2026-HOU-CT-01": {
+   "candidates": [
+    {
+     "name": "Luke Bronin",
+     "party": "D"
+    },
+    {
+     "name": "Amy Chai",
+     "party": "R"
+    },
+    {
+     "name": "Mary L. Sanders",
+     "party": "G"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Connecticut,_2026"
+  },
+  "2026-HOU-CT-02": {
+   "candidates": [
+    {
+     "name": "Joe Courtney",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "George Austin",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Connecticut,_2026"
+  },
+  "2026-HOU-CT-03": {
+   "candidates": [
+    {
+     "name": "Rosa L. DeLauro",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Christopher Lancia",
+     "party": "R"
+    },
+    {
+     "name": "Thomas Egan",
+     "party": "IOC"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Connecticut,_2026"
+  },
+  "2026-HOU-CT-04": {
+   "candidates": [
+    {
+     "name": "Jim Himes",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Michael Goldstein",
+     "party": "R"
+    },
+    {
+     "name": "Benjamin Wesley",
+     "party": "IOC"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Connecticut,_2026"
+  },
+  "2026-HOU-CT-05": {
+   "candidates": [
+    {
+     "name": "Jahana Hayes",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Chris Shea",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Connecticut,_2026"
+  },
+  "2026-HOU-DE-AL": {
+   "candidates": [
+    {
+     "name": "Sarah McBride",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Joseph Arminio",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Delaware,_2026"
+  },
+  "2026-HOU-FL-01": {
+   "candidates": [
+    {
+     "name": "Jimmy Patronis",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Gay Valimont",
+     "party": "D"
+    },
+    {
+     "name": "Tyler Davis",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Florida,_2026"
+  },
+  "2026-HOU-FL-02": {
+   "candidates": [
+    {
+     "name": "Amanda Green",
+     "party": "D"
+    },
+    {
+     "name": "Austin Rogers",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Florida,_2026"
+  },
+  "2026-HOU-FL-03": {
+   "candidates": [
+    {
+     "name": "Kat Cammack",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Seth Harp",
+     "party": "D"
+    },
+    {
+     "name": "Mike Klein",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Florida,_2026"
+  },
+  "2026-HOU-FL-04": {
+   "candidates": [
+    {
+     "name": "Aaron Bean",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "LaShonda Holloway",
+     "party": "D"
+    },
+    {
+     "name": "Mike Sell",
+     "party": "FF"
+    },
+    {
+     "name": "Todd Schaefer",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Florida,_2026"
+  },
+  "2026-HOU-FL-05": {
+   "candidates": [
+    {
+     "name": "John Rutherford",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Rachel Grage",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Florida,_2026"
+  },
+  "2026-HOU-FL-06": {
+   "candidates": [
+    {
+     "name": "Randy Fine",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Eric Yonce",
+     "party": "D"
+    },
+    {
+     "name": "Andrew Parrott",
+     "party": "L"
+    },
+    {
+     "name": "Michael Gist",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Florida,_2026"
+  },
+  "2026-HOU-FL-07": {
+   "candidates": [
+    {
+     "name": "Bale Dalton",
+     "party": "D"
+    },
+    {
+     "name": "Ryan Elijah",
+     "party": "R"
+    },
+    {
+     "name": "Christopher Dennison",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Florida,_2026"
+  },
+  "2026-HOU-FL-08": {
+   "candidates": [
+    {
+     "name": "Mike Haridopolos",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Jennifer Jenkins",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Florida,_2026"
+  },
+  "2026-HOU-FL-09": {
+   "candidates": [
+    {
+     "name": "Darren Soto",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Dan Green",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Florida,_2026"
+  },
+  "2026-HOU-FL-10": {
+   "candidates": [
+    {
+     "name": "Maxwell Alejandro Frost",
+     "party": "D",
+     "incumbent": true
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Florida,_2026",
+   "note": "Only one candidate on the general ballot (per Ballotpedia)."
+  },
+  "2026-HOU-FL-11": {
+   "candidates": [
+    {
+     "name": "James Pericola",
+     "party": "D"
+    },
+    {
+     "name": "Joe Strada",
+     "party": "R"
+    },
+    {
+     "name": "Ralph Groves",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Florida,_2026"
+  },
+  "2026-HOU-FL-12": {
+   "candidates": [
+    {
+     "name": "Gus M. Bilirakis",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Kimberly Overman",
+     "party": "D"
+    },
+    {
+     "name": "Branden Scrivener",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Florida,_2026"
+  },
+  "2026-HOU-FL-13": {
+   "candidates": [
+    {
+     "name": "Anna Paulina Luna",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Leela Gray",
+     "party": "D"
+    },
+    {
+     "name": "Tony D'Arrigo",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Florida,_2026"
+  },
+  "2026-HOU-FL-14": {
+   "candidates": [
+    {
+     "name": "Kathy Castor",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Mike Beltran",
+     "party": "R"
+    },
+    {
+     "name": "Brian Lambert",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Florida,_2026"
+  },
+  "2026-HOU-FL-15": {
+   "candidates": [
+    {
+     "name": "Laurel Lee",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Robert People",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Florida,_2026"
+  },
+  "2026-HOU-FL-16": {
+   "candidates": [
+    {
+     "name": "Kelly Kirschner",
+     "party": "D"
+    },
+    {
+     "name": "Sydney Gruters",
+     "party": "R"
+    },
+    {
+     "name": "Mark Davis",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Florida,_2026"
+  },
+  "2026-HOU-FL-17": {
+   "candidates": [
+    {
+     "name": "Greg Steube",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Matthew Montavon",
+     "party": "D"
+    },
+    {
+     "name": "Michael Quirk",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Florida,_2026"
+  },
+  "2026-HOU-FL-18": {
+   "candidates": [
+    {
+     "name": "Scott Franklin",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Curtis Gibson",
+     "party": "D"
+    },
+    {
+     "name": "Deva Simmons",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Florida,_2026"
+  },
+  "2026-HOU-FL-19": {
+   "candidates": [
+    {
+     "name": "Victor Arias",
+     "party": "D"
+    },
+    {
+     "name": "Jim Schwartzel",
+     "party": "R"
+    },
+    {
+     "name": "Seth Haskin",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Florida,_2026"
+  },
+  "2026-HOU-FL-20": {
+   "candidates": [
+    {
+     "name": "Debbie Wasserman Schultz",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Brent Andersen",
+     "party": "R"
+    },
+    {
+     "name": "Kedner Maxime",
+     "party": "IOF"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Florida,_2026"
+  },
+  "2026-HOU-FL-21": {
+   "candidates": [
+    {
+     "name": "Brian Mast",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "James Martin",
+     "party": "D"
+    },
+    {
+     "name": "Alexander Cooke",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Florida,_2026"
+  },
+  "2026-HOU-FL-22": {
+   "candidates": [
+    {
+     "name": "Pia Dandiya",
+     "party": "D"
+    },
+    {
+     "name": "Casey Askar",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Florida,_2026"
+  },
+  "2026-HOU-FL-23": {
+   "candidates": [
+    {
+     "name": "Lois Frankel",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Deborah Adeimy",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Florida,_2026"
+  },
+  "2026-HOU-FL-24": {
+   "candidates": [
+    {
+     "name": "Oliver Gilbert",
+     "party": "D"
+    },
+    {
+     "name": "Tedora Brown",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Florida,_2026"
+  },
+  "2026-HOU-FL-25": {
+   "candidates": [
+    {
+     "name": "Jared Evan Moskowitz",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Scott Singer",
+     "party": "R"
+    },
+    {
+     "name": "Peter Jassenoff",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Florida,_2026"
+  },
+  "2026-HOU-FL-26": {
+   "candidates": [
+    {
+     "name": "Mario Diaz-Balart",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Nicole Locklin",
+     "party": "D"
+    },
+    {
+     "name": "Deborah Meidinger Hosey",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Florida,_2026"
+  },
+  "2026-HOU-FL-27": {
+   "candidates": [
+    {
+     "name": "Maria Elvira Salazar",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Eliott Rodriguez",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Florida,_2026"
+  },
+  "2026-HOU-FL-28": {
+   "candidates": [
+    {
+     "name": "Carlos Gimenez",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Phil Ehr",
+     "party": "D"
+    },
+    {
+     "name": "Eddy Rojas",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Florida,_2026"
+  },
+  "2026-HOU-GA-01": {
+   "candidates": [
+    {
+     "name": "Amanda Hollowell",
+     "party": "D"
+    },
+    {
+     "name": "James Kingston",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Georgia,_2026"
+  },
+  "2026-HOU-GA-02": {
+   "candidates": [
+    {
+     "name": "Sanford Bishop Jr.",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Matt Day",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Georgia,_2026"
+  },
+  "2026-HOU-GA-03": {
+   "candidates": [
+    {
+     "name": "Brian Jack",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Maura Keller",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Georgia,_2026"
+  },
+  "2026-HOU-GA-04": {
+   "candidates": [
+    {
+     "name": "Hank Johnson",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "James Duffie",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Georgia,_2026"
+  },
+  "2026-HOU-GA-05": {
+   "candidates": [
+    {
+     "name": "Nikema Williams",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "John Salvesen",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Georgia,_2026"
+  },
+  "2026-HOU-GA-06": {
+   "candidates": [
+    {
+     "name": "Lucy McBath",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Kevin Martin",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Georgia,_2026"
+  },
+  "2026-HOU-GA-07": {
+   "candidates": [
+    {
+     "name": "Rich McCormick",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Tony Kozycki",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Georgia,_2026"
+  },
+  "2026-HOU-GA-08": {
+   "candidates": [
+    {
+     "name": "Austin Scott",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Kelly Esti",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Georgia,_2026"
+  },
+  "2026-HOU-GA-09": {
+   "candidates": [
+    {
+     "name": "Andrew Clyde",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Caitlyn Gegen",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Georgia,_2026"
+  },
+  "2026-HOU-GA-10": {
+   "candidates": [
+    {
+     "name": "Pamela DeLancy",
+     "party": "D"
+    },
+    {
+     "name": "Houston Gaines",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Georgia,_2026"
+  },
+  "2026-HOU-GA-11": {
+   "candidates": [
+    {
+     "name": "Chris Harden",
+     "party": "D"
+    },
+    {
+     "name": "John Cowan",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Georgia,_2026"
+  },
+  "2026-HOU-GA-12": {
+   "candidates": [
+    {
+     "name": "Rick Allen",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Ceretta Smith",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Georgia,_2026"
+  },
+  "2026-HOU-GA-13": {
+   "candidates": [
+    {
+     "name": "Jasmine Clark",
+     "party": "D"
+    },
+    {
+     "name": "Jonathan Chavez",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Georgia,_2026"
+  },
+  "2026-HOU-GA-14": {
+   "candidates": [
+    {
+     "name": "Clayton Fuller",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Shawn Harris",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Georgia,_2026"
+  },
+  "2026-HOU-HI-01": {
+   "candidates": [
+    {
+     "name": "Ed Case",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Adriel Lam",
+     "party": "R"
+    },
+    {
+     "name": "Jordan Conley",
+     "party": "G"
+    },
+    {
+     "name": "Nathan Berning",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Hawaii,_2026"
+  },
+  "2026-HOU-HI-02": {
+   "candidates": [
+    {
+     "name": "Jill Tokuda",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Brenton Awa",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Hawaii,_2026"
+  },
+  "2026-HOU-IA-01": {
+   "candidates": [
+    {
+     "name": "Mariannette Miller-Meeks",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Christina Bohannan",
+     "party": "D"
+    },
+    {
+     "name": "Michael Bridgford",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Iowa,_2026"
+  },
+  "2026-HOU-IA-02": {
+   "candidates": [
+    {
+     "name": "Lindsay James",
+     "party": "D"
+    },
+    {
+     "name": "Joe Mitchell",
+     "party": "R"
+    },
+    {
+     "name": "Rick Stewart",
+     "party": "L"
+    },
+    {
+     "name": "Dave Bushaw",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Iowa,_2026"
+  },
+  "2026-HOU-IA-03": {
+   "candidates": [
+    {
+     "name": "Zach Nunn",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Sarah Trone Garriott",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Iowa,_2026"
+  },
+  "2026-HOU-IA-04": {
+   "candidates": [
+    {
+     "name": "Dave Dawson",
+     "party": "D"
+    },
+    {
+     "name": "Chris McGowan",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Iowa,_2026"
+  },
+  "2026-HOU-ID-01": {
+   "candidates": [
+    {
+     "name": "Russ Fulcher",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Kaylee Peterson",
+     "party": "D"
+    },
+    {
+     "name": "Brendan Gomez",
+     "party": "C"
+    },
+    {
+     "name": "Sarah Zabel",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Idaho,_2026"
+  },
+  "2026-HOU-ID-02": {
+   "candidates": [
+    {
+     "name": "Michael K. Simpson",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Elinor Gilbreath",
+     "party": "D"
+    },
+    {
+     "name": "Will Johanson",
+     "party": "L"
+    },
+    {
+     "name": "Emre Houser",
+     "party": "I"
+    },
+    {
+     "name": "Tripp Hutchinson",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Idaho,_2026"
+  },
+  "2026-HOU-IL-01": {
+   "candidates": [
+    {
+     "name": "Jonathan Jackson",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Christian Maxwell",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Illinois,_2026"
+  },
+  "2026-HOU-IL-02": {
+   "candidates": [
+    {
+     "name": "Donna Miller",
+     "party": "D"
+    },
+    {
+     "name": "Mike Noack",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Illinois,_2026"
+  },
+  "2026-HOU-IL-03": {
+   "candidates": [
+    {
+     "name": "Delia Ramirez",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Angel Oakley",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Illinois,_2026"
+  },
+  "2026-HOU-IL-04": {
+   "candidates": [
+    {
+     "name": "Patty Garcia",
+     "party": "D"
+    },
+    {
+     "name": "Lupe Castillo",
+     "party": "R"
+    },
+    {
+     "name": "Ed Hershey",
+     "party": "WC"
+    },
+    {
+     "name": "Chris Getty",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Illinois,_2026"
+  },
+  "2026-HOU-IL-05": {
+   "candidates": [
+    {
+     "name": "Mike Quigley",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Tom Hanson",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Illinois,_2026"
+  },
+  "2026-HOU-IL-06": {
+   "candidates": [
+    {
+     "name": "Sean Casten",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Niki Conforti",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Illinois,_2026"
+  },
+  "2026-HOU-IL-07": {
+   "candidates": [
+    {
+     "name": "La Shawn Ford",
+     "party": "D"
+    },
+    {
+     "name": "Chad Koppie",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Illinois,_2026"
+  },
+  "2026-HOU-IL-08": {
+   "candidates": [
+    {
+     "name": "Melissa Bean",
+     "party": "D"
+    },
+    {
+     "name": "Jennifer Davis",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Illinois,_2026"
+  },
+  "2026-HOU-IL-09": {
+   "candidates": [
+    {
+     "name": "Daniel K. Biss",
+     "party": "D"
+    },
+    {
+     "name": "John Elleson",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Illinois,_2026"
+  },
+  "2026-HOU-IL-10": {
+   "candidates": [
+    {
+     "name": "Brad Schneider",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Carl Lambrecht",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Illinois,_2026"
+  },
+  "2026-HOU-IL-11": {
+   "candidates": [
+    {
+     "name": "Bill Foster",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Jeffrey Walter",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Illinois,_2026"
+  },
+  "2026-HOU-IL-12": {
+   "candidates": [
+    {
+     "name": "Mike Bost",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Julie Fortier",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Illinois,_2026"
+  },
+  "2026-HOU-IL-13": {
+   "candidates": [
+    {
+     "name": "Nikki Budzinski",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Jeff Wilson",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Illinois,_2026"
+  },
+  "2026-HOU-IL-14": {
+   "candidates": [
+    {
+     "name": "Lauren Underwood",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Jim Marter",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Illinois,_2026"
+  },
+  "2026-HOU-IL-15": {
+   "candidates": [
+    {
+     "name": "Mary Miller",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Jennifer Todd",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Illinois,_2026"
+  },
+  "2026-HOU-IL-16": {
+   "candidates": [
+    {
+     "name": "Darin LaHood",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Paul Nolley",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Illinois,_2026"
+  },
+  "2026-HOU-IL-17": {
+   "candidates": [
+    {
+     "name": "Eric Sorensen",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Dillan Vancil",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Illinois,_2026"
+  },
+  "2026-HOU-IN-01": {
+   "candidates": [
+    {
+     "name": "Frank Mrvan",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Barb Regnitz",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Indiana,_2026"
+  },
+  "2026-HOU-IN-02": {
+   "candidates": [
+    {
+     "name": "Rudy Yakym",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Jamee Decio",
+     "party": "D"
+    },
+    {
+     "name": "William Henry",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Indiana,_2026"
+  },
+  "2026-HOU-IN-03": {
+   "candidates": [
+    {
+     "name": "Marlin A. Stutzman",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Kelly Thompson",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Indiana,_2026"
+  },
+  "2026-HOU-IN-04": {
+   "candidates": [
+    {
+     "name": "Jim Baird",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Drew Cox",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Indiana,_2026"
+  },
+  "2026-HOU-IN-05": {
+   "candidates": [
+    {
+     "name": "Victoria Spartz",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "J.D. Ford",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Indiana,_2026"
+  },
+  "2026-HOU-IN-06": {
+   "candidates": [
+    {
+     "name": "Jefferson Shreve",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Cynthia Wirth",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Indiana,_2026"
+  },
+  "2026-HOU-IN-07": {
+   "candidates": [
+    {
+     "name": "André Carson",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Patrick McAuley",
+     "party": "R"
+    },
+    {
+     "name": "James Sceniak",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Indiana,_2026"
+  },
+  "2026-HOU-IN-08": {
+   "candidates": [
+    {
+     "name": "Mark Messmer",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Mary Allen",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Indiana,_2026"
+  },
+  "2026-HOU-IN-09": {
+   "candidates": [
+    {
+     "name": "Erin Houchin",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Brad Meyer",
+     "party": "D"
+    },
+    {
+     "name": "Tonya Hudson",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Indiana,_2026"
+  },
+  "2026-HOU-KS-01": {
+   "candidates": [
+    {
+     "name": "Tracey Mann",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Lauren Reinhold",
+     "party": "D"
+    },
+    {
+     "name": "Steven Jacob",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Kansas,_2026"
+  },
+  "2026-HOU-KS-02": {
+   "candidates": [
+    {
+     "name": "Derek Schmidt",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Don Coover",
+     "party": "D"
+    },
+    {
+     "name": "John Hauer",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Kansas,_2026"
+  },
+  "2026-HOU-KS-03": {
+   "candidates": [
+    {
+     "name": "Sharice Davids",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Eric Jenkins",
+     "party": "R"
+    },
+    {
+     "name": "Steve Hohe",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Kansas,_2026"
+  },
+  "2026-HOU-KS-04": {
+   "candidates": [
+    {
+     "name": "Ron Estes",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Katy Tyndell",
+     "party": "D"
+    },
+    {
+     "name": "Drew Cranmer",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Kansas,_2026"
+  },
+  "2026-HOU-KY-01": {
+   "candidates": [
+    {
+     "name": "James Comer Jr.",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Drew Williams",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Kentucky,_2026"
+  },
+  "2026-HOU-KY-02": {
+   "candidates": [
+    {
+     "name": "Brett Guthrie",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Megan Wingfield",
+     "party": "D"
+    },
+    {
+     "name": "Thomas Loecken",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Kentucky,_2026"
+  },
+  "2026-HOU-KY-03": {
+   "candidates": [
+    {
+     "name": "Morgan McGarvey",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Maria Teresa Rodriguez",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Kentucky,_2026"
+  },
+  "2026-HOU-KY-04": {
+   "candidates": [
+    {
+     "name": "Melissa Strange",
+     "party": "D"
+    },
+    {
+     "name": "Ed Gallrein",
+     "party": "R"
+    },
+    {
+     "name": "Jeremy Todd",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Kentucky,_2026"
+  },
+  "2026-HOU-KY-05": {
+   "candidates": [
+    {
+     "name": "Hal Rogers",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Ned Pillersdorf",
+     "party": "D"
+    },
+    {
+     "name": "Gerardo Serrano",
+     "party": "I"
+    },
+    {
+     "name": "Mikel Wein",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Kentucky,_2026"
+  },
+  "2026-HOU-KY-06": {
+   "candidates": [
+    {
+     "name": "Zach Dembo",
+     "party": "D"
+    },
+    {
+     "name": "Ralph Alvarado",
+     "party": "R"
+    },
+    {
+     "name": "Pete Lynch",
+     "party": "K"
+    },
+    {
+     "name": "Jay Bowman",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Kentucky,_2026"
+  },
+  "2026-HOU-LA-01": {
+   "candidates": [],
+   "note": "Not verified: Ballotpedia's Louisiana general-election list is incomplete pending primary results."
+  },
+  "2026-HOU-LA-02": {
+   "candidates": [],
+   "note": "Not verified: Ballotpedia's Louisiana general-election list is incomplete pending primary results."
+  },
+  "2026-HOU-LA-03": {
+   "candidates": [],
+   "note": "Not verified: Ballotpedia's Louisiana general-election list is incomplete pending primary results."
+  },
+  "2026-HOU-LA-04": {
+   "candidates": [],
+   "note": "Not verified: Ballotpedia's Louisiana general-election list is incomplete pending primary results."
+  },
+  "2026-HOU-LA-05": {
+   "candidates": [],
+   "note": "Not verified: Ballotpedia's Louisiana general-election list is incomplete pending primary results."
+  },
+  "2026-HOU-LA-06": {
+   "candidates": [],
+   "note": "Not verified: Ballotpedia's Louisiana general-election list is incomplete pending primary results."
+  },
+  "2026-HOU-MA-01": {
+   "candidates": [
+    {
+     "name": "Richard Neal",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Nadia Milleron",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Massachusetts,_2026"
+  },
+  "2026-HOU-MA-02": {
+   "candidates": [
+    {
+     "name": "Jim McGovern",
+     "party": "D",
+     "incumbent": true
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Massachusetts,_2026",
+   "note": "Only one candidate on the general ballot (per Ballotpedia)."
+  },
+  "2026-HOU-MA-03": {
+   "candidates": [
+    {
+     "name": "Lori Trahan",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Gary Grossi",
+     "party": "R"
+    },
+    {
+     "name": "Dennis Conlon",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Massachusetts,_2026"
+  },
+  "2026-HOU-MA-04": {
+   "candidates": [
+    {
+     "name": "Jake Auchincloss",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Thomas Stalcup",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Massachusetts,_2026"
+  },
+  "2026-HOU-MA-05": {
+   "candidates": [
+    {
+     "name": "Katherine Clark",
+     "party": "D",
+     "incumbent": true
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Massachusetts,_2026",
+   "note": "Only one candidate on the general ballot (per Ballotpedia)."
+  },
+  "2026-HOU-MA-06": {
+   "candidates": [
+    {
+     "name": "Dan Koh",
+     "party": "D"
+    },
+    {
+     "name": "Micah Jones",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Massachusetts,_2026"
+  },
+  "2026-HOU-MA-07": {
+   "candidates": [
+    {
+     "name": "Ayanna Pressley",
+     "party": "D",
+     "incumbent": true
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Massachusetts,_2026",
+   "note": "Only one candidate on the general ballot (per Ballotpedia)."
+  },
+  "2026-HOU-MA-08": {
+   "candidates": [
+    {
+     "name": "Stephen Lynch",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Robert Burke",
+     "party": "R"
+    },
+    {
+     "name": "Rasheed Walters",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Massachusetts,_2026"
+  },
+  "2026-HOU-MA-09": {
+   "candidates": [
+    {
+     "name": "Bill Keating",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "R. Tyler MacAllister",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Massachusetts,_2026"
+  },
+  "2026-HOU-MD-01": {
+   "candidates": [
+    {
+     "name": "Andrew Harris",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Dan Schwartz",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Maryland,_2026"
+  },
+  "2026-HOU-MD-02": {
+   "candidates": [
+    {
+     "name": "John Olszewski Jr.",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Dave Wallace",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Maryland,_2026"
+  },
+  "2026-HOU-MD-03": {
+   "candidates": [
+    {
+     "name": "Sarah Elfreth",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Bernard Flowers",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Maryland,_2026"
+  },
+  "2026-HOU-MD-04": {
+   "candidates": [
+    {
+     "name": "Glenn Ivey",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "George McDermott",
+     "party": "R"
+    },
+    {
+     "name": "Sam Husseini",
+     "party": "G"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Maryland,_2026"
+  },
+  "2026-HOU-MD-05": {
+   "candidates": [
+    {
+     "name": "Adrian Boafo",
+     "party": "D"
+    },
+    {
+     "name": "Chris Chaffee",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Maryland,_2026"
+  },
+  "2026-HOU-MD-06": {
+   "candidates": [
+    {
+     "name": "April McClain Delaney",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Robin Ficker",
+     "party": "R"
+    },
+    {
+     "name": "Moshe Landman",
+     "party": "G"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Maryland,_2026"
+  },
+  "2026-HOU-MD-07": {
+   "candidates": [
+    {
+     "name": "Kweisi Mfume",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Scott Collier",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Maryland,_2026"
+  },
+  "2026-HOU-MD-08": {
+   "candidates": [
+    {
+     "name": "Jamie Raskin",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Cheryl Riley",
+     "party": "R"
+    },
+    {
+     "name": "Nancy Wallace",
+     "party": "G"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Maryland,_2026"
+  },
+  "2026-HOU-ME-01": {
+   "candidates": [
+    {
+     "name": "Chellie Pingree",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Ronald C. Russell",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Maine,_2026"
+  },
+  "2026-HOU-ME-02": {
+   "candidates": [
+    {
+     "name": "Matthew Dunlap",
+     "party": "D"
+    },
+    {
+     "name": "Paul LePage",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Maine,_2026"
+  },
+  "2026-HOU-MI-01": {
+   "candidates": [
+    {
+     "name": "Jack Bergman",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Callie Barr",
+     "party": "D"
+    },
+    {
+     "name": "LaVeta Davenport",
+     "party": "G"
+    },
+    {
+     "name": "Arnett Satterla",
+     "party": "L"
+    },
+    {
+     "name": "Doc Kovaly",
+     "party": "UST"
+    },
+    {
+     "name": "Liz Hakola",
+     "party": "WC"
+    },
+    {
+     "name": "Zebulon Featherly",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Michigan,_2026"
+  },
+  "2026-HOU-MI-02": {
+   "candidates": [
+    {
+     "name": "John Moolenaar",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Ben Ambrose",
+     "party": "D"
+    },
+    {
+     "name": "Charlotte Magoon",
+     "party": "G"
+    },
+    {
+     "name": "Richard Sills",
+     "party": "NLI"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Michigan,_2026"
+  },
+  "2026-HOU-MI-03": {
+   "candidates": [
+    {
+     "name": "Hillary Scholten",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Terri DeBoer",
+     "party": "R"
+    },
+    {
+     "name": "Joe Jock",
+     "party": "G"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Michigan,_2026"
+  },
+  "2026-HOU-MI-04": {
+   "candidates": [
+    {
+     "name": "Bill Huizenga",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Sean McCann",
+     "party": "D"
+    },
+    {
+     "name": "Shafina Barnett",
+     "party": "G"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Michigan,_2026"
+  },
+  "2026-HOU-MI-05": {
+   "candidates": [
+    {
+     "name": "Tim Walberg",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Christian Vukasovich",
+     "party": "D"
+    },
+    {
+     "name": "James Bronke",
+     "party": "G"
+    },
+    {
+     "name": "Ronald Muszynski",
+     "party": "L"
+    },
+    {
+     "name": "Sharon Renier",
+     "party": "UST"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Michigan,_2026"
+  },
+  "2026-HOU-MI-06": {
+   "candidates": [
+    {
+     "name": "Debbie Dingell",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Heather Smiley",
+     "party": "R"
+    },
+    {
+     "name": "Clyde Shabazz",
+     "party": "G"
+    },
+    {
+     "name": "Tim Teagan",
+     "party": "L"
+    },
+    {
+     "name": "Michael Mickevicius",
+     "party": "UST"
+    },
+    {
+     "name": "Linda Rayburn",
+     "party": "WC"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Michigan,_2026"
+  },
+  "2026-HOU-MI-07": {
+   "candidates": [
+    {
+     "name": "Tom Barrett",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "William Lawrence",
+     "party": "D"
+    },
+    {
+     "name": "Shane Dedrick",
+     "party": "G"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Michigan,_2026"
+  },
+  "2026-HOU-MI-08": {
+   "candidates": [
+    {
+     "name": "Kristen McDonald Rivet",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Thomas J. Smith",
+     "party": "R"
+    },
+    {
+     "name": "Jim Casha",
+     "party": "G"
+    },
+    {
+     "name": "C. Mia Pettus",
+     "party": "L"
+    },
+    {
+     "name": "Kathy Goodwin",
+     "party": "WC"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Michigan,_2026"
+  },
+  "2026-HOU-MI-09": {
+   "candidates": [
+    {
+     "name": "Lisa McClain",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Ray Pooley",
+     "party": "D"
+    },
+    {
+     "name": "Destiny Clayton",
+     "party": "G"
+    },
+    {
+     "name": "Kevin Vayko",
+     "party": "L"
+    },
+    {
+     "name": "John Vlahos",
+     "party": "UST"
+    },
+    {
+     "name": "Jim Walkowicz",
+     "party": "WC"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Michigan,_2026"
+  },
+  "2026-HOU-MI-10": {
+   "candidates": [
+    {
+     "name": "Christina Hines",
+     "party": "D"
+    },
+    {
+     "name": "Michael Bouchard",
+     "party": "R"
+    },
+    {
+     "name": "Kwabena Nkromo",
+     "party": "G"
+    },
+    {
+     "name": "Mike Saliba",
+     "party": "L"
+    },
+    {
+     "name": "Andrea Kirby",
+     "party": "WC"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Michigan,_2026"
+  },
+  "2026-HOU-MI-11": {
+   "candidates": [
+    {
+     "name": "Jeremy Moss",
+     "party": "D"
+    },
+    {
+     "name": "Ethan Baker",
+     "party": "R"
+    },
+    {
+     "name": "Ryan Teasdale",
+     "party": "G"
+    },
+    {
+     "name": "Farid Ishac",
+     "party": "L"
+    },
+    {
+     "name": "Anil Kumar",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Michigan,_2026"
+  },
+  "2026-HOU-MI-12": {
+   "candidates": [
+    {
+     "name": "Rashida Tlaib",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "James Hooper",
+     "party": "R"
+    },
+    {
+     "name": "Brenda Sanders",
+     "party": "G"
+    },
+    {
+     "name": "Marc Joseph Sosnowski",
+     "party": "UST"
+    },
+    {
+     "name": "Gary Walkowicz",
+     "party": "WC"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Michigan,_2026"
+  },
+  "2026-HOU-MI-13": {
+   "candidates": [
+    {
+     "name": "Donavan McKinney",
+     "party": "D"
+    },
+    {
+     "name": "Taras Nykoriak",
+     "party": "R"
+    },
+    {
+     "name": "Raelyn Light",
+     "party": "G"
+    },
+    {
+     "name": "Christopher Dardzinski",
+     "party": "UST"
+    },
+    {
+     "name": "Simone Coleman",
+     "party": "WC"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Michigan,_2026"
+  },
+  "2026-HOU-MN-01": {
+   "candidates": [
+    {
+     "name": "Brad Finstad",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Jake Johnson",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Minnesota,_2026"
+  },
+  "2026-HOU-MN-02": {
+   "candidates": [
+    {
+     "name": "Matt Little",
+     "party": "D"
+    },
+    {
+     "name": "Eric Pratt",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Minnesota,_2026"
+  },
+  "2026-HOU-MN-03": {
+   "candidates": [
+    {
+     "name": "Kelly Morrison",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Tyler Bass",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Minnesota,_2026"
+  },
+  "2026-HOU-MN-04": {
+   "candidates": [
+    {
+     "name": "Betty McCollum",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Paul Wikstrom",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Minnesota,_2026"
+  },
+  "2026-HOU-MN-05": {
+   "candidates": [
+    {
+     "name": "Ilhan Omar",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "John Nagel",
+     "party": "R"
+    },
+    {
+     "name": "DeVelle Jackson",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Minnesota,_2026"
+  },
+  "2026-HOU-MN-06": {
+   "candidates": [
+    {
+     "name": "Tom Emmer",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Doug Chapin",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Minnesota,_2026"
+  },
+  "2026-HOU-MN-07": {
+   "candidates": [
+    {
+     "name": "Michelle Fischbach",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Erik Osberg",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Minnesota,_2026"
+  },
+  "2026-HOU-MN-08": {
+   "candidates": [
+    {
+     "name": "Pete Stauber",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Trina Swanson",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Minnesota,_2026"
+  },
+  "2026-HOU-MO-01": {
+   "candidates": [
+    {
+     "name": "Wesley Bell",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Paul Berry",
+     "party": "R"
+    },
+    {
+     "name": "Tom Schmitz",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Missouri,_2026"
+  },
+  "2026-HOU-MO-02": {
+   "candidates": [
+    {
+     "name": "Ann Wagner",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Frederick Wellman",
+     "party": "D"
+    },
+    {
+     "name": "Brandon Daugherty",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Missouri,_2026"
+  },
+  "2026-HOU-MO-03": {
+   "candidates": [
+    {
+     "name": "Bob Onder",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Bethany Mann",
+     "party": "D"
+    },
+    {
+     "name": "Jim Higgins",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Missouri,_2026"
+  },
+  "2026-HOU-MO-04": {
+   "candidates": [
+    {
+     "name": "Mark Alford",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Jordan Herrera",
+     "party": "D"
+    },
+    {
+     "name": "Thomas Holbrook",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Missouri,_2026"
+  },
+  "2026-HOU-MO-05": {
+   "candidates": [
+    {
+     "name": "Emanuel Cleaver",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Rick Brattin",
+     "party": "R"
+    },
+    {
+     "name": "Randy Langkraehr",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Missouri,_2026"
+  },
+  "2026-HOU-MO-06": {
+   "candidates": [
+    {
+     "name": "Josh Smead",
+     "party": "D"
+    },
+    {
+     "name": "Chris Stigall",
+     "party": "R"
+    },
+    {
+     "name": "Andy Maidment",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Missouri,_2026"
+  },
+  "2026-HOU-MO-07": {
+   "candidates": [
+    {
+     "name": "Eric Burlison",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Missi Hesketh",
+     "party": "D"
+    },
+    {
+     "name": "Kevin Craig",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Missouri,_2026"
+  },
+  "2026-HOU-MO-08": {
+   "candidates": [
+    {
+     "name": "Jason Smith",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Christopher Reichard",
+     "party": "D"
+    },
+    {
+     "name": "Rebecca Sharpe Lombard",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Missouri,_2026"
+  },
+  "2026-HOU-MS-01": {
+   "candidates": [
+    {
+     "name": "Trent Kelly",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Cliff Johnson",
+     "party": "D"
+    },
+    {
+     "name": "Johnny Baucom",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Mississippi,_2026"
+  },
+  "2026-HOU-MS-02": {
+   "candidates": [
+    {
+     "name": "Bennie Thompson",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Ron Eller",
+     "party": "R"
+    },
+    {
+     "name": "Bennie Foster",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Mississippi,_2026"
+  },
+  "2026-HOU-MS-03": {
+   "candidates": [
+    {
+     "name": "Michael Guest",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Michael Chiaradio",
+     "party": "D"
+    },
+    {
+     "name": "Erik Kiehle",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Mississippi,_2026"
+  },
+  "2026-HOU-MS-04": {
+   "candidates": [
+    {
+     "name": "Mike Ezell",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Jeffrey Hulum III",
+     "party": "D"
+    },
+    {
+     "name": "Carl Boyanton",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Mississippi,_2026"
+  },
+  "2026-HOU-MT-01": {
+   "candidates": [
+    {
+     "name": "Sam Forstag",
+     "party": "D"
+    },
+    {
+     "name": "Aaron Flint",
+     "party": "R"
+    },
+    {
+     "name": "Nick Sheedy",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Montana,_2026"
+  },
+  "2026-HOU-MT-02": {
+   "candidates": [
+    {
+     "name": "Troy Downing",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Brian Miller",
+     "party": "D"
+    },
+    {
+     "name": "Patrick McCracken",
+     "party": "L"
+    },
+    {
+     "name": "Michael Eisenhauer",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Montana,_2026"
+  },
+  "2026-HOU-NC-01": {
+   "candidates": [
+    {
+     "name": "Donald Davis",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Laurie Buckhout",
+     "party": "R"
+    },
+    {
+     "name": "Tom Bailey",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_North_Carolina,_2026"
+  },
+  "2026-HOU-NC-02": {
+   "candidates": [
+    {
+     "name": "Deborah Ross",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Eugene Douglass",
+     "party": "R"
+    },
+    {
+     "name": "Matthew Laszacs",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_North_Carolina,_2026"
+  },
+  "2026-HOU-NC-03": {
+   "candidates": [
+    {
+     "name": "Gregory Murphy",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Raymond Smith Jr.",
+     "party": "D"
+    },
+    {
+     "name": "Daniel Cavender",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_North_Carolina,_2026"
+  },
+  "2026-HOU-NC-04": {
+   "candidates": [
+    {
+     "name": "Valerie Foushee",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Mahesh Ganorkar",
+     "party": "R"
+    },
+    {
+     "name": "Guy Meilleur",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_North_Carolina,_2026"
+  },
+  "2026-HOU-NC-05": {
+   "candidates": [
+    {
+     "name": "Virginia Foxx",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Chuck Hubbard",
+     "party": "D"
+    },
+    {
+     "name": "Robert Luffman",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_North_Carolina,_2026"
+  },
+  "2026-HOU-NC-06": {
+   "candidates": [
+    {
+     "name": "Addison McDowell",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Cyril Jefferson",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_North_Carolina,_2026"
+  },
+  "2026-HOU-NC-07": {
+   "candidates": [
+    {
+     "name": "David Rouzer",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Kimberly Hardy",
+     "party": "D"
+    },
+    {
+     "name": "Maad Abu-Ghazalah",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_North_Carolina,_2026"
+  },
+  "2026-HOU-NC-08": {
+   "candidates": [
+    {
+     "name": "Mark Harris",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Colby Watson",
+     "party": "D"
+    },
+    {
+     "name": "Bo Whitehead",
+     "party": "G"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_North_Carolina,_2026"
+  },
+  "2026-HOU-NC-09": {
+   "candidates": [
+    {
+     "name": "Richard Hudson",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Richard Ojeda",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_North_Carolina,_2026"
+  },
+  "2026-HOU-NC-10": {
+   "candidates": [
+    {
+     "name": "Pat Harrigan",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Ashley Bell",
+     "party": "D"
+    },
+    {
+     "name": "Steven Feldman",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_North_Carolina,_2026"
+  },
+  "2026-HOU-NC-11": {
+   "candidates": [
+    {
+     "name": "Jamie Ager",
+     "party": "D"
+    },
+    {
+     "name": "Jennifer Balkcom",
+     "party": "R"
+    },
+    {
+     "name": "Travis Groo",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_North_Carolina,_2026"
+  },
+  "2026-HOU-NC-12": {
+   "candidates": [
+    {
+     "name": "Alma Adams",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Jack Codiga",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_North_Carolina,_2026"
+  },
+  "2026-HOU-NC-13": {
+   "candidates": [
+    {
+     "name": "Brad Knott",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Paul Barringer",
+     "party": "D"
+    },
+    {
+     "name": "Steven Swinton",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_North_Carolina,_2026"
+  },
+  "2026-HOU-NC-14": {
+   "candidates": [
+    {
+     "name": "Timothy K. Moore",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Lakesha Womack",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_North_Carolina,_2026"
+  },
+  "2026-HOU-ND-AL": {
+   "candidates": [
+    {
+     "name": "Julie Fedorchak",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Trygve Hammer",
+     "party": "D"
+    },
+    {
+     "name": "Helene Neville",
+     "party": "I"
+    },
+    {
+     "name": "Charles Tuttle",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_North_Dakota,_2026"
+  },
+  "2026-HOU-NE-01": {
+   "candidates": [
+    {
+     "name": "Mike Flood",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Christopher Backemeyer",
+     "party": "D"
+    },
+    {
+     "name": "Dan Hartong",
+     "party": "AFN"
+    },
+    {
+     "name": "Nik Sandman",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Nebraska,_2026"
+  },
+  "2026-HOU-NE-02": {
+   "candidates": [
+    {
+     "name": "Denise Powell",
+     "party": "D"
+    },
+    {
+     "name": "Brinker Harding",
+     "party": "R"
+    },
+    {
+     "name": "Eric Michael Foreman",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Nebraska,_2026"
+  },
+  "2026-HOU-NE-03": {
+   "candidates": [
+    {
+     "name": "Adrian Smith",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Becky Lynn Stille",
+     "party": "D"
+    },
+    {
+     "name": "David J. Else",
+     "party": "LMN"
+    },
+    {
+     "name": "Macey Budke",
+     "party": "NWP"
+    },
+    {
+     "name": "Mark Cohen",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Nebraska,_2026"
+  },
+  "2026-HOU-NH-01": {
+   "candidates": [
+    {
+     "name": "Stefany Shaheen",
+     "party": "D"
+    },
+    {
+     "name": "Anthony DiLorenzo",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_New_Hampshire,_2026"
+  },
+  "2026-HOU-NH-02": {
+   "candidates": [
+    {
+     "name": "Maggie Goodlander",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Lily Williams",
+     "party": "R"
+    },
+    {
+     "name": "Robbie Mahrou",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_New_Hampshire,_2026"
+  },
+  "2026-HOU-NJ-01": {
+   "candidates": [
+    {
+     "name": "Donald Norcross",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Damon Galdo",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_New_Jersey,_2026"
+  },
+  "2026-HOU-NJ-02": {
+   "candidates": [
+    {
+     "name": "Jeff Van Drew",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Zack Mullock",
+     "party": "D"
+    },
+    {
+     "name": "Ramon Mora Jr.",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_New_Jersey,_2026"
+  },
+  "2026-HOU-NJ-03": {
+   "candidates": [
+    {
+     "name": "Herbert C. Conaway Jr.",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Michael McGuire",
+     "party": "R"
+    },
+    {
+     "name": "Ryan Kelly",
+     "party": "A"
+    },
+    {
+     "name": "Steven Welzer",
+     "party": "G"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_New_Jersey,_2026"
+  },
+  "2026-HOU-NJ-04": {
+   "candidates": [
+    {
+     "name": "Chris Smith",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Rachel Peace",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_New_Jersey,_2026"
+  },
+  "2026-HOU-NJ-05": {
+   "candidates": [
+    {
+     "name": "Josh Gottheimer",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Sean Kirrane",
+     "party": "R"
+    },
+    {
+     "name": "Adam Rueda",
+     "party": "HSF"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_New_Jersey,_2026"
+  },
+  "2026-HOU-NJ-06": {
+   "candidates": [
+    {
+     "name": "Frank Pallone Jr.",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Hillary Herzig",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_New_Jersey,_2026"
+  },
+  "2026-HOU-NJ-07": {
+   "candidates": [
+    {
+     "name": "Thomas Kean Jr.",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Rebecca Bennett",
+     "party": "D"
+    },
+    {
+     "name": "Seamus O'Toole",
+     "party": "SIS"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_New_Jersey,_2026"
+  },
+  "2026-HOU-NJ-08": {
+   "candidates": [
+    {
+     "name": "Robert Menendez Jr.",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Craig Honts",
+     "party": "SW"
+    },
+    {
+     "name": "Da'Shone Hughey",
+     "party": "WTP"
+    },
+    {
+     "name": "Aristotle Eliopoulos",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_New_Jersey,_2026"
+  },
+  "2026-HOU-NJ-09": {
+   "candidates": [
+    {
+     "name": "Nellie Pou",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Rosemary Pino",
+     "party": "R"
+    },
+    {
+     "name": "Terrisa Bukovinac",
+     "party": "SOB"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_New_Jersey,_2026"
+  },
+  "2026-HOU-NJ-10": {
+   "candidates": [
+    {
+     "name": "LaMonica McIver",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Carmen Bucco",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_New_Jersey,_2026"
+  },
+  "2026-HOU-NJ-11": {
+   "candidates": [
+    {
+     "name": "Analilia Mejia",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Joe Hathaway",
+     "party": "R"
+    },
+    {
+     "name": "Alan Bond",
+     "party": "HFT"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_New_Jersey,_2026"
+  },
+  "2026-HOU-NJ-12": {
+   "candidates": [
+    {
+     "name": "Adam Hamawy",
+     "party": "D"
+    },
+    {
+     "name": "Gregg Mele",
+     "party": "R"
+    },
+    {
+     "name": "Winston Jordan",
+     "party": "GMO"
+    },
+    {
+     "name": "Andres Jinete",
+     "party": "G"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_New_Jersey,_2026"
+  },
+  "2026-HOU-NM-01": {
+   "candidates": [
+    {
+     "name": "Melanie Ann Stansbury",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Ndidiamaka Okpareke",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_New_Mexico,_2026"
+  },
+  "2026-HOU-NM-02": {
+   "candidates": [
+    {
+     "name": "Gabriel Vasquez",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Greg Cunningham",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_New_Mexico,_2026"
+  },
+  "2026-HOU-NM-03": {
+   "candidates": [
+    {
+     "name": "Teresa Leger Fernandez",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Martin Ruben Zamora",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_New_Mexico,_2026"
+  },
+  "2026-HOU-NV-01": {
+   "candidates": [
+    {
+     "name": "Dina Titus",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Carrie Buck",
+     "party": "R"
+    },
+    {
+     "name": "Steven St John",
+     "party": "NP"
+    },
+    {
+     "name": "Bobby Khan",
+     "party": "NP"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Nevada,_2026"
+  },
+  "2026-HOU-NV-02": {
+   "candidates": [
+    {
+     "name": "Teresa Benitez-Thompson",
+     "party": "D"
+    },
+    {
+     "name": "David Flippo",
+     "party": "R"
+    },
+    {
+     "name": "Lynn Chapman",
+     "party": "IA"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Nevada,_2026"
+  },
+  "2026-HOU-NV-03": {
+   "candidates": [
+    {
+     "name": "Susie Lee",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Marty O'Donnell",
+     "party": "R"
+    },
+    {
+     "name": "Jon Kamerath",
+     "party": "IA"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Nevada,_2026"
+  },
+  "2026-HOU-NV-04": {
+   "candidates": [
+    {
+     "name": "Steven Horsford",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Cody Whipple",
+     "party": "R"
+    },
+    {
+     "name": "Russell Best",
+     "party": "IA"
+    },
+    {
+     "name": "William Johnson",
+     "party": "NP"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Nevada,_2026"
+  },
+  "2026-HOU-NY-01": {
+   "candidates": [
+    {
+     "name": "Nicholas J. LaLota",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Christopher Gallant",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_New_York,_2026"
+  },
+  "2026-HOU-NY-02": {
+   "candidates": [
+    {
+     "name": "Andrew Garbarino",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Patrick Halpin",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_New_York,_2026"
+  },
+  "2026-HOU-NY-03": {
+   "candidates": [
+    {
+     "name": "Tom Suozzi",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Michael LiPetri Jr.",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_New_York,_2026"
+  },
+  "2026-HOU-NY-04": {
+   "candidates": [
+    {
+     "name": "Laura Gillen",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Jeanine Driscoll",
+     "party": "R"
+    },
+    {
+     "name": "Blay Tarnoff",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_New_York,_2026"
+  },
+  "2026-HOU-NY-05": {
+   "candidates": [
+    {
+     "name": "Gregory W. Meeks",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "George Marsh",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_New_York,_2026"
+  },
+  "2026-HOU-NY-06": {
+   "candidates": [
+    {
+     "name": "Grace Meng",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Joseph Chou",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_New_York,_2026"
+  },
+  "2026-HOU-NY-07": {
+   "candidates": [
+    {
+     "name": "Claire Valdez",
+     "party": "D"
+    },
+    {
+     "name": "Melvin Rivera",
+     "party": "R"
+    },
+    {
+     "name": "Priscilla Ghaznavi",
+     "party": "OF"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_New_York,_2026"
+  },
+  "2026-HOU-NY-08": {
+   "candidates": [
+    {
+     "name": "Hakeem Jeffries",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Lewis Mizrahi",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_New_York,_2026"
+  },
+  "2026-HOU-NY-09": {
+   "candidates": [
+    {
+     "name": "Yvette D. Clarke",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Joel Anabilah-Azumah",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_New_York,_2026"
+  },
+  "2026-HOU-NY-10": {
+   "candidates": [
+    {
+     "name": "Brad Lander",
+     "party": "D"
+    },
+    {
+     "name": "Jennifer Moore",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_New_York,_2026"
+  },
+  "2026-HOU-NY-11": {
+   "candidates": [
+    {
+     "name": "Nicole Malliotakis",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Michael DeCillis",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_New_York,_2026"
+  },
+  "2026-HOU-NY-12": {
+   "candidates": [
+    {
+     "name": "Micah Lasher",
+     "party": "D"
+    },
+    {
+     "name": "Caroline Shinkle",
+     "party": "R"
+    },
+    {
+     "name": "Wilneida Negron",
+     "party": "FAO"
+    },
+    {
+     "name": "Karen Ortiz",
+     "party": "KO"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_New_York,_2026"
+  },
+  "2026-HOU-NY-13": {
+   "candidates": [
+    {
+     "name": "Darializa Avila Chevalier",
+     "party": "D"
+    },
+    {
+     "name": "Manual Williams",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_New_York,_2026"
+  },
+  "2026-HOU-NY-14": {
+   "candidates": [
+    {
+     "name": "Alexandria Ocasio-Cortez",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Diamant Hysenaj",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_New_York,_2026"
+  },
+  "2026-HOU-NY-15": {
+   "candidates": [
+    {
+     "name": "Ritchie Torres",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Stylo A. Sapaskis",
+     "party": "R"
+    },
+    {
+     "name": "Gonzalo Duran",
+     "party": "C"
+    },
+    {
+     "name": "Andre Easton",
+     "party": "PFS"
+    },
+    {
+     "name": "Jose Vega",
+     "party": "STT"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_New_York,_2026"
+  },
+  "2026-HOU-NY-16": {
+   "candidates": [
+    {
+     "name": "George Latimer",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Joseph Cinquemani",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_New_York,_2026"
+  },
+  "2026-HOU-NY-17": {
+   "candidates": [
+    {
+     "name": "Michael Lawler",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Cait Conley",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_New_York,_2026"
+  },
+  "2026-HOU-NY-18": {
+   "candidates": [
+    {
+     "name": "Pat Ryan",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Jackie Auringer",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_New_York,_2026"
+  },
+  "2026-HOU-NY-19": {
+   "candidates": [
+    {
+     "name": "Josh Riley",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Peter Oberacker",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_New_York,_2026"
+  },
+  "2026-HOU-NY-20": {
+   "candidates": [
+    {
+     "name": "Paul Tonko",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Ralph Ambrosio",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_New_York,_2026"
+  },
+  "2026-HOU-NY-21": {
+   "candidates": [
+    {
+     "name": "Blake Gendebien",
+     "party": "D"
+    },
+    {
+     "name": "Anthony Constantino",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_New_York,_2026"
+  },
+  "2026-HOU-NY-22": {
+   "candidates": [
+    {
+     "name": "John Mannion",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Kailee Buller",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_New_York,_2026"
+  },
+  "2026-HOU-NY-23": {
+   "candidates": [
+    {
+     "name": "Nick Langworthy",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Aaron Gies",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_New_York,_2026"
+  },
+  "2026-HOU-NY-24": {
+   "candidates": [
+    {
+     "name": "Claudia Tenney",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Alissa Ellman",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_New_York,_2026"
+  },
+  "2026-HOU-NY-25": {
+   "candidates": [
+    {
+     "name": "Joseph Morelle",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Virginia McIntyre",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_New_York,_2026"
+  },
+  "2026-HOU-NY-26": {
+   "candidates": [
+    {
+     "name": "Timothy M. Kennedy",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Dennis Hannon",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_New_York,_2026"
+  },
+  "2026-HOU-OH-01": {
+   "candidates": [
+    {
+     "name": "Greg Landsman",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Eric Conroy",
+     "party": "R"
+    },
+    {
+     "name": "Nathan Weise",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Ohio,_2026"
+  },
+  "2026-HOU-OH-02": {
+   "candidates": [
+    {
+     "name": "David Taylor",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Jen Mazzuckelli",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Ohio,_2026"
+  },
+  "2026-HOU-OH-03": {
+   "candidates": [
+    {
+     "name": "Joyce Beatty",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Cleophus Dulaney",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Ohio,_2026"
+  },
+  "2026-HOU-OH-04": {
+   "candidates": [
+    {
+     "name": "Jim Jordan",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Joshua Kolasinski",
+     "party": "D"
+    },
+    {
+     "name": "Tracey Tackett",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Ohio,_2026"
+  },
+  "2026-HOU-OH-05": {
+   "candidates": [
+    {
+     "name": "Bob Latta",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Brian Shaver",
+     "party": "D"
+    },
+    {
+     "name": "Michael Veloff",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Ohio,_2026"
+  },
+  "2026-HOU-OH-06": {
+   "candidates": [
+    {
+     "name": "Michael Rulli",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Elizabeth Kirtley",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Ohio,_2026"
+  },
+  "2026-HOU-OH-07": {
+   "candidates": [
+    {
+     "name": "Max Miller",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Brian Poindexter",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Ohio,_2026"
+  },
+  "2026-HOU-OH-08": {
+   "candidates": [
+    {
+     "name": "Warren Davidson",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Vanessa Enoch",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Ohio,_2026"
+  },
+  "2026-HOU-OH-09": {
+   "candidates": [
+    {
+     "name": "Marcy Kaptur",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Derek Merrin",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Ohio,_2026"
+  },
+  "2026-HOU-OH-10": {
+   "candidates": [
+    {
+     "name": "Michael Turner",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Kristina Knickerbocker",
+     "party": "D"
+    },
+    {
+     "name": "Thomas McMasters",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Ohio,_2026"
+  },
+  "2026-HOU-OH-11": {
+   "candidates": [
+    {
+     "name": "Shontel Brown",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Mike Kirchner",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Ohio,_2026"
+  },
+  "2026-HOU-OH-12": {
+   "candidates": [
+    {
+     "name": "Troy Balderson",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Jerrad Christian",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Ohio,_2026"
+  },
+  "2026-HOU-OH-13": {
+   "candidates": [
+    {
+     "name": "Emilia Sykes",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Carey Coleman",
+     "party": "R"
+    },
+    {
+     "name": "Sandeep Dixit",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Ohio,_2026"
+  },
+  "2026-HOU-OH-14": {
+   "candidates": [
+    {
+     "name": "David Joyce",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Maria Jukic",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Ohio,_2026"
+  },
+  "2026-HOU-OH-15": {
+   "candidates": [
+    {
+     "name": "Mike Carey",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Don Leonard",
+     "party": "D"
+    },
+    {
+     "name": "Brennan Barrington",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Ohio,_2026"
+  },
+  "2026-HOU-OK-01": {
+   "candidates": [
+    {
+     "name": "John Croisant",
+     "party": "D"
+    },
+    {
+     "name": "Mark Tedford",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Oklahoma,_2026"
+  },
+  "2026-HOU-OK-02": {
+   "candidates": [
+    {
+     "name": "Josh Brecheen",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Brandon Wade",
+     "party": "D"
+    },
+    {
+     "name": "Ronnie Hopkins",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Oklahoma,_2026"
+  },
+  "2026-HOU-OK-03": {
+   "candidates": [
+    {
+     "name": "Frank Lucas",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Suzie Byrd",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Oklahoma,_2026"
+  },
+  "2026-HOU-OK-04": {
+   "candidates": [
+    {
+     "name": "Tom Cole",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Mitchell Jacob",
+     "party": "D"
+    },
+    {
+     "name": "Rocco Bonacci",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Oklahoma,_2026"
+  },
+  "2026-HOU-OK-05": {
+   "candidates": [
+    {
+     "name": "Stephanie Bice",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Jena Nelson",
+     "party": "D"
+    },
+    {
+     "name": "Robert Henri",
+     "party": "I"
+    },
+    {
+     "name": "Austin Nieves",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Oklahoma,_2026"
+  },
+  "2026-HOU-OR-01": {
+   "candidates": [
+    {
+     "name": "Suzanne Bonamici",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Barbara Kahl",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Oregon,_2026"
+  },
+  "2026-HOU-OR-02": {
+   "candidates": [
+    {
+     "name": "Cliff Bentz",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Chris Beck",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Oregon,_2026"
+  },
+  "2026-HOU-OR-03": {
+   "candidates": [
+    {
+     "name": "Maxine Dexter",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Loran Ayles",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Oregon,_2026"
+  },
+  "2026-HOU-OR-04": {
+   "candidates": [
+    {
+     "name": "Val Hoyle",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Monique DeSpain",
+     "party": "R"
+    },
+    {
+     "name": "Justin Filip",
+     "party": "PGO"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Oregon,_2026"
+  },
+  "2026-HOU-OR-05": {
+   "candidates": [
+    {
+     "name": "Janelle Bynum",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Patti Adair",
+     "party": "R"
+    },
+    {
+     "name": "Andrea Townsend",
+     "party": "PGO"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Oregon,_2026"
+  },
+  "2026-HOU-OR-06": {
+   "candidates": [
+    {
+     "name": "Andrea Salinas",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "David Russ",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Oregon,_2026"
+  },
+  "2026-HOU-PA-01": {
+   "candidates": [
+    {
+     "name": "Brian Fitzpatrick",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Bob Harvie",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Pennsylvania,_2026"
+  },
+  "2026-HOU-PA-02": {
+   "candidates": [
+    {
+     "name": "Brendan Boyle",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Jessica Arriaga",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Pennsylvania,_2026"
+  },
+  "2026-HOU-PA-03": {
+   "candidates": [
+    {
+     "name": "Christopher Rabb",
+     "party": "D"
+    },
+    {
+     "name": "Dennis Mahoney",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Pennsylvania,_2026"
+  },
+  "2026-HOU-PA-04": {
+   "candidates": [
+    {
+     "name": "Madeleine Dean",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Aurora Stuski",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Pennsylvania,_2026"
+  },
+  "2026-HOU-PA-05": {
+   "candidates": [
+    {
+     "name": "Mary Gay Scanlon",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Nick Manganaro",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Pennsylvania,_2026"
+  },
+  "2026-HOU-PA-06": {
+   "candidates": [
+    {
+     "name": "Chrissy Houlahan",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Marty Young",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Pennsylvania,_2026"
+  },
+  "2026-HOU-PA-07": {
+   "candidates": [
+    {
+     "name": "Ryan Mackenzie",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Bob Brooks",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Pennsylvania,_2026"
+  },
+  "2026-HOU-PA-08": {
+   "candidates": [
+    {
+     "name": "Rob Bresnahan Jr.",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Paige Cognetti",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Pennsylvania,_2026"
+  },
+  "2026-HOU-PA-09": {
+   "candidates": [
+    {
+     "name": "Dan Meuser",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Rachel Wallace",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Pennsylvania,_2026"
+  },
+  "2026-HOU-PA-10": {
+   "candidates": [
+    {
+     "name": "Scott Perry",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Janelle Stelson",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Pennsylvania,_2026"
+  },
+  "2026-HOU-PA-11": {
+   "candidates": [
+    {
+     "name": "Lloyd Smucker",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Nancy Mannion",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Pennsylvania,_2026"
+  },
+  "2026-HOU-PA-12": {
+   "candidates": [
+    {
+     "name": "Summer Lee",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "James Hayes",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Pennsylvania,_2026"
+  },
+  "2026-HOU-PA-13": {
+   "candidates": [
+    {
+     "name": "John Joyce",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Beth Farnham",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Pennsylvania,_2026"
+  },
+  "2026-HOU-PA-14": {
+   "candidates": [
+    {
+     "name": "Guy Reschenthaler",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Alan Bradstock",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Pennsylvania,_2026"
+  },
+  "2026-HOU-PA-15": {
+   "candidates": [
+    {
+     "name": "Glenn Thompson",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Ray Bilger",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Pennsylvania,_2026"
+  },
+  "2026-HOU-PA-16": {
+   "candidates": [
+    {
+     "name": "Mike Kelly",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Justin Wagner",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Pennsylvania,_2026"
+  },
+  "2026-HOU-PA-17": {
+   "candidates": [
+    {
+     "name": "Chris Deluzio",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Tony Guy",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Pennsylvania,_2026"
+  },
+  "2026-HOU-RI-01": {
+   "candidates": [
+    {
+     "name": "Gabe Amo",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Kellie Keenan",
+     "party": "R"
+    },
+    {
+     "name": "Pedro Soares de Souza",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Rhode_Island,_2026"
+  },
+  "2026-HOU-RI-02": {
+   "candidates": [
+    {
+     "name": "Seth Magaziner",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Victor Mellor",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Rhode_Island,_2026"
+  },
+  "2026-HOU-SC-01": {
+   "candidates": [
+    {
+     "name": "Nancy Lacore",
+     "party": "D"
+    },
+    {
+     "name": "Jenny Honeycutt",
+     "party": "R"
+    },
+    {
+     "name": "Bill Reeside",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_South_Carolina,_2026"
+  },
+  "2026-HOU-SC-02": {
+   "candidates": [
+    {
+     "name": "Joe Wilson",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Zyon Khalifa",
+     "party": "D"
+    },
+    {
+     "name": "Dayna Alane Smith",
+     "party": "W"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_South_Carolina,_2026"
+  },
+  "2026-HOU-SC-03": {
+   "candidates": [
+    {
+     "name": "Sheri Biggs",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Eunice Lehmacher",
+     "party": "D"
+    },
+    {
+     "name": "Brian Corriea",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_South_Carolina,_2026"
+  },
+  "2026-HOU-SC-04": {
+   "candidates": [
+    {
+     "name": "William Timmons",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Courtney McClain",
+     "party": "D"
+    },
+    {
+     "name": "Jessica Ethridge",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_South_Carolina,_2026"
+  },
+  "2026-HOU-SC-05": {
+   "candidates": [
+    {
+     "name": "Mallory Dittmer",
+     "party": "D"
+    },
+    {
+     "name": "Wes Climer",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_South_Carolina,_2026"
+  },
+  "2026-HOU-SC-06": {
+   "candidates": [
+    {
+     "name": "James Clyburn",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "John Peterson",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_South_Carolina,_2026"
+  },
+  "2026-HOU-SC-07": {
+   "candidates": [
+    {
+     "name": "Russell Fry",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "John Vincent",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_South_Carolina,_2026"
+  },
+  "2026-HOU-SD-AL": {
+   "candidates": [
+    {
+     "name": "Nicole Gronli",
+     "party": "D"
+    },
+    {
+     "name": "Marty J. Jackley",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_South_Dakota,_2026"
+  },
+  "2026-HOU-TN-01": {
+   "candidates": [
+    {
+     "name": "Diana Harshbarger",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Kristi Burke",
+     "party": "D"
+    },
+    {
+     "name": "Joshua Ray Ashburn",
+     "party": "I"
+    },
+    {
+     "name": "Richard Baker",
+     "party": "I"
+    },
+    {
+     "name": "Chris Campbell",
+     "party": "I"
+    },
+    {
+     "name": "Billy Cody",
+     "party": "I"
+    },
+    {
+     "name": "Tyler McClain",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Tennessee,_2026"
+  },
+  "2026-HOU-TN-02": {
+   "candidates": [
+    {
+     "name": "Tim Burchett",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Michaela Barnett",
+     "party": "D"
+    },
+    {
+     "name": "Bruce Fine",
+     "party": "I"
+    },
+    {
+     "name": "Adam Heimerman",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Tennessee,_2026"
+  },
+  "2026-HOU-TN-03": {
+   "candidates": [
+    {
+     "name": "Charles J. Fleischmann",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Anna Golladay",
+     "party": "D"
+    },
+    {
+     "name": "Dean Arnold",
+     "party": "I"
+    },
+    {
+     "name": "Jean Howard-Hill",
+     "party": "I"
+    },
+    {
+     "name": "Rodney King",
+     "party": "I"
+    },
+    {
+     "name": "Donnie Ownby",
+     "party": "I"
+    },
+    {
+     "name": "Edward Roland",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Tennessee,_2026"
+  },
+  "2026-HOU-TN-04": {
+   "candidates": [
+    {
+     "name": "Scott DesJarlais",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Victoria Broderick",
+     "party": "D"
+    },
+    {
+     "name": "Jacob Anders",
+     "party": "I"
+    },
+    {
+     "name": "Clay Faircloth",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Tennessee,_2026"
+  },
+  "2026-HOU-TN-05": {
+   "candidates": [
+    {
+     "name": "Chaz Molder",
+     "party": "D"
+    },
+    {
+     "name": "Charlie Hatcher",
+     "party": "R"
+    },
+    {
+     "name": "James Johnson",
+     "party": "I"
+    },
+    {
+     "name": "Micheál O'Leary",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Tennessee,_2026"
+  },
+  "2026-HOU-TN-06": {
+   "candidates": [
+    {
+     "name": "Mike Croley",
+     "party": "D"
+    },
+    {
+     "name": "Johnny Garrett",
+     "party": "R"
+    },
+    {
+     "name": "Christopher Monday",
+     "party": "I"
+    },
+    {
+     "name": "Angus Purdy",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Tennessee,_2026"
+  },
+  "2026-HOU-TN-07": {
+   "candidates": [
+    {
+     "name": "Matt Van Epps",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Darden Copeland",
+     "party": "D"
+    },
+    {
+     "name": "Andrew Koontz",
+     "party": "I"
+    },
+    {
+     "name": "Lowell Reynolds",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Tennessee,_2026"
+  },
+  "2026-HOU-TN-08": {
+   "candidates": [
+    {
+     "name": "David Kustoff",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Heidi Kuhn",
+     "party": "D"
+    },
+    {
+     "name": "Adam Austill",
+     "party": "I"
+    },
+    {
+     "name": "Wendell Blankenship",
+     "party": "I"
+    },
+    {
+     "name": "Antonio Futch",
+     "party": "I"
+    },
+    {
+     "name": "Pamela Moses",
+     "party": "I"
+    },
+    {
+     "name": "Horace Taylor",
+     "party": "I"
+    },
+    {
+     "name": "Henry Ward III",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Tennessee,_2026"
+  },
+  "2026-HOU-TN-09": {
+   "candidates": [
+    {
+     "name": "Justin Pearson",
+     "party": "D"
+    },
+    {
+     "name": "Brent Taylor",
+     "party": "R"
+    },
+    {
+     "name": "Dennis Jeffrey Clark",
+     "party": "I"
+    },
+    {
+     "name": "Michelle Head",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Tennessee,_2026"
+  },
+  "2026-HOU-TX-01": {
+   "candidates": [
+    {
+     "name": "Nathaniel Moran",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Yolanda Prince",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Texas,_2026"
+  },
+  "2026-HOU-TX-02": {
+   "candidates": [
+    {
+     "name": "Shaun Finnie",
+     "party": "D"
+    },
+    {
+     "name": "Steve Toth",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Texas,_2026"
+  },
+  "2026-HOU-TX-03": {
+   "candidates": [
+    {
+     "name": "Keith Self",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Evan Hunt",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Texas,_2026"
+  },
+  "2026-HOU-TX-04": {
+   "candidates": [
+    {
+     "name": "Pat Fallon",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Jason Pearce",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Texas,_2026"
+  },
+  "2026-HOU-TX-05": {
+   "candidates": [
+    {
+     "name": "Lance Gooden",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Chelsey Hockett",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Texas,_2026"
+  },
+  "2026-HOU-TX-06": {
+   "candidates": [
+    {
+     "name": "Jake Ellzey",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Danny Minton",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Texas,_2026"
+  },
+  "2026-HOU-TX-07": {
+   "candidates": [
+    {
+     "name": "Lizzie Pannill Fletcher",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Alexander Hale",
+     "party": "R"
+    },
+    {
+     "name": "Espoir Ngabo",
+     "party": "G"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Texas,_2026"
+  },
+  "2026-HOU-TX-08": {
+   "candidates": [
+    {
+     "name": "Laura Jones",
+     "party": "D"
+    },
+    {
+     "name": "Jessica Steinmann",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Texas,_2026"
+  },
+  "2026-HOU-TX-09": {
+   "candidates": [
+    {
+     "name": "Leticia Gutierrez",
+     "party": "D"
+    },
+    {
+     "name": "Alex Mealer",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Texas,_2026"
+  },
+  "2026-HOU-TX-10": {
+   "candidates": [
+    {
+     "name": "Caitlin Rourk",
+     "party": "D"
+    },
+    {
+     "name": "Chris Gober",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Texas,_2026"
+  },
+  "2026-HOU-TX-11": {
+   "candidates": [
+    {
+     "name": "August Pfluger",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Claire Reynolds",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Texas,_2026"
+  },
+  "2026-HOU-TX-12": {
+   "candidates": [
+    {
+     "name": "Craig Goldman",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Heli Rodriguez Prilliman",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Texas,_2026"
+  },
+  "2026-HOU-TX-13": {
+   "candidates": [
+    {
+     "name": "Ronny L. Jackson",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Mark Nair",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Texas,_2026"
+  },
+  "2026-HOU-TX-14": {
+   "candidates": [
+    {
+     "name": "Randy Weber",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Thurman Bill Bartie",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Texas,_2026"
+  },
+  "2026-HOU-TX-15": {
+   "candidates": [
+    {
+     "name": "Monica De La Cruz",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Bobby Pulido",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Texas,_2026"
+  },
+  "2026-HOU-TX-16": {
+   "candidates": [
+    {
+     "name": "Veronica Escobar",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Adam Bauman",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Texas,_2026"
+  },
+  "2026-HOU-TX-17": {
+   "candidates": [
+    {
+     "name": "Pete Sessions",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Casey Shepard",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Texas,_2026"
+  },
+  "2026-HOU-TX-18": {
+   "candidates": [
+    {
+     "name": "Christian Menefee",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Ronald Whitfield",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Texas,_2026"
+  },
+  "2026-HOU-TX-19": {
+   "candidates": [
+    {
+     "name": "Kyle Rable",
+     "party": "D"
+    },
+    {
+     "name": "Tom Sell",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Texas,_2026"
+  },
+  "2026-HOU-TX-20": {
+   "candidates": [
+    {
+     "name": "Joaquin Castro",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Edgardo Baez",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Texas,_2026"
+  },
+  "2026-HOU-TX-21": {
+   "candidates": [
+    {
+     "name": "Kristin Hook",
+     "party": "D"
+    },
+    {
+     "name": "Mark Teixeira",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Texas,_2026"
+  },
+  "2026-HOU-TX-22": {
+   "candidates": [
+    {
+     "name": "Marquette Greene-Scott",
+     "party": "D"
+    },
+    {
+     "name": "Trever Nehls",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Texas,_2026"
+  },
+  "2026-HOU-TX-23": {
+   "candidates": [
+    {
+     "name": "Katy Padilla Stout",
+     "party": "D"
+    },
+    {
+     "name": "Brandon Herrera",
+     "party": "R"
+    },
+    {
+     "name": "Ben Mendoza",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Texas,_2026"
+  },
+  "2026-HOU-TX-24": {
+   "candidates": [
+    {
+     "name": "Beth Van Duyne",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Kevin Burge",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Texas,_2026"
+  },
+  "2026-HOU-TX-25": {
+   "candidates": [
+    {
+     "name": "Roger Williams",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Dione Sims",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Texas,_2026"
+  },
+  "2026-HOU-TX-26": {
+   "candidates": [
+    {
+     "name": "Brandon Gill",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Steven Shook",
+     "party": "D"
+    },
+    {
+     "name": "Phil Gray",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Texas,_2026"
+  },
+  "2026-HOU-TX-27": {
+   "candidates": [
+    {
+     "name": "Michael Cloud",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Tanya Lloyd",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Texas,_2026"
+  },
+  "2026-HOU-TX-28": {
+   "candidates": [
+    {
+     "name": "Henry Cuellar",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Tano Tijerina",
+     "party": "R"
+    },
+    {
+     "name": "Marlon Duran",
+     "party": "G"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Texas,_2026"
+  },
+  "2026-HOU-TX-29": {
+   "candidates": [
+    {
+     "name": "Sylvia Garcia",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Martha Fierro",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Texas,_2026"
+  },
+  "2026-HOU-TX-30": {
+   "candidates": [
+    {
+     "name": "Frederick Haynes",
+     "party": "D"
+    },
+    {
+     "name": "Everett Jackson",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Texas,_2026"
+  },
+  "2026-HOU-TX-31": {
+   "candidates": [
+    {
+     "name": "John Carter",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Justin Early",
+     "party": "D"
+    },
+    {
+     "name": "Greg Stoker",
+     "party": "G"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Texas,_2026"
+  },
+  "2026-HOU-TX-32": {
+   "candidates": [
+    {
+     "name": "Dan Barrios",
+     "party": "D"
+    },
+    {
+     "name": "Jace Yarbrough",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Texas,_2026"
+  },
+  "2026-HOU-TX-33": {
+   "candidates": [
+    {
+     "name": "Colin Allred",
+     "party": "D"
+    },
+    {
+     "name": "Patrick Gillespie",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Texas,_2026"
+  },
+  "2026-HOU-TX-34": {
+   "candidates": [
+    {
+     "name": "Vicente Gonzalez Jr.",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Eric Flores",
+     "party": "R"
+    },
+    {
+     "name": "Eddie Espinoza",
+     "party": "G"
+    },
+    {
+     "name": "Chris Royal",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Texas,_2026"
+  },
+  "2026-HOU-TX-35": {
+   "candidates": [
+    {
+     "name": "Johnny Garcia",
+     "party": "D"
+    },
+    {
+     "name": "Carlos De La Cruz",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Texas,_2026"
+  },
+  "2026-HOU-TX-36": {
+   "candidates": [
+    {
+     "name": "Brian Babin",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Rhonda Hart",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Texas,_2026"
+  },
+  "2026-HOU-TX-37": {
+   "candidates": [
+    {
+     "name": "Greg Casar",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Lauren Peña",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Texas,_2026"
+  },
+  "2026-HOU-TX-38": {
+   "candidates": [
+    {
+     "name": "Melissa McDonough",
+     "party": "D"
+    },
+    {
+     "name": "Jon Bonck",
+     "party": "R"
+    },
+    {
+     "name": "Alex McMenemy",
+     "party": "G"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Texas,_2026"
+  },
+  "2026-HOU-UT-01": {
+   "candidates": [
+    {
+     "name": "Ben McAdams",
+     "party": "D"
+    },
+    {
+     "name": "Riley Owen",
+     "party": "R"
+    },
+    {
+     "name": "Jesse West",
+     "party": "L"
+    },
+    {
+     "name": "Elias Montgomery",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Utah,_2026"
+  },
+  "2026-HOU-UT-02": {
+   "candidates": [
+    {
+     "name": "Blake Moore",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Peter Crosby",
+     "party": "D"
+    },
+    {
+     "name": "Carlton Bowen",
+     "party": "IAO"
+    },
+    {
+     "name": "Daniel Cottam",
+     "party": "L"
+    },
+    {
+     "name": "Robert Moesinger",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Utah,_2026"
+  },
+  "2026-HOU-UT-03": {
+   "candidates": [
+    {
+     "name": "Celeste Maloy",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Kent Udell",
+     "party": "D"
+    },
+    {
+     "name": "Cassie Easley",
+     "party": "C"
+    },
+    {
+     "name": "Michael Stoddard",
+     "party": "L"
+    },
+    {
+     "name": "Adonis Hooslyn",
+     "party": "I"
+    },
+    {
+     "name": "Ayden Scott",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Utah,_2026"
+  },
+  "2026-HOU-UT-04": {
+   "candidates": [
+    {
+     "name": "Mike Kennedy",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Jonny Larsen",
+     "party": "D"
+    },
+    {
+     "name": "Taylor Wright",
+     "party": "L"
+    },
+    {
+     "name": "Steven Burt",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Utah,_2026"
+  },
+  "2026-HOU-VA-01": {
+   "candidates": [
+    {
+     "name": "Robert J. Wittman",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Shannon Taylor",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Virginia,_2026"
+  },
+  "2026-HOU-VA-02": {
+   "candidates": [
+    {
+     "name": "Jennifer Kiggans",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Elaine Luria",
+     "party": "D"
+    },
+    {
+     "name": "J. Matt Baker",
+     "party": "I"
+    },
+    {
+     "name": "Bishop Staten",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Virginia,_2026"
+  },
+  "2026-HOU-VA-03": {
+   "candidates": [
+    {
+     "name": "Robert C. Scott",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Edwin Rivera",
+     "party": "R"
+    },
+    {
+     "name": "Makiba Gaines",
+     "party": "I"
+    },
+    {
+     "name": "Stephen Woll",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Virginia,_2026"
+  },
+  "2026-HOU-VA-04": {
+   "candidates": [
+    {
+     "name": "Jennifer McClellan",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Robert Murray Jr.",
+     "party": "R"
+    },
+    {
+     "name": "Joan Bell",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Virginia,_2026"
+  },
+  "2026-HOU-VA-05": {
+   "candidates": [
+    {
+     "name": "John McGuire",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Tom Perriello",
+     "party": "D"
+    },
+    {
+     "name": "Cooke Harvey",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Virginia,_2026"
+  },
+  "2026-HOU-VA-06": {
+   "candidates": [
+    {
+     "name": "Benjamin Lee Cline",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Beth Macy",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Virginia,_2026"
+  },
+  "2026-HOU-VA-07": {
+   "candidates": [
+    {
+     "name": "Eugene Vindman",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Douglas Ollivant",
+     "party": "R"
+    },
+    {
+     "name": "Taner Demirci Lopez",
+     "party": "L"
+    },
+    {
+     "name": "Alaha Ahrar",
+     "party": "I"
+    },
+    {
+     "name": "Joshua Ertle",
+     "party": "I"
+    },
+    {
+     "name": "Randall Terry",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Virginia,_2026"
+  },
+  "2026-HOU-VA-08": {
+   "candidates": [
+    {
+     "name": "Donald Sternoff Beyer Jr.",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Tony Sabio",
+     "party": "R"
+    },
+    {
+     "name": "Shelly Arnoldi",
+     "party": "L"
+    },
+    {
+     "name": "Tim Sharman",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Virginia,_2026"
+  },
+  "2026-HOU-VA-09": {
+   "candidates": [
+    {
+     "name": "H. Morgan Griffith",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Joy Powers",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Virginia,_2026"
+  },
+  "2026-HOU-VA-10": {
+   "candidates": [
+    {
+     "name": "Suhas Subramanyam",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Dave Beckwith",
+     "party": "R"
+    },
+    {
+     "name": "Ahsen Malik",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Virginia,_2026"
+  },
+  "2026-HOU-VA-11": {
+   "candidates": [
+    {
+     "name": "James Walkinshaw",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Arthur Purves",
+     "party": "R"
+    },
+    {
+     "name": "Dianne Blais",
+     "party": "G"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Virginia,_2026"
+  },
+  "2026-HOU-VT-AL": {
+   "candidates": [
+    {
+     "name": "Becca Balint",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Gerald Malloy",
+     "party": "R"
+    },
+    {
+     "name": "Phoenix Altair",
+     "party": "I"
+    },
+    {
+     "name": "Adam Ortiz",
+     "party": "I"
+    },
+    {
+     "name": "Suzanne Seymour",
+     "party": "I"
+    },
+    {
+     "name": "Ryan Walton",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Vermont,_2026"
+  },
+  "2026-HOU-WA-01": {
+   "candidates": [
+    {
+     "name": "Suzan DelBene",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Mary Silva",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Washington,_2026"
+  },
+  "2026-HOU-WA-02": {
+   "candidates": [
+    {
+     "name": "Rick Larsen",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Edwin Feller",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Washington,_2026"
+  },
+  "2026-HOU-WA-03": {
+   "candidates": [
+    {
+     "name": "Marie Gluesenkamp Perez",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "John Braun",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Washington,_2026"
+  },
+  "2026-HOU-WA-04": {
+   "candidates": [
+    {
+     "name": "John Duresky",
+     "party": "D"
+    },
+    {
+     "name": "Amanda McKinney",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Washington,_2026"
+  },
+  "2026-HOU-WA-05": {
+   "candidates": [
+    {
+     "name": "Michael Baumgartner",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Carmela Conroy",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Washington,_2026"
+  },
+  "2026-HOU-WA-06": {
+   "candidates": [
+    {
+     "name": "Emily Randall",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Teresa Fox",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Washington,_2026"
+  },
+  "2026-HOU-WA-07": {
+   "candidates": [
+    {
+     "name": "Pramila Jayapal",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Nirav Sheth",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Washington,_2026"
+  },
+  "2026-HOU-WA-08": {
+   "candidates": [
+    {
+     "name": "Kim Schrier",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Spencer Meline",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Washington,_2026"
+  },
+  "2026-HOU-WA-09": {
+   "candidates": [
+    {
+     "name": "D. Adam Smith",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Douglas Michael Basler",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Washington,_2026"
+  },
+  "2026-HOU-WA-10": {
+   "candidates": [
+    {
+     "name": "Marilyn Strickland",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Chris Chung",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Washington,_2026"
+  },
+  "2026-HOU-WI-01": {
+   "candidates": [
+    {
+     "name": "Bryan Steil",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Mitchell Berman",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Wisconsin,_2026"
+  },
+  "2026-HOU-WI-02": {
+   "candidates": [
+    {
+     "name": "Mark Pocan",
+     "party": "D",
+     "incumbent": true
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Wisconsin,_2026",
+   "note": "Only one candidate on the general ballot (per Ballotpedia)."
+  },
+  "2026-HOU-WI-03": {
+   "candidates": [
+    {
+     "name": "Derrick Van Orden",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Rebecca Cooke",
+     "party": "D"
+    },
+    {
+     "name": "Alexander Valiensi Kent",
+     "party": "I"
+    },
+    {
+     "name": "Rustin Provance",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Wisconsin,_2026"
+  },
+  "2026-HOU-WI-04": {
+   "candidates": [
+    {
+     "name": "Gwen Moore",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Tim Rogers",
+     "party": "R"
+    },
+    {
+     "name": "Arthur Burks",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Wisconsin,_2026"
+  },
+  "2026-HOU-WI-05": {
+   "candidates": [
+    {
+     "name": "Scott Fitzgerald",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Andrew Beck",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Wisconsin,_2026"
+  },
+  "2026-HOU-WI-06": {
+   "candidates": [
+    {
+     "name": "Glenn Grothman",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Bradley Smith",
+     "party": "D"
+    },
+    {
+     "name": "Matthew Arndt",
+     "party": "G"
+    },
+    {
+     "name": "Elizabeth Fitzgibbon",
+     "party": "I"
+    },
+    {
+     "name": "Mike Thurow",
+     "party": "I"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Wisconsin,_2026"
+  },
+  "2026-HOU-WI-07": {
+   "candidates": [
+    {
+     "name": "Fred Clark",
+     "party": "D"
+    },
+    {
+     "name": "Michael Alfonso",
+     "party": "R"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Wisconsin,_2026"
+  },
+  "2026-HOU-WI-08": {
+   "candidates": [
+    {
+     "name": "Tony Wied",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Rick Crosson",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Wisconsin,_2026"
+  },
+  "2026-HOU-WV-01": {
+   "candidates": [
+    {
+     "name": "Carol Miller",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Vince George",
+     "party": "D"
+    },
+    {
+     "name": "Belinda Fox-Spencer",
+     "party": "C"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_West_Virginia,_2026"
+  },
+  "2026-HOU-WV-02": {
+   "candidates": [
+    {
+     "name": "Riley Moore",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Ace Parsi",
+     "party": "D"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_West_Virginia,_2026"
+  },
+  "2026-HOU-WY-AL": {
+   "candidates": [
+    {
+     "name": "Lisa Kinney",
+     "party": "D"
+    },
+    {
+     "name": "Chuck Gray",
+     "party": "R"
+    },
+    {
+     "name": "Jeff Haggit",
+     "party": "C"
+    },
+    {
+     "name": "Shawn Johnson",
+     "party": "L"
+    }
+   ],
+   "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Wyoming,_2026"
+  }
+ }
+}
