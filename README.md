@@ -36,7 +36,21 @@ Everything election-specific lives in `elections/<YYYY-MM-DD>/`; code in `fetche
 3. Replace `measures.json` with the new official ballot titles (or delete `measures_file` from config).
 4. Regenerate the national race list CSV (one row per race; format in the template header) and load it into a new Google Sheet.
 5. Write the config path into `elections/ACTIVE`, and update the date in the election-window `cron` line of the workflow.
-6. Optional: add a preview config (see `elections/preview-2024/`) with `preview_banner` and commit its output as `site/data/results.json`.
+6. Placeholder cards (`elections/<date>/mo_placeholders.json`): one entry per MO race on the ballot (title exactly as
+   `fetcher/common.py` names it, e.g. "MO House 96", "MO Senate 8", "MO US House 2", "Amendment 3", "State Auditor";
+   category mo_house / mo_senate / mo_ushouse / mo_measure / mo_statewide; district; candidates with party/incumbent).
+   They show as TOO EARLY with 0 votes until a live SOS race with the same title (or category+district) replaces them.
+   Statewide offices are data-driven: add Governor, Lieutenant Governor, Secretary of State, State Treasurer,
+   Attorney General, U.S. President / U.S. Senator (MO) here with category mo_statewide and they land in the MO Statewide tab
+   (common.py already maps those SOS contest names to mo_statewide).
+7. National candidates (`elections/<date>/national_candidates.json`): candidates keyed by national race_id; merged onto the
+   calls-sheet races. Sheet/feed rows win (matched by last name), so nothing is duplicated.
+8. Manual polls (`manual_polls_file`, `manual_polls.json`): keyed by exact race title. Candidate polls use margin = R minus D;
+   ballot measures set `"measure": true` with candidates Yes/No and margin = Yes minus No.
+9. MO chamber control bars: `baselines.mo_senate` / `baselines.mo_house` in config.json with `scope: "mo"`, R/D = seats NOT
+   on the ballot (holdovers), `total`, `control` (majority) and `super` (two-thirds line). The Senate alternates: 2026 elects
+   even districts (odd hold over); 2028 elects odd districts, so the even-district split becomes the baseline.
+10. Optional: add a preview config (see `elections/preview-2024/`) with `preview_banner` and commit its output as `site/data/results.json`.
 
 ## Key races
 Mark races as "key" (gold badge, sorted first, "Key races only" filter, "★ Key races" tab):

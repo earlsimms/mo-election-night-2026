@@ -44,7 +44,7 @@ def classify(title, county=None):
         return "mo_measure", t.title().replace("Proposition", "Proposition"), None
     for off in ["GOVERNOR", "LIEUTENANT GOVERNOR", "SECRETARY OF STATE", "STATE TREASURER", "ATTORNEY GENERAL", "STATE AUDITOR"]:
         if u == off or u.startswith(off + " ") and "COUNTY" not in u:
-            return "mo_statewide", off.title(), None
+            return "mo_statewide", off.title().replace(" Of ", " of "), None
     if county: return "county", f"{county}: {t.title()}", dist
     return "mo_other", t, dist
 

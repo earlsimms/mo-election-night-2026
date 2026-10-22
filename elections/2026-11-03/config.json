@@ -24,6 +24,26 @@
    "D": 0,
    "total": 435,
    "control": 218
+  },
+  "mo_senate": {
+   "R": 10,
+   "D": 7,
+   "total": 34,
+   "control": 18,
+   "super": 23,
+   "scope": "mo",
+   "label": "Missouri Senate",
+   "note": "Not on the 2026 ballot: the 17 odd-numbered districts (10 R, 7 D) per Ballotpedia's Missouri State Senate member list, Oct 21 2026. District 10 (even, vacant) is on the ballot. Majority 18 of 34; two-thirds (veto override) 23."
+  },
+  "mo_house": {
+   "R": 0,
+   "D": 0,
+   "total": 163,
+   "control": 82,
+   "super": 109,
+   "scope": "mo",
+   "label": "Missouri House",
+   "note": "All 163 seats are on the 2026 ballot. Majority 82; two-thirds (veto override) 109."
   }
  },
  "sources": [
@@ -304,5 +324,6 @@
   ],
   "_help": "Public X lists shown in the 'Live chatter' panel via X's official embed (widgets.js). No API tokens."
  },
- "manual_polls_file": "elections/2026-11-03/manual_polls.json"
+ "manual_polls_file": "elections/2026-11-03/manual_polls.json",
+ "_baselines_help": "Seats NOT up per chamber. National chambers count national races; entries with scope 'mo' (mo_senate, mo_house) count the MO cards. 'super' = two-thirds line. In 2028 the odd Senate districts are up, so mo_senate holdovers become the even districts."
 }

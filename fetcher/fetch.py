@@ -1,7 +1,7 @@
 """Run all enabled sources once, normalize, and write site/data/results.json.
 Usage: python3 -m fetcher.fetch [--config config.json] [--out site/data/results.json] [--loop SECONDS]
 A failing source never breaks the page: its last good data is kept and marked stale with the error message."""
-import json, os, sys, time, argparse, traceback, datetime
+import json, os, re, sys, time, argparse, traceback, datetime
 from .adapters import ADAPTERS
 from .common import ROOT
 
@@ -10,10 +10,11 @@ def now(): return datetime.datetime.now(datetime.timezone.utc).isoformat(timespe
 def tally(races, baselines):
     out = {}
     for ch, b in baselines.items():
-        t = {"called": {"R": b["R"], "D": b["D"], "O": 0}, "leading": {"R": 0, "D": 0, "O": 0}, "too_early": 0,
+        t = {"called": {"R": b["R"], "D": b["D"], "O": b.get("O", 0)}, "leading": {"R": 0, "D": 0, "O": 0}, "too_early": 0,
              "holdover": {"R": b["R"], "D": b["D"]}, **{k: v for k, v in b.items() if k not in ("R", "D")}}
         for r in races:
-            if r.get("level") != "national" or r["category"] != ch: continue
+            # scope "mo": Missouri chambers (mo_house / mo_senate) counted from the MO cards; else national races only
+            if (r.get("level") == "national") == (b.get("scope") == "mo") or r["category"] != ch: continue
             if r["status"] in ("called", "certified"):
                 w = next((c for c in r["candidates"] if c.get("winner")), None)
                 p = w["party"] if w else "O"; t["called"][p if p in "RD" else "O"] += 1
@@ -44,6 +45,55 @@ def merge_feeds(races):
         finalize(n)
         if n.get("called_by") and any(c["winner"] for c in cands): n["status"] = "called"
     return out
+
+def _norm_last(n):
+    import unicodedata
+    n = unicodedata.normalize("NFKD", n or "").encode("ascii", "ignore").decode().lower()
+    n = re.sub(r"\(.*?\)|\*|\b(jr|sr|ii|iii|iv)\b\.?", " ", n)
+    w = re.findall(r"[a-z'-]+", n)
+    return w[-1].replace("'", "") if w else ""
+
+def add_national_candidates(races, cfg, cfg_path):
+    """Fill national races with certified candidates (elections/<date>/national_candidates.json, keyed by race_id).
+    Sheet/feed rows always win: a placeholder candidate is only added if no existing row has the same normalized last
+    name; matching rows keep their numbers and just gain the incumbent flag."""
+    from .common import finalize
+    path = os.path.join(ROOT, cfg.get("national_candidates_file") or os.path.join(os.path.dirname(cfg_path), "national_candidates.json"))
+    if not os.path.exists(path): return races
+    try: nc = json.load(open(path)).get("races", {})
+    except Exception as e:
+        print("NATIONAL CANDIDATES FAILED", e, file=sys.stderr); return races
+    for r in races:
+        if r.get("level") != "national": continue
+        p = nc.get(r.get("race_id"))
+        if not p: continue
+        if p.get("note") and not r.get("candidates_note"): r["candidates_note"] = p["note"]
+        if p.get("source"): r["candidates_source"] = p["source"]
+        full = lambda n: re.sub(r"[^a-z]", "", (n or "").lower())
+        have_full = {full(c["name"]): c for c in r["candidates"]}
+        have = {_norm_last(c["name"]): c for c in r["candidates"]}
+        lastn = [_norm_last(c["name"]) for c in p.get("candidates", [])]
+        added = False
+        for c in p.get("candidates", []):
+            m = have_full.get(full(c["name"]))
+            ln = _norm_last(c["name"])
+            if m is None and lastn.count(ln) == 1: m = have.get(ln)
+            elif m is None:  # two placeholder candidates share a last name: match on first initial
+                same = [x for x in r["candidates"] if _norm_last(x["name"]) == ln]
+                fi = (c["name"].strip()[:1] or "").lower()
+                m = next((x for x in same if len(x["name"].split()) > 1 and x["name"].strip()[:1].lower() == fi), None)
+                if m is None and any(len(x["name"].split()) == 1 for x in same): continue  # ambiguous bare last name: don't duplicate
+            if m:
+                if c.get("incumbent"): m["incumbent"] = True
+                if not m.get("party"): m["party"] = c.get("party", "")
+            else:
+                r["candidates"].append(dict(c, votes=0, winner=False)); added = True
+        if not r.get("total_votes") and not r.get("reporting_pct"):
+            r["reporting_pct"] = 0; r["reporting_text"] = "No results yet"
+        if added:
+            st = r.get("status"); finalize(r)
+            if st in ("called", "certified"): r["status"] = st
+    return races
 
 def add_placeholders(races, cfg, cfg_path):
     """Add a too_early, 0-vote card for every placeholder race (elections/<date>/mo_placeholders.json) that has no live
@@ -108,6 +158,7 @@ def run(cfg_path, out_path):
             print("SOURCE FAILED", s["id"], meta["error"], file=sys.stderr)
         sources.append(meta); races.extend(rs)
     races = merge_feeds(races)
+    races = add_national_candidates(races, cfg, cfg_path)
     races = add_placeholders(races, cfg, cfg_path)
     if any(r.get("source_id") == "placeholder" for r in races):
         sources.append({"id": "placeholder", "name": "Ballot list (Ballotpedia; no results yet)", "url": "https://ballotpedia.org/Missouri_elections,_2026",
