@@ -63,7 +63,8 @@
    "enabled": true,
    "url": "https://extcontent.stlouisco.com/BOE/eResults/el261103/CSV.csv",
    "county": "St. Louis County",
-   "live_only": true
+   "live_only": true,
+   "category": "county_stl"
   },
   {
    "id": "stcharles",
@@ -73,7 +74,8 @@
    "url": "https://www.livevoterturnout.com/ENR/stcharlesmoenr/33/en/Index_33.html",
    "county": "St. Charles County",
    "note": "The /32/ index was the Aug 4 2026 primary; confirm the November number from sccmo.org/437/Election-Results.",
-   "live_only": true
+   "live_only": true,
+   "category": "county_stc"
   },
   {
    "id": "national",

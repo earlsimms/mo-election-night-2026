@@ -110,9 +110,15 @@ def add_placeholders(races, cfg, cfg_path):
     dists = {(r.get("category"), r.get("district")) for r in live if r.get("district") is not None}
     out = list(races)
     for p in ph:
-        if p["title"] in titles or (p.get("district") is not None and (p["category"], p["district"]) in dists): continue
+        if p["title"] in titles: continue
+        if p["category"].startswith("county"):
+            # county races: same county tab + optional "match" regex on the live contest title (office + district)
+            pats = [re.compile(x, re.I) for x in p.get("match", [])]
+            if any(r.get("category") == p["category"] and any(x.search(r.get("raw_title", "") + " | " + r.get("title", "")) for x in pats) for r in live): continue
+        elif p.get("district") is not None and (p["category"], p["district"]) in dists: continue
         r = {"raw_title": p["title"], "title": p["title"], "category": p["category"], "district": p.get("district"), "state": "MO",
-             "level": "missouri", "source_id": "placeholder", "id": "placeholder:" + p["title"], "placeholder": True,
+             "level": "county" if p["category"].startswith("county") else "missouri", "source_id": "placeholder",
+             "county": p.get("county"), "id": "placeholder:" + p["title"], "placeholder": True,
              "is_measure": bool(p.get("is_measure")), "reporting_pct": 0, "reporting_text": "No results yet",
              "candidates": [dict(c, votes=0) for c in p.get("candidates", [])]}
         for k in ("description", "note", "candidates_source"):
@@ -146,7 +152,7 @@ def run(cfg_path, out_path):
                 rs = ADAPTERS[s["adapter"]](dict(s, url=s["fallback_url"]))
                 meta["note"] = f"Primary failed ({type(e1).__name__}: {str(e1)[:120]}); using fallback {s['fallback_url']}"
             for r in rs:
-                r["source_id"] = s["id"]; r.setdefault("level", "missouri" if r["category"] != "county" else "county")
+                r["source_id"] = s["id"]; r.setdefault("level", "county" if r["category"].startswith("county") else "missouri")
                 r["highlight"] = r["title"] in cfg.get("highlight", [])
                 r["id"] = f'{s["id"]}:{r["raw_title"]}'
             meta.update(ok=True, updated_at=now(), race_count=len(rs), error=None)
@@ -161,7 +167,7 @@ def run(cfg_path, out_path):
     races = add_national_candidates(races, cfg, cfg_path)
     races = add_placeholders(races, cfg, cfg_path)
     if any(r.get("source_id") == "placeholder" for r in races):
-        sources.append({"id": "placeholder", "name": "Ballot list (Ballotpedia; no results yet)", "url": "https://ballotpedia.org/Missouri_elections,_2026",
+        sources.append({"id": "placeholder", "name": "Pre-election ballot list (no results yet; see each card for its source)", "url": "https://ballotpedia.org/Missouri_elections,_2026",
                         "ok": True, "checked_at": now(), "updated_at": now(), "race_count": sum(r.get("source_id") == "placeholder" for r in races),
                         "error": None, "note": "Placeholder cards; replaced by Missouri SOS results when they appear."})
     keys = set(cfg.get("key_races", []) + cfg.get("highlight", []))

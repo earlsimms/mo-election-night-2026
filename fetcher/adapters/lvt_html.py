@@ -27,7 +27,7 @@ def parse(src):
         cat, label, dist = classify(title, county=src.get("county"))
         if cat != "county": label = f"{src['county']}: {label}"
         ptag = re.search(r"\((REPUBLICAN|DEMOCRATIC|LIBERTARIAN|GREEN)", " ".join(c["name"] for c in cands).upper())
-        out.append(finalize({"raw_title": title, "title": label, "category": "county", "district": dist, "state": "MO",
+        out.append(finalize({"raw_title": title, "title": label, "category": src.get("category") or "county", "district": dist, "state": "MO",
                              "county": src.get("county"), "reporting_pct": round(100 * a / b, 1) if b else None,
                              "reporting_text": f"{a} of {b} precincts", "candidates": cands,
                              "is_measure": any(c["name"].upper() in ("YES", "NO") for c in cands)}, official=final))

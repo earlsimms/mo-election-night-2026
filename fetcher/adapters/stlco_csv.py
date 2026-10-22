@@ -20,7 +20,8 @@ def parse(src):
     for t, race in races.items():
         base = re.sub(r"\s*-\s*(REPUBLICAN|DEMOCRATIC|LIBERTARIAN|GREEN|CONSTITUTION)\s*$", "", t)
         cat, label, dist = classify(base, county=None if re.search(r"U\.?S\.?|STATE (SENAT|REPRESENT)|AUDITOR|AMENDMENT", base.upper()) else src.get("county"))
-        if cat != "county": cat, label = "county", f"{src['county']}: {label}"  # county slice of a state race
+        if cat != "county": label = f"{src['county']}: {label}"  # county slice of a state race
+        cat = src.get("category") or "county"  # per-county tab category from config (e.g. county_stl)
         if race["primary_party"]: label += f" ({race['primary_party']} primary)"
         cands = [c for c in race["cand"].values() if c["name"].upper() != "NO CANDIDATE FILED"]
         rr = {"raw_title": t, "title": label, "category": cat, "district": dist, "state": "MO", "county": src.get("county"),
