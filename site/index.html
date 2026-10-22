@@ -57,7 +57,8 @@ body.chat-open{margin-right:340px}#chatbtn{background:#fff;color:#111;border:0;b
 const TABS=[["key","★ Key races"],["overview","Overview"],["national","National"],["mo_statewide","MO Statewide"],["mo_measure","MO Ballot Measures"],["mo_ushouse","MO US House"],["mo_senate","MO Senate"],["mo_house","MO House"],["county","St. Charles / St. Louis Co."],["mo_judicial","Judicial"],["all","All"]];
 let D=null,M={},tab="key";const $=s=>document.querySelector(s);
 const tz={timeZone:"America/Chicago",hour:"numeric",minute:"2-digit",second:"2-digit",month:"short",day:"numeric",timeZoneName:"short"};
-const fmt=t=>t?new Date(t).toLocaleString("en-US",tz):"never";
+const MN=["January","February","March","April","May","June","July","August","September","October","November","December"];const LD=s=>String(s).replace(/\b(\d{4})-(\d{2})-(\d{2})\b/g,(m,y,mo,d)=>`${MN[mo-1]} ${+d}, ${y}`).replace(/\b(\d{1,2})\/(\d{1,2})\/(\d{4})\b/g,(m,mo,d,y)=>`${MN[mo-1]} ${+d}, ${y}`);
+const fmt=t=>{if(!t)return"never";const x=new Date(t);return x.toLocaleDateString("en-US",{timeZone:"America/Chicago",month:"long",day:"numeric",year:"numeric"})+", "+x.toLocaleTimeString("en-US",{timeZone:"America/Chicago",hour:"numeric",minute:"2-digit",timeZoneName:"short"})};
 const ago=t=>{if(!t)return"";const s=(Date.now()-new Date(t))/1000;return s<90?`${s|0}s ago`:`${(s/60)|0} min ago`};
 const pc=p=>p==="R"?"var(--r)":p==="D"?"var(--d)":"var(--o)";
 function tabsHTML(){$("#tabs").innerHTML=TABS.map(([k,l])=>`<button class="${k==tab?"on":""}" data-k="${k}">${l}</button>`).join("");
@@ -75,7 +76,7 @@ function gap(r){const pr=pollRef(r.poll),rm=resMargin(r);return pr&&rm!=null?rm-
 function pollHTML(r){const p=r.poll;if(!p)return"";const nm=(v)=>p.candidates.map((c,i)=>v[i]!=null?`${c.name} (${c.party}) ${v[i]}%`:"").filter(Boolean).join(" / ");
  let s=`<div class="poll"><b>PRE-ELECTION POLLING</b> (not results) · source: <a href="${p.source_url}" target="_blank" rel="noopener">${p.source}</a><br>`;
  if(p.avg)s+=`Average: ${nm(p.avg.values)} → <b>${fm(p.avg.margin)}</b> <span style="color:#666">(${p.avg.label})</span><br>`;
- if(p.latest)s+=`Latest: ${p.latest.pollster}, ${p.latest.date}, ${p.latest.sample}: ${nm(p.latest.values)} → <b>${fm(p.latest.margin)}</b>`;
+ if(p.latest)s+=`Latest: ${p.latest.pollster}, ${LD(p.latest.date)}, ${p.latest.sample}: ${nm(p.latest.values)} → <b>${fm(p.latest.margin)}</b>`;
  s+=`</div>`;const pr=pollRef(p),rm=resMargin(r);
  if(pr&&rm!=null){const g=rm-pr.m,who=Math.abs(g)<0.05?"exactly matching polls":`${g>0?"R":"D"} beating polls by ${Math.abs(g).toFixed(1)}`;
   s+=`<div class="cmp"><b>${["called","certified"].includes(r.status)?"Final comparison":"Running comparison (partial count, not a call)"}:</b> result ${fm(rm)} vs poll ${pr.k==="avg"?"avg":"latest"} ${fm(pr.m)} → ${who}</div>`}
@@ -118,7 +119,7 @@ function chatShow(i){xi=i;const L=XL[i],url="https://x.com/i/lists/"+L.id;
  setTimeout(fb,8000);}
 async function load(){try{const r=await fetch("data/results.json?t="+Date.now(),{cache:"no-store"});D=await r.json();
  M={};(D.measures||[]).forEach(x=>M[x.title]=x);
- $("#title").textContent="Election Night Live Results — "+D.election;
+ $("#title").textContent="Election Night Live Results — "+LD(D.election);
  $("#gen").textContent=`Data built ${fmt(D.generated_at)} (${ago(D.generated_at)}) · page refreshes every 60s`;
  const pv=!!D.preview_banner||/PREVIEW|TEST|SAMPLE/i.test(D.election)||D.races.some(r=>r.sample);$("#preview").style.display=pv?"block":"none";
  $("#preview").textContent=pv?(D.preview_banner||"PREVIEW / SAMPLE DATA - not official live results. Races labelled SAMPLE are fake demo data."):"";
