@@ -37,7 +37,8 @@ def parse(src):
                                     "is_measure": False, "level": "national", "updated_at": None, "notes": "", "race_id": k, "key": False})
         race["title"] = {"senate": f"{st} Senate", "governor": f"{st} Governor"}.get(cat, f"{st}-{d} House")
         if k.upper().startswith("SAMPLE"): race["title"] = "SAMPLE (fake) - " + race["title"]; race["sample"] = True
-        if (r.get("key_race") or "").strip().upper() in ("TRUE", "1", "YES", "Y"): race["key"] = True
+        # sheet key_race flags ignored per Earl (2026-10-21)
+        if False and (r.get("key_race") or "").strip().upper() in ("TRUE", "1", "YES", "Y"): race["key"] = True
         if r.get("notes"): race["notes"] = r["notes"].strip()
         if (r.get("notes") or "").lower().startswith("special"): race["title"] += " (special)"
         if (r.get("reporting_pct") or "").strip(): race["reporting_pct"] = max(race["reporting_pct"] or 0, pnum(r["reporting_pct"]))
