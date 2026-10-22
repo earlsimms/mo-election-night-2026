@@ -74,7 +74,7 @@ html.dark .kt{color:#cbd5e1;border-color:#64748b}html.dark .kt.on{color:#7c2d12}
 <main id="grid"></main>
 <section id="sources"></section>
 <script>
-const TABS=[["key","★ Key races"],["overview","Overview"],["national","National"],["mo_statewide","MO Statewide"],["mo_measure","MO Ballot Measures"],["mo_ushouse","MO US House"],["mo_senate","MO Senate"],["mo_house","MO House"],["county_stl","St. Louis County"],["county_stc","St. Charles County"],["all","All"]];
+const TABS=[["key","★ Key races"],["overview","Overview"],["national","National"],["mo_statewide","MO Statewide"],["mo_measure","MO Ballot Measures"],["mo_ushouse","MO US House"],["mo_senate","MO Senate"],["mo_house","MO House"],["county_stl","St. Louis County"],["county_stc","St. Charles County"]];
 let D=null,M={},tab="key";const $=s=>document.querySelector(s);
 const tz={timeZone:"America/Chicago",hour:"numeric",minute:"2-digit",second:"2-digit",month:"short",day:"numeric",timeZoneName:"short"};
 const MN=["January","February","March","April","May","June","July","August","September","October","November","December"];const LD=s=>String(s).replace(/\b(\d{4})-(\d{2})-(\d{2})\b/g,(m,y,mo,d)=>`${MN[mo-1]} ${+d}, ${y}`).replace(/\b(\d{1,2})\/(\d{1,2})\/(\d{4})\b/g,(m,mo,d,y)=>`${MN[mo-1]} ${+d}, ${y}`);
@@ -123,7 +123,7 @@ function raceState(r){if(/^(mo_|county$)/.test(r.category||"")&&r.level!=="natio
 function stateMenu(){const sel=$("#stsel"),cur=sel.value,have=new Set(D.races.map(raceState));const codes=Object.keys(SN).filter(k=>k!=="DC"||have.has("DC")).sort((a,b)=>SN[a].localeCompare(SN[b]));
  const h=`<option value="">All states</option>`+codes.map(k=>`<option value="${k}">${SN[k]}</option>`).join("");if(sel.dataset.h!==h){sel.innerHTML=h;sel.dataset.h=h;sel.value=cur}}
 function render(){if(!D)return;stateMenu();const stf=$("#stsel").value;const q=$("#q").value.toLowerCase().trim(),st=$("#st").value,hl=$("#hlonly").checked;
- let rs=D.races.filter(r=>tab==="all"||(tab==="key"?r.key:tab==="overview"?(r.key||["mo_measure","mo_statewide","mo_senate"].includes(r.category)):tab==="national"?r.level==="national":r.category===tab&&r.level!=="national"));
+ let rs=D.races.filter(r=>tab==="all"||stf||(tab==="key"?r.key:tab==="overview"?(r.key||["mo_measure","mo_statewide","mo_senate"].includes(r.category)):tab==="national"?r.level==="national":r.category===tab&&r.level!=="national"));
  if(q)rs=rs.filter(r=>(r.title+" "+r.raw_title+" "+(r.county||"")+" "+r.candidates.map(c=>c.name).join(" ")).toLowerCase().includes(q));
  if(stf)rs=rs.filter(r=>raceState(r)===stf);if(st)rs=rs.filter(r=>r.status===st);if($("#pollonly").checked)rs=rs.filter(r=>r.poll);if(hl)rs=rs.filter(r=>r.key);
  const ord={mo_statewide:0,mo_measure:1,mo_ushouse:2};
