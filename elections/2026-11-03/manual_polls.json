@@ -1,0 +1,5 @@
+{"_help":"Polls attached by race title (e.g. 'MO Senate 8'). Source: MO Scout polls page (Remington Research Group for Missouri Scout), compiled by Mo on 2026-10-21. General-election polls only; primary polls are omitted.",
+ "races":{
+  "MO Senate 8":{"source":"Missouri Scout","source_url":"https://moscout.com/s/MOSCOUT-SD8-GEN-ELECTION-SURVEY-100226.docx","candidates":[{"name":"Patterson","party":"R"},{"name":"Ingle","party":"D"}],"latest":{"pollster":"Remington Research Group","date":"2026-10-01","sample":"596 LV","values":[45,48],"margin":-3.0}},
+  "MO Senate 30":{"source":"Missouri Scout","source_url":"https://moscout.com/s/MOSCOUT-SD30-GEN-ELECTION-SURVEY-100926.docx","candidates":[{"name":"Stinnett","party":"R"},{"name":"Fogle","party":"D"}],"latest":{"pollster":"Remington Research Group","date":"2026-10-08","sample":"517 LV","values":[45,47],"margin":-2.0}}
+ }}

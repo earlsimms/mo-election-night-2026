@@ -94,8 +94,13 @@ def run(cfg_path, out_path):
             polls = refresh(cfg, races, os.path.join(os.path.dirname(out_path), "polls.json"))
         except Exception as e:
             print("POLLS FAILED", e, file=sys.stderr)
+    mp = {}
+    try:
+        mp = json.load(open(os.path.join(ROOT, cfg.get("manual_polls_file", "")))).get("races", {}) if cfg.get("manual_polls_file") else {}
+    except Exception as e:
+        print("MANUAL POLLS FAILED", e, file=sys.stderr)
     for r in races:
-        p = polls.get("races", {}).get(r.get("race_id"))
+        p = polls.get("races", {}).get(r.get("race_id")) or mp.get(r.get("title"))
         if p: r["poll"] = p
     doc = {"social": cfg.get("social", {}),
            "polls_meta": {k: v for k, v in polls.items() if k != "races"},

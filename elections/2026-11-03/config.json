@@ -303,5 +303,6 @@
    }
   ],
   "_help": "Public X lists shown in the 'Live chatter' panel via X's official embed (widgets.js). No API tokens."
- }
+ },
+ "manual_polls_file": "elections/2026-11-03/manual_polls.json"
 }
