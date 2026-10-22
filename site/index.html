@@ -77,6 +77,7 @@ function pollHTML(r){const p=r.poll;if(!p)return"";const nm=(v)=>p.candidates.ma
  let s=`<div class="poll"><b>PRE-ELECTION POLLING</b> (not results) · source: <a href="${p.source_url}" target="_blank" rel="noopener">${p.source}</a><br>`;
  if(p.avg)s+=`Average: ${nm(p.avg.values)} → <b>${fm(p.avg.margin)}</b> <span style="color:#666">(${p.avg.label})</span><br>`;
  if(p.latest)s+=`Latest: ${p.latest.pollster}, ${LD(p.latest.date)}, ${p.latest.sample}: ${nm(p.latest.values)} → <b>${fm(p.latest.margin)}</b>`;
+ (p.extra||[]).forEach(x=>{s+=`<br><span style="color:#7c2d12;font-weight:600">${x.label}:</span> ${x.pollster}, ${LD(x.date)}${x.sample?", "+x.sample:""}: ${nm(x.values)} → <b>${fm(x.margin)}</b>`});
  s+=`</div>`;const pr=pollRef(p),rm=resMargin(r);
  if(pr&&rm!=null){const g=rm-pr.m,who=Math.abs(g)<0.05?"exactly matching polls":`${g>0?"R":"D"} beating polls by ${Math.abs(g).toFixed(1)}`;
   s+=`<div class="cmp"><b>${["called","certified"].includes(r.status)?"Final comparison":"Running comparison (partial count, not a call)"}:</b> result ${fm(rm)} vs poll ${pr.k==="avg"?"avg":"latest"} ${fm(pr.m)} → ${who}</div>`}
