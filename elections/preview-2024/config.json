@@ -38,7 +38,8 @@
    "adapter": "stlco_csv",
    "enabled": true,
    "url": "https://extcontent.stlouisco.com/BOE/eResults/el260804/CSV.csv",
-   "county": "St. Louis County"
+   "county": "St. Louis County",
+   "category": "county_stl"
   },
   {
    "id": "stcharles",
@@ -46,7 +47,8 @@
    "adapter": "lvt_html",
    "enabled": true,
    "url": "https://www.livevoterturnout.com/ENR/stcharlesmoenr/32/en/Index_32.html",
-   "county": "St. Charles County"
+   "county": "St. Charles County",
+   "category": "county_stc"
   },
   {
    "id": "national",

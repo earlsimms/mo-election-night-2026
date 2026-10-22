@@ -1,5 +1,5 @@
 {
- "_help": "Placeholder cards shown before results exist. fetch.py adds each as a too_early race with 0 votes unless a live race with the same title (or category+district) exists; the live race replaces it. Candidates are the general-election candidates from Ballotpedia (fetched 2026-10-21; the MO SOS site returned Cloudflare 403). Senate: 17 even-numbered districts (Ballotpedia: 'Seats up: 17').",
+ "_help": "Placeholder cards shown before results exist. fetch.py adds each as a too_early race with 0 votes unless a live race with the same title (or category+district) exists; the live race replaces it. Candidates are the general-election candidates from Ballotpedia (fetched 2026-10-21; the MO SOS site returned Cloudflare 403). Senate: 17 even-numbered districts (Ballotpedia: 'Seats up: 17'). County cards (category county_stl / county_stc) also carry 'county' and 'match' (regexes on the live feed contest title); a live county race in the same tab that matches replaces the placeholder.",
  "fetched": "2026-10-21",
  "races": [
   {
@@ -3228,6 +3228,250 @@
     }
    ],
    "candidates_source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Missouri,_2026"
+  },
+  {
+   "title": "St. Louis County: County Executive",
+   "category": "county_stl",
+   "county": "St. Louis County",
+   "district": null,
+   "candidates": [
+    {
+     "name": "Dennis Hancock",
+     "party": "R"
+    },
+    {
+     "name": "Jake Zimmerman",
+     "party": "D"
+    },
+    {
+     "name": "J D McFarland",
+     "party": "G"
+    }
+   ],
+   "match": [
+    "COUNTY EXECUTIVE"
+   ],
+   "candidates_source": "https://www.stlamerican.com/news/what-st-louis-area-voters-will-see-on-the-nov-3-ballot/",
+   "note": "Open seat: County Executive Sam Page is not running (St. Louis Call, Oct 21 2026)."
+  },
+  {
+   "title": "St. Louis County: County Council District 1",
+   "category": "county_stl",
+   "county": "St. Louis County",
+   "district": 1,
+   "candidates": [
+    {
+     "name": "Rita H. Days",
+     "party": "D",
+     "incumbent": true
+    }
+   ],
+   "match": [
+    "COUNCIL.*DISTRICT\\s*0?1\\b"
+   ],
+   "candidates_source": "https://www.stlamerican.com/news/what-st-louis-area-voters-will-see-on-the-nov-3-ballot/",
+   "note": "Uncontested."
+  },
+  {
+   "title": "St. Louis County: County Council District 3",
+   "category": "county_stl",
+   "county": "St. Louis County",
+   "district": 3,
+   "candidates": [
+    {
+     "name": "Andrew Koenig",
+     "party": "R"
+    },
+    {
+     "name": "Mark Osmack",
+     "party": "D"
+    }
+   ],
+   "match": [
+    "COUNCIL.*DISTRICT\\s*0?3\\b"
+   ],
+   "candidates_source": "https://www.stlamerican.com/news/what-st-louis-area-voters-will-see-on-the-nov-3-ballot/",
+   "note": "Open seat: incumbent Dennis Hancock is running for county executive (STLPR)."
+  },
+  {
+   "title": "St. Louis County: County Council District 5",
+   "category": "county_stl",
+   "county": "St. Louis County",
+   "district": 5,
+   "candidates": [
+    {
+     "name": "Lisa Clancy",
+     "party": "D",
+     "incumbent": true
+    }
+   ],
+   "match": [
+    "COUNCIL.*DISTRICT\\s*0?5\\b"
+   ],
+   "candidates_source": "https://www.stlamerican.com/news/what-st-louis-area-voters-will-see-on-the-nov-3-ballot/",
+   "note": "Uncontested."
+  },
+  {
+   "title": "St. Louis County: County Council District 7",
+   "category": "county_stl",
+   "county": "St. Louis County",
+   "district": 7,
+   "candidates": [
+    {
+     "name": "Mark Harder",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "John Kiehne",
+     "party": "D"
+    }
+   ],
+   "match": [
+    "COUNCIL.*DISTRICT\\s*0?7\\b"
+   ],
+   "candidates_source": "https://www.stlpr.org/government-politics-issues/2026-10-15/harder-wants-a-fourth-term-on-the-st-louis-county-council-kiehne-wants-to-stop-him"
+  },
+  {
+   "title": "St. Charles County: County Executive",
+   "category": "county_stc",
+   "county": "St. Charles County",
+   "district": null,
+   "candidates": [
+    {
+     "name": "Steve Ehlmann",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "David Veneziano",
+     "party": "D"
+    }
+   ],
+   "match": [
+    "COUNTY EXECUTIVE"
+   ],
+   "candidates_source": "https://www.sccmo.org/DocumentCenter/View/29008/Full-County-Sample-Ballot---20261103"
+  },
+  {
+   "title": "St. Charles County: County Council District 1",
+   "category": "county_stc",
+   "county": "St. Charles County",
+   "district": 1,
+   "candidates": [
+    {
+     "name": "Matt Swanson",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "match": [
+    "COUNCIL.*DISTRICT\\s*0?1\\b"
+   ],
+   "candidates_source": "https://www.sccmo.org/DocumentCenter/View/29008/Full-County-Sample-Ballot---20261103",
+   "note": "Uncontested."
+  },
+  {
+   "title": "St. Charles County: County Council District 3",
+   "category": "county_stc",
+   "county": "St. Charles County",
+   "district": 3,
+   "candidates": [
+    {
+     "name": "Mike Elam",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "match": [
+    "COUNCIL.*DISTRICT\\s*0?3\\b"
+   ],
+   "candidates_source": "https://www.sccmo.org/DocumentCenter/View/29008/Full-County-Sample-Ballot---20261103",
+   "note": "Uncontested."
+  },
+  {
+   "title": "St. Charles County: County Council District 5",
+   "category": "county_stc",
+   "county": "St. Charles County",
+   "district": 5,
+   "candidates": [
+    {
+     "name": "Terry Hollander",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "match": [
+    "COUNCIL.*DISTRICT\\s*0?5\\b"
+   ],
+   "candidates_source": "https://www.sccmo.org/DocumentCenter/View/29008/Full-County-Sample-Ballot---20261103",
+   "note": "Uncontested."
+  },
+  {
+   "title": "St. Charles County: County Council District 7",
+   "category": "county_stc",
+   "county": "St. Charles County",
+   "district": 7,
+   "candidates": [
+    {
+     "name": "Tim Baker",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Monica Balestreri",
+     "party": "D"
+    }
+   ],
+   "match": [
+    "COUNCIL.*DISTRICT\\s*0?7\\b"
+   ],
+   "candidates_source": "https://www.sccmo.org/DocumentCenter/View/29008/Full-County-Sample-Ballot---20261103"
+  },
+  {
+   "title": "St. Louis County: Proposition A (Charter: County Auditor)",
+   "category": "county_stl",
+   "county": "St. Louis County",
+   "district": null,
+   "candidates": [
+    {
+     "name": "Yes",
+     "party": ""
+    },
+    {
+     "name": "No",
+     "party": ""
+    }
+   ],
+   "match": [
+    "PROPOSITION A\\b.*(CHARTER|AUDITOR)",
+    "(CHARTER|AUDITOR).*PROPOSITION A\\b"
+   ],
+   "candidates_source": "https://www.stlamerican.com/news/what-st-louis-area-voters-will-see-on-the-nov-3-ballot/",
+   "is_measure": true,
+   "description": "County charter amendment: remove the fixed term of office for the county auditor."
+  },
+  {
+   "title": "St. Louis County: Proposition S (Senior Services Tax)",
+   "category": "county_stl",
+   "county": "St. Louis County",
+   "district": null,
+   "candidates": [
+    {
+     "name": "Yes",
+     "party": ""
+    },
+    {
+     "name": "No",
+     "party": ""
+    }
+   ],
+   "match": [
+    "PROPOSITION S\\b"
+   ],
+   "candidates_source": "https://stlouisco.civicweb.net/document/452929/",
+   "is_measure": true,
+   "description": "Levy 5 cents per $100 of assessed valuation for services to residents age 60 and older."
   }
  ]
 }
