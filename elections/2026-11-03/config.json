@@ -82,7 +82,7 @@
    "name": "National calls sheet (Google Sheet: Election Night 2026 - National Calls)",
    "adapter": "national_csv",
    "enabled": true,
-   "url": "PASTE_PUBLISHED_CSV_URL_HERE",
+   "url": "https://docs.google.com/spreadsheets/d/1uxVlztxf8d3kU-U0ak9vEc3nNZVhpLoUNO89ZzCc32E/export?format=csv",
    "note": "Sheet is PRIVATE. To activate: in the sheet, File > Share > Publish to web > Sheet1 > CSV, paste the pub?output=csv URL here. (Or set link-sharing 'Anyone with link: Viewer' and paste the /edit URL - auto-converted to export?format=csv.) Until then this source shows as DOWN and national races are empty.",
    "fallback_url": "file:elections/2026-11-03/national_calls_template.csv"
   },
