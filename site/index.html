@@ -111,9 +111,9 @@ function chatShow(i){xi=i;const L=XL[i],url="https://x.com/i/lists/"+L.id;
  $("#chattabs").innerHTML=XL.map((l,j)=>`<button class="${j==i?"on":""}" data-j="${j}">${l.name}</button>`).join("");
  document.querySelectorAll("#chattabs button").forEach(b=>b.onclick=()=>chatShow(+b.dataset.j));
  $("#chatfb").style.display="none";
- $("#chatbody").innerHTML=`<a class="twitter-timeline" data-height="2000" data-dnt="true" data-chrome="noheader nofooter" href="https://twitter.com/i/lists/${L.id}">Loading ${L.name} on X…</a>`;
+ $("#chatbody").innerHTML=`<a class="twitter-timeline" data-height="2000" data-dnt="true" data-chrome="noheader nofooter" href="${L.url||('https://x.com/i/lists/'+L.id)}">Loading ${L.name} on X…</a>`;
  const fb=()=>{if(!$("#chatbody iframe")){$("#chatfb").style.display="block";$("#chatfb").innerHTML=`X's embedded timeline didn't load here (X often requires viewers to be logged in, or rate-limits embeds). <br><a href="${url}" target="_blank" rel="noopener"><b>Open “${L.name}” on X ↗</b></a>`}};
- if(!wjs){wjs=true;const s=document.createElement("script");s.src="https://platform.twitter.com/widgets.js";s.async=true;s.charset="utf-8";s.onerror=fb;document.body.appendChild(s)}
+ if(!wjs){wjs=true;const s=document.createElement("script");s.src="https://platform.x.com/widgets.js";s.async=true;s.charset="utf-8";s.onerror=fb;document.body.appendChild(s)}
  else if(window.twttr&&twttr.widgets)twttr.widgets.load($("#chatbody"));
  setTimeout(fb,8000);}
 async function load(){try{const r=await fetch("data/results.json?t="+Date.now(),{cache:"no-store"});D=await r.json();
