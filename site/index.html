@@ -123,7 +123,7 @@ function raceState(r){if(/^(mo_|county$)/.test(r.category||"")&&r.level!=="natio
 function stateMenu(){const sel=$("#stsel"),cur=sel.value,have=new Set(D.races.map(raceState));const codes=Object.keys(SN).filter(k=>k!=="DC"||have.has("DC")).sort((a,b)=>SN[a].localeCompare(SN[b]));
  const h=`<option value="">All states</option>`+codes.map(k=>`<option value="${k}">${SN[k]}</option>`).join("");if(sel.dataset.h!==h){sel.innerHTML=h;sel.dataset.h=h;sel.value=cur}}
 function render(){if(!D)return;stateMenu();const stf=$("#stsel").value;const q=$("#q").value.toLowerCase().trim(),st=$("#st").value,hl=$("#hlonly").checked;
- let rs=D.races.filter(r=>tab==="all"||(tab==="key"?r.key:tab==="overview"?(r.key||["mo_measure","mo_statewide","mo_ushouse"].includes(r.category)||(r.level==="national"&&r.status!=="too_early")):tab==="national"?r.level==="national":r.category===tab&&r.level!=="national"));
+ let rs=D.races.filter(r=>tab==="all"||(tab==="key"?r.key:tab==="overview"?(r.key||["mo_measure","mo_statewide","mo_senate"].includes(r.category)):tab==="national"?r.level==="national":r.category===tab&&r.level!=="national"));
  if(q)rs=rs.filter(r=>(r.title+" "+r.raw_title+" "+(r.county||"")+" "+r.candidates.map(c=>c.name).join(" ")).toLowerCase().includes(q));
  if(stf)rs=rs.filter(r=>raceState(r)===stf);if(st)rs=rs.filter(r=>r.status===st);if($("#pollonly").checked)rs=rs.filter(r=>r.poll);if(hl)rs=rs.filter(r=>r.key);
  const ord={mo_statewide:0,mo_measure:1,mo_ushouse:2};
