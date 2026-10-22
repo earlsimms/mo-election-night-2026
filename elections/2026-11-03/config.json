@@ -298,7 +298,8 @@
    },
    {
     "name": "Campaigns & Elections",
-    "id": "1058572960607490053"
+    "id": "1058572960607490053",
+    "url": "https://x.com/earlsimms/lists/campaigns-elections?ref_src=twsrc%5Etfw"
    }
   ],
   "_help": "Public X lists shown in the 'Live chatter' panel via X's official embed (widgets.js). No API tokens."
