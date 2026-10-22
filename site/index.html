@@ -38,8 +38,8 @@ nav button.on{background:#111827;color:#fff}
 #chatbody{flex:1;overflow:auto;padding:6px}#chatfb{font-size:13px;padding:8px;background:#f3f4f6;border-radius:6px;margin:6px;display:none}
 body.chat-open{margin-right:340px}#chatbtn{background:#fff;color:#111;border:0;border-radius:14px;padding:5px 12px;cursor:pointer;font-weight:600}
 @media(max-width:900px){#chat{width:100%}body.chat-open{margin-right:0}}
-</style></head><body>
-<header><h1 id="title">Election Night Live Results</h1><div style="display:flex;gap:10px;align-items:center"><div id="gen">Loading…</div><button id="chatbtn" style="display:none">💬 Live chatter</button></div></header>
+</style><style>html.dark{filter:invert(1) hue-rotate(180deg);background:#111}html.dark img,html.dark iframe,html.dark video{filter:invert(1) hue-rotate(180deg)}#darkbtn{cursor:pointer}</style><script>(function(){var k="mo-dark",s=localStorage.getItem(k),d=s?s==="1":matchMedia("(prefers-color-scheme: dark)").matches;function a(v){document.documentElement.classList.toggle("dark",v);var b=document.getElementById("darkbtn");if(b)b.textContent=v?"☀️ Light mode":"🌙 Dark mode"}a(d);document.addEventListener("DOMContentLoaded",function(){a(d);document.getElementById("darkbtn").onclick=function(){d=!d;localStorage.setItem(k,d?"1":"0");a(d)}})})()</script></head><body>
+<header><h1 id="title">Election Night Live Results</h1><div style="display:flex;gap:10px;align-items:center"><div id="gen">Loading…</div><button id="darkbtn">🌙 Dark mode</button><button id="chatbtn" style="display:none">💬 Live chatter</button></div></header>
 <aside id="chat" aria-label="Live chatter from X lists"><header style="display:flex;justify-content:space-between;align-items:center"><b>Live chatter (X lists, not results)</b><button id="chatx" aria-label="Close" style="border:0;background:none;color:#fff;font-size:18px;cursor:pointer">✕</button></header><div class="tabs" id="chattabs"></div><div id="chatfb"></div><div id="chatbody"></div></aside>
 <div id="preview" style="display:none;background:#7c2d12;color:#fff;padding:8px 16px;font-weight:600"></div><div id="banner"></div>
 <section class="tallies" id="tallies"></section>
