@@ -74,7 +74,7 @@ html.dark .kt{color:#cbd5e1;border-color:#64748b}html.dark .kt.on{color:#7c2d12}
 <main id="grid"></main>
 <section id="sources"></section>
 <script>
-const TABS=[["key","★ Key races"],["overview","Overview"],["national","National"],["mo_statewide","MO Statewide"],["mo_measure","MO Ballot Measures"],["mo_ushouse","MO US House"],["mo_senate","MO Senate"],["mo_house","MO House"],["county_stl","St. Louis County"],["county_stc","St. Charles County"]];
+const TABS=[["key","★ Key races"],["national","National"],["mo_statewide","MO Statewide"],["mo_measure","MO Ballot Measures"],["mo_ushouse","MO US House"],["mo_senate","MO Senate"],["mo_house","MO House"],["county_stl","St. Louis County"],["county_stc","St. Charles County"]];
 let D=null,M={},tab="key";const $=s=>document.querySelector(s);
 const tz={timeZone:"America/Chicago",hour:"numeric",minute:"2-digit",second:"2-digit",month:"short",day:"numeric",timeZoneName:"short"};
 const MN=["January","February","March","April","May","June","July","August","September","October","November","December"];const LD=s=>String(s).replace(/\b(\d{4})-(\d{2})-(\d{2})\b/g,(m,y,mo,d)=>`${MN[mo-1]} ${+d}, ${y}`).replace(/\b(\d{1,2})\/(\d{1,2})\/(\d{4})\b/g,(m,mo,d,y)=>`${MN[mo-1]} ${+d}, ${y}`);
