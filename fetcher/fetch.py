@@ -45,6 +45,32 @@ def merge_feeds(races):
         if n.get("called_by") and any(c["winner"] for c in cands): n["status"] = "called"
     return out
 
+def add_placeholders(races, cfg, cfg_path):
+    """Add a too_early, 0-vote card for every placeholder race (elections/<date>/mo_placeholders.json) that has no live
+    race with the same identity (same title, or same category+district). A live race always replaces its placeholder."""
+    from .common import finalize
+    path = cfg.get("placeholders_file") or os.path.join(os.path.dirname(cfg_path), "mo_placeholders.json")
+    path = os.path.join(ROOT, path)
+    if not os.path.exists(path): return races
+    try: ph = json.load(open(path)).get("races", [])
+    except Exception as e:
+        print("PLACEHOLDERS FAILED", e, file=sys.stderr); return races
+    live = [r for r in races if r.get("level") != "national"]
+    titles = {r.get("title") for r in live}
+    dists = {(r.get("category"), r.get("district")) for r in live if r.get("district") is not None}
+    out = list(races)
+    for p in ph:
+        if p["title"] in titles or (p.get("district") is not None and (p["category"], p["district"]) in dists): continue
+        r = {"raw_title": p["title"], "title": p["title"], "category": p["category"], "district": p.get("district"), "state": "MO",
+             "level": "missouri", "source_id": "placeholder", "id": "placeholder:" + p["title"], "placeholder": True,
+             "is_measure": bool(p.get("is_measure")), "reporting_pct": 0, "reporting_text": "No results yet",
+             "candidates": [dict(c, votes=0) for c in p.get("candidates", [])]}
+        for k in ("description", "note", "candidates_source"):
+            if p.get(k): r[k] = p[k]
+        finalize(r); r["status"] = "too_early"
+        out.append(r)
+    return out
+
 def run(cfg_path, out_path):
     cfg = json.load(open(os.path.join(ROOT, cfg_path)))
     prev = {}
@@ -82,6 +108,11 @@ def run(cfg_path, out_path):
             print("SOURCE FAILED", s["id"], meta["error"], file=sys.stderr)
         sources.append(meta); races.extend(rs)
     races = merge_feeds(races)
+    races = add_placeholders(races, cfg, cfg_path)
+    if any(r.get("source_id") == "placeholder" for r in races):
+        sources.append({"id": "placeholder", "name": "Ballot list (Ballotpedia; no results yet)", "url": "https://ballotpedia.org/Missouri_elections,_2026",
+                        "ok": True, "checked_at": now(), "updated_at": now(), "race_count": sum(r.get("source_id") == "placeholder" for r in races),
+                        "error": None, "note": "Placeholder cards; replaced by Missouri SOS results when they appear."})
     keys = set(cfg.get("key_races", []) + cfg.get("highlight", []))
     for r in races:
         r["key"] = bool(r.get("key") or r["title"] in keys or r.get("race_id") in keys)

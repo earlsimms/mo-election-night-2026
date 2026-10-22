@@ -1,0 +1,3045 @@
+{
+ "_help": "Placeholder cards shown before results exist. fetch.py adds each as a too_early race with 0 votes unless a live race with the same title (or category+district) exists; the live race replaces it. Candidates are the general-election candidates from Ballotpedia (fetched 2026-10-21; the MO SOS site returned Cloudflare 403). Senate: 17 even-numbered districts (Ballotpedia: 'Seats up: 17').",
+ "fetched": "2026-10-21",
+ "races": [
+  {
+   "title": "MO Senate 2",
+   "category": "mo_senate",
+   "district": 2,
+   "candidates": [
+    {
+     "name": "Susan Shumway",
+     "party": "D"
+    },
+    {
+     "name": "Nick Schroer",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_State_Senate_elections,_2026"
+  },
+  {
+   "title": "MO Senate 4",
+   "category": "mo_senate",
+   "district": 4,
+   "candidates": [
+    {
+     "name": "Gina Mitten",
+     "party": "D"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_State_Senate_elections,_2026",
+   "note": "Uncontested on the general ballot (per Ballotpedia)"
+  },
+  {
+   "title": "MO Senate 6",
+   "category": "mo_senate",
+   "district": 6,
+   "candidates": [
+    {
+     "name": "J. Don Salcedo",
+     "party": "D"
+    },
+    {
+     "name": "Jake Vogel",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_State_Senate_elections,_2026"
+  },
+  {
+   "title": "MO Senate 8",
+   "category": "mo_senate",
+   "district": 8,
+   "candidates": [
+    {
+     "name": "Keri Ingle",
+     "party": "D"
+    },
+    {
+     "name": "Jon Patterson",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_State_Senate_elections,_2026"
+  },
+  {
+   "title": "MO Senate 10",
+   "category": "mo_senate",
+   "district": 10,
+   "candidates": [
+    {
+     "name": "John Wells",
+     "party": "D"
+    },
+    {
+     "name": "Mike Deering",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_State_Senate_elections,_2026"
+  },
+  {
+   "title": "MO Senate 12",
+   "category": "mo_senate",
+   "district": 12,
+   "candidates": [
+    {
+     "name": "Judy McNeece",
+     "party": "D"
+    },
+    {
+     "name": "Rusty Black",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_State_Senate_elections,_2026"
+  },
+  {
+   "title": "MO Senate 14",
+   "category": "mo_senate",
+   "district": 14,
+   "candidates": [
+    {
+     "name": "Raychel Proudie",
+     "party": "D"
+    },
+    {
+     "name": "Vernon Norman",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_State_Senate_elections,_2026"
+  },
+  {
+   "title": "MO Senate 16",
+   "category": "mo_senate",
+   "district": 16,
+   "candidates": [
+    {
+     "name": "Virginia Staabs",
+     "party": "D"
+    },
+    {
+     "name": "Bill Hardwick",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_State_Senate_elections,_2026"
+  },
+  {
+   "title": "MO Senate 18",
+   "category": "mo_senate",
+   "district": 18,
+   "candidates": [
+    {
+     "name": "Nick Miller",
+     "party": "D"
+    },
+    {
+     "name": "Greg Sharpe",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_State_Senate_elections,_2026"
+  },
+  {
+   "title": "MO Senate 20",
+   "category": "mo_senate",
+   "district": 20,
+   "candidates": [
+    {
+     "name": "Sean Falconer",
+     "party": "D"
+    },
+    {
+     "name": "Lori Rook",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_State_Senate_elections,_2026"
+  },
+  {
+   "title": "MO Senate 22",
+   "category": "mo_senate",
+   "district": 22,
+   "candidates": [
+    {
+     "name": "Jeff Abney",
+     "party": "D"
+    },
+    {
+     "name": "Jim Avery",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_State_Senate_elections,_2026"
+  },
+  {
+   "title": "MO Senate 24",
+   "category": "mo_senate",
+   "district": 24,
+   "candidates": [
+    {
+     "name": "Tracy McCreery",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "LaVanna Wrobley",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_State_Senate_elections,_2026"
+  },
+  {
+   "title": "MO Senate 26",
+   "category": "mo_senate",
+   "district": 26,
+   "candidates": [
+    {
+     "name": "Victoria Wors",
+     "party": "D"
+    },
+    {
+     "name": "Ben Brown",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_State_Senate_elections,_2026"
+  },
+  {
+   "title": "MO Senate 28",
+   "category": "mo_senate",
+   "district": 28,
+   "candidates": [
+    {
+     "name": "Mike McCaffree",
+     "party": "D"
+    },
+    {
+     "name": "Sam Alexander",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_State_Senate_elections,_2026"
+  },
+  {
+   "title": "MO Senate 30",
+   "category": "mo_senate",
+   "district": 30,
+   "candidates": [
+    {
+     "name": "Betsy Fogle",
+     "party": "D"
+    },
+    {
+     "name": "Melanie Stinnett",
+     "party": "R"
+    },
+    {
+     "name": "Cecil Ince",
+     "party": "L"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_State_Senate_elections,_2026"
+  },
+  {
+   "title": "MO Senate 32",
+   "category": "mo_senate",
+   "district": 32,
+   "candidates": [
+    {
+     "name": "Imma Curl",
+     "party": "D"
+    },
+    {
+     "name": "Jill Carter",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_State_Senate_elections,_2026"
+  },
+  {
+   "title": "MO Senate 34",
+   "category": "mo_senate",
+   "district": 34,
+   "candidates": [
+    {
+     "name": "Shereka Barnes",
+     "party": "D"
+    },
+    {
+     "name": "Mike Jones",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_State_Senate_elections,_2026"
+  },
+  {
+   "title": "MO House 1",
+   "category": "mo_house",
+   "district": 1,
+   "candidates": [
+    {
+     "name": "Jeff Farnan",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026",
+   "note": "Uncontested on the general ballot (per Ballotpedia)"
+  },
+  {
+   "title": "MO House 2",
+   "category": "mo_house",
+   "district": 2,
+   "candidates": [
+    {
+     "name": "Casey Scott",
+     "party": "D"
+    },
+    {
+     "name": "Phil Fox",
+     "party": "R"
+    },
+    {
+     "name": "Shelby Dreier",
+     "party": "L"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 3",
+   "category": "mo_house",
+   "district": 3,
+   "candidates": [
+    {
+     "name": "Corey Luebbering",
+     "party": "D"
+    },
+    {
+     "name": "P. Jeremy Mosley",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 4",
+   "category": "mo_house",
+   "district": 4,
+   "candidates": [
+    {
+     "name": "Tristan Sutton",
+     "party": "D"
+    },
+    {
+     "name": "Keith Gudehus",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 5",
+   "category": "mo_house",
+   "district": 5,
+   "candidates": [
+    {
+     "name": "John Tomko",
+     "party": "D"
+    },
+    {
+     "name": "Roth McElvain",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 6",
+   "category": "mo_house",
+   "district": 6,
+   "candidates": [
+    {
+     "name": "Robert Johnson",
+     "party": "D"
+    },
+    {
+     "name": "Kelly Gatts",
+     "party": "R"
+    },
+    {
+     "name": "John Davison",
+     "party": "L"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 7",
+   "category": "mo_house",
+   "district": 7,
+   "candidates": [
+    {
+     "name": "Adrian Cooper",
+     "party": "D"
+    },
+    {
+     "name": "Jeremy Clevenger",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 8",
+   "category": "mo_house",
+   "district": 8,
+   "candidates": [
+    {
+     "name": "Amy Minich",
+     "party": "D"
+    },
+    {
+     "name": "Josh Hurlbert",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 9",
+   "category": "mo_house",
+   "district": 9,
+   "candidates": [
+    {
+     "name": "Gena Puckett",
+     "party": "D"
+    },
+    {
+     "name": "Dean VanSchoiack",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 10",
+   "category": "mo_house",
+   "district": 10,
+   "candidates": [
+    {
+     "name": "LaTonya Williams",
+     "party": "D"
+    },
+    {
+     "name": "Paul Gatewood",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 11",
+   "category": "mo_house",
+   "district": 11,
+   "candidates": [
+    {
+     "name": "Luke Rae",
+     "party": "D"
+    },
+    {
+     "name": "Taylor Crouse",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 12",
+   "category": "mo_house",
+   "district": 12,
+   "candidates": [
+    {
+     "name": "Tracey Steele",
+     "party": "D"
+    },
+    {
+     "name": "Jerry Hickey",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 13",
+   "category": "mo_house",
+   "district": 13,
+   "candidates": [
+    {
+     "name": "Jacoby Wynkoop",
+     "party": "D"
+    },
+    {
+     "name": "John Elliott",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 14",
+   "category": "mo_house",
+   "district": 14,
+   "candidates": [
+    {
+     "name": "Ashley Aune",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Frank Pendleton",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 15",
+   "category": "mo_house",
+   "district": 15,
+   "candidates": [
+    {
+     "name": "Kenneth Jamison",
+     "party": "D",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026",
+   "note": "Uncontested on the general ballot (per Ballotpedia)"
+  },
+  {
+   "title": "MO House 16",
+   "category": "mo_house",
+   "district": 16,
+   "candidates": [
+    {
+     "name": "Daniel Kinate",
+     "party": "D"
+    },
+    {
+     "name": "Chris Brown",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 17",
+   "category": "mo_house",
+   "district": 17,
+   "candidates": [
+    {
+     "name": "Susan Hoisington",
+     "party": "D"
+    },
+    {
+     "name": "Bill Allen",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 18",
+   "category": "mo_house",
+   "district": 18,
+   "candidates": [
+    {
+     "name": "Eric Woods",
+     "party": "D",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026",
+   "note": "Uncontested on the general ballot (per Ballotpedia)"
+  },
+  {
+   "title": "MO House 19",
+   "category": "mo_house",
+   "district": 19,
+   "candidates": [
+    {
+     "name": "Wick Thomas",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Karen Spalding",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 20",
+   "category": "mo_house",
+   "district": 20,
+   "candidates": [
+    {
+     "name": "Jeff Spicer",
+     "party": "D"
+    },
+    {
+     "name": "Mike Steinmeyer",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 21",
+   "category": "mo_house",
+   "district": 21,
+   "candidates": [
+    {
+     "name": "Will Jobe",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Michael Young",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 22",
+   "category": "mo_house",
+   "district": 22,
+   "candidates": [
+    {
+     "name": "Yolanda Young",
+     "party": "D",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026",
+   "note": "Uncontested on the general ballot (per Ballotpedia)"
+  },
+  {
+   "title": "MO House 23",
+   "category": "mo_house",
+   "district": 23,
+   "candidates": [
+    {
+     "name": "Tony Van Trece",
+     "party": "D"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026",
+   "note": "Uncontested on the general ballot (per Ballotpedia)"
+  },
+  {
+   "title": "MO House 24",
+   "category": "mo_house",
+   "district": 24,
+   "candidates": [
+    {
+     "name": "Kevin Garner",
+     "party": "D"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026",
+   "note": "Uncontested on the general ballot (per Ballotpedia)"
+  },
+  {
+   "title": "MO House 25",
+   "category": "mo_house",
+   "district": 25,
+   "candidates": [
+    {
+     "name": "Patricia Mansur",
+     "party": "D",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026",
+   "note": "Uncontested on the general ballot (per Ballotpedia)"
+  },
+  {
+   "title": "MO House 26",
+   "category": "mo_house",
+   "district": 26,
+   "candidates": [
+    {
+     "name": "Tiffany Price",
+     "party": "D",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026",
+   "note": "Uncontested on the general ballot (per Ballotpedia)"
+  },
+  {
+   "title": "MO House 27",
+   "category": "mo_house",
+   "district": 27,
+   "candidates": [
+    {
+     "name": "Melissa Douglas",
+     "party": "D",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026",
+   "note": "Uncontested on the general ballot (per Ballotpedia)"
+  },
+  {
+   "title": "MO House 28",
+   "category": "mo_house",
+   "district": 28,
+   "candidates": [
+    {
+     "name": "Donna Barnes",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Steven Hinton",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 29",
+   "category": "mo_house",
+   "district": 29,
+   "candidates": [
+    {
+     "name": "Tedi Rowland",
+     "party": "D"
+    },
+    {
+     "name": "Robert Bruette",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 30",
+   "category": "mo_house",
+   "district": 30,
+   "candidates": [
+    {
+     "name": "Kevin Grover",
+     "party": "D"
+    },
+    {
+     "name": "Jeff Martin",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 31",
+   "category": "mo_house",
+   "district": 31,
+   "candidates": [
+    {
+     "name": "Justin Geiser",
+     "party": "D"
+    },
+    {
+     "name": "Ron Fowler",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 32",
+   "category": "mo_house",
+   "district": 32,
+   "candidates": [
+    {
+     "name": "Jennifer Cassidy",
+     "party": "D"
+    },
+    {
+     "name": "Michael Todd",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 33",
+   "category": "mo_house",
+   "district": 33,
+   "candidates": [
+    {
+     "name": "Troy Latterell",
+     "party": "D"
+    },
+    {
+     "name": "Carolyn Caton",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 34",
+   "category": "mo_house",
+   "district": 34,
+   "candidates": [
+    {
+     "name": "Kemp Strickler",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Sean Smith",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 35",
+   "category": "mo_house",
+   "district": 35,
+   "candidates": [
+    {
+     "name": "Michael Scott",
+     "party": "D"
+    },
+    {
+     "name": "Jacquie Aziere Stenger",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 36",
+   "category": "mo_house",
+   "district": 36,
+   "candidates": [
+    {
+     "name": "Anthony Ealy",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Dave Thomas",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 37",
+   "category": "mo_house",
+   "district": 37,
+   "candidates": [
+    {
+     "name": "Karissa Varga",
+     "party": "D"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026",
+   "note": "Uncontested on the general ballot (per Ballotpedia)"
+  },
+  {
+   "title": "MO House 38",
+   "category": "mo_house",
+   "district": 38,
+   "candidates": [
+    {
+     "name": "Martin Jacobs",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Mary Hill",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 39",
+   "category": "mo_house",
+   "district": 39,
+   "candidates": [
+    {
+     "name": "Tanya Lakins",
+     "party": "D"
+    },
+    {
+     "name": "Mark Meirath",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 40",
+   "category": "mo_house",
+   "district": 40,
+   "candidates": [
+    {
+     "name": "Thomas McBeth",
+     "party": "D"
+    },
+    {
+     "name": "Chad Perkins",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Sheri Jay",
+     "party": "L"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 41",
+   "category": "mo_house",
+   "district": 41,
+   "candidates": [
+    {
+     "name": "Matthew Beger",
+     "party": "D"
+    },
+    {
+     "name": "Doyle Justus",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Dalton Johnson",
+     "party": "L"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 42",
+   "category": "mo_house",
+   "district": 42,
+   "candidates": [
+    {
+     "name": "Amy Pritchard",
+     "party": "D"
+    },
+    {
+     "name": "Jeff Myers",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 43",
+   "category": "mo_house",
+   "district": 43,
+   "candidates": [
+    {
+     "name": "Rich Gold",
+     "party": "D"
+    },
+    {
+     "name": "Brendan Webber",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 44",
+   "category": "mo_house",
+   "district": 44,
+   "candidates": [
+    {
+     "name": "Rebecca Brewer",
+     "party": "D"
+    },
+    {
+     "name": "John Martin",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 45",
+   "category": "mo_house",
+   "district": 45,
+   "candidates": [
+    {
+     "name": "Kathy Steinhoff",
+     "party": "D",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026",
+   "note": "Uncontested on the general ballot (per Ballotpedia)"
+  },
+  {
+   "title": "MO House 46",
+   "category": "mo_house",
+   "district": 46,
+   "candidates": [
+    {
+     "name": "David T. Smith",
+     "party": "D",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026",
+   "note": "Uncontested on the general ballot (per Ballotpedia)"
+  },
+  {
+   "title": "MO House 47",
+   "category": "mo_house",
+   "district": 47,
+   "candidates": [
+    {
+     "name": "Adrian Plank",
+     "party": "D",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026",
+   "note": "Uncontested on the general ballot (per Ballotpedia)"
+  },
+  {
+   "title": "MO House 48",
+   "category": "mo_house",
+   "district": 48,
+   "candidates": [
+    {
+     "name": "Hope Tinker",
+     "party": "D"
+    },
+    {
+     "name": "Tim Taylor",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 49",
+   "category": "mo_house",
+   "district": 49,
+   "candidates": [
+    {
+     "name": "Jessica Slisz",
+     "party": "D"
+    },
+    {
+     "name": "Jim Schulte",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 50",
+   "category": "mo_house",
+   "district": 50,
+   "candidates": [
+    {
+     "name": "Gregg Bush",
+     "party": "D",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026",
+   "note": "Uncontested on the general ballot (per Ballotpedia)"
+  },
+  {
+   "title": "MO House 51",
+   "category": "mo_house",
+   "district": 51,
+   "candidates": [
+    {
+     "name": "Ron Fauss",
+     "party": "D"
+    },
+    {
+     "name": "Stephanie Gooden",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 52",
+   "category": "mo_house",
+   "district": 52,
+   "candidates": [
+    {
+     "name": "Rene Vance",
+     "party": "D"
+    },
+    {
+     "name": "Israel Baeza",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 53",
+   "category": "mo_house",
+   "district": 53,
+   "candidates": [
+    {
+     "name": "Beth Grubb",
+     "party": "D"
+    },
+    {
+     "name": "Terry Thompson",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 54",
+   "category": "mo_house",
+   "district": 54,
+   "candidates": [
+    {
+     "name": "Taigan Plummer",
+     "party": "D"
+    },
+    {
+     "name": "Brandon Phelps",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 55",
+   "category": "mo_house",
+   "district": 55,
+   "candidates": [
+    {
+     "name": "Jonathan Pennell",
+     "party": "D"
+    },
+    {
+     "name": "William Irwin",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 56",
+   "category": "mo_house",
+   "district": 56,
+   "candidates": [
+    {
+     "name": "Staci Czar",
+     "party": "D"
+    },
+    {
+     "name": "Steve Baker",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 57",
+   "category": "mo_house",
+   "district": 57,
+   "candidates": [
+    {
+     "name": "Michael Walbom",
+     "party": "D"
+    },
+    {
+     "name": "Matthew Sergent",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 58",
+   "category": "mo_house",
+   "district": 58,
+   "candidates": [
+    {
+     "name": "Roger Korenberg",
+     "party": "D"
+    },
+    {
+     "name": "Willard Haley",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 59",
+   "category": "mo_house",
+   "district": 59,
+   "candidates": [
+    {
+     "name": "Rebecca Kroll",
+     "party": "D"
+    },
+    {
+     "name": "Carrie Tergin",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 60",
+   "category": "mo_house",
+   "district": 60,
+   "candidates": [
+    {
+     "name": "Suzanne Luther",
+     "party": "D"
+    },
+    {
+     "name": "Shane Kampeter",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 61",
+   "category": "mo_house",
+   "district": 61,
+   "candidates": [
+    {
+     "name": "Stacy Bax",
+     "party": "D"
+    },
+    {
+     "name": "Bruce Sassmann",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 62",
+   "category": "mo_house",
+   "district": 62,
+   "candidates": [
+    {
+     "name": "Liz Davenport",
+     "party": "D"
+    },
+    {
+     "name": "Sherri Gallick",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 63",
+   "category": "mo_house",
+   "district": 63,
+   "candidates": [
+    {
+     "name": "Donald Looney",
+     "party": "D"
+    },
+    {
+     "name": "Tony Lovasco",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 64",
+   "category": "mo_house",
+   "district": 64,
+   "candidates": [
+    {
+     "name": "Amber Teson",
+     "party": "D"
+    },
+    {
+     "name": "Deanna Self",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 65",
+   "category": "mo_house",
+   "district": 65,
+   "candidates": [
+    {
+     "name": "Dale Conoyer",
+     "party": "D"
+    },
+    {
+     "name": "Wendy Hausman",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 66",
+   "category": "mo_house",
+   "district": 66,
+   "candidates": [
+    {
+     "name": "Marlene Terry",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Laura Mitchell-Riley",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 67",
+   "category": "mo_house",
+   "district": 67,
+   "candidates": [
+    {
+     "name": "Tonya Rush",
+     "party": "D",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026",
+   "note": "Uncontested on the general ballot (per Ballotpedia)"
+  },
+  {
+   "title": "MO House 68",
+   "category": "mo_house",
+   "district": 68,
+   "candidates": [
+    {
+     "name": "Kem Smith",
+     "party": "D",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026",
+   "note": "Uncontested on the general ballot (per Ballotpedia)"
+  },
+  {
+   "title": "MO House 69",
+   "category": "mo_house",
+   "district": 69,
+   "candidates": [
+    {
+     "name": "Chris Chapman",
+     "party": "D"
+    },
+    {
+     "name": "Scott Miller",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 70",
+   "category": "mo_house",
+   "district": 70,
+   "candidates": [
+    {
+     "name": "Stephanie Boykin",
+     "party": "D",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026",
+   "note": "Uncontested on the general ballot (per Ballotpedia)"
+  },
+  {
+   "title": "MO House 71",
+   "category": "mo_house",
+   "district": 71,
+   "candidates": [
+    {
+     "name": "Nicole Greer",
+     "party": "D"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026",
+   "note": "Uncontested on the general ballot (per Ballotpedia)"
+  },
+  {
+   "title": "MO House 72",
+   "category": "mo_house",
+   "district": 72,
+   "candidates": [
+    {
+     "name": "Patrick Wroblewski",
+     "party": "D"
+    },
+    {
+     "name": "Jeffrey Jacks",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 73",
+   "category": "mo_house",
+   "district": 73,
+   "candidates": [
+    {
+     "name": "Kennedy Moore",
+     "party": "D"
+    },
+    {
+     "name": "Joy Denise Dabney",
+     "party": "L"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 74",
+   "category": "mo_house",
+   "district": 74,
+   "candidates": [
+    {
+     "name": "Marla Smith",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Jack Howard",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 75",
+   "category": "mo_house",
+   "district": 75,
+   "candidates": [
+    {
+     "name": "Chanel Mosley",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Brandon Wilke",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 76",
+   "category": "mo_house",
+   "district": 76,
+   "candidates": [
+    {
+     "name": "Marlon Anderson",
+     "party": "D",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026",
+   "note": "Uncontested on the general ballot (per Ballotpedia)"
+  },
+  {
+   "title": "MO House 77",
+   "category": "mo_house",
+   "district": 77,
+   "candidates": [
+    {
+     "name": "Kimberly-Ann Collins",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Michael Corey",
+     "party": "L"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 78",
+   "category": "mo_house",
+   "district": 78,
+   "candidates": [
+    {
+     "name": "Marty Joe Murray",
+     "party": "D",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026",
+   "note": "Uncontested on the general ballot (per Ballotpedia)"
+  },
+  {
+   "title": "MO House 79",
+   "category": "mo_house",
+   "district": 79,
+   "candidates": [
+    {
+     "name": "Rachel D'Souza",
+     "party": "D"
+    },
+    {
+     "name": "Michael J. Hebron Sr.",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 80",
+   "category": "mo_house",
+   "district": 80,
+   "candidates": [
+    {
+     "name": "Elizabeth Fuchs",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Jennie Drag",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 81",
+   "category": "mo_house",
+   "district": 81,
+   "candidates": [
+    {
+     "name": "James P. Lappe",
+     "party": "D"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026",
+   "note": "Uncontested on the general ballot (per Ballotpedia)"
+  },
+  {
+   "title": "MO House 82",
+   "category": "mo_house",
+   "district": 82,
+   "candidates": [
+    {
+     "name": "Nick Kimble",
+     "party": "D",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026",
+   "note": "Uncontested on the general ballot (per Ballotpedia)"
+  },
+  {
+   "title": "MO House 83",
+   "category": "mo_house",
+   "district": 83,
+   "candidates": [
+    {
+     "name": "Raymond Reed",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Andrew Bolin",
+     "party": "L"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 84",
+   "category": "mo_house",
+   "district": 84,
+   "candidates": [
+    {
+     "name": "Del Taylor",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Robert Vroman",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 85",
+   "category": "mo_house",
+   "district": 85,
+   "candidates": [
+    {
+     "name": "Yolonda Fountain Henderson",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Jerron Sutton",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 86",
+   "category": "mo_house",
+   "district": 86,
+   "candidates": [
+    {
+     "name": "Jeff Hales",
+     "party": "D",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026",
+   "note": "Uncontested on the general ballot (per Ballotpedia)"
+  },
+  {
+   "title": "MO House 87",
+   "category": "mo_house",
+   "district": 87,
+   "candidates": [
+    {
+     "name": "Connie Steinmetz",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Dan Hyatt",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 88",
+   "category": "mo_house",
+   "district": 88,
+   "candidates": [
+    {
+     "name": "Jennifer Trickey",
+     "party": "D"
+    },
+    {
+     "name": "Holly Jones",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 89",
+   "category": "mo_house",
+   "district": 89,
+   "candidates": [
+    {
+     "name": "Bryan Troop",
+     "party": "D"
+    },
+    {
+     "name": "George Hruza",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 90",
+   "category": "mo_house",
+   "district": 90,
+   "candidates": [
+    {
+     "name": "Mark Boyko",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Ryan Sheridan",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 91",
+   "category": "mo_house",
+   "district": 91,
+   "candidates": [
+    {
+     "name": "Jo Doll",
+     "party": "D",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026",
+   "note": "Uncontested on the general ballot (per Ballotpedia)"
+  },
+  {
+   "title": "MO House 92",
+   "category": "mo_house",
+   "district": 92,
+   "candidates": [
+    {
+     "name": "Michael Burton",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Kenneth Abram",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 93",
+   "category": "mo_house",
+   "district": 93,
+   "candidates": [
+    {
+     "name": "Bridget Walsh Moore",
+     "party": "D",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026",
+   "note": "Uncontested on the general ballot (per Ballotpedia)"
+  },
+  {
+   "title": "MO House 94",
+   "category": "mo_house",
+   "district": 94,
+   "candidates": [
+    {
+     "name": "Cathy Summers",
+     "party": "D"
+    },
+    {
+     "name": "Maryellen Murphy",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 95",
+   "category": "mo_house",
+   "district": 95,
+   "candidates": [
+    {
+     "name": "Meredith Sumenek",
+     "party": "D"
+    },
+    {
+     "name": "Bob Mahacek",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 96",
+   "category": "mo_house",
+   "district": 96,
+   "candidates": [
+    {
+     "name": "Matt Vitale",
+     "party": "D"
+    },
+    {
+     "name": "Brad Christ",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Shane Ferguson",
+     "party": "L"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 97",
+   "category": "mo_house",
+   "district": 97,
+   "candidates": [
+    {
+     "name": "Dan Schaefer",
+     "party": "D"
+    },
+    {
+     "name": "David Robertson",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 98",
+   "category": "mo_house",
+   "district": 98,
+   "candidates": [
+    {
+     "name": "Jaclyn Zimmermann",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Tim Bosch",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 99",
+   "category": "mo_house",
+   "district": 99,
+   "candidates": [
+    {
+     "name": "Tori Schafer",
+     "party": "D"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026",
+   "note": "Uncontested on the general ballot (per Ballotpedia)"
+  },
+  {
+   "title": "MO House 100",
+   "category": "mo_house",
+   "district": 100,
+   "candidates": [
+    {
+     "name": "Mary Ann Perkins",
+     "party": "D"
+    },
+    {
+     "name": "Philip Oehlerking",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Ken Newhouse",
+     "party": "L"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 101",
+   "category": "mo_house",
+   "district": 101,
+   "candidates": [
+    {
+     "name": "Paul Lentz",
+     "party": "D"
+    },
+    {
+     "name": "Ben Keathley",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Jeff Coleman",
+     "party": "L"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 102",
+   "category": "mo_house",
+   "district": 102,
+   "candidates": [
+    {
+     "name": "David Rogers",
+     "party": "D"
+    },
+    {
+     "name": "Richard West",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 103",
+   "category": "mo_house",
+   "district": 103,
+   "candidates": [
+    {
+     "name": "Don Crozier",
+     "party": "D"
+    },
+    {
+     "name": "Dave Hinman",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 104",
+   "category": "mo_house",
+   "district": 104,
+   "candidates": [
+    {
+     "name": "Tara Murray",
+     "party": "D"
+    },
+    {
+     "name": "Terri Violet",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 105",
+   "category": "mo_house",
+   "district": 105,
+   "candidates": [
+    {
+     "name": "Caterina Clayton",
+     "party": "D"
+    },
+    {
+     "name": "Colin Wellenkamp",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 106",
+   "category": "mo_house",
+   "district": 106,
+   "candidates": [
+    {
+     "name": "Jewel Kelly, Jr.",
+     "party": "D"
+    },
+    {
+     "name": "Travis Wilson",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 107",
+   "category": "mo_house",
+   "district": 107,
+   "candidates": [
+    {
+     "name": "Gary Wester",
+     "party": "D"
+    },
+    {
+     "name": "Mark Matthiesen",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 108",
+   "category": "mo_house",
+   "district": 108,
+   "candidates": [
+    {
+     "name": "Stephen Scott",
+     "party": "D"
+    },
+    {
+     "name": "Mike Costlow",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 109",
+   "category": "mo_house",
+   "district": 109,
+   "candidates": [
+    {
+     "name": "Trent Leslie",
+     "party": "D"
+    },
+    {
+     "name": "John Simmons",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 110",
+   "category": "mo_house",
+   "district": 110,
+   "candidates": [
+    {
+     "name": "Claire Heinrich",
+     "party": "D"
+    },
+    {
+     "name": "Niles Stephens",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 111",
+   "category": "mo_house",
+   "district": 111,
+   "candidates": [
+    {
+     "name": "Stacey Hagen",
+     "party": "D"
+    },
+    {
+     "name": "Cecelie Williams",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 112",
+   "category": "mo_house",
+   "district": 112,
+   "candidates": [
+    {
+     "name": "Dave Rekosh",
+     "party": "D"
+    },
+    {
+     "name": "Ed Callahan",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 113",
+   "category": "mo_house",
+   "district": 113,
+   "candidates": [
+    {
+     "name": "Ashley Drury",
+     "party": "D"
+    },
+    {
+     "name": "Phil Amato",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 114",
+   "category": "mo_house",
+   "district": 114,
+   "candidates": [
+    {
+     "name": "Jessie Shepherd",
+     "party": "D"
+    },
+    {
+     "name": "Ann Moloney",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 115",
+   "category": "mo_house",
+   "district": 115,
+   "candidates": [
+    {
+     "name": "David George",
+     "party": "D"
+    },
+    {
+     "name": "Bill Lucas",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 116",
+   "category": "mo_house",
+   "district": 116,
+   "candidates": [
+    {
+     "name": "Whitney Wisker-Brooks",
+     "party": "D"
+    },
+    {
+     "name": "Jason Green",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 117",
+   "category": "mo_house",
+   "district": 117,
+   "candidates": [
+    {
+     "name": "Justin Flowers",
+     "party": "D"
+    },
+    {
+     "name": "Becky Laubinger",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 118",
+   "category": "mo_house",
+   "district": 118,
+   "candidates": [
+    {
+     "name": "Sarah Puckett",
+     "party": "D"
+    },
+    {
+     "name": "Amy DeClue",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 119",
+   "category": "mo_house",
+   "district": 119,
+   "candidates": [
+    {
+     "name": "Amy Thompson",
+     "party": "D"
+    },
+    {
+     "name": "Brad Banderman",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 120",
+   "category": "mo_house",
+   "district": 120,
+   "candidates": [
+    {
+     "name": "Ray Bruno",
+     "party": "D"
+    },
+    {
+     "name": "John Hewkin",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 121",
+   "category": "mo_house",
+   "district": 121,
+   "candidates": [
+    {
+     "name": "Miguel Arellanes",
+     "party": "D"
+    },
+    {
+     "name": "Keith Pritchard",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 122",
+   "category": "mo_house",
+   "district": 122,
+   "candidates": [
+    {
+     "name": "Dan Victor",
+     "party": "D"
+    },
+    {
+     "name": "Tara Peters",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 123",
+   "category": "mo_house",
+   "district": 123,
+   "candidates": [
+    {
+     "name": "Cody Hutcheson",
+     "party": "D"
+    },
+    {
+     "name": "Jeff Vernetti",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 124",
+   "category": "mo_house",
+   "district": 124,
+   "candidates": [
+    {
+     "name": "Tara Hallmark",
+     "party": "D"
+    },
+    {
+     "name": "Kevin Onstott",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 125",
+   "category": "mo_house",
+   "district": 125,
+   "candidates": [
+    {
+     "name": "Lynda Jones",
+     "party": "D"
+    },
+    {
+     "name": "Dane Diehl",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 126",
+   "category": "mo_house",
+   "district": 126,
+   "candidates": [
+    {
+     "name": "Melissa Perry",
+     "party": "D"
+    },
+    {
+     "name": "Jim Kalberloh",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 127",
+   "category": "mo_house",
+   "district": 127,
+   "candidates": [
+    {
+     "name": "Marvin Manring",
+     "party": "D"
+    },
+    {
+     "name": "Brenden Kelley",
+     "party": "R"
+    },
+    {
+     "name": "Racheal Martin",
+     "party": "I"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 128",
+   "category": "mo_house",
+   "district": 128,
+   "candidates": [
+    {
+     "name": "Michael Martin",
+     "party": "D"
+    },
+    {
+     "name": "Christopher Warwick",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Shane Sawyer",
+     "party": "I"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 129",
+   "category": "mo_house",
+   "district": 129,
+   "candidates": [
+    {
+     "name": "John Gray",
+     "party": "D"
+    },
+    {
+     "name": "William Worsham",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 130",
+   "category": "mo_house",
+   "district": 130,
+   "candidates": [
+    {
+     "name": "Leslie Jones",
+     "party": "D"
+    },
+    {
+     "name": "Bishop Davidson",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 131",
+   "category": "mo_house",
+   "district": 131,
+   "candidates": [
+    {
+     "name": "Ashley Cossins",
+     "party": "D"
+    },
+    {
+     "name": "Bill Owen",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 132",
+   "category": "mo_house",
+   "district": 132,
+   "candidates": [
+    {
+     "name": "Jeremy Dean",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Russ Gos\u00adselin",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 133",
+   "category": "mo_house",
+   "district": 133,
+   "candidates": [
+    {
+     "name": "Katelyn Zach",
+     "party": "D"
+    },
+    {
+     "name": "Gerald Angelo",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 134",
+   "category": "mo_house",
+   "district": 134,
+   "candidates": [
+    {
+     "name": "K. Grant",
+     "party": "D"
+    },
+    {
+     "name": "Alex Riley",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 135",
+   "category": "mo_house",
+   "district": 135,
+   "candidates": [
+    {
+     "name": "John Chiles",
+     "party": "D"
+    },
+    {
+     "name": "Michael Hasty",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 136",
+   "category": "mo_house",
+   "district": 136,
+   "candidates": [
+    {
+     "name": "Stephanie Hein",
+     "party": "D",
+     "incumbent": true
+    },
+    {
+     "name": "Jacey Buckles",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 137",
+   "category": "mo_house",
+   "district": 137,
+   "candidates": [
+    {
+     "name": "Bryce Lockwood",
+     "party": "D"
+    },
+    {
+     "name": "Darin Chappell",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 138",
+   "category": "mo_house",
+   "district": 138,
+   "candidates": [
+    {
+     "name": "Chris Daugherty",
+     "party": "D"
+    },
+    {
+     "name": "Burt Whaley",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 139",
+   "category": "mo_house",
+   "district": 139,
+   "candidates": [
+    {
+     "name": "Bob Titus",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026",
+   "note": "Uncontested on the general ballot (per Ballotpedia)"
+  },
+  {
+   "title": "MO House 140",
+   "category": "mo_house",
+   "district": 140,
+   "candidates": [
+    {
+     "name": "Julia Curran",
+     "party": "D"
+    },
+    {
+     "name": "Jamie Ray Gragg",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 141",
+   "category": "mo_house",
+   "district": 141,
+   "candidates": [
+    {
+     "name": "Darrel Swofford",
+     "party": "D"
+    },
+    {
+     "name": "Melissa Schmidt",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 142",
+   "category": "mo_house",
+   "district": 142,
+   "candidates": [
+    {
+     "name": "Josh Ray",
+     "party": "D"
+    },
+    {
+     "name": "Jeff Brown",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 143",
+   "category": "mo_house",
+   "district": 143,
+   "candidates": [
+    {
+     "name": "Marsha Snodgrass",
+     "party": "D"
+    },
+    {
+     "name": "Bennie Cook",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 144",
+   "category": "mo_house",
+   "district": 144,
+   "candidates": [
+    {
+     "name": "Andrew Eye",
+     "party": "D"
+    },
+    {
+     "name": "Chris Dinkins",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 145",
+   "category": "mo_house",
+   "district": 145,
+   "candidates": [
+    {
+     "name": "Carl Kinsky",
+     "party": "D"
+    },
+    {
+     "name": "Bryant Wolfin",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 146",
+   "category": "mo_house",
+   "district": 146,
+   "candidates": [
+    {
+     "name": "Mary Harriet Talbut",
+     "party": "D"
+    },
+    {
+     "name": "Lucas Green",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 147",
+   "category": "mo_house",
+   "district": 147,
+   "candidates": [
+    {
+     "name": "Tim Palmer",
+     "party": "D"
+    },
+    {
+     "name": "John Voss",
+     "party": "R",
+     "incumbent": true
+    },
+    {
+     "name": "Greg Tlapek",
+     "party": "L"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 148",
+   "category": "mo_house",
+   "district": 148,
+   "candidates": [
+    {
+     "name": "Casey Carlisle",
+     "party": "D"
+    },
+    {
+     "name": "David A. Dolan",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 149",
+   "category": "mo_house",
+   "district": 149,
+   "candidates": [
+    {
+     "name": "John Armbruster",
+     "party": "D"
+    },
+    {
+     "name": "Scott Crumpecker",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 150",
+   "category": "mo_house",
+   "district": 150,
+   "candidates": [
+    {
+     "name": "Cameron Bunting Parker",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026",
+   "note": "Uncontested on the general ballot (per Ballotpedia)"
+  },
+  {
+   "title": "MO House 151",
+   "category": "mo_house",
+   "district": 151,
+   "candidates": [
+    {
+     "name": "Pam Proffitt-Rowland",
+     "party": "D"
+    },
+    {
+     "name": "Steven Jordan",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 152",
+   "category": "mo_house",
+   "district": 152,
+   "candidates": [
+    {
+     "name": "Corretta Bishop",
+     "party": "D"
+    },
+    {
+     "name": "Jeff Shawan",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 153",
+   "category": "mo_house",
+   "district": 153,
+   "candidates": [
+    {
+     "name": "Les Majors",
+     "party": "D"
+    },
+    {
+     "name": "Keith Elliott",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 154",
+   "category": "mo_house",
+   "district": 154,
+   "candidates": [
+    {
+     "name": "JoJo Stewart",
+     "party": "D"
+    },
+    {
+     "name": "Lisa Durnell",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 155",
+   "category": "mo_house",
+   "district": 155,
+   "candidates": [
+    {
+     "name": "Joshua Berzins",
+     "party": "D"
+    },
+    {
+     "name": "Matthew Overcast",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 156",
+   "category": "mo_house",
+   "district": 156,
+   "candidates": [
+    {
+     "name": "Trent Davis",
+     "party": "D"
+    },
+    {
+     "name": "Brian Seitz",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 157",
+   "category": "mo_house",
+   "district": 157,
+   "candidates": [
+    {
+     "name": "Bradley Bos",
+     "party": "D"
+    },
+    {
+     "name": "Mitch Boggs",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 158",
+   "category": "mo_house",
+   "district": 158,
+   "candidates": [
+    {
+     "name": "Chris Foster",
+     "party": "D"
+    },
+    {
+     "name": "Scott Cupps",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 159",
+   "category": "mo_house",
+   "district": 159,
+   "candidates": [
+    {
+     "name": "Joel Mace",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026",
+   "note": "Uncontested on the general ballot (per Ballotpedia)"
+  },
+  {
+   "title": "MO House 160",
+   "category": "mo_house",
+   "district": 160,
+   "candidates": [
+    {
+     "name": "Angela Thomas",
+     "party": "D"
+    },
+    {
+     "name": "Cheryle Perkins",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 161",
+   "category": "mo_house",
+   "district": 161,
+   "candidates": [
+    {
+     "name": "Aaron Metzger",
+     "party": "D"
+    },
+    {
+     "name": "Louise Secker",
+     "party": "R"
+    },
+    {
+     "name": "Thomas Ross",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "MO House 162",
+   "category": "mo_house",
+   "district": 162,
+   "candidates": [
+    {
+     "name": "Roger Koch",
+     "party": "R"
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026",
+   "note": "Uncontested on the general ballot (per Ballotpedia)"
+  },
+  {
+   "title": "MO House 163",
+   "category": "mo_house",
+   "district": 163,
+   "candidates": [
+    {
+     "name": "Brenna Barksdale",
+     "party": "D"
+    },
+    {
+     "name": "Cathy Loy",
+     "party": "R",
+     "incumbent": true
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_House_of_Representatives_elections,_2026"
+  },
+  {
+   "title": "Amendment 3",
+   "category": "mo_measure",
+   "district": null,
+   "is_measure": true,
+   "description": "Legislature-referred: repeal the 2024 abortion-rights amendment, allow abortion only in limited cases, and ban gender transition procedures for minors.",
+   "candidates": [
+    {
+     "name": "Yes",
+     "party": ""
+    },
+    {
+     "name": "No",
+     "party": ""
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_2026_ballot_measures"
+  },
+  {
+   "title": "Amendment 6",
+   "category": "mo_measure",
+   "district": null,
+   "is_measure": true,
+   "description": "Citizen initiative: make initiative/referendum a fundamental right and bar the legislature from changing voter-passed initiatives without 80% of both chambers plus voter approval.",
+   "candidates": [
+    {
+     "name": "Yes",
+     "party": ""
+    },
+    {
+     "name": "No",
+     "party": ""
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_2026_ballot_measures"
+  },
+  {
+   "title": "Amendment 7",
+   "category": "mo_measure",
+   "district": null,
+   "is_measure": true,
+   "description": "Legislature-referred: create a permanent state endowment fund and eliminate state-imposed taxes once its earnings can replace them.",
+   "candidates": [
+    {
+     "name": "Yes",
+     "party": ""
+    },
+    {
+     "name": "No",
+     "party": ""
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_2026_ballot_measures"
+  },
+  {
+   "title": "Amendment 8",
+   "category": "mo_measure",
+   "district": null,
+   "is_measure": true,
+   "description": "Legislature-referred: require county sheriffs to be elected and limit their removal to quo warranto.",
+   "candidates": [
+    {
+     "name": "Yes",
+     "party": ""
+    },
+    {
+     "name": "No",
+     "party": ""
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_2026_ballot_measures"
+  },
+  {
+   "title": "Proposition A",
+   "category": "mo_measure",
+   "district": null,
+   "is_measure": true,
+   "description": "Referendum on the 2025 congressional map (HB 1): Yes keeps the new map, No repeals it.",
+   "candidates": [
+    {
+     "name": "Yes",
+     "party": ""
+    },
+    {
+     "name": "No",
+     "party": ""
+    }
+   ],
+   "candidates_source": "https://ballotpedia.org/Missouri_2026_ballot_measures"
+  }
+ ]
+}

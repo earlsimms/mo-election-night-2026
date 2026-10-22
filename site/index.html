@@ -69,18 +69,18 @@ function tallyCard(name,t){if(!t)return"";const T=t.total,w=x=>100*x/T+"%";
  <div class="nums"><span><b style="color:var(--d)">D ${t.called.D}</b> won/not up${t.leading.D?` · +${t.leading.D} leading`:""}</span><span>${T-t.called.D-t.called.R-t.called.O} undecided</span><span>${t.leading.R?`+${t.leading.R} leading · `:""}<b style="color:var(--r)">R ${t.called.R}</b></span></div>
  <div class="nums"><span>Not on ballot: D ${t.holdover.D} / R ${t.holdover.R}</span>${t.note?`<span title="${t.note}">ⓘ</span>`:""}</div></div>`}
 
-const fm=m=>m==null?"n/a":Math.abs(m)<0.05?"EVEN":(m>0?"R+":"D+")+Math.abs(m).toFixed(1);
+const fm=(m,ms)=>m==null?"n/a":Math.abs(m)<0.05?(ms?"TIED":"EVEN"):(ms?(m>0?"Yes +":"No +"):(m>0?"R+":"D+"))+Math.abs(m).toFixed(1);
 function resMargin(r){const c=r.candidates;if(!r.total_votes)return null;const R=c.find(x=>x.party==="R"),D=c.find(x=>x.party==="D")||c.find(x=>x.party!=="R");return R&&D?+(R.pct-D.pct).toFixed(1):null}
 function pollRef(p){return p&&(p.avg&&p.avg.margin!=null?{m:p.avg.margin,k:"avg"}:p.latest&&p.latest.margin!=null?{m:p.latest.margin,k:"latest"}:null)}
 function gap(r){const pr=pollRef(r.poll),rm=resMargin(r);return pr&&rm!=null?rm-pr.m:null}
-function pollHTML(r){const p=r.poll;if(!p)return"";const nm=(v)=>p.candidates.map((c,i)=>v[i]!=null?`${c.name} (${c.party}) ${v[i]}%`:"").filter(Boolean).join(" / ");
+function pollHTML(r){const p=r.poll;if(!p)return"";const ms=!!(p.measure||r.is_measure);const fm2=m=>fm(m,ms);const nm=(v)=>p.candidates.map((c,i)=>v[i]!=null?`${c.name}${c.party?` (${c.party})`:""} ${v[i]}%`:"").filter(Boolean).join(" / ");
  let s=`<div class="poll"><b>PRE-ELECTION POLLING</b> (not results) · source: <a href="${p.source_url}" target="_blank" rel="noopener">${p.source}</a><br>`;
- if(p.avg)s+=`Average: ${nm(p.avg.values)} → <b>${fm(p.avg.margin)}</b> <span style="color:#666">(${p.avg.label})</span><br>`;
- if(p.latest)s+=`Latest: ${p.latest.pollster}, ${LD(p.latest.date)}, ${p.latest.sample}: ${nm(p.latest.values)} → <b>${fm(p.latest.margin)}</b>`;
- (p.extra||[]).forEach(x=>{s+=`<br><span style="color:#7c2d12;font-weight:600">${x.label}:</span> ${x.pollster}, ${LD(x.date)}${x.sample?", "+x.sample:""}: ${nm(x.values)} → <b>${fm(x.margin)}</b>`});
- s+=`</div>`;const pr=pollRef(p),rm=resMargin(r);
- if(pr&&rm!=null){const g=rm-pr.m,who=Math.abs(g)<0.05?"exactly matching polls":`${g>0?"R":"D"} beating polls by ${Math.abs(g).toFixed(1)}`;
-  s+=`<div class="cmp"><b>${["called","certified"].includes(r.status)?"Final comparison":"Running comparison (partial count, not a call)"}:</b> result ${fm(rm)} vs poll ${pr.k==="avg"?"avg":"latest"} ${fm(pr.m)} → ${who}</div>`}
+ if(p.avg)s+=`Average: ${nm(p.avg.values)} → <b>${fm2(p.avg.margin)}</b> <span style="color:#666">(${p.avg.label})</span><br>`;
+ if(p.latest)s+=`Latest: ${p.latest.pollster}, ${LD(p.latest.date)}, ${p.latest.sample}: ${nm(p.latest.values)} → <b>${fm2(p.latest.margin)}</b>`;
+ (p.extra||[]).forEach(x=>{s+=`<br><span style="color:#7c2d12;font-weight:600">${x.label}:</span> ${x.pollster}, ${LD(x.date)}${x.sample?", "+x.sample:""}: ${nm(x.values)} → <b>${fm2(x.margin)}</b>`});
+ if(p.note)s+=`<br><span style="color:#666">${p.note}</span>`;s+=`</div>`;const pr=pollRef(p),rm=resMargin(r);
+ if(pr&&rm!=null&&!ms){const g=rm-pr.m,who=Math.abs(g)<0.05?"exactly matching polls":`${g>0?"R":"D"} beating polls by ${Math.abs(g).toFixed(1)}`;
+  s+=`<div class="cmp"><b>${["called","certified"].includes(r.status)?"Final comparison":"Running comparison (partial count, not a call)"}:</b> result ${fm2(rm)} vs poll ${pr.k==="avg"?"avg":"latest"} ${fm2(pr.m)} → ${who}</div>`}
  return s}
 const SH={R:["#fde8e8","#fbc9c9","#f5a3a3","#ec7c7c"],D:["#e6effc","#c7dbf9","#a3c3f3","#7ea9eb"],O:["#f1eafb","#ddd0f5","#c7b3ee","#b296e6"]},NEU="#eceff3";
 function cardBg(r){const c=r.candidates;if(r.is_measure||r.status==="too_early"||!r.total_votes||c.length<1)return NEU;
@@ -92,8 +92,8 @@ function raceHTML(r){const src=D.sources.find(s=>s.id===r.source_id)||{};const o
  return `<div class="race ${r.key?"hl":""} ${r.stale?"stale":""}" style="background:${cardBg(r)};border-left-color:${r.status==="too_early"?"#ccc":col}">
  <h4><span><button class="kt ${r.key?"on":""}" title="${r.key?"Remove from":"Add to"} key races" onclick='toggleKey(${JSON.stringify(r.id)},event)'>${r.key?"★ KEY RACE":"☆ Key race"}</button> ${r.sample?"<b style='color:#7c2d12'>[SAMPLE]</b> ":""}${r.title}</span><span class="badge ${r.status}">${lab}</span></h4>
  <div class="meta">${r.reporting_text||""}${r.reporting_pct!=null?` (${r.reporting_pct}%)`:""}${r.margin_pct!=null&&r.total_votes?` · margin ${r.margin_pct} pts`:""} · ${src.name||r.source_id}${r.votes_source?` · votes: ${(D.sources.find(s=>s.id===r.votes_source)||{}).name||r.votes_source}`:""}${r.stale?" · <b style='color:#b91c1c'>STALE (source down)</b>":""}</div>
- ${ot?`<div class="otitle">${ot.official_ballot_title}</div>`:""}
- ${r.candidates.slice(0,6).map(c=>`<div class="c"><span class="${c.winner?"w":""}">${c.party?`<span class="ptag" style="background:${pc(c.party)}">${c.party}</span>`:""}${c.name}${c.winner?" ✔":""}</span><span>${c.votes.toLocaleString()}</span><span><b>${c.pct}%</b></span>
+ ${ot?`<div class="otitle">${ot.official_ballot_title}</div>`:r.description?`<div class="otitle">${r.description}</div>`:""}${r.note?`<div class="meta" style="font-style:italic">${r.note}</div>`:""}
+ ${r.candidates.slice(0,6).map(c=>`<div class="c"><span class="${c.winner?"w":""}">${c.party?`<span class="ptag" style="background:${pc(c.party)}">${c.party}</span>`:""}${c.name}${c.incumbent?" <small>(i)</small>":""}${c.winner?" ✔":""}</span><span>${c.votes.toLocaleString()}</span><span><b>${c.pct}%</b></span>
  <div class="pb"><div style="width:${c.pct}%;background:${r.is_measure?(c.name==="Yes"?"#16a34a":"#dc2626"):pc(c.party)}"></div></div></div>`).join("")}${pollHTML(r)}</div>`}
 const KO=JSON.parse(localStorage.getItem("mo-keyo")||"{}");function applyKO(){D.races.forEach(r=>{if(r.key0===undefined)r.key0=!!r.key;r.key=r.id in KO?KO[r.id]:r.key0})}function toggleKey(id,e){e.stopPropagation();const r=D.races.find(x=>x.id===id);if(!r)return;const v=!r.key;if(v===r.key0)delete KO[id];else KO[id]=v;localStorage.setItem("mo-keyo",JSON.stringify(KO));applyKO();render()}
 function render(){if(!D)return;const q=$("#q").value.toLowerCase().trim(),st=$("#st").value,hl=$("#hlonly").checked;
