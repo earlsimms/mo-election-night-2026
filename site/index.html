@@ -150,6 +150,7 @@ async function chatLoad(){if(!XL.length)return;try{const r=await fetch("data/cha
 function chatShow(i,keep){xi=i;const L=XL[i],xurl=L.url||("https://x.com/i/lists/"+L.id);
  $("#chattabs").innerHTML=XL.map((l,j)=>`<button class="${j==i?"on":""}" data-j="${j}">${esc(l.name)}</button>`).join("");
  document.querySelectorAll("#chattabs button").forEach(b=>b.onclick=()=>chatShow(+b.dataset.j));
+ if(L.link_only){$("#chatfb").style.display="none";$("#chatbody").innerHTML=`<div style="padding:16px;font-size:14px;line-height:1.5"><b>${esc(L.name)}</b><p>X's curated midterm election hub. X only shows it to signed-in users and doesn't allow it to be embedded, so it opens on X.</p><p><a href="${esc(L.url)}" target="_blank" rel="noopener" style="display:inline-block;padding:8px 14px;border-radius:8px;background:#0b3d6b;color:#fff;text-decoration:none;font-weight:600">Open ${esc(L.name)} on X ↗</a></p></div>`;return}
  const C=CH&&(CH.lists||[]).find(l=>l.name===L.name||l.id===L.id),ps=(C&&C.posts)||[];
  $("#chatfb").style.display="block";
  $("#chatfb").innerHTML=`<span>${C&&C.fetched_at?`Updated ${fmt(C.fetched_at)} (${ago(C.fetched_at)})`:CH?"Not fetched yet":"Loading…"}${C&&C.ok===false&&ps.length?" · <b style='color:var(--r2)'>X unavailable, showing last posts</b>":""}</span> <a href="${esc(xurl)}" target="_blank" rel="noopener">Open on X ↗</a>`;

@@ -53,6 +53,7 @@ def refresh(cfg, out_path):
         except Exception: pass
         lists = []
         for L in (cfg.get("social") or {}).get("x_lists", []):
+            if L.get("link_only"): continue
             owner, slug = _owner_slug(L.get("url"))
             p = prev.get(L["name"], {})
             ent = {"name": L["name"], "id": L.get("id"), "url": L.get("url") or f"https://x.com/i/lists/{L.get('id')}", "checked_at": _now()}
