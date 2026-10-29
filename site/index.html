@@ -92,7 +92,7 @@ function tallyCard(name,t){if(!t)return"";const T=t.total,w=x=>100*x/T+"%";
  return `<div class="tally"><h3>${name} — ${t.control} for control</h3><div class="bar"><div class="D" style="width:${w(t.called.D)}"></div><div class="Dl" style="width:${w(t.leading.D)}"></div>
  <div style="flex:1"></div><div class="Rl" style="width:${w(t.leading.R)}"></div><div class="R" style="width:${w(t.called.R)}"></div><div class="mid"></div>${t.super?`<div class="sup" style="left:${w(t.super)}" title="D two-thirds: ${t.super}"></div><div class="sup" style="left:${w(T-t.super)}" title="R two-thirds: ${t.super}"></div>`:""}</div>
  <div class="nums"><span><b style="color:var(--d)">D ${t.called.D}</b> won/not up${t.leading.D?` · +${t.leading.D} leading`:""}</span><span>${T-t.called.D-t.called.R-t.called.O} undecided</span><span>${t.leading.R?`+${t.leading.R} leading · `:""}<b style="color:var(--r)">R ${t.called.R}</b></span></div>
- ${t.super?`<div class="nums suplab"><span>┆ 2/3 supermajority (veto override): ${t.super} from either side</span><span>¦ majority ${t.control}</span></div>`:""}
+ ${t.super?`<div class="suplab" style="display:block;font-size:12px;line-height:1.5;margin-top:4px"><div>┆ Supermajority (2/3, veto override): ${t.super}</div><div>¦ Majority: ${t.control}</div></div>`:""}
  <div class="nums"><span>${t.holdover.D||t.holdover.R||t.scope!=="mo"?`Not on ballot: D ${t.holdover.D} / R ${t.holdover.R}`:"All seats on the ballot"}</span>${t.note?`<span title="${t.note}">ⓘ</span>`:""}</div></div>`}
 
 const fm=(m,ms)=>m==null?"n/a":Math.abs(m)<0.05?(ms?"TIED":"EVEN"):(ms?(m>0?"Yes +":"No +"):(m>0?"R+":"D+"))+Math.abs(m).toFixed(1);
