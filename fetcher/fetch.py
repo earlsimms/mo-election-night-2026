@@ -196,6 +196,11 @@ def run(cfg_path, out_path):
            "measures": json.load(open(os.path.join(ROOT, cfg["measures_file"]))).get("measures", []) if cfg.get("measures_file") else []}
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     tmp = out_path + ".tmp"; json.dump(doc, open(tmp, "w"), separators=(",", ":")); os.replace(tmp, out_path)
+    try:
+        from .chatter import refresh as chatter_refresh
+        chatter_refresh(cfg, os.path.join(os.path.dirname(out_path), "chatter.json"))
+    except Exception as e:
+        print("CHATTER FAILED", e, file=sys.stderr)
     print(f"wrote {out_path}: {len(races)} races; " + ", ".join(f'{s["id"]}={"ok" if s["ok"] else "FAIL"}' for s in sources))
     return doc
 
