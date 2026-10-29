@@ -173,4 +173,5 @@ async function load(){try{const r=await fetch("data/results.json?t="+Date.now(),
  
  chatSetup();chatLoad();render();}catch(e){$("#gen").textContent="Could not load data/results.json ("+e+") — retrying";}}
 tabsHTML();["#q","#st","#stsel","#hlonly","#sort","#pollonly"].forEach(s=>$(s).oninput=render);load();setInterval(load,60000);
-</script></body></html>
+</script><footer style="text-align:center;padding:18px 12px 28px;font-size:13px;opacity:.85">Have a suggestion or question? <a href="mailto:earlsalice@mail.grokbot.com?subject=Election%20dashboard%20feedback" style="color:inherit;font-weight:600">Send feedback &amp; contact us ✉</a></footer>
+</body></html>
