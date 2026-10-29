@@ -155,7 +155,7 @@ async function load(){try{const r=await fetch("data/results.json?t="+Date.now(),
  const bad=D.sources.filter(s=>!s.ok);$("#banner").style.display=bad.length?"block":"none";
  $("#banner").textContent=bad.length?"⚠ Source problem: "+bad.map(s=>s.name).join(", ")+" — showing last good data where available.":"";
  $("#sources").innerHTML=`<h3>Sources</h3><table><tr><th>Source</th><th>Status</th><th>Last good update</th><th>Last checked</th><th>Races</th><th>Notes / error</th></tr>${D.sources.map(s=>`<tr><td><a href="${s.url}" target="_blank" rel="noopener">${s.name}</a></td><td class="${s.ok?"ok":"fail"}">${s.waiting?"WAITING":s.ok?"OK":"DOWN"}</td><td>${fmt(s.updated_at)}</td><td>${fmt(s.checked_at)}</td><td>${s.race_count}</td><td>${s.error||s.note||""}</td></tr>`).join("")}</table>`;
- if(!pv&&Date.now()-new Date(D.generated_at)>15*60e3){$("#banner").style.display="block";$("#banner").textContent+=" ⚠ Data file is over 15 minutes old — the update job may be stalled.";}
+ 
  chatSetup();render();}catch(e){$("#gen").textContent="Could not load data/results.json ("+e+") — retrying";}}
 tabsHTML();["#q","#st","#stsel","#hlonly","#sort","#pollonly"].forEach(s=>$(s).oninput=render);load();setInterval(load,60000);
 </script></body></html>
