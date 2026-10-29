@@ -7,7 +7,7 @@ header{background:#0b3d6b;border-bottom:4px solid #a51c36;color:#fff;padding:10p
 header h1{font-size:18px;margin:0}#gen{font-size:12px;opacity:.85}
 .tallies{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px;padding:10px 16px}
 .tally{background:var(--card);border-radius:8px;padding:10px;box-shadow:0 1px 2px #0002}
-.tally h3{margin:0 0 6px;font-size:14px}.bar{display:flex;height:22px;border-radius:4px;overflow:hidden;background:#e5e7eb;position:relative}
+.tally.ch{display:flex;flex-direction:column}.nums.foot{margin-top:auto;padding-top:6px;justify-content:flex-start;gap:6px}.tally h3{margin:0 0 6px;font-size:14px}.bar{display:flex;height:22px;border-radius:4px;overflow:hidden;background:#e5e7eb;position:relative}
 .bar div{height:100%}.bar .sup{position:absolute;top:0;bottom:0;border-left:2px dotted #d97706;height:auto}.suplab{font-size:11px;color:#b45309}html.dark .bar .sup{border-left-color:#fbbf24}html.dark .suplab{color:#fbbf24}.bar .mid{position:absolute;left:50%;top:-3px;bottom:-3px;border-left:2px dashed #111}
 .R{background:var(--r)}.D{background:var(--d)}.Rl{background:#f2a7b3}.Dl{background:#9ec5fe}
 .nums{display:flex;justify-content:space-between;font-size:12px;margin-top:4px}
@@ -90,11 +90,11 @@ const pc=p=>p==="R"?"var(--r)":p==="D"?"var(--d)":"var(--o)";
 function tabsHTML(){$("#tabs").innerHTML=TABS.map(([k,l])=>`<button class="${k==tab?"on":""}" data-k="${k}">${l}</button>`).join("");
  document.querySelectorAll("#tabs button").forEach(b=>b.onclick=()=>{tab=b.dataset.k;tabsHTML();render()});}
 function tallyCard(name,t){if(!t)return"";const T=t.total,w=x=>100*x/T+"%";
- return `<div class="tally"><h3>${name} — ${t.control} for control</h3><div class="bar"><div class="D" style="width:${w(t.called.D)}"></div><div class="Dl" style="width:${w(t.leading.D)}"></div>
+ return `<div class="tally ch"><h3>${name} — ${t.control} for control</h3><div class="bar"><div class="D" style="width:${w(t.called.D)}"></div><div class="Dl" style="width:${w(t.leading.D)}"></div>
  <div style="flex:1"></div><div class="Rl" style="width:${w(t.leading.R)}"></div><div class="R" style="width:${w(t.called.R)}"></div><div class="mid"></div>${t.super?`<div class="sup" style="left:${w(t.super)}" title="D two-thirds: ${t.super}"></div><div class="sup" style="left:${w(T-t.super)}" title="R two-thirds: ${t.super}"></div>`:""}</div>
  <div class="nums"><span><b style="color:var(--d)">D ${t.called.D}</b> won/not up${t.leading.D?` · +${t.leading.D} leading`:""}</span><span>${T-t.called.D-t.called.R-t.called.O} undecided</span><span>${t.leading.R?`+${t.leading.R} leading · `:""}<b style="color:var(--r)">R ${t.called.R}</b></span></div>
  ${t.super?`<div class="suplab" style="display:block;text-align:left;padding:0;font-size:12px;line-height:1.5;margin-top:4px"><div style="display:flex;gap:6px;margin:0;padding:0;text-indent:0"><span style="width:10px;text-align:center">┆</span><span>Supermajority (2/3, veto override): ${t.super}</span></div><div style="display:flex;gap:6px;margin:0;padding:0;text-indent:0"><span style="width:10px;text-align:center">¦</span><span>Majority: ${t.control}</span></div></div>`:""}
- <div class="nums"><span>${t.holdover.D||t.holdover.R||t.scope!=="mo"?`Not on ballot: D ${t.holdover.D} / R ${t.holdover.R}`:"All seats on the ballot"}</span>${t.note?`<span title="${t.note}">ⓘ</span>`:""}</div></div>`}
+ <div class="nums foot"><span>${t.holdover.D||t.holdover.R||t.scope!=="mo"?`Not on ballot: D ${t.holdover.D} / R ${t.holdover.R}`:"All seats on the ballot"}</span>${t.note?`<span title="${t.note}">ⓘ</span>`:""}</div></div>`}
 
 const fm=(m,ms)=>m==null?"n/a":Math.abs(m)<0.05?(ms?"TIED":"EVEN"):(ms?(m>0?"Yes +":"No +"):(m>0?"R+":"D+"))+Math.abs(m).toFixed(1);
 function resMargin(r){const c=r.candidates;if(!r.total_votes)return null;const R=c.find(x=>x.party==="R"),D=c.find(x=>x.party==="D")||c.find(x=>x.party!=="R");return R&&D?+(R.pct-D.pct).toFixed(1):null}
