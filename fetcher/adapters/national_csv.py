@@ -35,7 +35,7 @@ def parse(src):
         race = races.setdefault(k, {"raw_title": k, "category": cat, "state": st, "district": d or None, "candidates": [],
                                     "called_by": "", "reporting_pct": None, "incumbent_party": (r.get("incumbent_party") or "").strip(),
                                     "is_measure": False, "level": "national", "updated_at": None, "notes": "", "race_id": k, "key": False})
-        race["title"] = {"senate": f"{st} Senate", "governor": f"{st} Governor"}.get(cat, f"{st}-{d} House")
+        race["title"] = {"senate": f"{st} Senate", "governor": f"{st} Governor"}.get(cat, (f"{st} House" if str(d).upper() in ("AL","0","00","") else f"{st}-{d} House"))
         if k.upper().startswith("SAMPLE"): race["title"] = "SAMPLE (fake) - " + race["title"]; race["sample"] = True
         # sheet key_race flags ignored per Earl (2026-10-21)
         if False and (r.get("key_race") or "").strip().upper() in ("TRUE", "1", "YES", "Y"): race["key"] = True

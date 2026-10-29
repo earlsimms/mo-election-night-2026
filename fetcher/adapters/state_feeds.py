@@ -18,7 +18,7 @@ def _build(src, contests):
         if not hits: continue
         k = hits[0]; v = contests[k]; a, b = v.get("rep") or (None, None)
         st = c["state"]; d = c.get("district")
-        title = {"senate": f"{st} Senate", "governor": f"{st} Governor", "house": f"{st}-{d} House"}.get(c["category"], k.title())
+        title = {"senate": f"{st} Senate", "governor": f"{st} Governor", "house": (f"{st} House" if str(d).upper() in ("AL","0","00","") else f"{st}-{d} House")}.get(c["category"], k.title())
         out.append(finalize({"raw_title": c["race_id"], "race_id": c["race_id"], "title": title, "category": c["category"],
             "state": st, "district": d, "level": "state_feed", "feed_contest": k, "is_measure": False,
             "reporting_pct": round(100 * a / b, 1) if b else None,
