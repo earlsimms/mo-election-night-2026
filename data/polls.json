@@ -1,0 +1,1731 @@
+{
+ "fetched_at": "2026-10-31T12:26:07+00:00",
+ "label": "PRE-ELECTION POLLING - not results",
+ "source_status": {
+  "RCP": "blocked (HTTPError: HTTP Error 403: Forbidden)",
+  "Silver Bulletin": "paywalled",
+  "Politico": "blocked (HTTPError: HTTP Error 403: Forbidden)",
+  "270toWin": "ok (53 races)"
+ },
+ "races": {
+  "2026-SEN-AK": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-senate-polls/alaska",
+   "candidates": [
+    {
+     "name": "Peltola",
+     "party": "D"
+    },
+    {
+     "name": "D. J. Sullivan",
+     "party": "R"
+    },
+    {
+     "name": "Heikes",
+     "party": "R"
+    },
+    {
+     "name": "Sullivan*",
+     "party": "R"
+    }
+   ],
+   "avg": {
+    "label": "Average of 3 Polls\u2020",
+    "values": [
+     47.7,
+     3.0,
+     2.0,
+     44.3
+    ],
+    "margin": -3.4
+   },
+   "latest": {
+    "pollster": "Alaska Survey Research",
+    "date": "10/30/2026",
+    "sample": "1,326 LV \u00b7 Margin of error \u00b13%",
+    "values": [
+     48.0,
+     3.0,
+     3.0,
+     46.0
+    ],
+    "margin": -2.0
+   },
+   "fetched_at": "2026-10-31T12:22:51+00:00"
+  },
+  "2026-SEN-AL": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-senate-polls/alabama",
+   "candidates": [
+    {
+     "name": "Wess",
+     "party": "D"
+    },
+    {
+     "name": "Moore",
+     "party": "R"
+    }
+   ],
+   "avg": {
+    "label": "Average of 3 Polls\u2020",
+    "values": [
+     36.0,
+     52.7
+    ],
+    "margin": 16.7
+   },
+   "latest": {
+    "pollster": "Blueprint Polling",
+    "date": "10/28/2026",
+    "sample": "695 LV \u00b7 Margin of error \u00b13.7%",
+    "values": [
+     40.0,
+     48.0
+    ],
+    "margin": 8.0
+   },
+   "fetched_at": "2026-10-31T12:22:54+00:00"
+  },
+  "2026-SEN-AR": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-senate-polls/arkansas",
+   "candidates": [
+    {
+     "name": "Shoffner",
+     "party": "D"
+    },
+    {
+     "name": "Cotton*",
+     "party": "R"
+    }
+   ],
+   "latest": {
+    "pollster": "Hendrix College",
+    "date": "10/16/2026",
+    "sample": "709 LV",
+    "values": [
+     41.0,
+     50.0
+    ],
+    "margin": 9.0
+   },
+   "fetched_at": "2026-10-31T12:22:57+00:00"
+  },
+  "2026-SEN-FL": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-senate-polls/florida",
+   "candidates": [
+    {
+     "name": "Nixon",
+     "party": "D"
+    },
+    {
+     "name": "Moody*",
+     "party": "R"
+    }
+   ],
+   "avg": {
+    "label": "Average of 5 Polls\u2020",
+    "values": [
+     44.4,
+     50.4
+    ],
+    "margin": 6.0
+   },
+   "latest": {
+    "pollster": "InsiderAdvantage",
+    "date": "10/30/2026",
+    "sample": "1,200 LV \u00b7 Margin of error \u00b12.8%",
+    "values": [
+     43.0,
+     49.0
+    ],
+    "margin": 6.0
+   },
+   "fetched_at": "2026-10-31T12:23:04+00:00"
+  },
+  "2026-SEN-GA": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-senate-polls/georgia",
+   "candidates": [
+    {
+     "name": "Ossoff*",
+     "party": "D"
+    },
+    {
+     "name": "Collins",
+     "party": "R"
+    }
+   ],
+   "avg": {
+    "label": "Average of 4 Polls\u2020",
+    "values": [
+     53.3,
+     43.5
+    ],
+    "margin": -9.8
+   },
+   "latest": {
+    "pollster": "Echelon Insights",
+    "date": "10/27/2026",
+    "sample": "508 LV \u00b7 Margin of error \u00b15.2%",
+    "values": [
+     55.0,
+     40.0
+    ],
+    "margin": -15.0
+   },
+   "fetched_at": "2026-10-31T12:23:07+00:00"
+  },
+  "2026-SEN-IA": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-senate-polls/iowa",
+   "candidates": [
+    {
+     "name": "Turek",
+     "party": "D"
+    },
+    {
+     "name": "Hinson",
+     "party": "R"
+    }
+   ],
+   "avg": {
+    "label": "Average of 5 Polls\u2020",
+    "values": [
+     45.2,
+     45.8
+    ],
+    "margin": 0.6
+   },
+   "latest": {
+    "pollster": "co/efficient",
+    "date": "10/29/2026",
+    "sample": "1,020 LV \u00b7 Margin of error \u00b13.1%",
+    "values": [
+     46.0,
+     48.0
+    ],
+    "margin": 2.0
+   },
+   "fetched_at": "2026-10-31T12:23:10+00:00"
+  },
+  "2026-SEN-IL": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-senate-polls/illinois",
+   "candidates": [
+    {
+     "name": "Stratton",
+     "party": "D"
+    },
+    {
+     "name": "Tracy",
+     "party": "R"
+    }
+   ],
+   "avg": {
+    "label": "Average of 2 Polls\u2020",
+    "values": [
+     52.5,
+     40.0
+    ],
+    "margin": -12.5
+   },
+   "latest": {
+    "pollster": "ActiVote",
+    "date": "10/30/2026",
+    "sample": "400 LV \u00b7 Margin of error \u00b14.9%",
+    "values": [
+     56.0,
+     44.0
+    ],
+    "margin": -12.0
+   },
+   "fetched_at": "2026-10-31T12:23:16+00:00"
+  },
+  "2026-SEN-KS": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-senate-polls/kansas",
+   "candidates": [
+    {
+     "name": "Hamilton",
+     "party": "D"
+    },
+    {
+     "name": "Marshall*",
+     "party": "R"
+    }
+   ],
+   "avg": {
+    "label": "Average of 5 Polls\u2020",
+    "values": [
+     49.0,
+     45.2
+    ],
+    "margin": -3.8
+   },
+   "latest": {
+    "pollster": "Emerson College",
+    "date": "10/30/2026",
+    "sample": "800 LV \u00b7 Margin of error \u00b13.5%",
+    "values": [
+     49.0,
+     45.0
+    ],
+    "margin": -4.0
+   },
+   "fetched_at": "2026-10-31T12:23:19+00:00"
+  },
+  "2026-SEN-MA": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-senate-polls/massachusetts",
+   "candidates": [
+    {
+     "name": "Markey*",
+     "party": "D"
+    },
+    {
+     "name": "Deaton",
+     "party": "R"
+    }
+   ],
+   "avg": {
+    "label": "Average of 4 Polls\u2020",
+    "values": [
+     56.3,
+     28.8
+    ],
+    "margin": -27.5
+   },
+   "latest": {
+    "pollster": "UMass Lowell",
+    "date": "10/29/2026",
+    "sample": "850 LV \u00b7 Margin of error \u00b14.4%",
+    "values": [
+     55.0,
+     26.0
+    ],
+    "margin": -29.0
+   },
+   "fetched_at": "2026-10-31T12:23:27+00:00"
+  },
+  "2026-SEN-ME": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-senate-polls/maine",
+   "candidates": [
+    {
+     "name": "Jackson",
+     "party": "D"
+    },
+    {
+     "name": "Collins*",
+     "party": "R"
+    }
+   ],
+   "avg": {
+    "label": "Average of 5 Polls\u2020",
+    "values": [
+     49.2,
+     45.6
+    ],
+    "margin": -3.6
+   },
+   "latest": {
+    "pollster": "Data for Progress",
+    "date": "10/30/2026",
+    "sample": "652 LV \u00b7 Margin of error \u00b14%",
+    "values": [
+     50.0,
+     45.0
+    ],
+    "margin": -5.0
+   },
+   "fetched_at": "2026-10-31T12:23:30+00:00"
+  },
+  "2026-SEN-MI": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-senate-polls/michigan",
+   "candidates": [
+    {
+     "name": "El-Sayed",
+     "party": "D"
+    },
+    {
+     "name": "Rogers",
+     "party": "R"
+    }
+   ],
+   "avg": {
+    "label": "Average of 6 Polls\u2020",
+    "values": [
+     49.8,
+     44.3
+    ],
+    "margin": -5.5
+   },
+   "latest": {
+    "pollster": "Data for Progress",
+    "date": "10/30/2026",
+    "sample": "622 LV \u00b7 Margin of error \u00b14%",
+    "values": [
+     50.0,
+     46.0
+    ],
+    "margin": -4.0
+   },
+   "fetched_at": "2026-10-31T12:23:33+00:00"
+  },
+  "2026-SEN-MN": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-senate-polls/minnesota",
+   "candidates": [
+    {
+     "name": "Flanagan",
+     "party": "D"
+    },
+    {
+     "name": "Tafoya",
+     "party": "R"
+    }
+   ],
+   "avg": {
+    "label": "Average of 6 Polls\u2020",
+    "values": [
+     48.2,
+     42.2
+    ],
+    "margin": -6.0
+   },
+   "latest": {
+    "pollster": "Siena College",
+    "date": "10/28/2026",
+    "sample": "752 LV \u00b7 Margin of error \u00b14.1%",
+    "values": [
+     54.0,
+     40.0
+    ],
+    "margin": -14.0
+   },
+   "fetched_at": "2026-10-31T12:23:36+00:00"
+  },
+  "2026-SEN-MT": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-senate-polls/montana",
+   "candidates": [
+    {
+     "name": "Bankhead",
+     "party": "D"
+    },
+    {
+     "name": "Bodnar",
+     "party": "I"
+    },
+    {
+     "name": "Alme",
+     "party": "R"
+    }
+   ],
+   "avg": {
+    "label": "Average of 2 Polls\u2020",
+    "values": [
+     20.0,
+     27.5,
+     45.5
+    ],
+    "margin": 25.5
+   },
+   "latest": {
+    "pollster": "Quantus Insights",
+    "date": "10/20/2026",
+    "sample": "667 LV",
+    "values": [
+     21.0,
+     29.0,
+     46.0
+    ],
+    "margin": 25.0
+   },
+   "fetched_at": "2026-10-31T12:23:41+00:00"
+  },
+  "2026-SEN-NC": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-senate-polls/north-carolina",
+   "candidates": [
+    {
+     "name": "Cooper",
+     "party": "D"
+    },
+    {
+     "name": "Whatley",
+     "party": "R"
+    }
+   ],
+   "avg": {
+    "label": "Average of 5 Polls\u2020",
+    "values": [
+     53.2,
+     41.6
+    ],
+    "margin": -11.6
+   },
+   "latest": {
+    "pollster": "High Point Univ.",
+    "date": "10/28/2026",
+    "sample": "620 LV \u00b7 Margin of error \u00b14.7%",
+    "values": [
+     54.0,
+     40.0
+    ],
+    "margin": -14.0
+   },
+   "fetched_at": "2026-10-31T12:23:44+00:00"
+  },
+  "2026-SEN-NE": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-senate-polls/nebraska",
+   "candidates": [
+    {
+     "name": "Osborn",
+     "party": "I"
+    },
+    {
+     "name": "Ricketts*",
+     "party": "R"
+    }
+   ],
+   "avg": {
+    "label": "Average of 5 Polls\u2020",
+    "values": [
+     43.6,
+     46.2
+    ],
+    "margin": 2.6
+   },
+   "latest": {
+    "pollster": "Siena College",
+    "date": "10/31/2026",
+    "sample": "809 LV \u00b7 Margin of error \u00b14%",
+    "values": [
+     41.0,
+     46.0
+    ],
+    "margin": 5.0
+   },
+   "fetched_at": "2026-10-31T12:23:47+00:00"
+  },
+  "2026-SEN-NH": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-senate-polls/new-hampshire",
+   "candidates": [
+    {
+     "name": "Pappas",
+     "party": "D"
+    },
+    {
+     "name": "Sununu",
+     "party": "R"
+    }
+   ],
+   "avg": {
+    "label": "Average of 4 Polls\u2020",
+    "values": [
+     49.8,
+     42.5
+    ],
+    "margin": -7.3
+   },
+   "latest": {
+    "pollster": "UMass Lowell",
+    "date": "10/29/2026",
+    "sample": "600 LV \u00b7 Margin of error \u00b15%",
+    "values": [
+     48.0,
+     41.0
+    ],
+    "margin": -7.0
+   },
+   "fetched_at": "2026-10-31T12:23:50+00:00"
+  },
+  "2026-SEN-NM": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-senate-polls/new-mexico",
+   "candidates": [
+    {
+     "name": "Lujan*",
+     "party": "D"
+    },
+    {
+     "name": "Marker",
+     "party": "R"
+    }
+   ],
+   "latest": {
+    "pollster": "SurveyUSA",
+    "date": "10/05/2026",
+    "sample": "567 LV \u00b7 Margin of error \u00b15.1%",
+    "values": [
+     54.0,
+     36.0
+    ],
+    "margin": -18.0
+   },
+   "fetched_at": "2026-10-31T12:23:55+00:00"
+  },
+  "2026-SEN-OH": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-senate-polls/ohio",
+   "candidates": [
+    {
+     "name": "Brown",
+     "party": "D"
+    },
+    {
+     "name": "Husted*",
+     "party": "R"
+    }
+   ],
+   "avg": {
+    "label": "Average of 6 Polls\u2020",
+    "values": [
+     48.3,
+     44.8
+    ],
+    "margin": -3.5
+   },
+   "latest": {
+    "pollster": "Siena College",
+    "date": "10/28/2026",
+    "sample": "500 LV \u00b7 Margin of error \u00b14.4%",
+    "values": [
+     47.0,
+     44.0
+    ],
+    "margin": -3.0
+   },
+   "fetched_at": "2026-10-31T12:23:57+00:00"
+  },
+  "2026-SEN-RI": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-senate-polls/rhode-island",
+   "candidates": [
+    {
+     "name": "Reed*",
+     "party": "D"
+    },
+    {
+     "name": "McKay",
+     "party": "R"
+    }
+   ],
+   "avg": {
+    "label": "Average of 3 Polls\u2020",
+    "values": [
+     55.7,
+     30.0
+    ],
+    "margin": -25.7
+   },
+   "latest": {
+    "pollster": "Embold Research",
+    "date": "10/20/2026",
+    "sample": "815 LV",
+    "values": [
+     55.0,
+     32.0
+    ],
+    "margin": -23.0
+   },
+   "fetched_at": "2026-10-31T12:24:05+00:00"
+  },
+  "2026-SEN-SC": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-senate-polls/south-carolina",
+   "candidates": [
+    {
+     "name": "Andrews",
+     "party": "D"
+    },
+    {
+     "name": "Graham",
+     "party": "R"
+    }
+   ],
+   "avg": {
+    "label": "Average of 5 Polls\u2020",
+    "values": [
+     45.2,
+     47.6
+    ],
+    "margin": 2.4
+   },
+   "latest": {
+    "pollster": "East Carolina Univ.",
+    "date": "10/29/2026",
+    "sample": "955 LV \u00b7 Margin of error \u00b13.7%",
+    "values": [
+     47.0,
+     51.0
+    ],
+    "margin": 4.0
+   },
+   "fetched_at": "2026-10-31T12:24:08+00:00"
+  },
+  "2026-SEN-SD": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-senate-polls/south-dakota",
+   "candidates": [
+    {
+     "name": "Bengs",
+     "party": "I"
+    },
+    {
+     "name": "Rounds*",
+     "party": "R"
+    }
+   ],
+   "avg": {
+    "label": "Average of 2 Polls\u2020",
+    "values": [
+     39.5,
+     54.5
+    ],
+    "margin": 15.0
+   },
+   "latest": {
+    "pollster": "Emerson College",
+    "date": "10/22/2026",
+    "sample": "803 LV \u00b7 Margin of error \u00b13.5%",
+    "values": [
+     42.0,
+     50.0
+    ],
+    "margin": 8.0
+   },
+   "fetched_at": "2026-10-31T12:24:11+00:00"
+  },
+  "2026-SEN-TN": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-senate-polls/tennessee",
+   "candidates": [
+    {
+     "name": "Bradshaw",
+     "party": "D"
+    },
+    {
+     "name": "Hagerty*",
+     "party": "R"
+    }
+   ],
+   "latest": {
+    "pollster": "Beacon Poll",
+    "date": "9/02/2026",
+    "sample": "1,200 RV \u00b7 Margin of error \u00b12.8%",
+    "values": [
+     31.0,
+     51.0
+    ],
+    "margin": 20.0
+   },
+   "fetched_at": "2026-10-31T12:24:13+00:00"
+  },
+  "2026-SEN-TX": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-senate-polls/texas",
+   "candidates": [
+    {
+     "name": "Talarico",
+     "party": "D"
+    },
+    {
+     "name": "Paxton",
+     "party": "R"
+    }
+   ],
+   "avg": {
+    "label": "Average of 9 Polls\u2020",
+    "values": [
+     49.6,
+     46.2
+    ],
+    "margin": -3.4
+   },
+   "latest": {
+    "pollster": "Data for Progress",
+    "date": "10/30/2026",
+    "sample": "712 LV \u00b7 Margin of error \u00b14%",
+    "values": [
+     49.0,
+     45.0
+    ],
+    "margin": -4.0
+   },
+   "fetched_at": "2026-10-31T12:24:16+00:00"
+  },
+  "2026-GOV-AK": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-governor-polls/alaska",
+   "candidates": [
+    {
+     "name": "Kreiss-Tomkins",
+     "party": "D"
+    },
+    {
+     "name": "Bronson",
+     "party": "R"
+    },
+    {
+     "name": "Taylor",
+     "party": "R"
+    },
+    {
+     "name": "Wilson",
+     "party": "R"
+    }
+   ],
+   "avg": {
+    "label": "Average of 3 Polls\u2020",
+    "values": [
+     45.7,
+     13.0,
+     9.0,
+     26.3
+    ],
+    "margin": -19.4
+   },
+   "latest": {
+    "pollster": "Alaska Survey Research",
+    "date": "10/26/2026",
+    "sample": "1,068 LV \u00b7 Margin of error \u00b13.5%",
+    "values": [
+     51.0,
+     12.0,
+     7.0,
+     31.0
+    ],
+    "margin": -20.0
+   },
+   "fetched_at": "2026-10-31T12:24:25+00:00"
+  },
+  "2026-GOV-AL": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-governor-polls/alabama",
+   "candidates": [
+    {
+     "name": "Jones",
+     "party": "D"
+    },
+    {
+     "name": "Tuberville",
+     "party": "R"
+    }
+   ],
+   "avg": {
+    "label": "Average of 4 Polls\u2020",
+    "values": [
+     40.3,
+     50.0
+    ],
+    "margin": 9.7
+   },
+   "latest": {
+    "pollster": "Blueprint Polling",
+    "date": "10/28/2026",
+    "sample": "695 LV \u00b7 Margin of error \u00b13.7%",
+    "values": [
+     45.0,
+     48.0
+    ],
+    "margin": 3.0
+   },
+   "fetched_at": "2026-10-31T12:24:28+00:00"
+  },
+  "2026-GOV-AR": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-governor-polls/arkansas",
+   "candidates": [
+    {
+     "name": "Love",
+     "party": "D"
+    },
+    {
+     "name": "Huckabee Sanders*",
+     "party": "R"
+    }
+   ],
+   "latest": {
+    "pollster": "Hendrix College",
+    "date": "10/16/2026",
+    "sample": "709 LV",
+    "values": [
+     32.0,
+     51.0
+    ],
+    "margin": 19.0
+   },
+   "fetched_at": "2026-10-31T12:24:31+00:00"
+  },
+  "2026-GOV-AZ": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-governor-polls/arizona",
+   "candidates": [
+    {
+     "name": "Hobbs*",
+     "party": "D"
+    },
+    {
+     "name": "Biggs",
+     "party": "R"
+    }
+   ],
+   "avg": {
+    "label": "Average of 5 Polls\u2020",
+    "values": [
+     49.8,
+     41.0
+    ],
+    "margin": -8.8
+   },
+   "latest": {
+    "pollster": "Noble Predictive Insights",
+    "date": "10/30/2026",
+    "sample": "511 LV \u00b7 Margin of error \u00b14.3%",
+    "values": [
+     51.0,
+     45.0
+    ],
+    "margin": -6.0
+   },
+   "fetched_at": "2026-10-31T12:24:34+00:00"
+  },
+  "2026-GOV-CA": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-governor-polls/california",
+   "candidates": [
+    {
+     "name": "Becerra",
+     "party": "D"
+    },
+    {
+     "name": "Hilton",
+     "party": "R"
+    }
+   ],
+   "avg": {
+    "label": "Average of 5 Polls\u2020",
+    "values": [
+     59.8,
+     36.2
+    ],
+    "margin": -23.6
+   },
+   "latest": {
+    "pollster": "PPIC",
+    "date": "10/28/2026",
+    "sample": "1,086 LV \u00b7 Margin of error \u00b13.8%",
+    "values": [
+     61.0,
+     37.0
+    ],
+    "margin": -24.0
+   },
+   "fetched_at": "2026-10-31T12:24:37+00:00"
+  },
+  "2026-GOV-CT": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-governor-polls/connecticut",
+   "candidates": [
+    {
+     "name": "Lamont*",
+     "party": "D"
+    },
+    {
+     "name": "Fazio",
+     "party": "R"
+    }
+   ],
+   "avg": {
+    "label": "Average of 5 Polls\u2020",
+    "values": [
+     56.6,
+     36.4
+    ],
+    "margin": -20.2
+   },
+   "latest": {
+    "pollster": "GreatBlue Research",
+    "date": "10/19/2026",
+    "sample": "LV \u00b7 Sample size not reported",
+    "values": [
+     62.0,
+     34.0
+    ],
+    "margin": -28.0
+   },
+   "fetched_at": "2026-10-31T12:24:42+00:00"
+  },
+  "2026-GOV-FL": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-governor-polls/florida",
+   "candidates": [
+    {
+     "name": "Jolly",
+     "party": "D"
+    },
+    {
+     "name": "Donalds",
+     "party": "R"
+    }
+   ],
+   "avg": {
+    "label": "Average of 6 Polls\u2020",
+    "values": [
+     44.3,
+     48.8
+    ],
+    "margin": 4.5
+   },
+   "latest": {
+    "pollster": "InsiderAdvantage",
+    "date": "10/30/2026",
+    "sample": "1,200 LV \u00b7 Margin of error \u00b12.8%",
+    "values": [
+     45.0,
+     49.0
+    ],
+    "margin": 4.0
+   },
+   "fetched_at": "2026-10-31T12:24:45+00:00"
+  },
+  "2026-GOV-GA": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-governor-polls/georgia",
+   "candidates": [
+    {
+     "name": "Bottoms",
+     "party": "D"
+    },
+    {
+     "name": "Jackson",
+     "party": "R"
+    }
+   ],
+   "avg": {
+    "label": "Average of 5 Polls\u2020",
+    "values": [
+     47.6,
+     48.8
+    ],
+    "margin": 1.2
+   },
+   "latest": {
+    "pollster": "Echelon Insights",
+    "date": "10/27/2026",
+    "sample": "508 LV \u00b7 Margin of error \u00b15.2%",
+    "values": [
+     49.0,
+     48.0
+    ],
+    "margin": -1.0
+   },
+   "fetched_at": "2026-10-31T12:24:48+00:00"
+  },
+  "2026-GOV-IL": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-governor-polls/illinois",
+   "candidates": [
+    {
+     "name": "Pritzker*",
+     "party": "D"
+    },
+    {
+     "name": "Bailey",
+     "party": "R"
+    }
+   ],
+   "avg": {
+    "label": "Average of 2 Polls\u2020",
+    "values": [
+     56.5,
+     37.5
+    ],
+    "margin": -19.0
+   },
+   "latest": {
+    "pollster": "ActiVote",
+    "date": "10/22/2026",
+    "sample": "400 LV \u00b7 Margin of error \u00b14.9%",
+    "values": [
+     59.0,
+     41.0
+    ],
+    "margin": -18.0
+   },
+   "fetched_at": "2026-10-31T12:24:59+00:00"
+  },
+  "2026-GOV-KS": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-governor-polls/kansas",
+   "candidates": [
+    {
+     "name": "Holscher",
+     "party": "D"
+    },
+    {
+     "name": "Masterson",
+     "party": "R"
+    }
+   ],
+   "avg": {
+    "label": "Average of 5 Polls\u2020",
+    "values": [
+     46.0,
+     48.2
+    ],
+    "margin": 2.2
+   },
+   "latest": {
+    "pollster": "Emerson College",
+    "date": "10/30/2026",
+    "sample": "800 LV \u00b7 Margin of error \u00b13.5%",
+    "values": [
+     46.0,
+     50.0
+    ],
+    "margin": 4.0
+   },
+   "fetched_at": "2026-10-31T12:25:02+00:00"
+  },
+  "2026-GOV-MA": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-governor-polls/massachusetts",
+   "candidates": [
+    {
+     "name": "Healey*",
+     "party": "D"
+    },
+    {
+     "name": "Minogue",
+     "party": "R"
+    }
+   ],
+   "avg": {
+    "label": "Average of 4 Polls\u2020",
+    "values": [
+     56.8,
+     32.3
+    ],
+    "margin": -24.5
+   },
+   "latest": {
+    "pollster": "UMass Lowell",
+    "date": "10/29/2026",
+    "sample": "850 LV \u00b7 Margin of error \u00b14.4%",
+    "values": [
+     57.0,
+     29.0
+    ],
+    "margin": -28.0
+   },
+   "fetched_at": "2026-10-31T12:25:05+00:00"
+  },
+  "2026-GOV-MD": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-governor-polls/maryland",
+   "candidates": [
+    {
+     "name": "Moore*",
+     "party": "D"
+    },
+    {
+     "name": "Cox",
+     "party": "R"
+    }
+   ],
+   "latest": {
+    "pollster": "UMBC Poll",
+    "date": "10/06/2026",
+    "sample": "776 LV \u00b7 Margin of error \u00b13.5%",
+    "values": [
+     51.0,
+     24.0
+    ],
+    "margin": -27.0
+   },
+   "fetched_at": "2026-10-31T12:25:08+00:00"
+  },
+  "2026-GOV-ME": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-governor-polls/maine",
+   "candidates": [
+    {
+     "name": "Pingree",
+     "party": "D"
+    },
+    {
+     "name": "Bennett",
+     "party": "I"
+    },
+    {
+     "name": "Charles",
+     "party": "R"
+    }
+   ],
+   "avg": {
+    "label": "Average of 5 Polls\u2020",
+    "values": [
+     48.4,
+     7.4,
+     39.2
+    ],
+    "margin": -9.2
+   },
+   "latest": {
+    "pollster": "Data for Progress",
+    "date": "10/30/2026",
+    "sample": "652 LV \u00b7 Margin of error \u00b14%",
+    "values": [
+     49.0,
+     7.0,
+     37.0
+    ],
+    "margin": -12.0
+   },
+   "fetched_at": "2026-10-31T12:25:11+00:00"
+  },
+  "2026-GOV-MI": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-governor-polls/michigan",
+   "candidates": [
+    {
+     "name": "Benson",
+     "party": "D"
+    },
+    {
+     "name": "James",
+     "party": "R"
+    }
+   ],
+   "avg": {
+    "label": "Average of 5 Polls\u2020",
+    "values": [
+     51.6,
+     43.2
+    ],
+    "margin": -8.4
+   },
+   "latest": {
+    "pollster": "Data for Progress",
+    "date": "10/30/2026",
+    "sample": "622 LV \u00b7 Margin of error \u00b14%",
+    "values": [
+     52.0,
+     43.0
+    ],
+    "margin": -9.0
+   },
+   "fetched_at": "2026-10-31T12:25:13+00:00"
+  },
+  "2026-GOV-MN": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-governor-polls/minnesota",
+   "candidates": [
+    {
+     "name": "Klobuchar",
+     "party": "D"
+    },
+    {
+     "name": "Demuth",
+     "party": "R"
+    }
+   ],
+   "avg": {
+    "label": "Average of 5 Polls\u2020",
+    "values": [
+     50.8,
+     40.2
+    ],
+    "margin": -10.6
+   },
+   "latest": {
+    "pollster": "State Navigate",
+    "date": "10/29/2026",
+    "sample": "806 LV \u00b7 Margin of error \u00b13.5%",
+    "values": [
+     52.0,
+     42.0
+    ],
+    "margin": -10.0
+   },
+   "fetched_at": "2026-10-31T12:25:17+00:00"
+  },
+  "2026-GOV-NE": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-governor-polls/nebraska",
+   "candidates": [
+    {
+     "name": "Walz",
+     "party": "D"
+    },
+    {
+     "name": "Pillen*",
+     "party": "R"
+    }
+   ],
+   "avg": {
+    "label": "Average of 5 Polls\u2020",
+    "values": [
+     40.2,
+     46.2
+    ],
+    "margin": 6.0
+   },
+   "latest": {
+    "pollster": "Siena College",
+    "date": "10/31/2026",
+    "sample": "809 LV \u00b7 Margin of error \u00b14%",
+    "values": [
+     40.0,
+     53.0
+    ],
+    "margin": 13.0
+   },
+   "fetched_at": "2026-10-31T12:25:20+00:00"
+  },
+  "2026-GOV-NH": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-governor-polls/new-hampshire",
+   "candidates": [
+    {
+     "name": "Warmington",
+     "party": "D"
+    },
+    {
+     "name": "Ayotte*",
+     "party": "R"
+    }
+   ],
+   "avg": {
+    "label": "Average of 4 Polls\u2020",
+    "values": [
+     40.5,
+     50.3
+    ],
+    "margin": 9.8
+   },
+   "latest": {
+    "pollster": "UMass Lowell",
+    "date": "10/29/2026",
+    "sample": "600 LV \u00b7 Margin of error \u00b15%",
+    "values": [
+     42.0,
+     48.0
+    ],
+    "margin": 6.0
+   },
+   "fetched_at": "2026-10-31T12:25:22+00:00"
+  },
+  "2026-GOV-NM": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-governor-polls/new-mexico",
+   "candidates": [
+    {
+     "name": "Haaland",
+     "party": "D"
+    },
+    {
+     "name": "Hull",
+     "party": "R"
+    }
+   ],
+   "avg": {
+    "label": "Average of 2 Polls\u2020",
+    "values": [
+     48.0,
+     41.5
+    ],
+    "margin": -6.5
+   },
+   "latest": {
+    "pollster": "Research & Polling",
+    "date": "10/11/2026",
+    "sample": "1,125 LV",
+    "values": [
+     49.0,
+     42.0
+    ],
+    "margin": -7.0
+   },
+   "fetched_at": "2026-10-31T12:25:25+00:00"
+  },
+  "2026-GOV-NV": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-governor-polls/nevada",
+   "candidates": [
+    {
+     "name": "Ford",
+     "party": "D"
+    },
+    {
+     "name": "Lombardo*",
+     "party": "R"
+    }
+   ],
+   "latest": {
+    "pollster": "Noble Predictive Insights",
+    "date": "10/30/2026",
+    "sample": "487 LV \u00b7 Margin of error \u00b14.4%",
+    "values": [
+     47.0,
+     47.0
+    ],
+    "margin": 0.0
+   },
+   "fetched_at": "2026-10-31T12:25:28+00:00"
+  },
+  "2026-GOV-NY": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-governor-polls/new-york",
+   "candidates": [
+    {
+     "name": "Hochul*",
+     "party": "D"
+    },
+    {
+     "name": "Blakeman",
+     "party": "R"
+    }
+   ],
+   "avg": {
+    "label": "Average of 5 Polls\u2020",
+    "values": [
+     53.4,
+     38.8
+    ],
+    "margin": -14.6
+   },
+   "latest": {
+    "pollster": "Siena College",
+    "date": "10/28/2026",
+    "sample": "807 LV \u00b7 Margin of error \u00b14.1%",
+    "values": [
+     54.0,
+     40.0
+    ],
+    "margin": -14.0
+   },
+   "fetched_at": "2026-10-31T12:25:31+00:00"
+  },
+  "2026-GOV-OH": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-governor-polls/ohio",
+   "candidates": [
+    {
+     "name": "Acton",
+     "party": "D"
+    },
+    {
+     "name": "Ramaswamy",
+     "party": "R"
+    }
+   ],
+   "avg": {
+    "label": "Average of 5 Polls\u2020",
+    "values": [
+     47.6,
+     45.6
+    ],
+    "margin": -2.0
+   },
+   "latest": {
+    "pollster": "Suffolk University",
+    "date": "10/28/2026",
+    "sample": "500 LV \u00b7 Margin of error \u00b14.4%",
+    "values": [
+     48.0,
+     44.0
+    ],
+    "margin": -4.0
+   },
+   "fetched_at": "2026-10-31T12:25:34+00:00"
+  },
+  "2026-GOV-OR": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-governor-polls/oregon",
+   "candidates": [
+    {
+     "name": "Kotek*",
+     "party": "D"
+    },
+    {
+     "name": "Drazan",
+     "party": "R"
+    }
+   ],
+   "latest": {
+    "pollster": "DHM Research",
+    "date": "10/08/2026",
+    "sample": "549 LV",
+    "values": [
+     46.0,
+     44.0
+    ],
+    "margin": -2.0
+   },
+   "fetched_at": "2026-10-31T12:25:39+00:00"
+  },
+  "2026-GOV-PA": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-governor-polls/pennsylvania",
+   "candidates": [
+    {
+     "name": "Shapiro*",
+     "party": "D"
+    },
+    {
+     "name": "Garrity",
+     "party": "R"
+    }
+   ],
+   "avg": {
+    "label": "Average of 5 Polls\u2020",
+    "values": [
+     56.8,
+     33.6
+    ],
+    "margin": -23.2
+   },
+   "latest": {
+    "pollster": "Franklin & Marshall",
+    "date": "10/22/2026",
+    "sample": "LV \u00b7 Sample size not reported",
+    "values": [
+     59.0,
+     36.0
+    ],
+    "margin": -23.0
+   },
+   "fetched_at": "2026-10-31T12:25:42+00:00"
+  },
+  "2026-GOV-RI": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-governor-polls/rhode-island",
+   "candidates": [
+    {
+     "name": "Foulkes",
+     "party": "D"
+    },
+    {
+     "name": "Block",
+     "party": "I"
+    },
+    {
+     "name": "Guckian",
+     "party": "R"
+    }
+   ],
+   "avg": {
+    "label": "Average of 3 Polls\u2020",
+    "values": [
+     43.7,
+     30.3,
+     15.3
+    ],
+    "margin": -28.4
+   },
+   "latest": {
+    "pollster": "Embold Research",
+    "date": "10/20/2026",
+    "sample": "815 LV",
+    "values": [
+     39.0,
+     28.0,
+     17.0
+    ],
+    "margin": -22.0
+   },
+   "fetched_at": "2026-10-31T12:25:46+00:00"
+  },
+  "2026-GOV-SC": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-governor-polls/south-carolina",
+   "candidates": [
+    {
+     "name": "Johnson",
+     "party": "D"
+    },
+    {
+     "name": "Wilson",
+     "party": "R"
+    }
+   ],
+   "avg": {
+    "label": "Average of 3 Polls\u2020",
+    "values": [
+     38.7,
+     48.0
+    ],
+    "margin": 9.3
+   },
+   "latest": {
+    "pollster": "Siena College",
+    "date": "10/28/2026",
+    "sample": "707 LV",
+    "values": [
+     44.0,
+     51.0
+    ],
+    "margin": 7.0
+   },
+   "fetched_at": "2026-10-31T12:25:49+00:00"
+  },
+  "2026-GOV-SD": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-governor-polls/south-dakota",
+   "candidates": [
+    {
+     "name": "Ahlers",
+     "party": "D"
+    },
+    {
+     "name": "Rhoden*",
+     "party": "R"
+    }
+   ],
+   "avg": {
+    "label": "Average of 2 Polls\u2020",
+    "values": [
+     37.0,
+     56.0
+    ],
+    "margin": 19.0
+   },
+   "latest": {
+    "pollster": "Emerson College",
+    "date": "10/22/2026",
+    "sample": "803 LV \u00b7 Margin of error \u00b13.5%",
+    "values": [
+     38.0,
+     56.0
+    ],
+    "margin": 18.0
+   },
+   "fetched_at": "2026-10-31T12:25:51+00:00"
+  },
+  "2026-GOV-TN": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-governor-polls/tennessee",
+   "candidates": [
+    {
+     "name": "Green",
+     "party": "D"
+    },
+    {
+     "name": "Blackburn",
+     "party": "R"
+    }
+   ],
+   "latest": {
+    "pollster": "Spry Research",
+    "date": "10/20/2026",
+    "sample": "635 LV",
+    "values": [
+     32.0,
+     44.0
+    ],
+    "margin": 12.0
+   },
+   "fetched_at": "2026-10-31T12:25:54+00:00"
+  },
+  "2026-GOV-TX": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-governor-polls/texas",
+   "candidates": [
+    {
+     "name": "Hinojosa",
+     "party": "D"
+    },
+    {
+     "name": "Abbott*",
+     "party": "R"
+    }
+   ],
+   "avg": {
+    "label": "Average of 8 Polls\u2020",
+    "values": [
+     46.8,
+     49.6
+    ],
+    "margin": 2.8
+   },
+   "latest": {
+    "pollster": "Data for Progress",
+    "date": "10/30/2026",
+    "sample": "712 LV \u00b7 Margin of error \u00b14%",
+    "values": [
+     47.0,
+     48.0
+    ],
+    "margin": 1.0
+   },
+   "fetched_at": "2026-10-31T12:25:57+00:00"
+  },
+  "2026-GOV-VT": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-governor-polls/vermont",
+   "candidates": [
+    {
+     "name": "Janoo",
+     "party": "D"
+    },
+    {
+     "name": "Scott*",
+     "party": "R"
+    }
+   ],
+   "latest": {
+    "pollster": "State Navigate",
+    "date": "10/27/2026",
+    "sample": "1,752 LV \u00b7 Margin of error \u00b12.3%",
+    "values": [
+     46.0,
+     49.0
+    ],
+    "margin": 3.0
+   },
+   "fetched_at": "2026-10-31T12:26:00+00:00"
+  },
+  "2026-GOV-WI": {
+   "source": "270toWin",
+   "source_url": "https://www.270towin.com/2026-governor-polls/wisconsin",
+   "candidates": [
+    {
+     "name": "Crowley",
+     "party": "D"
+    },
+    {
+     "name": "Tiffany",
+     "party": "R"
+    }
+   ],
+   "avg": {
+    "label": "Average of 3 Polls\u2020",
+    "values": [
+     48.7,
+     43.3
+    ],
+    "margin": -5.4
+   },
+   "latest": {
+    "pollster": "Marquette Law School",
+    "date": "10/28/2026",
+    "sample": "668 LV \u00b7 Margin of error \u00b14.7%",
+    "values": [
+     51.0,
+     44.0
+    ],
+    "margin": -7.0
+   },
+   "fetched_at": "2026-10-31T12:26:03+00:00"
+  }
+ }
+}
