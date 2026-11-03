@@ -13,7 +13,7 @@ permissions: {contents: write}
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 355   # GitHub-hosted job max is 360; one run can cover most of election night
     steps:
       - uses: actions/checkout@v4
       - run: sudo apt-get update && sudo apt-get install -y poppler-utils && pip install beautifulsoup4
@@ -29,10 +29,15 @@ jobs:
           CFG=$(cat elections/ACTIVE)
           read START END < <(python3 -c "import json,datetime as d;c=json.load(open('$CFG'));f=lambda k:int(d.datetime.fromisoformat(c.get(k,'1970-01-01T00:00:00Z').replace('Z','+00:00')).timestamp());print(f('live_start_utc'),f('live_end_utc'))")
           NOW=$(date -u +%s)
+          # Started up to 60 min before the live window? Wait for it instead of exiting, so a kickoff run at ~5 PM CT works.
+          if [ "$NOW" -lt "$START" ] && [ $((START - NOW)) -le 3600 ]; then sleep $((START - NOW)); NOW=$(date -u +%s); fi
           if [ "$NOW" -lt "$START" ] || [ "$NOW" -ge "$END" ]; then
             # pre/post-election: refresh race list + polls (polls cached 6h), results sources wait for live_start_utc
             python3 -m fetcher.fetch --config "$CFG" || true; deploy; exit 0; fi
-          for i in $(seq 1 26); do
+          # Loop ~2 min per refresh for up to ~5h40m (scheduled runs can start hours late, so each run covers a long stretch;
+          # a queued run picks up when this one ends). Stops early at live_end_utc.
+          T0=$(date -u +%s)
+          while [ $(( $(date -u +%s) - T0 )) -lt 20400 ] && [ "$(date -u +%s)" -lt "$END" ]; do
             python3 -m fetcher.fetch --config "$CFG" || true
             deploy || true
             sleep 110
