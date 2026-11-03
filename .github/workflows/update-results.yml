@@ -38,6 +38,8 @@ jobs:
           # a queued run picks up when this one ends). Stops early at live_end_utc.
           T0=$(date -u +%s)
           while [ $(( $(date -u +%s) - T0 )) -lt 20400 ] && [ "$(date -u +%s)" -lt "$END" ]; do
+            # pick up code pushed to main since this run started (fetcher/config/page only; site/data stays local)
+            git fetch -q origin main && git checkout -q FETCH_HEAD -- fetcher elections site/index.html || true
             python3 -m fetcher.fetch --config "$CFG" || true
             deploy || true
             sleep 110
