@@ -170,6 +170,11 @@ def run(cfg_path, out_path):
         sources.append({"id": "placeholder", "name": "Pre-election ballot list (no results yet; see each card for its source)", "url": "https://ballotpedia.org/Missouri_elections,_2026",
                         "ok": True, "checked_at": now(), "updated_at": now(), "race_count": sum(r.get("source_id") == "placeholder" for r in races),
                         "error": None, "note": "Placeholder cards; replaced by Missouri SOS results when they appear."})
+    try:
+        from .ddhq import apply as ddhq_apply
+        sources.append(ddhq_apply(races, os.path.dirname(out_path)))
+    except Exception as e:
+        print("DDHQ FAILED", e, file=sys.stderr)
     keys = set(cfg.get("key_races", []) + cfg.get("highlight", []))
     for r in races:
         r["key"] = bool(r.get("key") or r["title"] in keys or r.get("race_id") in keys)
