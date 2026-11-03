@@ -83,7 +83,7 @@
    "adapter": "national_csv",
    "enabled": true,
    "url": "https://docs.google.com/spreadsheets/d/1uxVlztxf8d3kU-U0ak9vEc3nNZVhpLoUNO89ZzCc32E/export?format=csv",
-   "note": "Sheet is PRIVATE. To activate: in the sheet, File > Share > Publish to web > Sheet1 > CSV, paste the pub?output=csv URL here. (Or set link-sharing 'Anyone with link: Viewer' and paste the /edit URL - auto-converted to export?format=csv.) Until then this source shows as DOWN and national races are empty.",
+   "note": "Sheet is shared (anyone with link can view); export CSV confirmed loading Nov 3 2026 morning.",
    "fallback_url": "file:elections/2026-11-03/national_calls_template.csv"
   },
   {
@@ -108,7 +108,7 @@
    "name": "Georgia SOS (Enhanced Voting export JSON)",
    "adapter": "ga_ev",
    "enabled": true,
-   "url": "https://results.sos.ga.gov/cdn/results/Georgia/export-2026NovGen.json",
+   "url": "https://results.sos.ga.gov/cdn/results/Georgia/export-11032026GeneralAndSpecialElection.json",
    "contests": [
     {
      "race_id": "2026-SEN-GA",
@@ -123,7 +123,7 @@
      "match": "^Governor$"
     }
    ],
-   "note": "Format verified (2024NovGen). 2026 slug '2026NovGen' is a GUESS - confirm on results.sos.ga.gov on Nov 3. File ~30 MB.",
+   "note": "Verified Nov 3 2026 morning: export file is live (~46 MB) and US Senate / Governor contests parse.",
    "live_only": true
   },
   {
@@ -259,10 +259,10 @@
   },
   {
    "id": "ia_feed",
-   "name": "Iowa SOS (Clarity) - best effort",
+   "name": "Iowa SOS (Clarity)",
    "adapter": "clarity",
-   "enabled": false,
-   "url": "https://electionresults.iowa.gov/IA/ELECTION_ID/",
+   "enabled": true,
+   "url": "https://electionresults.iowa.gov/IA/127077/",
    "contests": [
     {
      "race_id": "2026-GOV-IA",
@@ -277,7 +277,7 @@
      "match": "(US|U\\.S\\.|United States) Senat"
     }
    ],
-   "note": "UNTESTED. Replace ELECTION_ID with the Clarity election id on Nov 3, then set enabled=true.",
+   "note": "Election ID 127077 (2026 General) confirmed Nov 3 2026 morning from /IA/elections.json; summary.json parses.",
    "live_only": true
   },
   {
@@ -294,7 +294,7 @@
      "match": "^Governor"
     }
    ],
-   "note": "UNTESTED. Replace ELECTION_ID with the Clarity election id on Nov 3, then set enabled=true.",
+   "note": "Kansas no longer publishes on Clarity (its elections.json lists only a 2015 election as of Nov 3 2026). Leave disabled; KS comes from the national calls sheet.",
    "live_only": true
   }
  ],

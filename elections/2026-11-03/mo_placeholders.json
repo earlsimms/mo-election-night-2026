@@ -2433,7 +2433,7 @@
      "incumbent": true
     },
     {
-     "name": "Russ Gos\u00adselin",
+     "name": "Russ Gosselin",
      "party": "R"
     }
    ],
@@ -3255,6 +3255,50 @@
    "note": "Open seat: County Executive Sam Page is not running (St. Louis Call, Oct 21 2026)."
   },
   {
+   "title": "St. Louis County: Prosecuting Attorney",
+   "category": "county_stl",
+   "county": "St. Louis County",
+   "district": null,
+   "candidates": [
+    {
+     "name": "Melissa Price Smith",
+     "party": "D"
+    },
+    {
+     "name": "Theo Brown Sr.",
+     "party": "L"
+    }
+   ],
+   "match": [
+    "PROSECUTING ATTORNEY"
+   ],
+   "candidates_source": "https://www.timesnewspapers.com/webster-kirkwoodtimes/november-3-ballot/article_7dc86aa1-2c06-4725-9eec-cfdf8f93c625.html"
+  },
+  {
+   "title": "St. Louis County: County Assessor",
+   "category": "county_stl",
+   "county": "St. Louis County",
+   "district": null,
+   "candidates": [
+    {
+     "name": "David Messner",
+     "party": "R"
+    },
+    {
+     "name": "Doug Clemens",
+     "party": "D"
+    },
+    {
+     "name": "Austin Brown",
+     "party": "G"
+    }
+   ],
+   "match": [
+    "ASSESSOR"
+   ],
+   "candidates_source": "https://www.timesnewspapers.com/webster-kirkwoodtimes/november-3-ballot/article_7dc86aa1-2c06-4725-9eec-cfdf8f93c625.html"
+  },
+  {
    "title": "St. Louis County: County Council District 1",
    "category": "county_stl",
    "county": "St. Louis County",
@@ -3444,6 +3488,7 @@
     }
    ],
    "match": [
+    "^ST\\.?\\s*LOUIS COUNTY\\s*-\\s*PROPOSITION A\\b",
     "PROPOSITION A\\b.*(CHARTER|AUDITOR)",
     "(CHARTER|AUDITOR).*PROPOSITION A\\b"
    ],
@@ -3467,7 +3512,9 @@
     }
    ],
    "match": [
-    "PROPOSITION S\\b"
+    "^ST\\.?\\s*LOUIS COUNTY\\s*-\\s*PROPOSITION S\\b",
+    "PROPOSITION S\\b.*SENIOR",
+    "SENIOR.*PROPOSITION S\\b"
    ],
    "candidates_source": "https://stlouisco.civicweb.net/document/452929/",
    "is_measure": true,

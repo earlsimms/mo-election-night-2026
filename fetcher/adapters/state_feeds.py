@@ -51,7 +51,7 @@ def ga_ev(src):
     for it in d["results"]["ballotItems"]:
         a, b = it.get("precinctsReporting"), it.get("precinctsParticipating")
         C[it["name"]] = {"rep": (a, b) if b else None,
-                         "cands": [(re.sub(r"\s*\((Rep|Dem|Lib|Ind|Grn)\)\s*$", "", o["name"]), P(o.get("politicalParty")), o.get("voteCount") or 0)
+                         "cands": [(re.sub(r"(\s*\((I|Rep|Dem|Lib|Ind|Grn)\))+\s*$", "", o["name"]), P(o.get("politicalParty")), o.get("voteCount") or 0)
                                    for o in it["ballotOptions"]]}
     return _build(src, C)
 

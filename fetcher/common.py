@@ -1,5 +1,5 @@
 """Shared helpers: polite HTTP, normalization, race classification, status logic."""
-import re, time, urllib.request, os, io
+import re, time, urllib.request, os, io, gzip
 
 UA = "MO-Election-Dashboard/1.0 (non-commercial results viewer; polls every few minutes)"
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -11,6 +11,8 @@ def fetch(url, timeout=30, binary=False):
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "*/*"})
     with urllib.request.urlopen(req, timeout=timeout) as r:
         b = r.read()
+    if b[:2] == b"\x1f\x8b":  # some servers (e.g. Clarity ENR) gzip even when not asked
+        b = gzip.decompress(b)
     return b if binary else b.decode("utf-8", errors="replace")
 
 def num(s):
