@@ -12,3 +12,9 @@ ADAPTERS = {
 
 from . import ky_sbe
 ADAPTERS["ky_sbe"] = ky_sbe.parse
+
+try:  # isolated: an import problem here must not break other adapters
+    from . import stltoday_html
+    ADAPTERS["stltoday_html"] = stltoday_html.parse
+except Exception as _e:  # pragma: no cover
+    import sys; print("stltoday_html adapter unavailable:", _e, file=sys.stderr)

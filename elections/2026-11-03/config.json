@@ -67,6 +67,17 @@
    "category": "county_stl"
   },
   {
+   "id": "stlco_stltoday",
+   "name": "St. Louis County results via St. Louis Post-Dispatch (stltoday.com)",
+   "adapter": "stltoday_html",
+   "enabled": true,
+   "url": "https://graphics.stltoday.com/apps/elections/st-louis-county/",
+   "county": "St. Louis County",
+   "category": "county_stl",
+   "live_only": true,
+   "note": "Fallback: BOE CSV not posted; BOE ENR stlouis.totalvote.com refuses datacenter IPs. Unofficial; absentee/early first, then precincts."
+  },
+  {
    "id": "stcharles",
    "name": "St. Charles County Election Authority (LiveVoterTurnout)",
    "adapter": "lvt_html",
