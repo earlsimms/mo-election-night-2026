@@ -133,7 +133,7 @@
    "enabled": true,
    "urls": [
     "https://electionresultsfiles.sos.mn.gov/20261103/ussenate.txt",
-    "https://electionresultsfiles.sos.mn.gov/20261103/stateoffice.txt"
+    "https://electionresultsfiles.sos.mn.gov/20261103/Governor.txt"
    ],
    "contests": [
     {
@@ -195,15 +195,15 @@
   {
    "id": "wa_feed",
    "name": "Washington SOS statewide CSV",
-   "adapter": "wa_sos",
+   "adapter": "wa_votewa",
    "enabled": true,
-   "url": "https://results.vote.wa.gov/results/20261103/export/20261103_AllState.csv",
+   "url": "https://results.votewa.gov/results/public/api/elections/washington/20261103/ballot-items",
    "contests": [
     {
      "race_id": "2026-HOU-WA-03",
      "category": "house",
      "state": "WA",
-     "match": "^Congressional District 3\\b",
+     "match": "Congressional District 3\\b",
      "district": "03"
     },
     {
