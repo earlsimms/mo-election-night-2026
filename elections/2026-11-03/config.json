@@ -75,7 +75,9 @@
    "county": "St. Louis County",
    "category": "county_stl",
    "live_only": true,
-   "note": "Fallback: BOE CSV not posted; BOE ENR stlouis.totalvote.com refuses datacenter IPs. Unofficial; absentee/early first, then precincts."
+   "note": "Fallback: BOE CSV not posted; BOE ENR stlouis.totalvote.com refuses datacenter IPs. Unofficial; absentee/early first, then precincts.",
+   "fallback_url": "file:data/stlco_stltoday_snapshot.html",
+   "timeout": 15
   },
   {
    "id": "stcharles",

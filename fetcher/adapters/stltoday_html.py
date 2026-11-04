@@ -17,22 +17,28 @@ TITLE_MAP = {
     "St. Louis County Proposition S": "St. Louis County: Proposition S (Senior Services Tax)",
 }
 
-def _get(url):
+def _get(url, timeout=15):
     try:
-        return fetch(url, timeout=45)
+        return fetch(url, timeout=timeout)
     except Exception as e1:
+        if url.startswith("file:") or "timed out" in str(e1).lower():
+            raise  # a timeout means the runner IP is blocked; a browser-TLS retry won't help
+
         try:
             from curl_cffi import requests as cr
         except ImportError:
             raise e1
-        r = cr.get(url, impersonate="chrome", timeout=45)
+        r = cr.get(url, impersonate="chrome", timeout=timeout)
         if r.status_code != 200:
             raise RuntimeError(f"HTTP {r.status_code} (urllib: {e1})")
         return r.text
 
 def parse(src):
     from bs4 import BeautifulSoup
-    b = BeautifulSoup(_get(src["url"]), "html.parser")
+    html = _get(src["url"], src.get("timeout", 15))
+    snap = re.search(r"<!--\s*snapshot\s+(.*?)\s*-->", html[:500])
+    via = f"via St. Louis Post-Dispatch, relayed snapshot {snap.group(1)}" if snap else "via St. Louis Post-Dispatch"
+    b = BeautifulSoup(html, "html.parser")
     out = []
     for d in b.select("div.race"):
         h = d.find("h3")
@@ -57,7 +63,7 @@ def parse(src):
         rr = {"raw_title": raw, "title": title, "category": src.get("category") or "county_stl", "district": None,
               "state": "MO", "county": src.get("county"),
               "reporting_pct": round(100 * int(m.group(1)) / max(1, int(m.group(2))), 1) if m else None,
-              "reporting_text": (f"{m.group(1)} of {m.group(2)} precincts" if m else (ptxt.split("•")[0].strip() or "Partial")) + " (via St. Louis Post-Dispatch)",
+              "reporting_text": (f"{m.group(1)} of {m.group(2)} precincts" if m else (ptxt.split("•")[0].strip() or "Partial")) + f" ({via})",
               "candidates": cands, "is_measure": any(c["name"] in ("Yes", "No") for c in cands)}
         dm = re.search(r"District (\d+)", raw)
         if dm: rr["district"] = int(dm.group(1))
