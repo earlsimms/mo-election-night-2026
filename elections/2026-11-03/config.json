@@ -76,7 +76,7 @@
    "category": "county_stl",
    "live_only": true,
    "note": "Fallback: BOE CSV not posted; BOE ENR stlouis.totalvote.com refuses datacenter IPs. Unofficial; absentee/early first, then precincts.",
-   "fallback_url": "file:data/stlco_stltoday_snapshot.html",
+   "fallback_url": "file:elections/2026-11-03/stlco_stltoday_snapshot.html",
    "timeout": 15
   },
   {
