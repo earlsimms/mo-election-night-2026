@@ -164,10 +164,13 @@ def _cand(call, race):
     return m[0]
 
 def strip_calls(races):
-    """DDHQ is the only call source: drop winner flags/'called' from sheet and feeds; keep 'certified' (official)."""
+    """Drop feed winner flags/'called' (state feeds never call); keep 'certified' (official) and calls from
+    Alice's national calls sheet (called_by + winner=1). DDHQ calls applied afterwards take precedence."""
     from .common import finalize
     for r in races:
         if r.get("status") == "certified": continue
+        if r.get("status") == "called" and r.get("called_by") and any(c.get("winner") for c in r["candidates"]):
+            r["called_by_sheet"] = r["called_by"]; continue
         if r.get("status") == "called" or any(c.get("winner") for c in r["candidates"]):
             for c in r["candidates"]: c["winner"] = False
             ph = r.get("placeholder"); finalize(r)
@@ -183,9 +186,9 @@ def _load(path):
     except Exception: return {"calls": {}}
 
 def apply(races, out_dir, posts=None):
-    """Strip non-DDHQ calls, refresh DDHQ calls, apply them. Returns a source-status dict. Never raises."""
+    """Strip feed calls (keep sheet calls), refresh DDHQ calls, apply them (DDHQ overrides sheet). Returns a source-status dict. Never raises."""
     meta = {"id": "ddhq", "name": "Decision Desk HQ race calls (@DecisionDeskHQ on X)", "url": "https://x.com/DecisionDeskHQ",
-            "checked_at": _now(), "note": "All race calls come from Decision Desk HQ projection posts."}
+            "checked_at": _now(), "note": "Calls: DDHQ when available, otherwise Alice's calls sheet."}
     try:
         strip_calls(races)
         path = os.path.join(out_dir, "ddhq_calls.json")
@@ -215,11 +218,13 @@ def apply(races, out_dir, posts=None):
                 r.update(status="called", called_by="DDHQ", called_url=c["url"], called_at=c.get("created_at")); ok += 1
             if ok: applied += 1
             else: unmatched.append(dict(c, key=k, reason="candidate not found unambiguously on the matching race(s)"))
+        sheet_n = sum(1 for r in races if r.get("status") == "called" and r.get("called_by") not in ("", None, "DDHQ"))
+        meta["sheet_calls_applied"] = sheet_n
         if meta.get("ok"): store["fetched_at"] = _now()
         store["calls"] = calls; store["generated_at"] = _now()
         for fn, doc in ((path, store), (os.path.join(out_dir, "ddhq_unmatched.json"), {"generated_at": _now(), "unmatched": unmatched})):
             tmp = fn + ".tmp"; json.dump(doc, open(tmp, "w"), indent=1, ensure_ascii=False); os.replace(tmp, fn)
-        meta.update(race_count=applied, note=meta["note"] + f" {len(calls)} call posts stored, {applied} applied, {len(unmatched)} unmatched (see data/ddhq_unmatched.json).")
+        meta.update(race_count=applied, note=meta["note"] + f" {len(calls)} call posts stored, {applied} applied, {len(unmatched)} unmatched (see data/ddhq_unmatched.json); {sheet_n} races called from the sheet.")
         print(f"ddhq: {len(calls)} calls, {applied} applied, {len(unmatched)} unmatched" + ("" if meta.get("ok") else " (fetch failed, using stored calls)"))
     except Exception as e:
         meta.update(ok=False, error=f"{type(e).__name__}: {e}"[:200]); print("DDHQ STEP FAILED", e, file=sys.stderr)

@@ -15,7 +15,7 @@ check(len([r for r in R if r["category"] == "mo_house" and r["source_id"] == "mo
 check(g("MO House 96")["highlight"] and g("MO House 105")["highlight"], "House 96/105 highlighted")
 check(len([r for r in R if r["category"] == "mo_measure"]) == 6, "6 statewide measures in 2024 (Am 2,3,5,6,7 + Prop A)")
 n = {r["title"]: r for r in R if r["source_id"] == "national"}
-check(n["SAMPLE (fake) - TX Senate"]["status"] != "called" and not n["SAMPLE (fake) - TX Senate"].get("called_by") and n["SAMPLE (fake) - NC Senate"]["status"] == "leading" and n["SAMPLE (fake) - ME Senate"]["status"] == "too_early", "national status logic (sheet calls ignored: DDHQ only)")
+check(n["SAMPLE (fake) - TX Senate"]["status"] == "called" and n["SAMPLE (fake) - TX Senate"].get("called_by") and n["SAMPLE (fake) - NC Senate"]["status"] == "leading" and n["SAMPLE (fake) - ME Senate"]["status"] == "too_early", "national status logic (sheet call kept when no DDHQ call)")
 check(any(r["source_id"] == "stlco" for r in R) and any(r["source_id"] == "stcharles" for r in R), "county adapters parsed live archive pages")
 b = next(s for s in d["sources"] if s["id"] == "broken"); check(not b["ok"] and b["error"], "broken source isolated, error reported")
 print("measures:", sorted(r["title"] for r in R if r["category"] == "mo_measure"))
@@ -25,14 +25,13 @@ t = {r["race_id"]: r for r in R if r.get("race_id", "").startswith("TEST")}
 ok2 = 0
 def chk(c, m):
     global ok2; print(("PASS " if c else "FAIL ") + m); ok2 += (not c)
-chk(t["TEST-PA-SEN"]["candidates"][0]["votes"] == 3399295 and t["TEST-PA-SEN"]["status"] != "called", "PA feed votes merged, sheet call ignored (DDHQ only) (McCormick 3,399,295)")
-chk(t["TEST-MN-SEN"]["candidates"][0]["votes"] == 1792441 and t["TEST-MN-SEN"]["status"] != "called", "MN feed Klobuchar 1,792,441, not called without sheet")
+chk(t["TEST-PA-SEN"]["candidates"][0]["votes"] == 3399295 and t["TEST-PA-SEN"]["status"] == "called", "PA feed votes + sheet call merged (McCormick 3,399,295)")
+chk("TEST-MN-SEN" in t and t["TEST-MN-SEN"]["candidates"][0]["votes"] == 1792441 and t["TEST-MN-SEN"]["status"] != "called", "MN feed Klobuchar 1,792,441, not called without sheet")
 chk(t["TEST-FL-SEN"]["candidates"][0]["votes"] == 5977706, "FL feed Rick Scott 5,977,706")
 chk(t["TEST-WA-SEN"]["candidates"][0]["votes"] == 2252577, "WA feed Cantwell 2,252,577")
 chk(t["TEST-NC-GOV"]["candidates"][0]["name"].startswith("Josh Stein"), "NC feed governor")
 chk("TEST-GA-HOUSE-2" in t, "GA feed parsed")
 chk(g("MO House 96")["key"] and t["TEST-PA-SEN"]["key"], "key races from config (MO) and race_id")
-sys.exit(ok + ok2)
 
 # --- DDHQ call parsing (synthetic posts) ---
 from fetcher import ddhq
@@ -44,3 +43,14 @@ chk(P("Decision Desk HQ projects Nick Schroer (R) wins the election for Missouri
 chk(P("Decision Desk HQ projects Missouri Amendment 3 passes.")[0]["result"] == "pass", "DDHQ measure pass")
 chk(P("Decision Desk HQ projects Amendment 6 fails in Missouri.")[0]["result"] == "fail", "DDHQ measure fail")
 chk(P("Decision Desk HQ projects Republicans will retain control of the U.S. House.") == [], "DDHQ control call ignored")
+
+# --- sheet call kept without DDHQ; DDHQ overrides sheet ---
+import tempfile, copy
+def mk(): return [{"race_id": "X-AK-SEN", "level": "national", "category": "senate", "state": "AK", "title": "AK Senate", "status": "called", "called_by": "AP",
+                   "candidates": [{"name": "Mary Peltola", "party": "D", "votes": 10, "winner": True}, {"name": "Dan Sullivan", "party": "R", "votes": 9, "winner": False}]}]
+td = tempfile.mkdtemp(); open(os.path.join(td, "ddhq_calls.json"), "w").write('{"calls": {}}')
+a = mk(); m = ddhq.apply(a, td, posts=[])
+chk(a[0]["status"] == "called" and a[0]["called_by"] == "AP" and m.get("sheet_calls_applied") == 1, "sheet call kept when no DDHQ call")
+a = mk(); ddhq.apply(a, td, posts=[{"id": "1", "url": "u", "created_at": "2026-11-04T03:00:00Z", "text": "DDHQ PROJECTION: Dan Sullivan (R) wins the election for U.S. Senate in Alaska."}])
+chk(a[0]["called_by"] == "DDHQ" and a[0]["candidates"][1]["winner"] if a[0]["candidates"][1]["name"] == "Dan Sullivan" else a[0]["called_by"] == "DDHQ", "DDHQ call overrides sheet call")
+sys.exit(ok + ok2)
