@@ -780,6 +780,65 @@
    "state": "HI",
    "exclude": [],
    "note": "Aggregate fallback (CNN election API, AP-fed). Vote counts only; calls still come from DDHQ/calls sheet."
+  },
+  {
+   "id": "ky_feed",
+   "name": "Kentucky State Board of Elections (live results)",
+   "adapter": "ky_sbe",
+   "enabled": true,
+   "url": "https://vrsws.sos.ky.gov/liveresults/",
+   "contests": [
+    {
+     "race_id": "2026-SEN-KY",
+     "category": "senate",
+     "state": "KY",
+     "match": "^UNITED STATES SENATOR"
+    },
+    {
+     "race_id": "2026-HOU-KY-01",
+     "category": "house",
+     "state": "KY",
+     "district": "01",
+     "match": "^UNITED STATES REPRESENTATIVE in CONGRESS 1st Congressional District"
+    },
+    {
+     "race_id": "2026-HOU-KY-02",
+     "category": "house",
+     "state": "KY",
+     "district": "02",
+     "match": "^UNITED STATES REPRESENTATIVE in CONGRESS 2nd Congressional District"
+    },
+    {
+     "race_id": "2026-HOU-KY-03",
+     "category": "house",
+     "state": "KY",
+     "district": "03",
+     "match": "^UNITED STATES REPRESENTATIVE in CONGRESS 3rd Congressional District"
+    },
+    {
+     "race_id": "2026-HOU-KY-04",
+     "category": "house",
+     "state": "KY",
+     "district": "04",
+     "match": "^UNITED STATES REPRESENTATIVE in CONGRESS 4th Congressional District"
+    },
+    {
+     "race_id": "2026-HOU-KY-05",
+     "category": "house",
+     "state": "KY",
+     "district": "05",
+     "match": "^UNITED STATES REPRESENTATIVE in CONGRESS 5th Congressional District"
+    },
+    {
+     "race_id": "2026-HOU-KY-06",
+     "category": "house",
+     "state": "KY",
+     "district": "06",
+     "match": "^UNITED STATES REPRESENTATIVE in CONGRESS 6th Congressional District"
+    }
+   ],
+   "note": "KY no longer uses Clarity. Linked from elect.ky.gov. HTML scrape via curl_cffi (multi-fingerprint, freshest cache wins); verified Nov 3 2026 ~7 PM CT.",
+   "live_only": true
   }
  ],
  "key_races": [
