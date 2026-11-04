@@ -101,7 +101,11 @@
     }
    ],
    "note": "Format verified on 2024 archive; 2026 URL follows the same date pattern (assumed).",
-   "live_only": true
+   "live_only": true,
+   "house": {
+    "state": "NC",
+    "match": "^US HOUSE OF REPRESENTATIVES DISTRICT (\\d+)"
+   }
   },
   {
    "id": "ga_feed",
@@ -124,7 +128,11 @@
     }
    ],
    "note": "Verified Nov 3 2026 morning: export file is live (~46 MB) and US Senate / Governor contests parse.",
-   "live_only": true
+   "live_only": true,
+   "house": {
+    "state": "GA",
+    "match": "^US House of Representatives - District (\\d+)$"
+   }
   },
   {
    "id": "mn_feed",

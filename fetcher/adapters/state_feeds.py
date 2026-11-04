@@ -10,10 +10,25 @@ from ..common import fetch, finalize, fetch_json, NotPublished
 PMAP = {"REP": "R", "DEM": "D", "DFL": "D", "LIB": "L", "LBT": "L", "GRE": "G", "GRN": "G", "IND": "I", "NPA": "I", "UNA": "I", "CST": "C"}
 def P(p): return PMAP.get((p or "").strip().upper()[:3] if (p or "").upper() not in PMAP else (p or "").upper(), (p or "").strip().upper()[:3])
 
+def _auto_contests(src, contests):
+    """src["house"] = {"state": "NC", "match": regex whose group(1) is the district number} -> one contest per district
+    (race_id 2026-HOU-<ST>-<NN>, or -AL when src["house"]["at_large"]). Lets one config line cover every House seat."""
+    h = src.get("house")
+    if not h: return []
+    rx = re.compile(h["match"], re.I); st = h["state"]; out = []; seen = set()
+    for k in contests:
+        m = rx.search(k)
+        if not m: continue
+        d = "AL" if h.get("at_large") else f"{int(m.group(1)):02d}"
+        if d in seen: continue
+        seen.add(d)
+        out.append({"race_id": f"2026-HOU-{st}-{d}", "category": "house", "state": st, "district": d, "match": "^" + re.escape(k) + "$"})
+    return out
+
 def _build(src, contests):
     """contests: dict contest_name -> {"cands":[(name,party,votes)], "rep":(a,b) or None}"""
     out = []
-    for c in src.get("contests", []):
+    for c in list(src.get("contests", [])) + _auto_contests(src, contests):
         rx = re.compile(c["match"], re.I)
         hits = [k for k in contests if rx.search(k)]
         if not hits: continue
