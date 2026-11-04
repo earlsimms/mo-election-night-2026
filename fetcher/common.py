@@ -1,5 +1,5 @@
 """Shared helpers: polite HTTP, normalization, race classification, status logic."""
-import re, time, urllib.request, os, io, gzip
+import re, time, urllib.request, urllib.error, os, io, gzip
 
 UA = "MO-Election-Dashboard/1.0 (non-commercial results viewer; polls every few minutes)"
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -14,6 +14,31 @@ def fetch(url, timeout=30, binary=False):
     if b[:2] == b"\x1f\x8b":  # some servers (e.g. Clarity ENR) gzip even when not asked
         b = gzip.decompress(b)
     return b if binary else b.decode("utf-8", errors="replace")
+
+class NotPublished(Exception):
+    """Source reachable but results not posted yet (HTTP 404 / empty body). Shown as WAITING, not DOWN."""
+
+def fetch_json(url, timeout=60):
+    """JSON fetch with a browser-TLS (curl_cffi) retry when the plain response is not JSON (block page / challenge)."""
+    import json
+    try:
+        raw = fetch(url, timeout=timeout)
+        return json.loads(raw)
+    except urllib.error.HTTPError as e:
+        if e.code == 404: raise NotPublished(f"HTTP 404 at {url} - not posted yet (or URL changed)")
+        err = e
+    except ValueError as e:
+        err = e
+    try:
+        from curl_cffi import requests as cr
+    except Exception:
+        raise err
+    r = cr.get(url, impersonate="chrome", timeout=timeout)
+    if r.status_code == 404: raise NotPublished(f"HTTP 404 at {url} - not posted yet")
+    r.raise_for_status()
+    b = r.content
+    if b[:2] == b"\x1f\x8b": b = gzip.decompress(b)
+    return json.loads(b)
 
 def num(s):
     s = re.sub(r"[^\d.]", "", str(s or ""))

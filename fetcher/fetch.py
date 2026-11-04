@@ -1,9 +1,9 @@
 """Run all enabled sources once, normalize, and write site/data/results.json.
 Usage: python3 -m fetcher.fetch [--config config.json] [--out site/data/results.json] [--loop SECONDS]
 A failing source never breaks the page: its last good data is kept and marked stale with the error message."""
-import json, os, re, sys, time, argparse, traceback, datetime
+import json, os, re, sys, time, argparse, traceback, datetime, urllib.error
 from .adapters import ADAPTERS
-from .common import ROOT
+from .common import ROOT, NotPublished
 
 def now(): return datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds")
 
@@ -156,6 +156,20 @@ def run(cfg_path, out_path):
                 r["highlight"] = r["title"] in cfg.get("highlight", [])
                 r["id"] = f'{s["id"]}:{r["raw_title"]}'
             meta.update(ok=True, updated_at=now(), race_count=len(rs), error=None)
+        except (NotPublished, urllib.error.HTTPError) as e:
+            if isinstance(e, urllib.error.HTTPError) and e.code != 404: raise_other = e
+            else: raise_other = None
+            if raise_other is not None:
+                p = prev_src.get(s["id"], {})
+                rs = [r for r in prev.get("races", []) if r.get("source_id") == s["id"]]
+                for r in rs: r["stale"] = True
+                meta.update(ok=False, updated_at=p.get("updated_at"), race_count=len(rs), error=f"{type(e).__name__}: {e}"[:300])
+                print("SOURCE FAILED", s["id"], meta["error"], file=sys.stderr)
+                sources.append(meta); races.extend(rs); continue
+            if isinstance(e, urllib.error.HTTPError): e = f"HTTP 404 - file not posted yet ({meta['url']})"
+            rs = [r for r in prev.get("races", []) if r.get("source_id") == s["id"]]
+            meta.update(ok=True, waiting=True, updated_at=prev_src.get(s["id"], {}).get("updated_at"), race_count=len(rs), error=None,
+                        note=f"Waiting: {e}")
         except Exception as e:
             p = prev_src.get(s["id"], {})
             rs = [r for r in prev.get("races", []) if r.get("source_id") == s["id"]]

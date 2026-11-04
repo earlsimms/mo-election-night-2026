@@ -4,7 +4,8 @@ Returned races have level 'state_feed'; fetch.py merges them into national races
 Verified against 2024 archives: NC (er.ncsbe.gov results_0.txt), GA (results.sos.ga.gov export JSON),
 MN (electionresultsfiles.sos.mn.gov *.txt), PA (electionreturns.pa.gov API). Clarity (OH/NV/IA/KS etc.) is best-effort, untested."""
 import json, re
-from ..common import fetch, finalize
+import urllib.error
+from ..common import fetch, finalize, fetch_json, NotPublished
 
 PMAP = {"REP": "R", "DEM": "D", "DFL": "D", "LIB": "L", "LBT": "L", "GRE": "G", "GRN": "G", "IND": "I", "NPA": "I", "UNA": "I", "CST": "C"}
 def P(p): return PMAP.get((p or "").strip().upper()[:3] if (p or "").upper() not in PMAP else (p or "").upper(), (p or "").strip().upper()[:3])
@@ -35,14 +36,19 @@ def nc_enr(src):
     return _build(src, C)
 
 def mn_txt(src):
-    C = {}
+    C, errs = {}, []
     for url in src["urls"]:
-        for line in fetch(url, timeout=60).splitlines():
+        try: body = fetch(url, timeout=60)
+        except Exception as e: errs.append(f"{url.rsplit('/',1)[-1]}: {type(e).__name__}: {e}"); continue
+        for line in body.splitlines():
             f = line.split(";")
             if len(f) < 16: continue
             name = f[4] + (f" {f[5]}" if f[5] else "")
             c = C.setdefault(name, {"cands": [], "rep": (int(f[11] or 0), int(f[12] or 0))})
             c["cands"].append((f[7], P(f[10]), int(f[13] or 0)))
+    if len(errs) == len(src["urls"]):
+        if all("404" in e for e in errs): raise NotPublished("MN media files not posted yet (HTTP 404)")
+        raise RuntimeError("; ".join(errs)[:280])
     return _build(src, C)
 
 def ga_ev(src):
@@ -56,8 +62,10 @@ def ga_ev(src):
     return _build(src, C)
 
 def pa_api(src):
-    raw = fetch(src["url"], timeout=60)
-    d = json.loads(raw); d = json.loads(d) if isinstance(d, str) else d
+    d = fetch_json(src["url"], timeout=60)
+    if isinstance(d, str):
+        if not d.strip(): raise NotPublished("PA API returns an empty string for ElectionID 117 (G) - results not published yet")
+        d = json.loads(d)
     C = {}
     for office, items in d["Election"].items():
         for it in items:
@@ -68,8 +76,15 @@ def pa_api(src):
 def clarity(src):
     """Clarity/Scytl ENR. src['url'] = base like https://results.enr.clarityelections.com/KS/<electionId>/ (UNTESTED - set ID on Nov 3)."""
     base = src["url"].rstrip("/") + "/"
-    ver = fetch(base + "current_ver.txt").strip()
-    data = json.loads(fetch(f"{base}{ver}/json/en/summary.json", timeout=60))
+    try: ver = fetch(base + "current_ver.txt").strip()
+    except urllib.error.HTTPError as e:
+        if e.code == 404: raise NotPublished("Clarity current_ver.txt not posted yet")
+        raise
+    if not re.fullmatch(r"\d+", ver):  # HTML/challenge page instead of a version number: retry with browser TLS
+        from curl_cffi import requests as cr
+        ver = cr.get(base + "current_ver.txt", impersonate="chrome", timeout=30).text.strip()
+        if not re.fullmatch(r"\d+", ver): raise RuntimeError(f"Clarity current_ver.txt not a version number: {ver[:60]!r}")
+    data = fetch_json(f"{base}{ver}/json/en/summary.json", timeout=60)
     C = {}
     for r in data:
         names, parties, votes = r.get("CH", []), r.get("P", []), r.get("V", [])
@@ -104,4 +119,25 @@ def wa_sos(src):
         pm = re.search(r"Prefers (\w+)", r.get("Party") or "")
         p = {"Democratic": "D", "GOP": "R", "Republican": "R", "Libertarian": "L", "Green": "G", "Independent": "I"}.get(pm.group(1), pm.group(1)[:3].upper()) if pm else ""
         C.setdefault(r["Race"], {"cands": [], "rep": None})["cands"].append((r["Candidate"], p, int(r["Votes"] or 0)))
+    return _build(src, C)
+
+def wa_votewa(src):
+    """Washington SOS moved to Enhanced Voting (results.votewa.gov) in 2026. src['url'] e.g.
+    https://results.votewa.gov/results/public/api/elections/washington/20261103/ballot-items (VERIFIED on the Aug 2026 primary)."""
+    def T(x): return next((n.get("text") for n in (x or []) if n.get("languageId") == "en"), (x or [{}])[0].get("text", "") if x else "")
+    C, off = {}, 0
+    while True:
+        d = fetch_json(src["url"] + ("&" if "?" in src["url"] else "?") + f"offset={off}", timeout=60)
+        items = d.get("data") or []
+        for it in items:
+            rs = it.get("reportingStatus") or {}
+            opts = (it.get("summaryResults") or {}).get("ballotOptions") or []
+            cands = []
+            for o in opts:
+                pn = T((o.get("party") or {}).get("name")); pm = re.search(r"Prefers (\w+)", pn or "")
+                p = {"Democratic": "D", "GOP": "R", "Republican": "R", "Libertarian": "L", "Green": "G", "Independent": "I"}.get(pm.group(1), pm.group(1)[:3].upper()) if pm else P((o.get("party") or {}).get("abbreviation"))
+                cands.append((T(o.get("name")), p, int(o.get("voteCount") or 0)))
+            C[T(it.get("name"))] = {"cands": cands, "rep": (rs.get("reportingUnits"), rs.get("totalUnits")) if rs.get("totalUnits") else None}
+        off += len(items)
+        if not items or off >= int(d.get("totalRecordCount") or 0) or off > 5000: break
     return _build(src, C)
