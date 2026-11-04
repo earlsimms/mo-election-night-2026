@@ -44,15 +44,75 @@ def parse_pdf(src):
     txt = subprocess.run(["pdftotext", "-layout", path, "-"], capture_output=True, text=True, check=True).stdout
     return parse_text(txt, official="Official" in txt[:500])
 
-def parse_enr(src):
+PREC = re.compile(r"^(\d[\d,]*) of (\d[\d,]*) Precincts Reported$")
+
+def _session():
+    """enr.sos.mo.gov sits behind a Cloudflare challenge that rejects plain urllib (403 'cf-mitigated: challenge') but
+    serves a browser-TLS client (curl_cffi impersonate=chrome). Installed lazily so an already-running job picks it up."""
+    try:
+        from curl_cffi import requests as cr
+    except ImportError:
+        import sys
+        subprocess.run([sys.executable, "-m", "pip", "install", "-q", "--user", "curl_cffi"], capture_output=True, timeout=180)
+        import site, importlib; importlib.reload(site)
+        try: sys.path.append(site.getusersitepackages())
+        except Exception: pass
+        from curl_cffi import requests as cr
+    return cr.Session(impersonate="chrome")
+
+def parse_enr_text(html):
     from bs4 import BeautifulSoup
-    html = fetch(src["url"])
-    if "Attention Required! | Cloudflare" in html or "Sorry, you have been blocked" in html:
-        raise RuntimeError("Blocked by Cloudflare at enr.sos.mo.gov (try running the job from a residential IP / self-hosted runner)")
-    txt = BeautifulSoup(html, "html.parser").get_text("\n")
-    # Normalise ENR text into the same 'Title  (x of y Precincts Reported)' layout and reuse the verified parser.
-    txt = re.sub(r"\n\s*\((\d+) of (\d+) Precincts Reported\)", r"   (\1 of \2 Precincts Reported)", txt)
-    races = parse_text(txt, official=bool(re.search(r"Official Results", html)))
+    lines = [l.strip() for l in BeautifulSoup(html, "html.parser").get_text("\n").splitlines() if l.strip()]
+    races, cur, i = [], None, 0
+    while i < len(lines):
+        m = PREC.match(lines[i + 1]) if i + 1 < len(lines) else None
+        if m:
+            a, b = int(m.group(1).replace(",", "")), int(m.group(2).replace(",", ""))
+            cur = {"raw_title": re.sub(r"\s+", " ", lines[i]).strip(), "reporting_pct": round(100 * a / max(1, b), 1),
+                   "reporting_text": f"{a} of {b} precincts", "candidates": []}
+            races.append(cur); i += 2; continue
+        if cur is not None and lines[i].startswith("Total Votes"):
+            cur = None; i += 1; continue
+        if cur is not None and i + 2 < len(lines) and re.fullmatch(r"[\d,]+", lines[i + 1]) and lines[i + 2].endswith("%"):
+            nm = lines[i]; up = nm.upper()
+            if up in ("YES", "NO", "YES VOTES", "NO VOTES"): nm = up.split()[0].title()
+            cur["candidates"].append({"name": nm, "party": "", "votes": int(lines[i + 1].replace(",", ""))}); i += 3; continue
+        if cur is not None and i + 3 < len(lines) and re.fullmatch(r"[\d,]+", lines[i + 2]) and lines[i + 3].endswith("%"):
+            if lines[i].upper() != "WRITE-INS":
+                cur["candidates"].append({"name": lines[i], "party": party(lines[i + 1]), "votes": int(lines[i + 2].replace(",", ""))})
+            i += 4; continue
+        i += 1
+    official = bool(re.search(r"Official Results", html))
+    out = []
+    for r in races:
+        cat, label, dist = classify(r["raw_title"])
+        if cat == "mo_other" and ("Judge" in label or "Court" in label): cat = "mo_judicial"
+        r.update(category=cat, title=label, district=dist, state="MO",
+                 is_measure=any(c["name"] in ("Yes", "No") for c in r["candidates"]))
+        out.append(finalize(r, official=official))
+    return out
+
+def parse_enr(src):
+    """GET the ENR page, then replay the ASP.NET 'Submit' postback for the selected election (the page body is
+    filled only by that postback), and parse the 'All Results' listing."""
+    from bs4 import BeautifulSoup
+    base = "https://enr.sos.mo.gov/"
+    s = _session()
+    r = s.get(base, timeout=40)
+    if r.status_code != 200:
+        raise RuntimeError(f"enr.sos.mo.gov HTTP {r.status_code} (Cloudflare) on initial GET")
+    soup = BeautifulSoup(r.text, "html.parser")
+    data = {x["name"]: x.get("value", "") for x in soup.select("input[name]") if x.get("type") != "submit"}
+    sel = soup.find("select", id="cboElectionNames")
+    if sel is None:
+        raise RuntimeError("enr.sos.mo.gov: election selector not found - layout changed")
+    opt = sel.find("option", selected=True) or sel.find("option")
+    data[sel["name"]] = opt["value"]
+    data["ctl00$MainContent$btnElectionType"] = "Submit"
+    r2 = s.post(base, data=data, timeout=90)
+    if r2.status_code != 200:
+        raise RuntimeError(f"enr.sos.mo.gov HTTP {r2.status_code} on results postback")
+    races = parse_enr_text(r2.text)
     if not races:
         raise RuntimeError("enr.sos.mo.gov page fetched but no contests recognised - page layout changed; update mo_sos.parse_enr")
     return races

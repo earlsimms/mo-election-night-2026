@@ -52,7 +52,7 @@
    "name": "Missouri SOS Election Night Results",
    "adapter": "mo_sos_enr",
    "enabled": true,
-   "url": "https://enr.sos.mo.gov/ElectionResults.aspx",
+   "url": "https://enr.sos.mo.gov/",
    "note": "Cloudflare-protected; HTML scrape. Structure unverified from cloud IPs.",
    "live_only": true
   },
