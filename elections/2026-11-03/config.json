@@ -839,6 +839,16 @@
    ],
    "note": "KY no longer uses Clarity. Linked from elect.ky.gov. HTML scrape via curl_cffi (multi-fingerprint, freshest cache wins); verified Nov 3 2026 ~7 PM CT.",
    "live_only": true
+  },
+  {
+   "id": "cnn_ky",
+   "name": "KY Senate/House (CNN/AP results JSON)",
+   "adapter": "cnn_state",
+   "enabled": true,
+   "url": "https://politics.api.cnn.io/results/national-races/2026-SG.json",
+   "state": "KY",
+   "exclude": [],
+   "note": "Aggregate fallback (CNN election API, AP-fed). Vote counts only; calls still come from DDHQ/calls sheet."
   }
  ],
  "key_races": [
