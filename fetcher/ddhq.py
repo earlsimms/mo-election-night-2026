@@ -92,9 +92,31 @@ def parse(text):
     return [{"kind": "candidate", "candidate": w.group("who").strip(), "party": PARTY.get(p, p[:1] if p else ""),
              "office": _office(rest), "state": _state(rest), "district": _district(rest), "where": rest[:160]}]
 
+LAST_STATUS = {"rate_limited": False}
+
+def _get(url, timeout):
+    """urllib first; on any failure (e.g. 429 from shared runner IPs) retry once with a browser-TLS client (curl_cffi)."""
+    import time, random
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "text/html,application/xhtml+xml", "Accept-Language": "en-US,en;q=0.9"})
+        return urllib.request.urlopen(req, timeout=timeout).read().decode("utf-8", "replace")
+    except Exception as e1:
+        if "429" in str(e1): LAST_STATUS["rate_limited"] = True
+        time.sleep(2 + random.random() * 3)
+        try:
+            from curl_cffi import requests as cr
+        except Exception:
+            raise e1
+        r = cr.get(url, impersonate="chrome", timeout=timeout, headers={"Accept-Language": "en-US,en;q=0.9"})
+        if r.status_code != 200:
+            if r.status_code == 429: LAST_STATUS["rate_limited"] = True
+            raise RuntimeError(f"HTTP {r.status_code} (urllib: {e1}; curl_cffi retry also failed)")
+        return r.text
+
 def fetch_posts(timeout=25):
-    req = urllib.request.Request(SYND, headers={"User-Agent": UA, "Accept": "text/html,application/xhtml+xml", "Accept-Language": "en-US,en;q=0.9"})
-    body = urllib.request.urlopen(req, timeout=timeout).read().decode("utf-8", "replace")
+    LAST_STATUS["rate_limited"] = False
+    body = _get(SYND, timeout)
+    LAST_STATUS["rate_limited"] = False
     m = re.search(r'<script id="__NEXT_DATA__" type="application/json">(.*?)</script>', body, re.S)
     if not m: raise ValueError("no __NEXT_DATA__ (rate-limited?)")
     entries = json.loads(m.group(1))["props"]["pageProps"]["timeline"]["entries"]

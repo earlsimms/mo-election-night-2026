@@ -5,6 +5,7 @@ import datetime, email.utils, html, json, os, re, sys, urllib.request
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
 SYND = "https://syndication.twitter.com/srv/timeline-list/screen-name/{owner}/slug/{slug}"
 MAX = 50
+MIN_AGE = 600  # seconds: chatter lists share the syndication rate limit with DDHQ calls, so refresh each at most every ~10 min
 
 def _now(): return datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds")
 
@@ -51,18 +52,32 @@ def refresh(cfg, out_path):
         prev = {}
         try: prev = {l.get("name"): l for l in json.load(open(out_path)).get("lists", [])}
         except Exception: pass
-        lists = []
+        lists, stop = [], None
+        try:
+            from .ddhq import LAST_STATUS
+            if LAST_STATUS.get("rate_limited"): stop = "skipped: syndication rate-limited this loop (DDHQ calls get priority)"
+        except Exception: pass
+        nowt = datetime.datetime.now(datetime.timezone.utc)
+        def age(ts):
+            try: return (nowt - datetime.datetime.fromisoformat(ts)).total_seconds()
+            except Exception: return 1e9
         for L in (cfg.get("social") or {}).get("x_lists", []):
             if L.get("link_only"): continue
             owner, slug = _owner_slug(L.get("url"))
             p = prev.get(L["name"], {})
             ent = {"name": L["name"], "id": L.get("id"), "url": L.get("url") or f"https://x.com/i/lists/{L.get('id')}", "checked_at": _now()}
+            if stop or age(p.get("checked_at")) < MIN_AGE:
+                keep = {k: p[k] for k in ("posts", "fetched_at", "ok", "error", "checked_at") if k in p}
+                ent.update(posts=[], fetched_at=None, ok=False, error=None); ent.update(keep)
+                if stop and not keep.get("posts"): ent["error"] = stop
+                lists.append(ent); continue
             try:
                 if not slug: raise ValueError("cannot derive slug from url")
                 ent.update(posts=fetch_list(owner, slug), fetched_at=_now(), ok=True, error=None)
             except Exception as e:
                 ent.update(posts=p.get("posts", []), fetched_at=p.get("fetched_at"), ok=False, error=f"{type(e).__name__}: {e}"[:200])
                 print("CHATTER FAILED", L["name"], ent["error"], file=sys.stderr)
+                if "429" in str(e): stop = "skipped after HTTP 429 (rate limit)"
             lists.append(ent)
         doc = {"generated_at": _now(), "lists": lists}
         tmp = out_path + ".tmp"; json.dump(doc, open(tmp, "w"), separators=(",", ":"), ensure_ascii=False); os.replace(tmp, out_path)
