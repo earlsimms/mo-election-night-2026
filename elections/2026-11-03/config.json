@@ -564,6 +564,222 @@
    "state": "TX",
    "exclude": [],
    "note": "Aggregate fallback (CNN election API, AP-fed). Vote counts only; calls still come from DDHQ/calls sheet."
+  },
+  {
+   "id": "cnn_az",
+   "name": "AZ Senate/Governor/House (CNN/AP results JSON)",
+   "adapter": "cnn_state",
+   "enabled": true,
+   "url": "https://politics.api.cnn.io/results/national-races/2026-SG.json",
+   "state": "AZ",
+   "exclude": [],
+   "note": "Aggregate fallback (CNN election API, AP-fed). Vote counts only; calls still come from DDHQ/calls sheet."
+  },
+  {
+   "id": "cnn_co",
+   "name": "CO Senate/Governor/House (CNN/AP results JSON)",
+   "adapter": "cnn_state",
+   "enabled": true,
+   "url": "https://politics.api.cnn.io/results/national-races/2026-SG.json",
+   "state": "CO",
+   "exclude": [],
+   "note": "Aggregate fallback (CNN election API, AP-fed). Vote counts only; calls still come from DDHQ/calls sheet."
+  },
+  {
+   "id": "cnn_ia",
+   "name": "IA Senate/Governor/House (CNN/AP results JSON)",
+   "adapter": "cnn_state",
+   "enabled": true,
+   "url": "https://politics.api.cnn.io/results/national-races/2026-SG.json",
+   "state": "IA",
+   "exclude": [],
+   "note": "Aggregate fallback (CNN election API, AP-fed). Vote counts only; calls still come from DDHQ/calls sheet."
+  },
+  {
+   "id": "cnn_la",
+   "name": "LA Senate/Governor/House (CNN/AP results JSON)",
+   "adapter": "cnn_state",
+   "enabled": true,
+   "url": "https://politics.api.cnn.io/results/national-races/2026-SG.json",
+   "state": "LA",
+   "exclude": [],
+   "note": "Aggregate fallback (CNN election API, AP-fed). Vote counts only; calls still come from DDHQ/calls sheet."
+  },
+  {
+   "id": "cnn_mn",
+   "name": "MN Senate/Governor/House (CNN/AP results JSON)",
+   "adapter": "cnn_state",
+   "enabled": true,
+   "url": "https://politics.api.cnn.io/results/national-races/2026-SG.json",
+   "state": "MN",
+   "exclude": [
+    "2026-SEN-MN",
+    "2026-GOV-MN"
+   ],
+   "note": "Aggregate fallback (CNN election API, AP-fed). Vote counts only; calls still come from DDHQ/calls sheet. Races covered by the official state feed are excluded."
+  },
+  {
+   "id": "cnn_ne",
+   "name": "NE Senate/Governor/House (CNN/AP results JSON)",
+   "adapter": "cnn_state",
+   "enabled": true,
+   "url": "https://politics.api.cnn.io/results/national-races/2026-SG.json",
+   "state": "NE",
+   "exclude": [],
+   "note": "Aggregate fallback (CNN election API, AP-fed). Vote counts only; calls still come from DDHQ/calls sheet."
+  },
+  {
+   "id": "cnn_nm",
+   "name": "NM Senate/Governor/House (CNN/AP results JSON)",
+   "adapter": "cnn_state",
+   "enabled": true,
+   "url": "https://politics.api.cnn.io/results/national-races/2026-SG.json",
+   "state": "NM",
+   "exclude": [],
+   "note": "Aggregate fallback (CNN election API, AP-fed). Vote counts only; calls still come from DDHQ/calls sheet."
+  },
+  {
+   "id": "cnn_ny",
+   "name": "NY Senate/Governor/House (CNN/AP results JSON)",
+   "adapter": "cnn_state",
+   "enabled": true,
+   "url": "https://politics.api.cnn.io/results/national-races/2026-SG.json",
+   "state": "NY",
+   "exclude": [],
+   "note": "Aggregate fallback (CNN election API, AP-fed). Vote counts only; calls still come from DDHQ/calls sheet."
+  },
+  {
+   "id": "cnn_nd",
+   "name": "ND Senate/Governor/House (CNN/AP results JSON)",
+   "adapter": "cnn_state",
+   "enabled": true,
+   "url": "https://politics.api.cnn.io/results/national-races/2026-SG.json",
+   "state": "ND",
+   "exclude": [],
+   "note": "Aggregate fallback (CNN election API, AP-fed). Vote counts only; calls still come from DDHQ/calls sheet."
+  },
+  {
+   "id": "cnn_sd",
+   "name": "SD Senate/Governor/House (CNN/AP results JSON)",
+   "adapter": "cnn_state",
+   "enabled": true,
+   "url": "https://politics.api.cnn.io/results/national-races/2026-SG.json",
+   "state": "SD",
+   "exclude": [],
+   "note": "Aggregate fallback (CNN election API, AP-fed). Vote counts only; calls still come from DDHQ/calls sheet."
+  },
+  {
+   "id": "cnn_wi",
+   "name": "WI Senate/Governor/House (CNN/AP results JSON)",
+   "adapter": "cnn_state",
+   "enabled": true,
+   "url": "https://politics.api.cnn.io/results/national-races/2026-SG.json",
+   "state": "WI",
+   "exclude": [],
+   "note": "Aggregate fallback (CNN election API, AP-fed). Vote counts only; calls still come from DDHQ/calls sheet."
+  },
+  {
+   "id": "cnn_wy",
+   "name": "WY Senate/Governor/House (CNN/AP results JSON)",
+   "adapter": "cnn_state",
+   "enabled": true,
+   "url": "https://politics.api.cnn.io/results/national-races/2026-SG.json",
+   "state": "WY",
+   "exclude": [],
+   "note": "Aggregate fallback (CNN election API, AP-fed). Vote counts only; calls still come from DDHQ/calls sheet."
+  },
+  {
+   "id": "cnn_mt",
+   "name": "MT Senate/Governor/House (CNN/AP results JSON)",
+   "adapter": "cnn_state",
+   "enabled": true,
+   "url": "https://politics.api.cnn.io/results/national-races/2026-SG.json",
+   "state": "MT",
+   "exclude": [],
+   "note": "Aggregate fallback (CNN election API, AP-fed). Vote counts only; calls still come from DDHQ/calls sheet."
+  },
+  {
+   "id": "cnn_nv",
+   "name": "NV Senate/Governor/House (CNN/AP results JSON)",
+   "adapter": "cnn_state",
+   "enabled": true,
+   "url": "https://politics.api.cnn.io/results/national-races/2026-SG.json",
+   "state": "NV",
+   "exclude": [],
+   "note": "Aggregate fallback (CNN election API, AP-fed). Vote counts only; calls still come from DDHQ/calls sheet."
+  },
+  {
+   "id": "cnn_ut",
+   "name": "UT Senate/Governor/House (CNN/AP results JSON)",
+   "adapter": "cnn_state",
+   "enabled": true,
+   "url": "https://politics.api.cnn.io/results/national-races/2026-SG.json",
+   "state": "UT",
+   "exclude": [],
+   "note": "Aggregate fallback (CNN election API, AP-fed). Vote counts only; calls still come from DDHQ/calls sheet."
+  },
+  {
+   "id": "cnn_id",
+   "name": "ID Senate/Governor/House (CNN/AP results JSON)",
+   "adapter": "cnn_state",
+   "enabled": true,
+   "url": "https://politics.api.cnn.io/results/national-races/2026-SG.json",
+   "state": "ID",
+   "exclude": [],
+   "note": "Aggregate fallback (CNN election API, AP-fed). Vote counts only; calls still come from DDHQ/calls sheet."
+  },
+  {
+   "id": "cnn_ca",
+   "name": "CA Senate/Governor/House (CNN/AP results JSON)",
+   "adapter": "cnn_state",
+   "enabled": true,
+   "url": "https://politics.api.cnn.io/results/national-races/2026-SG.json",
+   "state": "CA",
+   "exclude": [],
+   "note": "Aggregate fallback (CNN election API, AP-fed). Vote counts only; calls still come from DDHQ/calls sheet."
+  },
+  {
+   "id": "cnn_or",
+   "name": "OR Senate/Governor/House (CNN/AP results JSON)",
+   "adapter": "cnn_state",
+   "enabled": true,
+   "url": "https://politics.api.cnn.io/results/national-races/2026-SG.json",
+   "state": "OR",
+   "exclude": [],
+   "note": "Aggregate fallback (CNN election API, AP-fed). Vote counts only; calls still come from DDHQ/calls sheet."
+  },
+  {
+   "id": "cnn_wa",
+   "name": "WA Senate/Governor/House (CNN/AP results JSON)",
+   "adapter": "cnn_state",
+   "enabled": true,
+   "url": "https://politics.api.cnn.io/results/national-races/2026-SG.json",
+   "state": "WA",
+   "exclude": [
+    "2026-HOU-WA-03",
+    "2026-HOU-WA-08"
+   ],
+   "note": "Aggregate fallback (CNN election API, AP-fed). Vote counts only; calls still come from DDHQ/calls sheet. Races covered by the official state feed are excluded."
+  },
+  {
+   "id": "cnn_ak",
+   "name": "AK Senate/Governor/House (CNN/AP results JSON)",
+   "adapter": "cnn_state",
+   "enabled": true,
+   "url": "https://politics.api.cnn.io/results/national-races/2026-SG.json",
+   "state": "AK",
+   "exclude": [],
+   "note": "Aggregate fallback (CNN election API, AP-fed). Vote counts only; calls still come from DDHQ/calls sheet."
+  },
+  {
+   "id": "cnn_hi",
+   "name": "HI Senate/Governor/House (CNN/AP results JSON)",
+   "adapter": "cnn_state",
+   "enabled": true,
+   "url": "https://politics.api.cnn.io/results/national-races/2026-SG.json",
+   "state": "HI",
+   "exclude": [],
+   "note": "Aggregate fallback (CNN election API, AP-fed). Vote counts only; calls still come from DDHQ/calls sheet."
   }
  ],
  "key_races": [
