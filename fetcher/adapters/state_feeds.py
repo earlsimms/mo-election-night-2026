@@ -167,3 +167,42 @@ def wa_votewa(src):
         off += len(items)
         if not items or off >= int(d.get("totalRecordCount") or 0) or off > 5000: break
     return _build(src, C)
+
+# ---- CNN (AP/Decision-desk-fed) national results JSON: aggregate fallback for every state's Senate/Governor/House ----
+# politics.api.cnn.io/results/national-races/2026-{SG,GG,HG}.json (verified live Nov 3 2026). Shared per-run cache so
+# 50 per-state sources cost 3 requests; each state is its own source so one bad state shows an error alone.
+_CNN_CACHE = {}
+def _cnn(kind, ttl=45):
+    import time
+    t, d = _CNN_CACHE.get(kind, (0, None))
+    if d is None or time.time() - t > ttl:
+        d = fetch_json(f"https://politics.api.cnn.io/results/national-races/2026-{kind}.json", timeout=60)
+        if not isinstance(d, list): raise RuntimeError(f"CNN {kind}: unexpected payload {str(d)[:80]}")
+        _CNN_CACHE[kind] = (time.time(), d)
+    return d
+
+def cnn_state(src):
+    """src: {"state": "IN", "kinds": ["SG","GG","HG"] (opt), "exclude": [race_ids covered by an official feed] (opt)}.
+    Vote counts only; never marks winners (calls come from DDHQ / the calls sheet)."""
+    st = src["state"].upper(); excl = set(src.get("exclude", [])); out = []; errs = []
+    for kind in src.get("kinds", ["SG", "GG", "HG"]):
+        try: rows = _cnn(kind)
+        except Exception as e: errs.append(f"{kind}: {type(e).__name__}: {str(e)[:100]}"); continue
+        for r in rows:
+            if (r.get("stateAbbreviation") or "").upper() != st: continue
+            if kind == "HG":
+                d = "AL" if "at large" in (r.get("raceTitle") or "").lower() else f"{int(r.get('jurisdictionCode') or 0):02d}"
+                rid, cat = f"2026-HOU-{st}-{d}", "house"
+            else:
+                d = None; rid, cat = (f"2026-SEN-{st}", "senate") if kind == "SG" else (f"2026-GOV-{st}", "governor")
+            if rid in excl: continue
+            pr = r.get("percentReporting")
+            title = {"senate": f"{st} Senate", "governor": f"{st} Governor", "house": f"{st} House" if d == "AL" else f"{st}-{d} House"}[cat]
+            out.append(finalize({"raw_title": rid, "race_id": rid, "title": title, "category": cat, "state": st, "district": d,
+                "level": "state_feed", "feed_contest": r.get("ecKey"), "is_measure": False,
+                "reporting_pct": pr if r.get("totalVote") else (pr or None),
+                "reporting_text": f"{pr}% expected vote in (CNN/AP)" if r.get("totalVote") else "no votes reported yet (CNN/AP)",
+                "candidates": [{"name": c.get("fullName"), "party": c.get("candidatePartyCode") or P(c.get("majorParty")),
+                                "votes": int(c.get("voteNum") or 0), "winner": False} for c in r.get("candidates", [])]}))
+    if errs and not out: raise RuntimeError("; ".join(errs))
+    return out

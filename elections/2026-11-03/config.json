@@ -304,6 +304,76 @@
    ],
    "note": "Kansas no longer publishes on Clarity (its elections.json lists only a 2015 election as of Nov 3 2026). Leave disabled; KS comes from the national calls sheet.",
    "live_only": true
+  },
+  {
+   "id": "cnn_in",
+   "name": "IN Senate/Governor/House (CNN/AP results JSON)",
+   "adapter": "cnn_state",
+   "enabled": true,
+   "url": "https://politics.api.cnn.io/results/national-races/2026-SG.json",
+   "state": "IN",
+   "exclude": [],
+   "note": "Aggregate fallback (CNN election API, AP-fed). Vote counts only; calls still come from DDHQ/calls sheet."
+  },
+  {
+   "id": "cnn_va",
+   "name": "VA Senate/Governor/House (CNN/AP results JSON)",
+   "adapter": "cnn_state",
+   "enabled": true,
+   "url": "https://politics.api.cnn.io/results/national-races/2026-SG.json",
+   "state": "VA",
+   "exclude": [],
+   "note": "Aggregate fallback (CNN election API, AP-fed). Vote counts only; calls still come from DDHQ/calls sheet."
+  },
+  {
+   "id": "cnn_vt",
+   "name": "VT Senate/Governor/House (CNN/AP results JSON)",
+   "adapter": "cnn_state",
+   "enabled": true,
+   "url": "https://politics.api.cnn.io/results/national-races/2026-SG.json",
+   "state": "VT",
+   "exclude": [],
+   "note": "Aggregate fallback (CNN election API, AP-fed). Vote counts only; calls still come from DDHQ/calls sheet."
+  },
+  {
+   "id": "cnn_sc",
+   "name": "SC Senate/Governor/House (CNN/AP results JSON)",
+   "adapter": "cnn_state",
+   "enabled": true,
+   "url": "https://politics.api.cnn.io/results/national-races/2026-SG.json",
+   "state": "SC",
+   "exclude": [],
+   "note": "Aggregate fallback (CNN election API, AP-fed). Vote counts only; calls still come from DDHQ/calls sheet."
+  },
+  {
+   "id": "cnn_fl",
+   "name": "FL Senate/Governor/House (CNN/AP results JSON)",
+   "adapter": "cnn_state",
+   "enabled": true,
+   "url": "https://politics.api.cnn.io/results/national-races/2026-SG.json",
+   "state": "FL",
+   "exclude": [],
+   "note": "Aggregate fallback (CNN election API, AP-fed). Vote counts only; calls still come from DDHQ/calls sheet."
+  },
+  {
+   "id": "cnn_oh",
+   "name": "OH Senate/Governor/House (CNN/AP results JSON)",
+   "adapter": "cnn_state",
+   "enabled": true,
+   "url": "https://politics.api.cnn.io/results/national-races/2026-SG.json",
+   "state": "OH",
+   "exclude": [],
+   "note": "Aggregate fallback (CNN election API, AP-fed). Vote counts only; calls still come from DDHQ/calls sheet."
+  },
+  {
+   "id": "cnn_wv",
+   "name": "WV Senate/Governor/House (CNN/AP results JSON)",
+   "adapter": "cnn_state",
+   "enabled": true,
+   "url": "https://politics.api.cnn.io/results/national-races/2026-SG.json",
+   "state": "WV",
+   "exclude": [],
+   "note": "Aggregate fallback (CNN election API, AP-fed). Vote counts only; calls still come from DDHQ/calls sheet."
   }
  ],
  "key_races": [
