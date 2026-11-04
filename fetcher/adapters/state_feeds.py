@@ -76,15 +76,26 @@ def pa_api(src):
 def clarity(src):
     """Clarity/Scytl ENR. src['url'] = base like https://results.enr.clarityelections.com/KS/<electionId>/ (UNTESTED - set ID on Nov 3)."""
     base = src["url"].rstrip("/") + "/"
-    try: ver = fetch(base + "current_ver.txt").strip()
-    except urllib.error.HTTPError as e:
-        if e.code == 404: raise NotPublished("Clarity current_ver.txt not posted yet")
-        raise
-    if not re.fullmatch(r"\d+", ver):  # HTML/challenge page instead of a version number: retry with browser TLS
-        from curl_cffi import requests as cr
-        ver = cr.get(base + "current_ver.txt", impersonate="chrome", timeout=30).text.strip()
-        if not re.fullmatch(r"\d+", ver): raise RuntimeError(f"Clarity current_ver.txt not a version number: {ver[:60]!r}")
-    data = fetch_json(f"{base}{ver}/json/en/summary.json", timeout=60)
+    bases = [base]
+    m = re.search(r"https?://[^/]+/([A-Z]{2}/\d+/)$", base)
+    if m and "clarityelections.com" not in base: bases.append("https://results.enr.clarityelections.com/" + m.group(1))
+    errs, data = [], None
+    for bb in bases:
+        try:
+            try: ver = fetch(bb + "current_ver.txt").strip()
+            except urllib.error.HTTPError as e:
+                if e.code == 404: raise NotPublished("Clarity current_ver.txt not posted yet")
+                raise
+            if not re.fullmatch(r"\d+", ver):  # HTML/block page instead of a version number: retry with browser TLS
+                from curl_cffi import requests as cr
+                ver = cr.get(bb + "current_ver.txt", impersonate="chrome", timeout=30).text.strip()
+                if not re.fullmatch(r"\d+", ver): raise RuntimeError(f"current_ver.txt not a version number: {ver[:40]!r}")
+            data = fetch_json(f"{bb}{ver}/json/en/summary.json", timeout=60)
+            break
+        except NotPublished: raise
+        except Exception as e:
+            errs.append(f"{bb.split('/')[2]}: {type(e).__name__}: {str(e)[:100]}")
+    if data is None: raise RuntimeError("; ".join(errs))
     C = {}
     for r in data:
         names, parties, votes = r.get("CH", []), r.get("P", []), r.get("V", [])
