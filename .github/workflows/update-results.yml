@@ -5,9 +5,8 @@ name: update-results
 on:
   push: {branches: [main]}
   workflow_dispatch:
-  schedule:
-    - cron: "*/5 * 4-6 11 *"     # 2026 window (UTC Nov 4-6). FOR A NEW ELECTION edit these dates too (cron cannot read config)
-    - cron: "17 */6 * * *"       # light heartbeat otherwise
+  # Scheduled updates disabled after election night so GitHub stops running
+  # the job and sending failure emails. Re-add a cron here for a future election.
 concurrency: {group: results, cancel-in-progress: false}
 permissions: {contents: write}
 jobs:
